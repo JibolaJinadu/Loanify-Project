@@ -14,3 +14,10 @@ Make the neccessary modifications
 3. git commit -m "your message"
 4. git pull origin Developement-branch
 5. git push origin ＜new-branch＞
+
+### Step 4
+1. Create a pull request to the Development-branch
+
+
+
+###NB: Remember make pull request to the main Branch but Development-branch only.
