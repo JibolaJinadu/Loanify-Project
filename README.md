@@ -19,5 +19,5 @@ Make the neccessary modifications
 1. Create a pull request to the Development-branch
 
 
-
-### NB: Remember make pull request to the main Branch but Development-branch only.
+### NB: Remember not to make pull request to the main Branch but Development-branch only.
+Which implies that, you will create a branch from the clone repo, then you will raise pull request from that branch to Development-branch.
