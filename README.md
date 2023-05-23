@@ -1,6 +1,6 @@
 # Loanify-Project
 
-#  Development-branch host link: https://rainbow-naiad-3d907d.netlify.app/
+Development-branch host link: https://rainbow-naiad-3d907d.netlify.app/
 
 ### Guidelines to for the Team-Members
 ### Step 1
