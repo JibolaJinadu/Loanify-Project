@@ -2,7 +2,7 @@
 
 Development-branch host link: https://rainbow-naiad-3d907d.netlify.app/
 
-### Guidelines to for the Team-Members
+### Guidelines to the Team-Members
 ### Step 1
 Run the following code in your terminal one after the other:
 1. git clone -b Developement-branch https://github.com/JibolaJinadu/Loanify-Project.git
@@ -10,7 +10,7 @@ Run the following code in your terminal one after the other:
 3. npm run dev
 
 ### Step 2
-Make the neccessary modifications 
+Make the neccessary modifications (Add a task-folder containing all your files & Assets) 
 
 ### Step 3
 1. git checkout -b ＜new-branch＞
