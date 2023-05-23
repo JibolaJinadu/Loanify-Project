@@ -1,1 +1,135 @@
 /* Login CSS */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.login {
+  display: flex;
+  height: 100vh;
+}
+
+.login img {
+  height: 100%;
+  flex: 0 0 25%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.form-wrapper {
+  height: 100%;
+  padding: 20px 50px;
+  flex: 0 0 75%;
+  background-color: #dcf3e7;
+}
+
+form {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper img {
+  height: 50px;
+  width: 150px;
+}
+
+.form-group {
+  width: 60%;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 10px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+button {
+  padding: 12px 0;
+  width: 100%;
+}
+
+.pass {
+  color: #010e2a;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 5px;
+  text-align: right;
+  display: block;
+}
+
+.btn {
+  display: block;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.btn-blue {
+  background-color: #010e2a;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.sign {
+  color: #0744d3;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.team {
+  color: #717070;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.title {
+  font-style: 36px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .login {
+    flex-direction: column;
+    background-color: #dcf3e7;
+  }
+
+  .form-wrapper {
+    height: 100%;
+  }
+
+  .login-img {
+    display: none;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+}
