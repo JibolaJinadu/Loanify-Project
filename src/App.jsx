@@ -8,11 +8,11 @@ import Token from './tokenAuth/Token';
 function App() {
   return (
     <>
-      {/* <Login /> */}
+      <Login /> 
       <ResetPassword />
-      
-      {/* <SignUp /> */}
+      <SignUp />
       <Token />
+      <Settings />
     </>
   );
 }
