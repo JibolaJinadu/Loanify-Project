@@ -1,11 +1,13 @@
 import Login from './login/Login';
-import SignUp from './signUp/SignUp';
+import Token from './tokenAuth/Token';
+
 
 function App() {
   return (
     <>
-      <Login />
+      {/* <Login /> */}
       {/* <SignUp /> */}
+      <Token />
     </>
   );
 }
