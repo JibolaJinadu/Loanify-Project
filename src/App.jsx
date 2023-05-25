@@ -1,15 +1,16 @@
-//import Login from './login/Login';
-//import SignUp from './signUp/SignUp';
-import Security from "./security/Security";
-
- 
+import Login from './login/Login';
+import SignUp from './signUp/SignUp';
+import ResetPassword from './passwordReset/ResetPassword';
+import Settings from './security/Settings';
 
 function App() {
   return (
     <>
-      { /*<Login /> *}
+      {/* <Login /> */}
+      <ResetPassword />
+      
       {/* <SignUp /> */}
-      < Security />
+      {/* < Settings/> */}
     </>
   );
 }
