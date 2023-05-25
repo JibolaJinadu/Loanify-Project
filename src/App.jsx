@@ -1,4 +1,5 @@
 import Login from './login/Login';
+import Settings from './settings/Settings';
 import SignUp from './signUp/SignUp';
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
       <Login />
       {/* <SignUp /> */}
+      {/* <Settings /> */}
     </>
   );
 }
