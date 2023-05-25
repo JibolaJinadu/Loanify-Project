@@ -1,11 +1,13 @@
-import Login from './login/Login';
-import SignUp from './signUp/SignUp';
+// import Login from './login/Login';
+import SignUp from "./Sign-Up";
+// import EmailSent from './EmailSent';
 
 function App() {
   return (
     <>
-      <Login />
-      {/* <SignUp /> */}
+      {/* <Login /> */}
+      <SignUp/>
+      {/* <EmailSent/> */}
     </>
   );
 }
