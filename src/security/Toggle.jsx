@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './security.css';
+import './settings.css';
 
 export const Toggle = ({ label, toggled, onClick }) => {
   const [isToggled, toggle] = useState(toggled);
@@ -10,10 +10,12 @@ export const Toggle = ({ label, toggled, onClick }) => {
   };
 
   return (
-    <label>
-      <input type="checkbox" defaultChecked={isToggled} onClick={callback} />
-      <span />
-      {/* <strong>{label}</strong> */}
-    </label>
+    <div className="toggle">
+      <label>
+        <input type="checkbox" defaultChecked={isToggled} onClick={callback} />
+        <span />
+        {/* <strong>{label}</strong> */}
+      </label>
+    </div>
   );
 };
