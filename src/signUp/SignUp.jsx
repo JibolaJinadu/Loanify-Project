@@ -156,7 +156,7 @@ const SignUp = () => {
     <>
       {isSuccess}
       {submitError && <div className="failed">{submitError}</div>}
-      <div className="container">
+      <div className="container1">
         <section className="left-div"></section>
         <section className="right-div">
           <img src={logo} alt="logo" className="rd-container-1" />

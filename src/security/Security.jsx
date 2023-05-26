@@ -1,5 +1,6 @@
 import { Toggle } from './Toggle';
 import './security.css';
+import { Link } from 'react-router-dom';
 
 function Security() {
   const logState = (state) => {
@@ -52,9 +53,9 @@ function Security() {
           <p>Permanently delete your account.</p>
         </div>
         <div className="btn-holder">
-          <a href="#" className="s-btn btn--red">
+          <Link href="#" className="s-btn btn--red">
             Delete
-          </a>
+          </Link>
         </div>
       </div>
     </div>
