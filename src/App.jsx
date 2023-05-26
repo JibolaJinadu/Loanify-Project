@@ -9,8 +9,7 @@ import Token from './tokenAuth/Token';
 function App() {
   return (
     <>
-      <Login />
-      {/* <SignUp /> */}
+      
     </>
   );
 }
