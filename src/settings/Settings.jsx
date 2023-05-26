@@ -7,6 +7,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import Security from '../security/Security';
 import UserPermission from '../permission/UserPermission';
+import General from '../general/General';
 
 export default function Settings() {
   const theme = useTheme();
@@ -93,7 +94,9 @@ export default function Settings() {
         />
       </Tabs>
       <TabPanel value={value} index={0}>
-        <Typography>General</Typography>
+        <Typography>
+          <General />
+        </Typography>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <Typography>Profile</Typography>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Building from './Assets/building.jpg';
 import Logo from './Assets/logo.svg';
-import '../home/home.css';
+import './home.css';
 
 const Home = () => {
   const navigate = useNavigate();

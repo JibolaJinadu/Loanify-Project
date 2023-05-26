@@ -3,15 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
-html,
-body,
-#root {
-  height: 100vh;
-  overflow: hidden;
-}
 .container {
+  height: 100vh;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .building {
