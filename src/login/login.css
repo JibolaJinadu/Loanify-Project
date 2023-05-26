@@ -29,7 +29,7 @@ a {
   background-color: #dcf3e7;
 }
 
-form {
+.form {
   margin-top: 100px;
   display: flex;
   flex-direction: column;
@@ -109,7 +109,7 @@ button {
 }
 
 .title {
-  font-style: 36px;
+  font-size: 28px;
   font-weight: 800;
   margin-bottom: 10px;
 }
