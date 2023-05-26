@@ -1,39 +1,28 @@
 /* UserPermission CSS */
-.user-info{
-    overflow-x: auto;
+.user-info {
+  padding: 20px 50px;
+}
+#users {
+  width: 100%;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  height: 100%;
 }
 
-.users{
-    border:1px solid;
-    width: 100%;
-    font-size: 50px;
-    border-spacing: 0px;
-    border-collapse: collapse;
-    height:100%;
+th {
+  background-color: white;
+  color: black;
+  border: 2 px solid #ddd;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
 }
 
-th{
-    background-color: white;
-    color: black;
-    height:25px;
-    border: 2 px solid #ddd;
-    font-size: 20px;
-    text-align: center;
+td {
+  text-align: center;
+  padding-top: 20px;
 }
 
-/* th, td{
-    padding: 50px;
-    text-align: center;
-} */
-
-td{
-    text-align: center;
-    height: 10px;
-    vertical-align:bottom;
-    padding: 20px 30px;
-}
-
-tr:nth-col(even) {
-    background-color: grey;
-
+td label {
+  margin-right: 10px;
 }

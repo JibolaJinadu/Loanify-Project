@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './login.css';
 import businessGuy from './img/business guy.png';
 import logo from './img/LOANIFY logo.svg';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -14,17 +15,27 @@ function Login() {
     password: '',
   });
 
+  const navigate = useNavigate();
+
   function handleSubmit(e) {
     e.preventDefault();
+    let isValid = true;
+
     if (!formData.password) {
       setErrors({
         password: 'Password is required',
       });
+      isValid = false;
     }
     if (!formData.username) {
       setErrors({
         username: 'Username is required',
       });
+      isValid = false;
+    }
+
+    if (isValid) {
+      navigate('/token');
     }
   }
   return (
@@ -32,7 +43,7 @@ function Login() {
       <img src={businessGuy} alt="Business Guy" className="login-img" />
       <div className="form-wrapper">
         <img src={logo} alt="Loanify Logo" />
-        <form onSubmit={handleSubmit}>
+        <form className="form" onSubmit={handleSubmit}>
           <h1 className="title">Welcome Back</h1>
           <div className="form-group">
             <input
@@ -56,7 +67,9 @@ function Login() {
               }}
             />
             {errors.username && (
-              <span style={{ color: 'red' }}>{errors.username}</span>
+              <span style={{ color: 'red', fontSize: '12px' }}>
+                {errors.username}
+              </span>
             )}
           </div>
           <div className="form-group">
@@ -72,6 +85,11 @@ function Login() {
                     ...errors,
                     password: 'Please enter password',
                   });
+                } else if (e.target.value.length < 8) {
+                  setErrors({
+                    ...errors,
+                    password: 'Password must be atleast 8 characters long',
+                  });
                 } else {
                   setErrors({
                     ...errors,
@@ -81,11 +99,13 @@ function Login() {
               }}
             />
             {errors.password && (
-              <span style={{ color: 'red' }}>{errors.password}</span>
+              <span style={{ color: 'red', fontSize: '12px' }}>
+                {errors.password}
+              </span>
             )}
-            <a href="" className="pass">
+            <Link to="/reset-password" className="pass">
               Forget password?
-            </a>
+            </Link>
           </div>
           <div className="form-group">
             <button type="submit" className="btn btn-blue">
@@ -94,9 +114,9 @@ function Login() {
           </div>
           <p className="team">
             Join the team ?{' '}
-            <a href="" className="sign">
+            <Link to="/sign-up" className="sign">
               Sign Up
-            </a>
+            </Link>
           </p>
         </form>
       </div>
