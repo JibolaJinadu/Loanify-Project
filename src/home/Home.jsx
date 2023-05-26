@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Building from '../home/assets/Buildings on onboarding page.jpg';
-import Logo from '../home/assets/Loanify logo.svg';
+import Building from './Assets/building.jpg';
+import Logo from './Assets/logo.svg';
 import '../home/home.css';
 
 const Home = () => {
