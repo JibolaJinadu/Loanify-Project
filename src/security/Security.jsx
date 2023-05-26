@@ -1,5 +1,5 @@
 import { Toggle } from './Toggle';
-import './security';
+import './security.css';
 
 function Security() {
   const logState = (state) => {
