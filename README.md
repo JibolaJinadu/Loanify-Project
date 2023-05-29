@@ -1,4 +1,4 @@
-# Loanify-Project
+# Loanify-App-Project
 
 Development-branch deployed preview link: "https://deploy-preview-13--chic-sopapillas-163b74.netlify.app/"
 
