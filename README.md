@@ -1,6 +1,6 @@
 # Loanify-Project
 
-Development-branch deployed preview link: https://deploy-preview-13--chic-sopapillas-163b74.netlify.app/
+Development-branch deployed preview link: "https://deploy-preview-13--chic-sopapillas-163b74.netlify.app/"
 
 ### Guidelines to the Team-Members
 ### Step-1 (first-time: complete all steps)
@@ -10,7 +10,7 @@ Run the following code in your terminal one after the other:
 3. npm run dev
 
 ### Step-2 (subsequently: start from here & complete the rest of the steps)
-Make the neccessary modifications (Add a task-folder containing all your files & Assets) 
+Make the neccessary modifications (Add a task-folder containing all your files & Assets e.g. SignUp Folder) 
 
 ### Step-3
 1. git checkout -b ＜new-branch＞
