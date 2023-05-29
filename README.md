@@ -3,7 +3,7 @@
 Development-branch deployed preview link: https://deploy-preview-13--chic-sopapillas-163b74.netlify.app/
 
 ### Guidelines to the Team-Members
-### Step 1 ## (first-time: complete all steps)
+### Step 1 ##(first-time: complete all steps)
 Run the following code in your terminal one after the other:
 1. git clone -b Developement-branch https://github.com/JibolaJinadu/Loanify-Project.git
 2. npm install
