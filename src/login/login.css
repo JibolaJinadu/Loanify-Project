@@ -26,6 +26,10 @@ a {
   background-color: #f0f4fc;
 }
 
+.form-wrapper img {
+  margin-top: 20px;
+}
+
 .form {
   margin-top: 100px;
   display: flex;
@@ -100,7 +104,7 @@ a {
 
 .title {
   font-size: 28px;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 

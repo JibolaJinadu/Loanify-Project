@@ -43,7 +43,7 @@ function ResetPassword() {
 
   const validateConfirmPassword = (value) => {
     if (!value) {
-      setConfirmPasswordError('Please enter the confirm password.');
+      setConfirmPasswordError('Please re-enter password.');
     } else if (value !== password) {
       setConfirmPasswordError('Passwords do not match.');
     } else {

@@ -268,10 +268,11 @@ const SignUp = () => {
                   </span>
                 ))}
               </div>
-
-              <button className="btn-submit" type="submit">
-                Submit
-              </button>
+              <div className="signup-field">
+                <button className="btn-submit" type="submit">
+                  Submit
+                </button>
+              </div>
             </form>
             <p className="rd-container-4">
               {' '}
