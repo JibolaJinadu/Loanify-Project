@@ -12,24 +12,17 @@
 }
 
 /* Left div - Business guy image */
-.image-container {
-  width: 25%;
-}
 
 .business-guy-img {
-  min-height: 100vh;
-  width: 100%;
+  flex: 0 0 30%;
 }
 
 /* Right div - Token field */
 .page-content {
-  width: 75%;
-  background-color: #dcf3e7;
+  flex: 0 0 70%;
+  background-color: #f0f4fc;
   position: relative;
-}
-
-.logo {
-  margin: 5%;
+  padding: 20px 90px;
 }
 
 .token-section {
@@ -47,8 +40,7 @@
   color: #010e2a;
   font-style: normal;
   font-weight: 700;
-  font-size: 0.98rem;
-  line-height: 24px;
+  font-size: 18px;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -58,6 +50,7 @@
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+  margin-bottom: 5px;
 }
 
 .token-field-background {
@@ -88,7 +81,7 @@
   color: white;
   background-color: #010e2a;
   width: 300px;
-  height: 58px;
+  padding: 15px 0;
   text-align: center;
   border-radius: 5px;
   margin: 20px;
@@ -100,6 +93,7 @@
 }
 
 .error-message {
+  font-size: 12px;
   text-align: center;
   color: red;
 }
@@ -153,7 +147,7 @@
   /* Right div - Token field */
   .page-content {
     width: 60%;
-    background-color: #dcf3e7;
+    background-color: #f0f4fc;
     position: relative;
   }
 }
