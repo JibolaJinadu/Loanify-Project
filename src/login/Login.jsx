@@ -41,7 +41,7 @@ function Login() {
     }
 
     if (isValid) {
-      navigate('/token');
+      navigate('/verification');
     }
   }
   return (
