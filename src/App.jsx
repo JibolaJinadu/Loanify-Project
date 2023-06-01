@@ -8,9 +8,16 @@ import EmailSent from './signUp/EmailSent';
 import Dashboard from './dashboard/DashBoard';
 import Settings from './settings/Settings';
 
+// import OverviewPage from "./overview/OverviewPage";
+// import SupportPage from "./support/SupportPage";
+
+
 function App() {
   return (
     <>
+      {/* <OverviewPage/> */}
+      {/* <SupportPage/> */}
+
       <Router>
         <Routes>
           <Route path="/" element={<Home />}></Route>
