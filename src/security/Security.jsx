@@ -1,7 +1,8 @@
 import { Toggle } from './Toggle';
-import './settings.css';
+import './security.css';
+import { Link } from 'react-router-dom';
 
-function Settings() {
+function Security() {
   const logState = (state) => {
     console.log('Toggled:', state);
   };
@@ -52,13 +53,13 @@ function Settings() {
           <p>Permanently delete your account.</p>
         </div>
         <div className="btn-holder">
-          <a href="#" className="s-btn btn--red">
+          <Link href="#" className="s-btn btn--red">
             Delete
-          </a>
+          </Link>
         </div>
       </div>
     </div>
   );
 }
 
-export default Settings;
+export default Security;

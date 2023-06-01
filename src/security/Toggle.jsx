@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './settings.css';
+import './security.css';
 
 export const Toggle = ({ label, toggled, onClick }) => {
   const [isToggled, toggle] = useState(toggled);
