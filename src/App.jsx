@@ -4,8 +4,14 @@ import ResetPassword from './passwordReset/ResetPassword';
 import Settings from './settings/Settings';
 import Token from './tokenAuth/Token';
 import Home from './home/Home';
+import './index.css'
 import SignUp from './signUp/SignUp';
 import EmailSent from './signUp/EmailSent';
+import ProfileNav from './Profile/ProfileNav';
+import ProfileLoanOfficer from './Profile/ProfileLoanOfficer';
+import ProfileEdit from './Profile/ProfileEdit';
+import ProfilePercentage from './Profile/ProfilePercentage';
+import ProfileTable from './Profile/ProfileTable';
 
 function App() {
   return (
@@ -21,6 +27,13 @@ function App() {
           <Route path="/token" element={<Token />}></Route>
         </Routes>
       </Router>
+      <ProfileNav />
+      <ProfileLoanOfficer />
+      <ProfileEdit />
+      <ProfilePercentage />
+      <ProfileTable />
+      
+
     </>
   );
 }
