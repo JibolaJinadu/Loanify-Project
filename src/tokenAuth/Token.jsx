@@ -44,7 +44,7 @@ const Token = () => {
       return;
     }
 
-    navigate('/settings');
+    navigate('/dashboard');
 
     // try {
     //   // Send a request to the server to verify the token PIN

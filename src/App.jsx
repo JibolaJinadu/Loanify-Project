@@ -1,11 +1,12 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './login/Login';
 import ResetPassword from './passwordReset/ResetPassword';
-import Settings from './settings/Settings';
 import Token from './tokenAuth/Token';
 import Home from './home/Home';
 import SignUp from './signUp/SignUp';
 import EmailSent from './signUp/EmailSent';
+import Dashboard from './dashboard/DashBoard';
+import Settings from './settings/Settings';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/reset-password" element={<ResetPassword />}></Route>
           <Route path="/settings" element={<Settings />}></Route>
           <Route path="/verification" element={<Token />}></Route>
+          <Route path="/dashboard" element={<Dashboard />}></Route>
         </Routes>
       </Router>
     </>

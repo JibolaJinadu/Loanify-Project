@@ -1,0 +1,87 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.notify-icon {
+  padding: 0 20px;
+}
+
+.avatar-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.sidebar-logo {
+  height: 30px;
+}
+
+.icon-btn {
+  background-color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.dialog-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dialog-title p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.dialog-title p span {
+  color: #8d8787;
+}
+
+.sms {
+  font-size: 16px;
+}
+
+.newMessages {
+  padding-left: 20px;
+  text-decoration: underline;
+}
+
+.sms-btn {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #0744d3;
+  display: block;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  width: 150px;
+  padding: 10px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.span-box {
+  height: 10px;
+  width: 10px;
+  background-color: #0744d3;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.jane {
+  width: 30px;
+  height: 30px;
+}
+
+.notify-btn {
+  width: 165px;
+}

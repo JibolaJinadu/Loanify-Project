@@ -3,10 +3,10 @@ import Toolbar from '@mui/material/Toolbar';
 import Sidebar from '../components/Sidebar';
 import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Link from '@mui/material/Link';
 import SettingsTabs from '../settings/SettingsTabs';
-import { Link } from 'react-router-dom';
 
-export default function Settings() {
+export default function DashBoard() {
   function handleClick(event) {
     event.preventDefault();
     console.info('You clicked a breadcrumb.');
@@ -26,16 +26,10 @@ export default function Settings() {
                 padding: '10px 5px',
               }}
             >
-              <Link underline="hover" color="inherit" to="/dashboard">
-                Home
-              </Link>
-              <Link underline="hover" color="inherit" to="/settings">
-                Settings
-              </Link>
-              <Typography color="text.primary">General</Typography>
+              <Typography sx={{ fontSize: '' }}>Overview of Loans</Typography>
             </Breadcrumbs>
           </div>
-          <SettingsTabs />
+          <h1>Dashboard</h1>
         </Box>
       </Box>
     </div>

@@ -108,7 +108,7 @@ function ResetPassword() {
                 value={email}
                 variant="standard"
                 onChange={handleEmailChange}
-                placeholder="Email"
+                placeholder="Email address"
                 className="input"
                 InputProps={{
                   disableUnderline: true,
