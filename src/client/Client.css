@@ -1,0 +1,29 @@
+/* Client CSS */
+#clients {
+  width: 100%;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  height: 100%;
+}
+
+#client-title {
+  border-collapse: collapse;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  font-size: 16px;
+  font-weight: 700; 
+}
+
+#client-data {
+  border-collapse: collapse;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-weight: 700; 
+}
+
+#clients-color {
+  color: green;
+}
+
