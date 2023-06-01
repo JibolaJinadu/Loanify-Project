@@ -16,17 +16,19 @@ a {
 }
 
 .login img {
-  height: 100%;
-  flex: 0 0 25%;
-  object-fit: cover;
-  object-position: center;
+  flex: 0 0 30%;
 }
 
 .form-wrapper {
   height: 100%;
-  padding: 20px 50px;
-  flex: 0 0 75%;
-  background-color: #dcf3e7;
+  padding: 20px 90px;
+  flex: 0 0 70%;
+  background-color: #f0f4fc;
+}
+
+.form-wrapper img {
+  margin-top: 20px;
+  height: 30px;
 }
 
 .form {
@@ -37,18 +39,14 @@ a {
   align-items: center;
 }
 
-.form-wrapper img {
-  height: 50px;
-}
-
 .form-group {
-  width: 60%;
+  width: 50%;
 }
 
 .form-group input {
   width: 100%;
-  padding: 12px 10px;
   margin-top: 20px;
+  padding: 15px 10px;
   font-size: 16px;
   font-weight: 500;
   border: none;
@@ -60,15 +58,10 @@ a {
   -o-border-radius: 8px;
 }
 
-button {
-  padding: 12px 0;
-  width: 100%;
-}
-
 .pass {
   color: #010e2a;
   font-style: italic;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   margin-top: 5px;
   text-align: right;
@@ -92,17 +85,19 @@ button {
   font-size: 18px;
   font-weight: 700;
   margin-top: 20px;
+  width: 100%;
+  padding: 15px 0;
 }
 
 .sign {
   color: #0744d3;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 700;
 }
 
 .team {
   color: #717070;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 700;
   text-align: center;
   margin-top: 20px;
@@ -110,14 +105,20 @@ button {
 
 .title {
   font-size: 28px;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 10px;
+}
+
+.login-password {
+  margin-left: -30px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 @media (max-width: 768px) {
   .login {
     flex-direction: column;
-    background-color: #dcf3e7;
+    background-color: #f0f4fc;
   }
 
   .form-wrapper {

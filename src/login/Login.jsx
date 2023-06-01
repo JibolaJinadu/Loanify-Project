@@ -3,6 +3,7 @@ import './login.css';
 import businessGuy from './img/business guy.png';
 import logo from './img/LOANIFY logo.svg';
 import { Link, useNavigate } from 'react-router-dom';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -14,6 +15,11 @@ function Login() {
     username: '',
     password: '',
   });
+
+  const [showPassword, setShowPassword] = useState(false);
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   const navigate = useNavigate();
 
@@ -35,7 +41,7 @@ function Login() {
     }
 
     if (isValid) {
-      navigate('/token');
+      navigate('/verification');
     }
   }
   return (
@@ -58,6 +64,12 @@ function Login() {
                     ...errors,
                     username: 'Please enter your username',
                   });
+                } else if (!event.target.value.match(/^[A-Za-z]+$/)) {
+                  setErrors({
+                    ...errors,
+                    username:
+                      'Please enter a username containing only letters.',
+                  });
                 } else {
                   setErrors({
                     ...errors,
@@ -74,7 +86,7 @@ function Login() {
           </div>
           <div className="form-group">
             <input
-              type="password"
+              type={showPassword ? 'text' : 'password'}
               placeholder="Password"
               className="form-input"
               value={formData.password}
@@ -98,6 +110,9 @@ function Login() {
                 }
               }}
             />
+            <span className="login-password" onClick={togglePasswordVisibility}>
+              {showPassword ? <VisibilityOff /> : <Visibility />}
+            </span>
             {errors.password && (
               <span style={{ color: 'red', fontSize: '12px' }}>
                 {errors.password}
