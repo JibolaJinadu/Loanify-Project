@@ -7,9 +7,16 @@ import Home from './home/Home';
 import SignUp from './signUp/SignUp';
 import EmailSent from './signUp/EmailSent';
 
+// import OverviewPage from "./overview/OverviewPage";
+// import SupportPage from "./support/SupportPage";
+
+
 function App() {
   return (
     <>
+      {/* <OverviewPage/> */}
+      {/* <SupportPage/> */}
+
       <Router>
         <Routes>
           <Route path="/" element={<Home />}></Route>
