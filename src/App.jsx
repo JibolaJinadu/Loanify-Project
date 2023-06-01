@@ -6,6 +6,7 @@ import Token from './tokenAuth/Token';
 import Home from './home/Home';
 import SignUp from './signUp/SignUp';
 import EmailSent from './signUp/EmailSent';
+import Loan from './loan/Loan'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/reset-password" element={<ResetPassword />}></Route>
           <Route path="/settings" element={<Settings />}></Route>
           <Route path="/token" element={<Token />}></Route>
+          <Route path="/loan" element={<Loan />}></Route>
         </Routes>
       </Router>
     </>

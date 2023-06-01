@@ -1,0 +1,36 @@
+.search {
+    width: 320px;
+    height: 40px;
+    border: 1px solid #bfbfbf;
+    border-radius: 0.5rem;
+    padding: 10px;
+    margin: 20px 50px;
+}
+.filter {
+    height: 40px;
+    border: 1px solid #bfbfbf;
+    border-radius: 0.5rem;
+    padding: 10px;
+    margin-top: 20px;
+}
+.print {
+    width: 100px;
+    height: 40px;
+    font-size: small;
+    background-color: white;
+    color: black;
+    border: 1px solid #bfbfbf;
+    margin-top: 20px;
+}
+.export-data {
+    width: 100px;
+    height: 40px;
+    font-size: small;
+    background-color: #0744d3;
+    margin-top: 20px;
+    margin-right: 40px;
+    
+}
+.loan-header {
+    display: flex;
+}
