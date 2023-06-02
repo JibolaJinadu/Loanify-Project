@@ -13,97 +13,105 @@ body {
 }
 
 .left-div {
-  flex: 0 0 25%;
+  flex: 0 0 30%;
   background-image: url('./Assets/business guy.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
 .right-div {
-  flex: 0 0 75%;
-  background-color: #dcf3e7;
+  flex: 0 0 70%;
+  background-color: #f0f4fc;
   position: relative;
 }
 
 .rd-container-1 {
   position: absolute;
-  top: 2%;
-  left: 8%;
-  width: 10vw;
-  height: 9vh;
+  top: 5%;
+  left: 9.5%;
+  height: 30px;
 }
 
 .rd-container-2 {
   position: absolute;
-  top: 9%;
+  top: 14%;
   left: 40%;
   font-size: 28px;
-  font-weight: 800;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .rd-container-3 {
   position: absolute;
-  top: 15%;
-  left: 15%;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 
 .rd-container-4 {
   position: absolute;
   left: 38%;
   margin-top: 0;
-  font-size: 11px;
+  font-size: 13px;
+  font-weight: 700;
   color: #717070;
 }
 
 .signup-form {
-  padding: 13px 0;
+  padding: 15px 0;
   border-radius: 5px;
   border: none;
-}
-
-.signUp-label {
-  font-size: 12px;
-  font-weight: 400;
-  display: block;
+  width: 50vw;
 }
 
 .signUp-input {
-  padding: 10px;
-  width: 45vw;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-top: 5px;
-  padding-left: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 10px;
+  width: 100%;
+  border: none;
   outline: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
 .field {
-  margin-bottom: 14px;
+  margin-bottom: 15px;
 }
 
 .errorfield {
   color: red;
   display: block;
-  font-size: 10px;
+  font-size: 12px;
 }
 
-button {
+.btn-submit {
+  padding: 15px 10px;
   background-color: #010e2a;
   color: white;
   font-size: 18px;
   font-weight: 700;
-  width: 29vw;
-  height: 6vh;
+  width: 75%;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  margin: 0 0 0 20%;
-  display: block;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
 ::placeholder {
-  font-size: 11px;
-  color: gray;
+  font-size: 14px;
+  font-weight: 700;
+  color: #717070;
 }
 
 .password-input-container {
@@ -119,27 +127,36 @@ button {
 }
 
 .password-input {
-  padding: 10px;
-  width: 45vw;
+  padding: 12px 10px;
+  width: 100%;
+}
+
+.signup-field {
+  display: flex;
+  justify-content: center;
 }
 
 .button-2 {
   background-color: #010e2a;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
-  width: 33vw;
-  padding: 10px;
+  width: 30vw;
+  padding: 15px 10px;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
-  margin: 20px 40px;
+  margin: 20px 60px;
   display: block;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
 .sent {
   font-size: 28px;
-  font-weight: 800;
+  font-weight: 700;
   padding-bottom: 20px;
 }
 
@@ -172,4 +189,8 @@ button {
   color: #0744d3;
   font-weight: 700;
   font-size: 13px;
+}
+
+.css-1aa5qj0-MuiInputBase-root-MuiInput-root {
+  width: 100%;
 }
