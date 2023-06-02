@@ -8,6 +8,7 @@ import EmailSent from './signUp/EmailSent';
 import Dashboard from './dashboard/DashBoard';
 import Settings from './settings/Settings';
 import SupportPage from './support/SupportPage';
+import Client from './client/Client';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/verification" element={<Token />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/support" element={<SupportPage />}></Route>
+          <Route path="/clients" element={<Client />}></Route>
         </Routes>
       </Router>
     </>

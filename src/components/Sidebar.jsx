@@ -57,6 +57,7 @@ export default function Sidebar() {
     {
       list: 'Clients',
       icon: clients,
+      path: '/clients',
     },
     {
       list: 'Settings',

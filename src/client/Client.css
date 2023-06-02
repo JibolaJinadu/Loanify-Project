@@ -1,0 +1,63 @@
+/* Client CSS */
+.client-info {
+  margin: 0 20px;
+}
+
+#clients {
+  width: 100%;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  height: 100%;
+}
+
+#client-title {
+  border-collapse: collapse;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#client-data {
+  border-collapse: collapse;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#clients-color {
+  color: green;
+}
+
+.p-10 {
+  padding: 10px 0;
+}
+
+.search-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #000;
+  width: 400px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  width: 90%;
+}

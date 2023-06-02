@@ -8,6 +8,7 @@ import { useTheme } from '@mui/material/styles';
 import Security from '../security/Security';
 import UserPermission from '../permission/UserPermission';
 import General from '../general/General';
+import Notification from '../notification/Notification';
 
 export default function SettingsTabs() {
   const theme = useTheme();
@@ -108,7 +109,9 @@ export default function SettingsTabs() {
         </Typography>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <Typography>Notifications</Typography>
+        <Typography>
+          <Notification />
+        </Typography>
       </TabPanel>
       <TabPanel value={value} index={4}>
         <Typography>
