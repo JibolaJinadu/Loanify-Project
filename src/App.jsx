@@ -7,17 +7,12 @@ import SignUp from './signUp/SignUp';
 import EmailSent from './signUp/EmailSent';
 import Dashboard from './dashboard/DashBoard';
 import Settings from './settings/Settings';
-
-// import OverviewPage from "./overview/OverviewPage";
-// import SupportPage from "./support/SupportPage";
-
+import SupportPage from './support/SupportPage';
 
 function App() {
   return (
     <>
-      {/* <OverviewPage/> */}
       {/* <SupportPage/> */}
-
       <Router>
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -28,6 +23,7 @@ function App() {
           <Route path="/settings" element={<Settings />}></Route>
           <Route path="/verification" element={<Token />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
+          <Route path="/support" element={<SupportPage />}></Route>
         </Routes>
       </Router>
     </>

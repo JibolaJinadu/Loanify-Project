@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import SettingsTabs from '../settings/SettingsTabs';
 import { Link } from 'react-router-dom';
+import '../support/Support.css';
 
 export default function Settings() {
   function handleClick(event) {
@@ -15,7 +16,7 @@ export default function Settings() {
     <div>
       <Box sx={{ display: 'flex' }}>
         <Sidebar />
-        <Box component="main" sx={{ flexGrow: 1 }}>
+        <Box component="main" sx={{ flexGrow: 1, margin: '0 20px' }}>
           <Toolbar />
           <div role="presentation" onClick={handleClick}>
             <Breadcrumbs
@@ -26,13 +27,13 @@ export default function Settings() {
                 padding: '10px 5px',
               }}
             >
-              <Link underline="hover" color="inherit" to="/dashboard">
+              <Link className="breadcrumbs" to="/dashboard">
                 Home
               </Link>
-              <Link underline="hover" color="inherit" to="/settings">
+              <Link className="breadcrumbs" to="/settings">
                 Settings
               </Link>
-              <Typography color="text.primary">General</Typography>
+              <p className="breadcrumbs">General</p>
             </Breadcrumbs>
           </div>
           <SettingsTabs />

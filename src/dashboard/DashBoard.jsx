@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import SettingsTabs from '../settings/SettingsTabs';
+import OverviewPage from '../overview/OverviewPage';
 
 export default function DashBoard() {
   function handleClick(event) {
@@ -13,7 +14,7 @@ export default function DashBoard() {
   }
   return (
     <div>
-      <Box sx={{ display: 'flex' }}>
+      <Box sx={{ display: 'flex', margin: '0 20px' }}>
         <Sidebar />
         <Box component="main" sx={{ flexGrow: 1 }}>
           <Toolbar />
@@ -26,10 +27,14 @@ export default function DashBoard() {
                 padding: '10px 5px',
               }}
             >
-              <Typography sx={{ fontSize: '' }}>Overview of Loans</Typography>
+              <Typography
+                sx={{ fontSize: '18px', fontWeight: '700', color: '#010E2A' }}
+              >
+                Overview of Loans
+              </Typography>
             </Breadcrumbs>
           </div>
-          <h1>Dashboard</h1>
+          <OverviewPage />
         </Box>
       </Box>
     </div>

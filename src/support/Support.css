@@ -1,85 +1,82 @@
-body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
-  }
-
-  /* SUPPORT PAGE */
-.overall{
-    max-width: 75%;
-    margin: 10% 2%;
-
+/* SUPPORT PAGE */
+.overall {
+  width: 76.5vw;
+  margin-left: 20px;
 }
 
-.section-1{
-    background-color: rgb(240,244,252);
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    position: relative;
+.section-1 {
+  background-color: rgb(240, 244, 252);
+  height: 65px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.section-1-p1{
-    font-weight: bold;
+.section-1-p1 {
+  font-weight: 600;
 }
 
-.section-1-button{
-    background-color: rgb(4, 41, 200);
-    color: white;
-    width: 5.5vw;
-    height: 4.5vh;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    position: absolute;
-    left: 90%;
-    top: 42%;
+.section-1-button {
+  background-color: rgb(4, 41, 200);
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 5px 16px;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  border-radius: 8px;
 }
 
-.section-2{
-    background-color: rgb(240,244,252);
-    padding: 1rem 0.5rem 2rem;
-    font-size: 12px;
-    margin-top: 1%;
+.section-2 {
+  background-color: rgb(240, 244, 252);
+  height: 65px;
+  padding: 10px 10px 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 15px;
 }
 
-.section-2-select{
-    max-width: 99%;
-    width: 200vw;
-    outline: none;
-    padding: 5px;
-    border-top: 0.8px solid rgb(189, 186, 186);
-    border-right: 0.8px solid rgb(189, 186, 186);
+.section-2-select {
+  width: 99%;
+  outline: none;
+  padding: 5px;
+  border-top: 0.8px solid rgb(189, 186, 186);
+  border-right: 0.8px solid rgb(189, 186, 186);
 }
 
-.option{
-    padding: 5px;
-    margin-bottom: 20px;
+.option {
+  padding: 5px;
+  margin-bottom: 20px;
 }
 
-.section-3{
-    margin-top: 1%;
-    background-color: rgb(240,244,252);
-    padding: 1rem 0.5rem;
-    font-size: 12px;
+.section-3 {
+  margin-top: 1%;
+  background-color: rgb(240, 244, 252);
+  height: 65px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 15px;
 }
 
-.section-3 .p1{
-    font-weight: bold;
+.section-3 .p1 {
+  font-weight: 600;
 }
 
-.section-4{
-    margin-top: 1%;
-    background-color: rgb(240,244,252);
-    padding: 1rem 0.5rem;
-    font-size: 12px;
-    font-weight: bold;
+.section-4 {
+  background-color: rgb(240, 244, 252);
+  height: 65px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 15px;
 }
-
-
 
 /* CHATBOX PAGE */
 
@@ -128,39 +125,37 @@ body {
   border: none;
   border-radius: 0 5px 5px 0;
 }
- 
 
 /* TOLL-FREE PAGE */
 .toll-free-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 100px;
-  }
-  
-  .toll-free-header {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: white;
-    background-color: rgb(4, 41, 200);
-    padding: 7px;
-    border-radius: 7px;
-  }
-  
-  .toll-free-info {
-    text-align: center;
-  }
-  
-  .toll-free-number {
-    font-size: 36px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-  
-  
-  /* Report Issue Page */
-  .report-issue-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.toll-free-header {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  background-color: rgb(4, 41, 200);
+  padding: 7px;
+  border-radius: 7px;
+}
+
+.toll-free-info {
+  text-align: center;
+}
+
+.toll-free-number {
+  font-size: 36px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Report Issue Page */
+.report-issue-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -197,4 +192,10 @@ body {
   cursor: pointer;
   margin: 0px;
   width: 22.5vw;
+}
+
+.breadcrumbs {
+  font-size: 12px;
+  font-weight: 700;
+  color: #010e2a;
 }

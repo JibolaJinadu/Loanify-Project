@@ -24,7 +24,6 @@ import reports from './assets/reports.svg';
 import settings from './assets/settings.svg';
 import support from './assets/support.svg';
 import avatar from './assets/Avatar.png';
-
 import MessageDialog from './MessageDialog';
 import NotificationDialog from './NotificationDialog';
 
@@ -143,27 +142,36 @@ export default function Sidebar() {
           })}
         </List>
         <List sx={{ backgroundColor: '#04297F', color: 'white' }}>
-          {['Support'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <img
-                  src={support}
-                  alt=""
-                  style={{
-                    paddingLeft: '30px',
-                  }}
-                />
-                <ListItemText
-                  primary={text}
-                  style={{
-                    paddingLeft: '20px',
-                    paddingRight: '10px',
-                    marginTop: '10px',
-                  }}
-                />
-              </ListItemButton>
-            </ListItem>
-          ))}
+          {['Support'].map((text, index) => {
+            const isActive = location.pathname.startsWith('/support');
+            return (
+              <ListItem key={text} disablePadding>
+                <ListItemButton
+                  onClick={() => navigate('/support')}
+                  sx={
+                    isActive
+                      ? { backgroundColor: 'rgba(255, 255, 255, 0.3)' }
+                      : {}
+                  }
+                >
+                  <img
+                    src={support}
+                    alt=""
+                    style={{
+                      paddingLeft: '30px',
+                    }}
+                  />
+                  <ListItemText
+                    primary={text}
+                    style={{
+                      paddingLeft: '20px',
+                      paddingRight: '10px',
+                    }}
+                  />
+                </ListItemButton>
+              </ListItem>
+            );
+          })}
         </List>
       </Drawer>
     </Box>
