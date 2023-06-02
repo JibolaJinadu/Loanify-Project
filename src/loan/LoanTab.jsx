@@ -1,17 +1,21 @@
 import * as React from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
-import Security from '../security/Security';
-import UserPermission from '../permission/UserPermission';
-import General from '../general/General';
-import Notification from '../notification/Notification';
-import Combine from '../profile/combine';
+import AllLoans from '../allLoans/AllLoans';
+import NewApplications from '../applications/NewApplications';
+import Pending from '../pending/Pending';
+import Active from '../active/Active';
+import DueLoan from '../dueLoan/DueLoan';
+import Extended from '../extended/Extended';
+import Defaulted from '../defaulted/Defaulted';
+import Closed from '../closed/Closed';
+import LoanHeader from '../loanHeader/LoanHeader';
 
-export default function SettingsTabs() {
+const LoanTab = () => {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('sm'));
 
@@ -27,6 +31,8 @@ export default function SettingsTabs() {
         bgcolor: 'background.paper',
       }}
     >
+      <LoanHeader />
+
       <Tabs
         value={value}
         onChange={handleChange}
@@ -41,7 +47,7 @@ export default function SettingsTabs() {
         }}
       >
         <Tab
-          label="General"
+          label="All Loans"
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
@@ -52,7 +58,7 @@ export default function SettingsTabs() {
           }}
         />
         <Tab
-          label="Profile"
+          label="New Applications"
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
@@ -63,7 +69,7 @@ export default function SettingsTabs() {
           }}
         />
         <Tab
-          label="User Permissions"
+          label="Pending"
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
@@ -74,7 +80,7 @@ export default function SettingsTabs() {
           }}
         />
         <Tab
-          label="Notifications"
+          label="Active"
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
@@ -85,7 +91,40 @@ export default function SettingsTabs() {
           }}
         />
         <Tab
-          label="Security"
+          label="Due loan"
+          sx={{
+            '&.Mui-selected': {
+              color: '#010E2A',
+            },
+            fontWeight: '700',
+            textTransform: 'none',
+            fontSize: '15px',
+          }}
+        />
+        <Tab
+          label="Extended"
+          sx={{
+            '&.Mui-selected': {
+              color: '#010E2A',
+            },
+            fontWeight: '700',
+            textTransform: 'none',
+            fontSize: '15px',
+          }}
+        />
+        <Tab
+          label="Defaulted"
+          sx={{
+            '&.Mui-selected': {
+              color: '#010E2A',
+            },
+            fontWeight: '700',
+            textTransform: 'none',
+            fontSize: '15px',
+          }}
+        />
+        <Tab
+          label="Closed"
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
@@ -98,32 +137,47 @@ export default function SettingsTabs() {
       </Tabs>
       <TabPanel value={value} index={0}>
         <Typography>
-          <General />
+          <AllLoans />
         </Typography>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <Typography>
-          <Combine />
+          <NewApplications />
         </Typography>
       </TabPanel>
       <TabPanel value={value} index={2}>
         <Typography>
-          <UserPermission />
+          <Pending />
         </Typography>
       </TabPanel>
       <TabPanel value={value} index={3}>
         <Typography>
-          <Notification />
+          <Active />
         </Typography>
       </TabPanel>
       <TabPanel value={value} index={4}>
         <Typography>
-          <Security />
+          <DueLoan />
+        </Typography>
+      </TabPanel>
+      <TabPanel value={value} index={5}>
+        <Typography>
+          <Extended />
+        </Typography>
+      </TabPanel>
+      <TabPanel value={value} index={6}>
+        <Typography>
+          <Defaulted />
+        </Typography>
+      </TabPanel>
+      <TabPanel value={value} index={7}>
+        <Typography>
+          <Closed />
         </Typography>
       </TabPanel>
     </Box>
   );
-}
+};
 
 function TabPanel(props) {
   const { children, value, index } = props;
@@ -140,3 +194,5 @@ function TabPanel(props) {
     </Typography>
   );
 }
+
+export default LoanTab;

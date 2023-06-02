@@ -3,15 +3,10 @@ import Toolbar from '@mui/material/Toolbar';
 import Sidebar from '../components/Sidebar';
 import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
-import SettingsTabs from '../settings/SettingsTabs';
 import { Link } from 'react-router-dom';
-import '../support/Support.css';
+import LoanTab from './LoanTab';
 
-export default function Settings() {
-  function handleClick(event) {
-    event.preventDefault();
-    console.info('You clicked a breadcrumb.');
-  }
+export default function Loan() {
   return (
     <div>
       <Box sx={{ display: 'flex' }}>
@@ -30,13 +25,10 @@ export default function Settings() {
               <Link className="breadcrumbs" to="/dashboard">
                 Home
               </Link>
-              <Link className="breadcrumbs" to="/settings">
-                Settings
-              </Link>
-              <p className="breadcrumbs">General</p>
+              <p className="breadcrumbs">Loans</p>
             </Breadcrumbs>
           </div>
-          <SettingsTabs />
+          <LoanTab />
         </Box>
       </Box>
     </div>

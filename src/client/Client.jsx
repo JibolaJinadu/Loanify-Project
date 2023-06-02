@@ -32,21 +32,26 @@ const Client = () => {
 
         <div className="client-info">
           <div className="search-wrapper">
-            <div className="search">
-              <SearchIcon />
-              <input
-                type="search"
-                className="search-input"
-                placeholder="search"
-                name=""
-                id=""
-              />
+            <div className="search-box">
+              <div className="search">
+                <SearchIcon />
+                <input
+                  type="search"
+                  className="search-input"
+                  placeholder="search"
+                  name=""
+                  id=""
+                />
+              </div>
+              <div className="search-filter">
+                <button className="btn-filter">filter</button>
+              </div>
             </div>
-            <div className="filter">
-              <button></button>
+
+            <div className="search-print">
+              <button className="btn-print">Print</button>
+              <button className="btn-export">Export Data</button>
             </div>
-            <button>Print</button>
-            <button className="">Export Data</button>
           </div>
           <table id="clients">
             <thead id="client-title">

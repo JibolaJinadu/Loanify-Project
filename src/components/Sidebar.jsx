@@ -41,6 +41,7 @@ export default function Sidebar() {
     {
       list: 'Loans',
       icon: loans,
+      path: '/loans',
     },
     {
       list: 'Profile',

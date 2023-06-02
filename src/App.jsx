@@ -9,6 +9,7 @@ import Dashboard from './dashboard/DashBoard';
 import Settings from './settings/Settings';
 import SupportPage from './support/SupportPage';
 import Client from './client/Client';
+import Loan from './loan/Loan';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
           <Route path="/sign-up" element={<SignUp />}></Route>
           <Route path="/reset-password" element={<ResetPassword />}></Route>
           <Route path="/settings" element={<Settings />}></Route>
+          <Route path="/token" element={<Token />}></Route>
+          <Route path="/loans" element={<Loan />}></Route>
           <Route path="/verification" element={<Token />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/support" element={<SupportPage />}></Route>
