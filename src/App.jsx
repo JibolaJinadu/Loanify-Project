@@ -6,13 +6,18 @@ import Token from './tokenAuth/Token';
 import Home from './home/Home';
 import SignUp from './signUp/SignUp';
 import EmailSent from './signUp/EmailSent';
+// import Notification from './notificationTab/Notification';
+import Message from './message/Message';
 
 function App() {
   return (
     <>
-      <Router>
+  
+    
+      <Router> 
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<Message />}></Route>
+          {/* <Route path="/" element={<Home />}></Route> */}
           <Route path="/login" element={<Login />}></Route>
           <Route path="/email-sent" element={<EmailSent />}></Route>
           <Route path="/sign-up" element={<SignUp />}></Route>
