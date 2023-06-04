@@ -23,9 +23,10 @@ import profile from './assets/profile.svg';
 import reports from './assets/reports.svg';
 import settings from './assets/settings.svg';
 import support from './assets/support.svg';
-import avatar from './assets/Avatar.png';
 import MessageDialog from './MessageDialog';
 import NotificationDialog from './NotificationDialog';
+import UserDialog from './UserDialog';
+import notification from './assets/notifications.svg';
 
 const drawerWidth = 240;
 
@@ -46,14 +47,22 @@ export default function Sidebar() {
     {
       list: 'Profile',
       icon: profile,
+      path: '/profile',
     },
     {
       list: 'Messages',
       icon: messages,
+      path: '/messages',
+    },
+    {
+      list: 'Notication',
+      icon: notification,
+      path: '/notification',
     },
     {
       list: 'Reports',
       icon: reports,
+      path: '/reports',
     },
     {
       list: 'Clients',
@@ -85,9 +94,7 @@ export default function Sidebar() {
           <div className="navbar">
             <MessageDialog />
             <NotificationDialog />
-            <button className="icon-btn">
-              <img src={avatar} alt="" className="avatar-icon" />
-            </button>
+            <UserDialog />
           </div>
         </Toolbar>
       </AppBar>
@@ -127,7 +134,7 @@ export default function Sidebar() {
                     src={text.icon}
                     alt="Icon"
                     style={{
-                      paddingLeft: '30px',
+                      paddingLeft: '20px',
                     }}
                   />
                   <ListItemText
@@ -135,7 +142,9 @@ export default function Sidebar() {
                     style={{
                       paddingLeft: '20px',
                       paddingRight: '10px',
-                      marginTop: '10px',
+                      marginTop: '5px',
+                      fontSize: '16px',
+                      fontWeight: '400',
                     }}
                   />
                 </ListItemButton>
@@ -160,7 +169,7 @@ export default function Sidebar() {
                     src={support}
                     alt=""
                     style={{
-                      paddingLeft: '30px',
+                      paddingLeft: '20px',
                     }}
                   />
                   <ListItemText
@@ -168,6 +177,8 @@ export default function Sidebar() {
                     style={{
                       paddingLeft: '20px',
                       paddingRight: '10px',
+                      fontSize: '16px',
+                      fontWeight: '400',
                     }}
                   />
                 </ListItemButton>

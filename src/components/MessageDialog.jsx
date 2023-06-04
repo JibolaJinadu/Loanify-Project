@@ -26,7 +26,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialog-paper': {
     position: 'fixed',
     top: 50,
-    right: 100,
+    right: 150,
     margin: 0,
     borderRadius: 10,
   },

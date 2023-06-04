@@ -11,9 +11,9 @@ import ListItem from '@mui/material/ListItem';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
+import avatar from './assets/Avatar.png';
 import { Link } from 'react-router-dom';
 import jane from './assets/jane.png';
-import notification from './assets/bell.svg';
 import './sidebar.css';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -26,7 +26,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialog-paper': {
     position: 'fixed',
     top: 50,
-    right: 120,
+    right: 70,
     margin: 0,
     borderRadius: 10,
   },
@@ -61,7 +61,7 @@ BootstrapDialogTitle.propTypes = {
   onClose: PropTypes.func.isRequired,
 };
 
-export default function NotificationDialog() {
+export default function UserDialog() {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -74,7 +74,7 @@ export default function NotificationDialog() {
   return (
     <div>
       <button className="icon-btn" onClick={handleClickOpen}>
-        <img src={notification} className="notify-icon" alt="" />
+        <img src={avatar} alt="" style={{ height: '30px' }} />
       </button>
       <BootstrapDialog
         onClose={handleClose}
@@ -84,34 +84,37 @@ export default function NotificationDialog() {
         <BootstrapDialogTitle
           id="customized-dialog-title"
           onClose={handleClose}
-        >
-          <h1 className="sms">Notifications</h1>
-        </BootstrapDialogTitle>
-        <h4 className="newMessages">New</h4>
+        ></BootstrapDialogTitle>
         <List>
           <ListItem>
-            <div className="dialog-box">
-              <img src={jane} alt="" className="jane" />
-              <p>Jane Doe applied for a loan extension </p>
-              <div className="span-box">&nbsp;</div>
-            </div>
-          </ListItem>
-          <ListItem>
-            <div className="dialog-box">
-              <img src={jane} alt="" className="jane" />
-              <p>Jane Doe applied for a loan extension </p>
-              <div className="span-box">&nbsp;</div>
-            </div>
-          </ListItem>
-          <ListItem>
-            <div className="dialog-box">
-              <img src={jane} alt="" className="jane" />
-              <p>Jane Doe applied for a loan extension </p>
-              <div className="span-box">&nbsp;</div>
-            </div>
+            <ul className="user-lists">
+              <li>
+                <Link className="user-link">Online</Link>
+              </li>
+              <li>
+                <Link className="user-link">On Break</Link>
+              </li>
+              <li>
+                <Link className="user-link">Offline</Link>
+              </li>
+              <li>
+                <Link className="user-link" to="/profile">
+                  View Profile
+                </Link>
+              </li>
+              <li>
+                <Link className="user-link" to="/settings">
+                  Profile Settings
+                </Link>
+              </li>
+              <li>
+                <Link className="user-link logout" to="/login">
+                  Log Out
+                </Link>
+              </li>
+            </ul>
           </ListItem>
         </List>
-        <Link className="sms-btn notify-btn">View all Notifications</Link>
       </BootstrapDialog>
     </div>
   );

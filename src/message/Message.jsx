@@ -3,16 +3,14 @@ import Toolbar from '@mui/material/Toolbar';
 import Sidebar from '../components/Sidebar';
 import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
-import SettingsTabs from '../settings/SettingsTabs';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Link } from 'react-router-dom';
-import '../support/Support.css';
+import './Message.css';
+import { data } from './Data';
 
-export default function Settings() {
-  function handleClick(event) {
-    event.preventDefault();
-    console.info('You clicked a breadcrumb.');
-  }
+console.log(data);
+
+export default function Message() {
   return (
     <div>
       <Box sx={{ display: 'flex' }}>
@@ -21,8 +19,8 @@ export default function Settings() {
           <Toolbar />
           <div role="presentation">
             <Breadcrumbs
-              separator={<ChevronRightIcon />}
               aria-label="breadcrumb"
+              separator={<ChevronRightIcon />}
               sx={{
                 backgroundColor: '#F0F4FC',
                 margin: '0 20px 10px',
@@ -32,13 +30,25 @@ export default function Settings() {
               <Link className="breadcrumbs" to="/dashboard">
                 Home
               </Link>
-              <Link className="breadcrumbs" to="/settings">
-                Settings
-              </Link>
-              <p className="breadcrumbs">General</p>
+              <p className="breadcrumbs">All Messages</p>
             </Breadcrumbs>
           </div>
-          <SettingsTabs />
+          <div>
+            {data.map((user) => (
+              <div className="messageWrapper" key={user.id}>
+                <div className="messageBox">
+                  <img src={user.image} alt={user.name} className="" />
+                  <div className="messageTitle">
+                    <h5>{user.name}</h5>
+                    <p>{user.chat}</p>
+                  </div>
+                </div>
+                <div className="">
+                  <p className="time">{user.min}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </Box>
       </Box>
     </div>

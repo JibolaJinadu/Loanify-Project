@@ -4,6 +4,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Sidebar from '../components/Sidebar';
 import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import './Client.css';
 import { Link } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
@@ -16,6 +17,7 @@ const Client = () => {
         <Toolbar />
         <div role="presentation">
           <Breadcrumbs
+            separator={<ChevronRightIcon />}
             aria-label="breadcrumb"
             sx={{
               backgroundColor: '#F0F4FC',

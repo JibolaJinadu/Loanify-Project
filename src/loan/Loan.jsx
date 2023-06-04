@@ -3,6 +3,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Sidebar from '../components/Sidebar';
 import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Link } from 'react-router-dom';
 import LoanTab from './LoanTab';
 
@@ -16,6 +17,7 @@ export default function Loan() {
           <div role="presentation">
             <Breadcrumbs
               aria-label="breadcrumb"
+              separator={<ChevronRightIcon />}
               sx={{
                 backgroundColor: '#F0F4FC',
                 margin: '0 20px 10px',

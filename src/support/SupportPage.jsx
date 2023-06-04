@@ -2,6 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import './Support.css';
 import Sidebar from '../components/Sidebar';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Breadcrumbs, Toolbar, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 
@@ -14,6 +15,7 @@ const SupportPage = () => {
           <Toolbar />
           <div role="presentation">
             <Breadcrumbs
+              separator={<ChevronRightIcon />}
               aria-label="breadcrumb"
               sx={{
                 backgroundColor: '#F0F4FC',
@@ -36,7 +38,9 @@ const SupportPage = () => {
 
               {/* Link to Chatbox */}
               <div>
-                <Link className="section-1-button">Go</Link>
+                <Link to="/support/chat-box" className="section-1-button">
+                  Go
+                </Link>
               </div>
             </div>
 
@@ -78,7 +82,7 @@ const SupportPage = () => {
 
             {/* Link to send to complaints */}
             <div className="section-4">
-              <p>Report an issue</p>
+              <Link to="/support/report-issue">Report an issue</Link>
             </div>
           </div>
         </Box>

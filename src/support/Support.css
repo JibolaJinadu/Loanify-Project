@@ -21,7 +21,7 @@
 }
 
 .section-1-button {
-  background-color: rgb(4, 41, 200);
+  background-color: #0744d3;
   color: white;
   text-align: center;
   font-size: 14px;
@@ -120,7 +120,7 @@
 
 .chatbox-input button {
   padding: 5px 10px;
-  background-color: rgb(4, 41, 200);
+  background-color: #0744d3;
   color: white;
   border: none;
   border-radius: 0 5px 5px 0;
@@ -139,7 +139,7 @@
   text-align: center;
   margin-bottom: 20px;
   color: white;
-  background-color: rgb(4, 41, 200);
+  background-color: #0744d3;
   padding: 7px;
   border-radius: 7px;
 }
@@ -186,7 +186,7 @@
 
 .report-issue-submit {
   padding: 10px;
-  background-color: rgb(4, 41, 200);
+  background-color: #0744d3;
   color: white;
   border: none;
   cursor: pointer;
@@ -198,6 +198,7 @@
   font-size: 12px;
   font-weight: 700;
   color: #010e2a;
+  margin-top: 0;
 }
 
 .section-2-select option {
