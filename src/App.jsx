@@ -10,12 +10,12 @@ import Settings from './settings/Settings';
 import SupportPage from './support/SupportPage';
 import Client from './client/Client';
 import Loan from './loan/Loan';
-import ProfileNav from './profile/ProfileNav';
 import NotificationPage from './notificationPage/NotificationPage';
 import Reports from './reports/Reports';
 import Message from './message/Message';
 import ChatBoxPage from './support/ChatBoxPage';
 import ReportIssuePage from './support/ReportIssuePage';
+import ProfileNav from './profile/ProfileNav';
 
 function App() {
   return (
