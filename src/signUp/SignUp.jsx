@@ -4,6 +4,7 @@ import { nanoid } from 'nanoid';
 import logo from './Assets/LOANIFY logo.svg';
 import './sign-up.css';
 import { Link, useNavigate } from 'react-router-dom';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
 
 const INITIAL_STATE = {
   firstName: '',
@@ -62,7 +63,7 @@ const VALIDATION = {
     },
     {
       isValid: (value) => /^\d{11}$/.test(value),
-      message: 'Phone number must be exactly 11 digits.',
+      message: 'Phone number must be 11 digits.',
     },
   ],
   password: [
@@ -153,25 +154,22 @@ const SignUp = () => {
   };
 
   return (
-    <>
+    <section>
       {isSuccess}
       {submitError && <div className="failed">{submitError}</div>}
       <div className="container1">
-        <section className="left-div"></section>
-        <section className="right-div">
+        <div className="left-div"></div>
+        <div className="right-div">
           <img src={logo} alt="logo" className="rd-container-1" />
           <h1 className="rd-container-2">Sign Up</h1>
           <div className="rd-container-3">
             <form className="signup-form" onSubmit={handleSubmit}>
               <div className="field">
-                <label className="signUp-label" htmlFor="firstName">
-                  First Name
-                </label>
                 <input
                   className="signUp-input"
                   id="firstName"
                   type="text"
-                  placeholder="John"
+                  placeholder="First name"
                   value={form.firstName}
                   onChange={handleChange}
                 />
@@ -183,14 +181,11 @@ const SignUp = () => {
               </div>
 
               <div className="field">
-                <label className="signUp-label" htmlFor="lastName">
-                  Last Name
-                </label>
                 <input
                   className="signUp-input"
                   id="lastName"
                   type="text"
-                  placeholder="Doe"
+                  placeholder="Last name"
                   value={form.lastName}
                   onChange={handleChange}
                 />
@@ -202,9 +197,6 @@ const SignUp = () => {
               </div>
 
               <div className="field">
-                <label className="signUp-label" htmlFor="jobRole">
-                  Role
-                </label>
                 <input
                   className="signUp-input"
                   id="jobRole"
@@ -221,14 +213,11 @@ const SignUp = () => {
               </div>
 
               <div className="field">
-                <label className="signUp-label" htmlFor="phoneNo">
-                  Phone Number
-                </label>
                 <input
                   className="signUp-input"
                   id="phoneNo"
                   type="number"
-                  placeholder="08022222222"
+                  placeholder="Phone number"
                   value={form.phoneNo}
                   onChange={handleChange}
                 />
@@ -240,14 +229,11 @@ const SignUp = () => {
               </div>
 
               <div className="field">
-                <label className="signUp-label" htmlFor="email">
-                  Email Address
-                </label>
                 <input
                   className="signUp-input"
                   id="email"
                   type="text"
-                  placeholder="johndoe@gmail.com"
+                  placeholder="Email address"
                   value={form.email}
                   onChange={handleChange}
                 />
@@ -259,14 +245,11 @@ const SignUp = () => {
               </div>
 
               <div className="field">
-                <label className="signUp-label" htmlFor="password">
-                  Password
-                </label>
                 <div className="password-input-container">
                   <input
                     id="password"
                     type={showPassword ? 'text' : 'password'}
-                    placeholder="*********************"
+                    placeholder="Password"
                     value={form.password}
                     onChange={handleChange}
                     className="signUp-input password-input"
@@ -275,7 +258,8 @@ const SignUp = () => {
                     className="password-toggle"
                     onClick={togglePasswordVisibility}
                   >
-                    {showPassword ? 'Hide' : 'Show'}
+                    {/* {showPassword ? 'Hide' : 'Show'} */}
+                    {showPassword ? <VisibilityOff /> : <Visibility />}
                   </span>
                 </div>
                 {errorFields.password?.map((error, index) => (
@@ -284,8 +268,11 @@ const SignUp = () => {
                   </span>
                 ))}
               </div>
-
-              <button type="submit">Submit</button>
+              <div className="signup-field">
+                <button className="btn-submit" type="submit">
+                  Submit
+                </button>
+              </div>
             </form>
             <p className="rd-container-4">
               {' '}
@@ -295,9 +282,9 @@ const SignUp = () => {
               </Link>
             </p>
           </div>
-        </section>
+        </div>
       </div>
-    </>
+    </section>
   );
 };
 

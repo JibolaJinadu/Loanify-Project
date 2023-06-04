@@ -1,0 +1,15 @@
+.loan-container {
+    padding: 20px 50px;
+}
+#loan {
+    width: 100%;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    height: 100%;
+}
+thead {
+    border: 1px solid #bfbfbf;
+}
+input[type='checkbox'] {
+    accent-color: #010e2a;
+}

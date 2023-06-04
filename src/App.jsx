@@ -6,15 +6,19 @@ import Token from './tokenAuth/Token';
 import Home from './home/Home';
 import SignUp from './signUp/SignUp';
 import EmailSent from './signUp/EmailSent';
+import Loan from './loan/Loan';
+import ProfileNav from './Profile/ProfileNav';
+
+// import OverviewPage from "./overview/OverviewPage";
+// import SupportPage from "./support/SupportPage";
+
 // import Notification from './notificationTab/Notification';
 import Message from './message/Message';
 
 function App() {
   return (
     <>
-  
-    
-      <Router> 
+      <Router>
         <Routes>
           <Route path="/" element={<Message />}></Route>
           {/* <Route path="/" element={<Home />}></Route> */}
@@ -23,7 +27,7 @@ function App() {
           <Route path="/sign-up" element={<SignUp />}></Route>
           <Route path="/reset-password" element={<ResetPassword />}></Route>
           <Route path="/settings" element={<Settings />}></Route>
-          <Route path="/token" element={<Token />}></Route>
+          <Route path="/verification" element={<Token />}></Route>
         </Routes>
       </Router>
     </>
