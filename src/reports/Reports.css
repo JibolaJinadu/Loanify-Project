@@ -13,7 +13,7 @@ body {
 .base {
   border-radius: 8px;
   padding: 8px 15px;
-  border: 2px solid black;
+  border: 1px solid black;
   margin-top: 0;
 }
 .white {
@@ -25,7 +25,7 @@ body {
 .self {
   border-radius: 7px;
   padding: 10px 15px;
-  border: 2px solid #d30744;
+  border: 1px solid #d30744;
 }
 .solo {
   color: #d30744;
@@ -47,7 +47,11 @@ body {
   text-align: center;
   padding: 10px 30px;
   border: none;
-  border-radius: 7px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 .mid {
   display: flex;
@@ -61,7 +65,11 @@ body {
 .sect {
   width: 50%;
   padding: 20px;
-  border-radius: 7px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 .hr {
   border: 1px solid white;
