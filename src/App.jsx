@@ -15,7 +15,7 @@ import Reports from './reports/Reports';
 import Message from './message/Message';
 import ChatBoxPage from './support/ChatBoxPage';
 import ReportIssuePage from './support/ReportIssuePage';
-import ProfilePage from './profile/ProfilePage';
+import ProfilePage from './profile/ProfilePage.jsx';
 
 function App() {
   return (
