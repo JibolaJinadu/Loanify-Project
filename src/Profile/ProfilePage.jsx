@@ -11,7 +11,7 @@ import ProfilePercentage from './ProfilePercentage';
 import ProfileTable from './ProfileTable';
 import './profile.css';
 
-function ProfileNav() {
+function ProfilePage() {
   return (
     <Box sx={{ display: 'flex', margin: '0 40px' }}>
       <Sidebar />
@@ -41,4 +41,4 @@ function ProfileNav() {
     </Box>
   );
 }
-export default ProfileNav;
+export default ProfilePage;
