@@ -15,7 +15,7 @@ import Reports from './reports/Reports';
 import Message from './message/Message';
 import ChatBoxPage from './support/ChatBoxPage';
 import ReportIssuePage from './support/ReportIssuePage';
-import ProfilePage from './profile/ProfilePage.jsx';
+// import ProfilePage from './profile/ProfilePage.jsx';
 
 function App() {
   return (
@@ -34,7 +34,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/support" element={<SupportPage />}></Route>
           <Route path="/clients" element={<Client />}></Route>
-          <Route path="/profile" element={<ProfilePage />}></Route>
+          {/* <Route path="/profile" element={<ProfilePage />}></Route> */}
           <Route path="/reports" element={<Reports />}></Route>
           <Route path="/notification" element={<NotificationPage />}></Route>
           <Route path="/messages" element={<Message />}></Route>
