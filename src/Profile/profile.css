@@ -1,187 +1,197 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    max-width: 60rem;
-    margin: auto;
-}
-.profileNavWrapper ul{
-    display: flex;
-    margin-top: 1rem;
-    padding: 1rem;
-    background-color: #f0f4fc;
-}
-.profileNavWrapper ul li{
-    list-style-type: none;
-}
-.profileNavWrapper .angleRight{
-    padding: 0 1rem;
+.profileNavWrapper {
+  width: 75vw;
 }
 
-.profileLoanWrapper{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-    
+.profileNavWrapper ul {
+  display: flex;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f0f4fc;
 }
-.loanOfficerDetails{
-    display: flex;
+.profileNavWrapper ul li {
+  list-style-type: none;
 }
-.loanOfficerDetails img{
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%;
+.profileNavWrapper .angleRight {
+  padding: 0 1rem;
 }
 
-.loanOfficerDetails div{
-    padding: 2rem 5rem 0 1rem;
-    background-color: #f0f4fc;
-    margin-left: 2rem;
+.profileLoanWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
 }
-.loanOfficerDetails .active{
-    color: green;
+.loanOfficerDetails {
+  display: flex;
 }
-.profileEditWrapper form{
-    margin-top: 2rem;
-}
-.profileEditWrapper form h3{
-    margin-bottom: 1rem;
-}
-.profileEditWrapper .formInputDiv{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.profileEditWrapper .formInputLabel{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-}
-.profileEditWrapper .formInput{
-    border: 1px solid rgb(219, 218, 218);
-    width: 25rem;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    margin-top: 0.3rem;
-}
-.profilPercentageWrapper{
-    display: flex;
-    margin-top: 3rem;
-}
-.box{
-    width: 14rem;
-    margin-right: 1.5rem;
-    background-color: #f0f4fc;
-    padding: 1rem 0.5rem 0.5rem 1rem;
-}
-.box div{
-    display: flex;
-    justify-content: space-between;
-}
-.box p{
-    color: gray;
-    font-size: 12px;
-}
-.box1{
-    border-bottom: 4px solid rgb(70, 70, 235);
-}
-.box1Percentage div,p{
-    margin-top: 0.5rem;
-}
-.box .angleUp{
-    color: rgb(70, 70, 235);
-    font-size: 12px;
-    margin-right: 2px;
-    margin-top: 3px;
-}
-.box1 .borderFilled{
-    margin-top: 0.5rem;
-    color: black;
-    border: 2px solid rgb(70, 70, 235);
-    border-radius: 50%;
-    padding: 2px;
-}
-.box2{
-    border-bottom: 4px solid rgb(11, 168, 11);
-}
-.box2Percentage div,p{
-    margin-top: 0.5rem;
-}
-.box2 .angleDown{
-    color: rgb(11, 168, 11);
-    font-size: 12px;
-    margin-right: 2px;
-    margin-top: 3px;
-}
-.box2 .borderFilled{
-    margin-top: 0.5rem;
-    color: black;
-    border: 2px solid rgb(11, 168, 11);
-    border-radius: 50%;
-    padding: 2px;
-}
-.box3{
-    border-bottom: 4px solid orange;
-}
-.box3Percentage div,p{
-    margin-top: 0.5rem;
-}
-.box3 .angleDown{
-    color: orange;
-    font-size: 12px;
-    margin-right: 2px;
-    margin-top: 3px;
-}
-.box3 .borderFilled{
-    margin-top: 0.5rem;
-    color: black;
-    border: 2px solid orange;
-    border-radius: 50%;
-    padding: 2px;
-}
-.box4{
-    border-bottom: 4px solid rgb(211, 32, 32);
-}
-.box4Percentage div,p{
-    margin-top: 0.5rem;
-}
-.box4 .angleDown{
-    color: rgb(211, 32, 32);
-    font-size: 12px;
-    margin-right: 2px;
-    margin-top: 3px;
-}
-.box4 .borderFilled{
-    margin-top: 0.5rem;
-    color: black;
-    border: 2px solid rgb(211, 32, 32);
-    border-radius: 50%;
-    padding: 2px;
+.loanOfficerDetails img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
 }
 
-.profileTableWrapper{
-    margin-top: 1rem;
+.loanOfficerDetails div {
+  width: 400px;
+  padding: 25px;
+  background-color: #f0f4fc;
+  margin-left: 2rem;
 }
-.profileTableHeader{
-    text-decoration: underline;
+.loanOfficerDetails .active {
+  color: green;
 }
-.profileTableWrapper table{
-    margin-top: 1rem;
-    width: 100%;
-    border-collapse: collapse;
-       
+.profileEditWrapper form {
+  margin-top: 2rem;
 }
-.profileTableWrapper table .tableHead{
-    border: 2px solid black;
-    padding: 0.5rem;
+.profileEditWrapper form h3 {
+  margin-bottom: 1rem;
 }
-.profileTableWrapper table th{
-    text-align: left;
-    padding: 0.5rem;
+.profileEditWrapper .formInputDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.profileTableWrapper table td{
-    text-align: left;
-    padding: 0.5rem;
+.profileEditWrapper .formInputLabel {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.profileEditWrapper .formInput {
+  border: 1px solid rgb(219, 218, 218);
+  width: 25rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-top: 0.3rem;
+}
+.profilPercentageWrapper {
+  width: 100%;
+  display: flex;
+  margin-top: 3rem;
+}
+.box {
+  width: 14rem;
+  margin-right: 1.5rem;
+  background-color: #f0f4fc;
+  padding: 1rem 0.5rem 0.5rem 1rem;
+}
+.box div {
+  display: flex;
+  justify-content: space-between;
+}
+.box p {
+  color: gray;
+  font-size: 12px;
+}
+.box1 {
+  border-bottom: 4px solid rgb(70, 70, 235);
+}
+.box1Percentage div,
+p {
+  margin-top: 0.5rem;
+}
+.box .angleUp {
+  color: rgb(70, 70, 235);
+  font-size: 12px;
+  margin-right: 2px;
+  margin-top: 3px;
+}
+.box1 .borderFilled {
+  margin-top: 0.5rem;
+  color: black;
+  border: 2px solid rgb(70, 70, 235);
+  border-radius: 50%;
+  padding: 2px;
+}
+.box2 {
+  border-bottom: 4px solid rgb(11, 168, 11);
+}
+.box2Percentage div,
+p {
+  margin-top: 0.5rem;
+}
+.box2 .angleDown {
+  color: rgb(11, 168, 11);
+  font-size: 12px;
+  margin-right: 2px;
+  margin-top: 3px;
+}
+.box2 .borderFilled {
+  margin-top: 0.5rem;
+  color: black;
+  border: 2px solid rgb(11, 168, 11);
+  border-radius: 50%;
+  padding: 2px;
+}
+.box3 {
+  border-bottom: 4px solid orange;
+}
+.box3Percentage div,
+p {
+  margin-top: 0.5rem;
+}
+.box3 .angleDown {
+  color: orange;
+  font-size: 12px;
+  margin-right: 2px;
+  margin-top: 3px;
+}
+.box3 .borderFilled {
+  margin-top: 0.5rem;
+  color: black;
+  border: 2px solid orange;
+  border-radius: 50%;
+  padding: 2px;
+}
+.box4 {
+  border-bottom: 4px solid rgb(211, 32, 32);
+}
+.box4Percentage div,
+p {
+  margin-top: 0.5rem;
+}
+.box4 .angleDown {
+  color: rgb(211, 32, 32);
+  font-size: 12px;
+  margin-right: 2px;
+  margin-top: 3px;
+}
+.box4 .borderFilled {
+  margin-top: 0.5rem;
+  color: black;
+  border: 2px solid rgb(211, 32, 32);
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.profileTableWrapper {
+  margin-top: 1rem;
+}
+.profileTableHeader {
+  text-decoration: underline;
+}
+.profileTableWrapper table {
+  margin-top: 1rem;
+  width: 100%;
+  border-collapse: collapse;
+}
+.profileTableWrapper table .tableHead {
+  border: 2px solid black;
+  padding: 0.5rem;
+}
+.profileTableWrapper table th {
+  text-align: left;
+  padding: 0.5rem;
+}
+.profileTableWrapper table td {
+  text-align: left;
+  padding: 0.5rem;
+}
+
+.profile-name {
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.profile-sub {
+  font-size: 16px;
+  font-weight: 500;
 }

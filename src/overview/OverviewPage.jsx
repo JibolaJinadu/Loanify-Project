@@ -1,7 +1,6 @@
-import React from 'react'
-import './Overview.css'
+import React from 'react';
+import './Overview.css';
 import Chart from './PieChart';
-
 
 const OverviewPage = () => {
   return (
@@ -47,7 +46,7 @@ const OverviewPage = () => {
             </div>
           </div>
 
-          <div className="overview-row1">
+          <div className="overview-row1 pb-50">
             <div className="row-item5">
               <div className="item-left">
                 <p className="upper-text">Due Loans</p>
@@ -87,29 +86,32 @@ const OverviewPage = () => {
           </div>
         </div>
 
-
         <div className="overview-2">
           <div className="pie-header"> Loan Application Chart</div>
-          <div className='pie-label-container'>
-            <div><Chart/></div>
-            <div className='chart-label'>
+          <div className="pie-label-container">
+            <div>
+              <Chart />
+            </div>
+            <div className="chart-label">
               <div>
-                <div className='new-application label-tabs'>New Application</div>
-                <div className='approved-loans label-tabs2'>Approved Loans</div>
-                <div className='declined-loans label-tabs3'>Declined Loans</div>
-                <div className='defaulted-loans label-tabs4'>Defaulted Loans</div>
+                <div className="new-application label-tabs">
+                  New Application
+                </div>
+                <div className="approved-loans label-tabs2">Approved Loans</div>
+                <div className="declined-loans label-tabs3">Declined Loans</div>
+                <div className="defaulted-loans label-tabs4">
+                  Defaulted Loans
+                </div>
               </div>
               <div>
-                <div className='label-percentage'>15%</div>
-                <div className='label-percentage'>50%</div>
-                <div className='label-percentage'>20%</div>
-                <div className='label-percentage'>15%</div>
+                <div className="label-percentage">15%</div>
+                <div className="label-percentage">50%</div>
+                <div className="label-percentage">20%</div>
+                <div className="label-percentage">15%</div>
               </div>
             </div>
           </div>
         </div>
-
-
 
         <div className="overview-3"></div>
         <div className="overview-4"></div>

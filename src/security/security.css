@@ -1,15 +1,11 @@
-.settings {
-  padding: 20px 50px;
-}
-
 .card {
-  height: 80px;
-  padding: 0 20px;
+  height: 72px;
+  padding: 0 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #f0f4fc;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .text-holder h4 {
@@ -28,7 +24,7 @@
   text-align: center;
   font-size: 14px;
   font-weight: 400;
-  padding: 7px 16px;
+  padding: 5px 16px;
   text-decoration: none;
   border-radius: 8px;
 }
@@ -78,23 +74,32 @@
   bottom: 0;
   background: #3969dc;
   transition: 0.3s;
-  border-radius: 30px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
 .toggle label span:before {
   position: absolute;
-  content: '';
+  content: '\039f';
   height: 25px;
   width: 25px;
   left: 3px;
   bottom: 2.6px;
   background-color: #fff;
-  border-radius: 50%;
+  color: #000;
   transition: 0.3s;
+  border-radius: 8%;
+  -webkit-border-radius: 8%;
+  -moz-border-radius: 8%;
+  -ms-border-radius: 8%;
+  -o-border-radius: 8%;
 }
 
 .toggle label input:checked + span {
-  background-color: #00c853;
+  background-color: blue;
 }
 
 .toggle label input:checked + span:before {

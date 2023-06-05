@@ -1,25 +1,25 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './login/Login';
 import ResetPassword from './passwordReset/ResetPassword';
-import Settings from './settings/Settings';
 import Token from './tokenAuth/Token';
 import Home from './home/Home';
 import SignUp from './signUp/SignUp';
 import EmailSent from './signUp/EmailSent';
+import Dashboard from './dashboard/DashBoard';
+import Settings from './settings/Settings';
+import SupportPage from './support/SupportPage';
+import Client from './client/Client';
 import Loan from './loan/Loan';
-import ProfileNav from './Profile/ProfileNav';
-
-// import OverviewPage from "./overview/OverviewPage";
-// import SupportPage from "./support/SupportPage";
-
+import NotificationPage from './notificationPage/NotificationPage';
+import Reports from './reports/Reports';
+import Message from './message/Message';
+import ChatBoxPage from './support/ChatBoxPage';
+import ReportIssuePage from './support/ReportIssuePage';
+import ProfilePage from './profile/ProfilePage';
 
 function App() {
   return (
     <>
-      {/* <OverviewPage/> */}
-      {/* <SupportPage/> */}
-      <ProfileNav />
-
       <Router>
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -28,7 +28,21 @@ function App() {
           <Route path="/sign-up" element={<SignUp />}></Route>
           <Route path="/reset-password" element={<ResetPassword />}></Route>
           <Route path="/settings" element={<Settings />}></Route>
+          <Route path="/token" element={<Token />}></Route>
+          <Route path="/loans" element={<Loan />}></Route>
           <Route path="/verification" element={<Token />}></Route>
+          <Route path="/dashboard" element={<Dashboard />}></Route>
+          <Route path="/support" element={<SupportPage />}></Route>
+          <Route path="/clients" element={<Client />}></Route>
+          <Route path="/profile" element={<ProfilePage />}></Route>
+          <Route path="/reports" element={<Reports />}></Route>
+          <Route path="/notification" element={<NotificationPage />}></Route>
+          <Route path="/messages" element={<Message />}></Route>
+          <Route path="/support/chat-box" element={<ChatBoxPage />}></Route>
+          <Route
+            path="/support/report-issue"
+            element={<ReportIssuePage />}
+          ></Route>
         </Routes>
       </Router>
     </>

@@ -7,12 +7,12 @@ import { Visibility, VisibilityOff } from '@mui/icons-material';
 
 function Login() {
   const [formData, setFormData] = useState({
-    username: '',
+    email: '',
     password: '',
   });
 
   const [errors, setErrors] = useState({
-    username: '',
+    email: '',
     password: '',
   });
 
@@ -33,9 +33,9 @@ function Login() {
       });
       isValid = false;
     }
-    if (!formData.username) {
+    if (!formData.email) {
       setErrors({
-        username: 'Username is required',
+        email: 'Email is required',
       });
       isValid = false;
     }
@@ -53,34 +53,37 @@ function Login() {
           <h1 className="title">Welcome Back</h1>
           <div className="form-group">
             <input
-              type="text"
-              placeholder="Username"
+              type="email"
+              placeholder="Email address"
               className="form-input"
-              value={formData.username}
+              value={formData.email}
               onChange={(e) => {
-                setFormData({ ...formData, username: e.target.value });
+                setFormData({ ...formData, email: e.target.value });
                 if (e.target.value === '') {
                   setErrors({
                     ...errors,
-                    username: 'Please enter your username',
+                    email: 'Please enter your email address',
                   });
-                } else if (!event.target.value.match(/^[A-Za-z]+$/)) {
+                } else if (
+                  !event.target.value.match(
+                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                  )
+                ) {
                   setErrors({
                     ...errors,
-                    username:
-                      'Please enter a username containing only letters.',
+                    email: 'Please enter a valid email address.',
                   });
                 } else {
                   setErrors({
                     ...errors,
-                    username: '',
+                    email: '',
                   });
                 }
               }}
             />
-            {errors.username && (
+            {errors.email && (
               <span style={{ color: 'red', fontSize: '12px' }}>
-                {errors.username}
+                {errors.email}
               </span>
             )}
           </div>

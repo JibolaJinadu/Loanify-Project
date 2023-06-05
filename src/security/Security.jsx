@@ -15,9 +15,9 @@ function Security() {
           <p>The email address associated with your account.</p>
         </div>
         <div className="btn-holder">
-          <a href="#" className="s-btn btn--blue btn--right">
+          <Link href="#" className="s-btn btn--blue btn--right">
             Edit
-          </a>
+          </Link>
           <p>jamesbond@gmail.com</p>
         </div>
       </div>

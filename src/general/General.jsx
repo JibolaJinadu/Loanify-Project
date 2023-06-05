@@ -9,9 +9,10 @@ export default function General() {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '20px',
-    margin: '15px 0',
-    backgroundColor: 'rgb(240,244,252)',
+    padding: '10px 20px',
+    marginBottom: '15px',
+    height: '65px',
+    backgroundColor: '#F0F4FC',
     textTransform: 'capitalize',
     fontWeight: '600',
   };
@@ -19,23 +20,27 @@ export default function General() {
     display: 'flex',
     padding: '10px 20px',
     flexDirection: 'column',
+    marginBottom: '15px',
     alignItems: 'flex-start',
-    backgroundColor: 'rgb(240,244,252)',
+    backgroundColor: '#F0F4FC',
     textTransform: 'capitalize',
     fontWeight: '600',
   };
 
   return (
-    <div style={{ margin: '20px 50px', height: '40vh', maxWidth: '90vw' }}>
+    <div>
       <div style={tab}>
         <NavbarItem title={'date & time'} />
-        <Button move={'edit'} />
+        {/* <Button move={'edit'} /> */}
+        <a href="#" className="s-btn btn--blue btn--right">
+          Edit
+        </a>
       </div>
 
-      <div style={tab}>
+      {/* <div style={tab}>
         <NavbarItem title={'dark mode'} />
         <Toggle />
-      </div>
+      </div> */}
 
       <div style={tab}>
         <NavbarItem title={'updates'} />
@@ -50,10 +55,10 @@ export default function General() {
         <NavbarItem title={'legal and registory'} />
       </div>
 
-      <div style={tab}>
+      {/* <div style={tab}>
         <NavbarItem title={'sign out'} />
         <Button link={'/login'} move={'signout'} />
-      </div>
+      </div> */}
     </div>
   );
 }
