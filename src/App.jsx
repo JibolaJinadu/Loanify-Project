@@ -4,16 +4,19 @@ import SignUp from './signUp/SignUp';
 import ResetPassword from './passwordReset/ResetPassword';
 import Settings from './settings/Settings';
 import Token from './tokenAuth/Token';
+import Record from './records/record';
 
 
 function App() {
   return (
     <>
-      <Login /> 
+      {/* <Login /> 
       <ResetPassword />
       <SignUp />
       <Token />
-      <Settings />
+      <Settings /> */}
+      <Record />
+      
     </>
   );
 }
