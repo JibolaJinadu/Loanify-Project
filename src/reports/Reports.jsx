@@ -5,6 +5,8 @@ import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Link } from 'react-router-dom';
+import './reports.css';
+import Top from './Top';
 
 function Reports() {
   return (
@@ -29,7 +31,7 @@ function Reports() {
               <p className="breadcrumbs">Reports</p>
             </Breadcrumbs>
           </div>
-          <h1>Reports</h1>
+          <Top />
         </Box>
       </Box>
     </div>
