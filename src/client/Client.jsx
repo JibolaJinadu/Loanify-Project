@@ -59,7 +59,7 @@ const Client = () => {
             <thead id="client-title">
               <tr>
                 <th className="p-10">
-                  <input type="checkBox" disabled></input>
+                  <input type="checkBox"></input>
                 </th>
                 <th className="p-10">Application Number</th>
                 <th className="p-10" id="client-name">
@@ -72,101 +72,101 @@ const Client = () => {
             <tbody id="client-data">
               <tr>
                 <td>
-                  <input type="checkBox" disabled></input>
+                  <input type="checkBox"></input>
                 </td>
                 <td>RRZU9D6BVG</td>
                 <td>Temidayo Adebayo</td>
-                <td id="clients-color">&#x2022; Approved</td>
+                <td id="clients-colorA">&#x2022; Approved</td>
                 <td>20/03/2023</td>
               </tr>
 
               <tr>
                 <td>
-                  <input type="checkBox" disabled></input>
+                  <input type="checkBox"></input>
                 </td>
                 <td>GR45467RBA</td>
                 <td>Justin Jude</td>
-                <td>&#x2022; Declined</td>
+                <td id="clients-colorD">&#x2022; Declined</td>
                 <td>18/03/2023</td>
               </tr>
 
               <tr>
                 <td>
-                  <input type="checkBox" disabled></input>
+                  <input type="checkBox"></input>
                 </td>
                 <td>RRZU9D6BVG</td>
                 <td>Sharon Udoh</td>
-                <td>&#x2022; Pending Review</td>
+                <td id="clients-colorP">&#x2022; Pending Review</td>
                 <td>17/03/2023</td>
               </tr>
 
               <tr>
                 <td>
-                  <input type="checkBox" disabled></input>
+                  <input type="checkBox"></input>
                 </td>
                 <td>GR45467RBA</td>
                 <td>Olufemi Ayo</td>
-                <td>&#x2022; Approved</td>
+                <td id="clients-coloraAP">&#x2022; Approved</td>
                 <td>18/03/2023</td>
               </tr>
 
               <tr>
                 <td>
-                  <input type="checkBox" disabled></input>
+                  <input type="checkBox"></input>
                 </td>
                 <td>RRZU9D6BVG</td>
                 <td>Temidayo Adebayo</td>
-                <td>&#x2022; Approved</td>
+                <td id="clients-colorAP">&#x2022; Approved</td>
                 <td>20/03/2023</td>
               </tr>
 
               <tr>
                 <td>
-                  <input type="checkBox" disabled></input>
+                  <input type="checkBox"></input>
                 </td>
                 <td>GR45467RBA</td>
                 <td>Justin Jude</td>
-                <td>&#x2022; Declined</td>
+                <td id="clients-colorD">&#x2022; Declined</td>
                 <td>18/03/2023</td>
               </tr>
 
               <tr>
                 <td>
-                  <input type="checkBox" disabled></input>
+                  <input type="checkBox"></input>
                 </td>
                 <td>RRZU9D6BVG</td>
                 <td>Sharon Udoh</td>
-                <td>&#x2022; Pending Review</td>
+                <td id="clients-colorP">&#x2022; Pending Review</td>
                 <td>17/03/2023</td>
               </tr>
 
               <tr>
                 <td>
-                  <input type="checkBox" disabled></input>
+                  <input type="checkBox"></input>
                 </td>
                 <td>GR45467RBA</td>
                 <td>Olufemi Ayo</td>
-                <td>&#x2022; Approved</td>
+                <td id="clients-colorAP">&#x2022; Approved</td>
                 <td>18/03/2023</td>
               </tr>
 
               <tr>
                 <td>
-                  <input type="checkBox" disabled></input>
+                  <input type="checkBox"></input>
                 </td>
                 <td>RRZU9D6BVG</td>
                 <td>Temidayo Adebayo</td>
-                <td>&#x2022; Approved</td>
+                <td id="clients-colorAP">&#x2022; Approved</td>
                 <td>20/03/2023</td>
               </tr>
 
               <tr>
                 <td>
-                  <input type="checkBox" disabled></input>
+                  <input type="checkBox"></input>
                 </td>
                 <td>GR45467RBA</td>
                 <td>Justin Jude</td>
-                <td>&#x2022; Declined</td>
+                <td id="clients-colorD">&#x2022; Declined</td>
                 <td>18/03/2023</td>
               </tr>
             </tbody>

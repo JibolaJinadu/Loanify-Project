@@ -27,10 +27,21 @@
   font-weight: 400;
 }
 
-#clients-color {
+#clients-colorA {
   color: green;
 }
 
+#clients-colorD {
+  color: rgba(243, 35, 97, 0.945);
+}
+
+#clients-colorP {
+  color: gold;
+}
+
+#clients-colorAP {
+  color: #7ce612;
+}
 .p-10 {
   padding: 10px 0;
 }
@@ -99,4 +110,104 @@
 .btn-filter {
   width: 200px;
   text-align: left;
+}
+
+/* General Information Styling*/
+.heading {
+  margin: 1rem;
+}
+
+.information-style {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.information-boxes {
+  width: 50%;
+  border:1px solid lightgrey;
+  border-radius: 5px;
+  margin:1rem;
+  padding: 0.3em;
+  font-size: 12px;
+}
+
+.information-box {
+  width:100%;
+  border:1px solid lightgrey;
+  border-radius: 5px;
+  margin:1rem;
+  padding: 0.3em;
+  font-size: 12px;
+}
+
+
+.information-label {
+  font-size: 12px;
+  color: #bfbfbf;
+  margin: 1rem;
+} 
+
+/*Loan Details styling*/
+.loan-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.loan-history {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 0.2rem;
+  border:1px solid lightgrey; 
+  padding-left: 50px;
+}
+
+.percent-border {
+  width:100px;
+  height:15px;
+  margin-top:1.0rem;
+  background-color: rgb(236, 234, 234);
+  border-radius:20px;
+}
+.black-background {
+  background-color: black;
+  text-align: center;
+  width:90px;
+  height:15px;
+  border-radius:15px;
+  color:white;
+}
+.green-background {
+  background-color: rgb(16, 131, 16);
+  margin-top:1.0rem;
+  text-align: center;
+  height:15px;
+  border-radius:15px;
+  color:white;
+  width:100px
+}
+
+.loan-information {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.loan-responses p, 
+.collateral-information p {
+  width: 30%;
+  border:1px solid lightgrey;
+  border-radius: 5px;
+  height: 25px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.collateral-information {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*Document*/
+.file {
+  display: flex;
+  gap: 50;
 }

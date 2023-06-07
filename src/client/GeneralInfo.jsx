@@ -1,202 +1,86 @@
-import React, { useState } from 'react';
-import './GeneralInfo.css';
+import React from 'react';
+import './Client.css';
 
 const GeneralInfo = () => {
-  const [firstName, setFirstName] = useState('');
-  const [middleName, setMiddleName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [gender, setGender] = useState('');
-  const [dateOfBirth, setDateOfBirth] = useState('');
-  const [maritalStatus, setMaritalStatus] = useState('');
-  const [email, setEmail] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [phoneNo, setPhoneNo] = useState('');
-  const [homeAddress, setHomeAddress] = useState('');
-  const [date, setDate] = useState('');
-  const [aviation, setAviation] = useState('');
-  const [profession, setProfession] = useState('');
-  const [mail, setMail] = useState('');
-
-  const handleFirstNameChange = (event) => {
-    setFirstName(event.target.value);
-  };
-  const handleMiddleNameChange = (event) => {
-    setMiddleName(event.target.value);
-  };
-  const handleLastNameChange = (event) => {
-    setLastName(event.target.value);
-  };
-  const handleGenderChange = (event) => {
-    setGender(event.target.value);
-  };
-  const handleDateOfBirthChange = (event) => {
-    setDateOfBirth(event.target.value);
-  };
-  const handleMaritalStatusChange = (event) => {
-    setMaritalStatus(event.target.value);
-  };
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
-  const handlePhoneNumberChange = (event) => {
-    setPhoneNumber(event.target.value);
-  };
-  const handlePhoneNoChange = (event) => {
-    setPhoneNo(event.target.value);
-  };
-  const handleHomeAddressChange = (event) => {
-    setHomeAddress(event.target.value);
-  };
-  const handleDateChange = (event) => {
-    setDate(event.target.value);
-  };
-  const handleAviationChange = (event) => {
-    setAviation(event.target.value);
-  };
-  const handleProfessionChange = (event) => {
-    setProfession(event.target.value);
-  };
-  const handleMailChange = (event) => {
-    setMail(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(
-      'Submitted:',
-      firstName,
-      middleName,
-      lastName,
-      gender,
-      dateOfBirth,
-      maritalStatus,
-      email,
-      phoneNumber,
-      phoneNo,
-      homeAddress,
-      date
-    );
-    setFirstName('');
-    setMiddleName('');
-    setLastName('');
-    setGender('');
-    setDateOfBirth('');
-    setMaritalStatus('');
-    setEmail('');
-    setPhoneNumber('');
-    setPhoneNo('');
-    setHomeAddress('');
-    setDate('');
-    setAviation('');
-    setProfession('');
-    setMail('');
-  };
-
   return (
-    <div>
-      <h5>Personal Information</h5>
-      <form className="personal-information-form" onSubmit={{ handleSubmit }}>
-        <div className="form-settings">
-          <div>
-            <label>
-              <input
-                type="text"
-                value={firstName}
-                placeholder="Temidayo"
-                onChange={handleFirstNameChange}
-              ></input>
-            </label>
-            <label>
-              <select value={gender} onChange={handleGenderChange}>
-                <option value="Female">Female</option>
-                <option value="Male">Male</option>
-              </select>
-            </label>
-            <label>
-              <input
-                type="text"
-                value={email}
-                placeholder="temidayo.bayo@gmail.com"
-                onChange={handleEmailChange}
-                required
-              ></input>
-            </label>
-            <label>
-              <input
-                type="text"
-                value={homeAddress}
-                placeholder="Olowoporoku Close Gbagada Estate,Lagos"
-                onChange={handleHomeAddressChange}
-              />
-            </label>
-          </div>
-          <div>
-            <label>
-              <input
-                type="text"
-                value={middleName}
-                placeholder="Middle Name(optional)"
-                onChange={handleMiddleNameChange}
-              ></input>
-            </label>
-            <label>
-              <input
-                type="text"
-                value={dateOfBirth}
-                placeholder="04/12/1975"
-                onChange={handleDateOfBirthChange}
-              ></input>
-            </label>
-            <label>
-              <input
-                type="text"
-                value={phoneNumber}
-                placeholder="09055555558"
-                onChange={handlePhoneNumberChange}
-              ></input>
-            </label>
-          </div>
-          <div>
-            <label>
-              <input
-                type="text"
-                value={lastName}
-                placeholder="Adebayo"
-                onChange={handleLastNameChange}
-              />
-            </label>
-            <label>
-              <select
-                value={maritalStatus}
-                onChange={handleMaritalStatusChange}
-              >
-                <option value="Married">Married</option>
-                <option value="Single">Single</option>
-                <option value="Divorced">Divorced</option>
-                <option value="Widow">Widow</option>
-              </select>
-            </label>
-            <label>
-              <input
-                type="text"
-                value={phoneNo}
-                placeholder="237569103853"
-                onChange={handlePhoneNoChange}
-              />
-            </label>
-            <label>
-              <input
-                type="text"
-                value={date}
-                placeholder="02/01/2015"
-                onChange={handleDateChange}
-              />
-            </label>
-          </div>
+    <section>
+        <div>
+        <h4 className='heading'>Personal Information</h4>
+        <div className='information-style'>
+            <div>
+                <span className='information-label'>First Name</span>
+                <p className='information-boxes'>Temidayo</p>
+                <span className='information-label'>Sex</span>
+                <p className='information-boxes'>Female</p>
+                <p className='information-label'>Email Address</p>
+                <p className='information-boxes'>temidayo.bayo@gmail.com</p>
+                <p className='information-label'>Address</p>
+                <p className='information-box'>Oloporoku Close, Gbagada Estate, Lagos</p>
+            </div>
+            <div>
+                <p className='information-label'>Middle Name</p>
+                <p className='information-boxes'>Janet</p>
+                <p className='information-label'>Date of Birth</p>
+                <p className='information-boxes'>04/12/1975</p>
+                <p className='information-label'>Phone Number</p>
+                <p className='information-boxes'>09055555558</p>
+            </div>
+            <div>
+                <p className='information-label'>Last Name</p>
+                <p className='information-boxes'>Adebayo</p>
+                <p className='information-label'>Marital Status</p>
+                <p className='information-boxes'>Married</p>
+                <p className='information-label'>NIN</p>
+                <p className='information-boxes'>237985689853</p>
+                <p className='information-label'>Date</p>
+                <p className='information-boxes'>02/01/2015</p>
+            </div>
         </div>
-      </form>
-    </div>
-  );
-};
+
+        </div>
+        
+        <div>
+        <h4 className='heading'>Employment Information</h4>
+        <div className='information-style'>
+            <div>
+                <p className='information-boxes'>Nigerian Aviation</p>
+                <p className='information-boxes'>NGA7890</p>
+                <p className='information-boxes'>SANCO Complex, MMA2 Ikeja, Lagos</p>
+            </div>
+            <div>
+                <p className='information-boxes'>Air Hostess</p>
+                <p className='information-boxes'>04/06/2013</p>
+            </div>
+            <div>
+                <p className='information-boxes'>atemidayo@ngair.org.ng</p>
+                <p className='information-boxes'>N/A</p>
+            </div>
+        </div>
+        </div>
+       
+        <div>
+        <h4 className='heading'>Guarantor Information</h4>
+        <div className='information-style'>
+        <div>
+            <p className='information-boxes'>Adebayo Solomon</p>
+            <p className='information-boxes'>09044567893</p>
+            <p className='information-boxes'>Green Logistics </p>
+            <p className='information-box'>Olowoporoku Close Gbagada Estate, Lagos</p>
+        </div>
+        <div>
+            <p className='information-boxes'>Employed</p>
+            <p className='information-boxes'>12/04/2000</p>
+            <p className='information-boxes'>12, Herbert Macaualay way Ikoyi, Lagos</p>
+        </div>
+        <div>
+            <p className='information-boxes'>adebayo@gmail.com</p>
+            <p className='information-boxes'>224567896808</p>
+        </div>
+        </div>
+        
+        </div>
+    </section>
+  )
+}
 
 export default GeneralInfo;
