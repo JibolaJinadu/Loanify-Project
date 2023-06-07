@@ -1,5 +1,5 @@
-import { BarChart } from 'recharts';
-import Piechart from './piechart';
+// import { BarChart } from 'recharts';
+// import Piechart from './piechart';
 import Diagram from './diagram';
 import './reports.css';
 
@@ -26,9 +26,7 @@ export default function Top() {
           <p className="base">Total value of all loan applications</p>
           <h4>NGN325,450,000'</h4>
         </div>
-        <div className="left">
-          <Piechart />
-        </div>
+        <div className="left">{/* <Piechart /> */}</div>
 
         <div className="shift">
           <span className="dot"></span>
