@@ -23,14 +23,9 @@ import ResetPasswordLink from './passwordReset/ResetPasswordLink';
 import ResetSuccessful from './passwordReset/ResetSuccessful';
 import ResendToken from './passwordReset/ResendToken';
 
-
 function App() {
   return (
     <>
-      
-      {/* <ResendToken />
-      <ResetPasswordLink />
-      <ResetSuccessful /> */}
       <ToastContainer />
       <Router>
         <Routes>
@@ -38,8 +33,14 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/email-sent" element={<EmailSent />}></Route>
           <Route path="/sign-up" element={<SignUp />}></Route>
-          <Route path="/forgot-password" element={<ResetPasswordEmail />}></Route>
-          <Route path="/submit-password" element={<ResetPasswordLink />}></Route>
+          <Route
+            path="/forgot-password"
+            element={<ResetPasswordEmail />}
+          ></Route>
+          <Route
+            path="/submit-password"
+            element={<ResetPasswordLink />}
+          ></Route>
           <Route path="/resend-token" element={<ResendToken />}></Route>
           <Route path="/reset-password" element={<ResetPassword />}></Route>
           <Route path="/reset-successful" element={<ResetSuccessful />}></Route>
