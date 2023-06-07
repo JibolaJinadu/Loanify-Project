@@ -5,37 +5,39 @@ import businessGuy from '../login/img/business guy.png';
 import logo from './loanifyLogo.svg';
 import { IconButton, InputAdornment } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
 
 function ResetPassword() {
-  const [email, setEmail] = useState('');
+  // const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [emailError, setEmailError] = useState('');
+  // const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [confirmPasswordError, setConfirmPasswordError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-
-  const validateEmail = (value) => {
-    if (!value) {
-      setEmailError('Please enter your email.');
-    } else {
-      // Email validation using regex
-      const emailRegex =
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      if (!emailRegex.test(value)) {
-        setEmailError('Please enter a valid email.');
-      } else {
-        setEmailError('');
-      }
-    }
-  };
+  const navigate = useNavigate();
+  
+  // const validateEmail = (value) => {
+  //   if (!value) {
+  //     setEmailError('Please enter your email.');
+  //   } else {
+  //     // Email validation using regex
+  //     const emailRegex =
+  //       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  //     if (!emailRegex.test(value)) {
+  //       setEmailError('Please enter a valid email.');
+  //     } else {
+  //       setEmailError('');
+  //     }
+  //   }
+  // };
 
   const validatePassword = (value) => {
-    if (!value) {
-      setPasswordError('Please enter your password.');
-    } else if (value.length < 8) {
-      setPasswordError('Password must be at least 8 characters long.');
+    if (!value) {  
+    setPasswordError('Please enter your password.');
+    } else if (value.length < 8) {  
+    setPasswordError('Password must be at least 8 characters long.');
     } else {
       setPasswordError('');
     }
@@ -51,11 +53,11 @@ function ResetPassword() {
     }
   };
 
-  const handleEmailChange = (event) => {
-    const { value } = event.target;
-    setEmail(value);
-    validateEmail(value);
-  };
+  // const handleEmailChange = (event) => {
+  //   const { value } = event.target;
+  //   setEmail(value);
+  //   validateEmail(value);
+  // };
 
   const handlePasswordChange = (event) => {
     const { value } = event.target;
@@ -74,13 +76,21 @@ function ResetPassword() {
     event.preventDefault();
 
     // Validate email
-    validateEmail(email);
+    // validateEmail(email);
 
     // Validate password
     validatePassword(password);
 
     // Validate confirm password
     validateConfirmPassword(confirmPassword);
+
+    const ispasswordValid = password && !passwordError;
+
+    const isconfirmPasswordValid = confirmPassword && !confirmPasswordError
+
+    if (ispasswordValid && isconfirmPasswordValid) {
+      navigate('/reset-successful');
+    }
 
     // Submit the form
     // ... perform the password reset logic here ...
@@ -102,13 +112,13 @@ function ResetPassword() {
         <form className="resetPass-form" onSubmit={handleSubmit}>
           <h1>Forgot Password</h1>
           <div className="resetWrapper">
-            <div className="textfield-wrapper">
+            {/* <div className="textfield-wrapper">
               <TextField
                 type="email"
                 value={email}
                 variant="standard"
                 onChange={handleEmailChange}
-                placeholder="Email"
+                placeholder="Email address"
                 className="input"
                 InputProps={{
                   disableUnderline: true,
@@ -119,14 +129,14 @@ function ResetPassword() {
                   {emailError}
                 </span>
               )}
-            </div>
+            </div> */}
             <div className="textfield-wrapper">
               <TextField
                 type={showPassword ? 'text' : 'password'}
                 variant="standard"
                 value={password}
                 onChange={handlePasswordChange}
-                placeholder="Password"
+                placeholder="New Password"
                 className="input"
                 InputProps={{
                   disableUnderline: true,

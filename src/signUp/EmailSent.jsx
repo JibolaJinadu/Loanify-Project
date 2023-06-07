@@ -24,7 +24,7 @@ const EmailSent = () => {
             </Link>
           </div>
           <div className="Next">
-            <Link to="/token" className="signUp-btn">
+            <Link to="/verification" className="signUp-btn">
               {' '}
               Next &gt;&gt;{' '}
             </Link>

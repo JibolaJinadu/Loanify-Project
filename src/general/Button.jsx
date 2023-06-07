@@ -5,17 +5,16 @@ export default function Button(props) {
     <Link
       to={props.link}
       style={{
-        marginInline: '10px',
-        padding: '12px',
+        padding: '5px 10px',
         borderRadius: '8px',
         border: 'none',
         textTransform: 'capitalize',
         color: 'white',
-        backgroundColor: 'blue',
+        backgroundColor: '#3969dc',
         width: '80px',
-        fontSize: '12px',
+        fontSize: '14px',
+        fontWeight: '400',
         textAlign: 'center',
-        fontWeight: '700',
       }}
     >
       {props.move}

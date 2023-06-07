@@ -1,0 +1,121 @@
+.report-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.gap-report {
+  gap: 30px;
+}
+.base-report {
+  border-radius: 8px;
+  padding: 8px 15px;
+  border: 1px solid black;
+  margin-top: 0;
+}
+.white-report {
+  border: 2px solid white;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.self-report {
+  border-radius: 7px;
+  padding: 10px 15px;
+  border: 1px solid #d30744;
+}
+.solo-report {
+  color: #d30744;
+}
+.dot-report {
+  background-color: #d30744;
+  margin-right: 5px;
+  padding: 1px 5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.shift-report {
+  margin-block: 20px;
+}
+.report-dark {
+  font-weight: 600;
+}
+.button-report {
+  background-color: #3969dc;
+  color: white;
+  text-align: center;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.mid-report {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-report {
+  display: flex;
+  justify-content: right;
+}
+.sect-top {
+  width: 50%;
+  padding: 20px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.hr-report {
+  border: 1px solid white;
+  margin-inline: -20px;
+}
+.bg-report {
+  background-color: rgb(240, 244, 252);
+}
+
+.report-piechart {
+  display: flex;
+  justify-content: right;
+}
+/* 
+@property --progress-value {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
+@keyframes progress {
+  to {
+    --progress-value: 60;
+  }
+}
+
+.progress-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
+    conic-gradient(
+      #3969dc calc(var(--progress-value) * 1%),
+      #8fe56a 0,
+      #d30744 0
+    );
+  animation: progress 2s 1 forwards;
+}
+
+.progress-bar::before {
+  counter-reset: percentage var(--progress-value);
+  content: counter(percentage) '%';
+  animation: progress 2s 1 forwards;
+} */
