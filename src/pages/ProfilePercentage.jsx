@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleUp, faAngleDown} from '@fortawesome/free-solid-svg-icons';
+import { Circle } from 'rc-progress';
 
 
 
@@ -11,10 +12,20 @@ export default function ProfilePercentage(){
                 <p className=''>New clients</p>
                 <div className='box1Percentage'>
                     <div>
-                        <FontAwesomeIcon icon={faAngleUp}   className='angleUp '></FontAwesomeIcon>
+                        <FontAwesomeIcon icon={faAngleUp} className='angleUp '></FontAwesomeIcon>
                         <span className=''>110%</span>
                     </div>
-                    <p className='borderFilled'>45</p>
+                    <div style={{ width: "2rem", position:"relative" }}>
+                        <Circle
+                            percent={45}
+                            strokeWidth={8}
+                            strokeColor="blue"
+                            trailWidth={8}
+                        />
+                        <div className='circlePercent'>
+                            <span className='circlePercentText'> 45 </span> 
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className='box box2'>
@@ -24,7 +35,17 @@ export default function ProfilePercentage(){
                         <FontAwesomeIcon icon={faAngleDown}  className='angleDown'></FontAwesomeIcon>
                         <span>50%</span>
                     </div>  
-                    <p className='borderFilled'>60</p>                 
+                    <div style={{ width: "2rem", position:"relative" }}>
+                        <Circle
+                            percent={60}
+                            strokeWidth={8}
+                            strokeColor="rgb(11, 168, 11)"
+                            trailWidth={8}
+                        />
+                        <div className='circlePercent'>
+                            60
+                        </div>
+                    </div>                         
                 </div>
             </div>
             <div className='box box3'>
@@ -34,7 +55,18 @@ export default function ProfilePercentage(){
                         <FontAwesomeIcon icon={faAngleDown} className='angleDown'></FontAwesomeIcon>
                         <span>30%</span>
                     </div>
-                    <p className='borderFilled'>20</p>                   
+                    <div style={{ width: "2rem", position:"relative" }}>
+                        <Circle
+                            percent={20}
+                            strokeWidth={8}
+                            strokeColor="orange"
+                            trailWidth={8}
+                        />
+                        <div className='circlePercent'>
+                            20
+                        </div>
+                    </div>
+                             
                 </div>
             </div>
             <div className='box box4'>
@@ -44,7 +76,17 @@ export default function ProfilePercentage(){
                         <FontAwesomeIcon icon={faAngleDown} className='angleDown'></FontAwesomeIcon>
                         <span>30%</span>
                     </div>
-                    <p className='borderFilled'>18</p>
+                    <div style={{ width: "2rem", position:"relative" }}>
+                        <Circle
+                            percent={30}
+                            strokeWidth={8}
+                            strokeColor="rgb(211, 32, 32)"
+                            trailWidth={8}
+                        />
+                        <div className='circlePercent'>
+                            45
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className='box box4'>
@@ -54,7 +96,17 @@ export default function ProfilePercentage(){
                         <FontAwesomeIcon icon={faAngleDown} className='angleDown'></FontAwesomeIcon>
                         <span>30%</span>
                     </div>
-                    <p className='borderFilled'>18</p>
+                    <div style={{ width: "2rem", position:"relative" }}>
+                        <Circle
+                            percent={30}
+                            strokeWidth={8}
+                            strokeColor="rgb(211, 32, 32)"
+                            trailWidth={8}
+                        />
+                        <div className='circlePercent'>
+                            30
+                        </div>
+                    </div>
                 </div>
             </div>
 
