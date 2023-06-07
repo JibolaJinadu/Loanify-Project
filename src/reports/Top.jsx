@@ -1,6 +1,7 @@
 import { BarChart } from 'recharts';
 import Piechart from './piechart';
 import Diagram from './diagram';
+import './reports.css';
 
 export default function Top() {
   return (
