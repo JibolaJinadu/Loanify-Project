@@ -70,7 +70,6 @@ const LoanTab = () => {
     });
 
     setNewApplications(filteredData);
-    console.log(newApplications);
   }, [tableData, searchQuery]);
 
   const [pendingLoans, setPendingLoans] = useState([]);
