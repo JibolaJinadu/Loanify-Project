@@ -9,6 +9,10 @@ const LoanHeader = () => {
   const keys = ['firstName', 'lastName'];
   const [query, setQuery] = useState('');
 
+  const handlePrint = () => {
+    window.print();
+  };
+
   const search = (data) => {
     return data.filter((Details) =>
       keys.some((key) => Details[key].toLowerCase().includes(query))
@@ -31,7 +35,9 @@ const LoanHeader = () => {
       </div>
       {/* <FontAwesomeIcon icon="fa-thin fa-filter" /> */}
       <div className="loan-print">
-        <button className="print">Print</button>
+        <button className="print" onClick={handlePrint}>
+          Print
+        </button>
         <button className="export-data">Export Data</button>
       </div>
     </div>
