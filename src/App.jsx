@@ -8,12 +8,14 @@ import SignUp from './signUp/SignUp';
 import EmailSent from './signUp/EmailSent';
 import Loan from './loan/Loan';
 import ProfileNav from './Profile/ProfileNav';
+import Message from './message/Message';
+
 
 // import OverviewPage from "./overview/OverviewPage";
 // import SupportPage from "./support/SupportPage";
 
 // import Notification from './notificationTab/Notification';
-import Message from './message/Message';
+
 
 function App() {
   return (
