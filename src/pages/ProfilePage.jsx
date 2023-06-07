@@ -6,10 +6,10 @@ import Breadcrumbs from '@mui/material/Breadcrumbs';
 import SettingsTabs from '../settings/SettingsTabs';
 import { Link } from 'react-router-dom';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ProfileLoanOfficer from '../profile/ProfileLoanOfficer';
-import ProfilePercentage from '../profile/ProfilePercentage';
-import ProfileTable from '../profile/ProfileTable';
-import '../profile/profile.css';
+import ProfileLoanOfficer from './ProfileLoanOfficer';
+import ProfilePercentage from './ProfilePercentage';
+import ProfileTable from './ProfileTable';
+import './profile.css';
 
 function ProfilePage() {
   return (
