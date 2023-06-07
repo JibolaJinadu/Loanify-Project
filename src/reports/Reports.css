@@ -78,7 +78,7 @@
 .bg {
   background-color: rgb(240, 244, 252);
 }
-
+/* 
 @property --progress-value {
   syntax: '<integer>';
   initial-value: 0;
@@ -112,4 +112,4 @@
   counter-reset: percentage var(--progress-value);
   content: counter(percentage) '%';
   animation: progress 2s 1 forwards;
-}
+} */
