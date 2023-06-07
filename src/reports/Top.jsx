@@ -1,6 +1,4 @@
-// import { BarChart } from 'recharts';
-// import Piechart from './piechart';
-import Diagram from './diagram';
+import ReportBarChart from './ReportBarChart';
 import './reports.css';
 
 export default function Top() {
@@ -71,7 +69,7 @@ export default function Top() {
         <div className="mid shift">
           <button className="button">Approved vs Pending</button>
         </div>
-        <Diagram />
+        <ReportBarChart />
       </div>
     </div>
   );
