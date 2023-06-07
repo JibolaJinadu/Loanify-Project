@@ -24,7 +24,7 @@ const data = [
     pv: 65,
   },
 ];
-function Diagram() {
+export default function ReportBarChart() {
   return (
     <div>
       <BarChart
@@ -49,4 +49,3 @@ function Diagram() {
     </div>
   );
 }
-export default Diagram;

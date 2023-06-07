@@ -4,6 +4,7 @@ import businessGuy from './img/business guy.png';
 import logo from './img/LOANIFY logo.svg';
 import { Link, useNavigate } from 'react-router-dom';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { toast } from 'react-toastify';
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -41,6 +42,7 @@ function Login() {
     }
 
     if (isValid) {
+      toast.success('Login successfully');
       navigate('/verification');
     }
   }

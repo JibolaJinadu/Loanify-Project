@@ -1,3 +1,5 @@
+import './reports.css';
+
 export default function Piechart() {
   return (
     <div

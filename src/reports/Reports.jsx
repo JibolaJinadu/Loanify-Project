@@ -6,7 +6,6 @@ import Breadcrumbs from '@mui/material/Breadcrumbs';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Link } from 'react-router-dom';
 import Top from './Top';
-import './reports.css';
 
 function Reports() {
   return (

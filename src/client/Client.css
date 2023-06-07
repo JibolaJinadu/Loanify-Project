@@ -100,3 +100,12 @@
   width: 200px;
   text-align: left;
 }
+
+#client-data tr td,
+#clients-row th {
+  text-align: left;
+}
+
+.clients-input {
+  margin-left: 10px;
+}

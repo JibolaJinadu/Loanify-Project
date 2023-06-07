@@ -15,11 +15,14 @@ import Reports from './reports/Reports';
 import Message from './message/Message';
 import ChatBoxPage from './support/ChatBoxPage';
 import ReportIssuePage from './support/ReportIssuePage';
-import ProfilePage from './profile/ProfilePage';
+import ProfilePage from './pages/ProfilePage';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <>
+      <ToastContainer />
       <Router>
         <Routes>
           <Route path="/" element={<Home />}></Route>

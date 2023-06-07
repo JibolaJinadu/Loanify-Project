@@ -36,7 +36,7 @@ const Home = () => {
           <img
             src={Logo}
             alt="logo"
-            style={{ height: '30px', width: '220px' }}
+            style={{ height: '50px', width: '220px' }}
           />
         </div>
         <h3>
