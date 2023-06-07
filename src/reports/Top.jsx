@@ -1,5 +1,4 @@
 import ReportBarChart from './ReportBarChart';
-import './reports.css';
 
 export default function Top() {
   return (
