@@ -16,10 +16,12 @@ import Message from './message/Message';
 import ChatBoxPage from './support/ChatBoxPage';
 import ReportIssuePage from './support/ReportIssuePage';
 import ProfilePage from './profile/ProfilePage';
+import FAQ from './support/FAQ';
 
 function App() {
   return (
     <>
+    
       <Router>
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -39,6 +41,7 @@ function App() {
           <Route path="/notification" element={<NotificationPage />}></Route>
           <Route path="/messages" element={<Message />}></Route>
           <Route path="/support/chat-box" element={<ChatBoxPage />}></Route>
+          <Route path="/support/faq" element={<FAQ/>}></Route>
           <Route
             path="/support/report-issue"
             element={<ReportIssuePage />}

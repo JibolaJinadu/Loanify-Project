@@ -1,6 +1,10 @@
 import React from 'react';
 import './Overview.css';
 import Chart from './PieChart';
+import Line_Chart from './LineChart';
+import Barchart1 from './BarChart1';
+import Barchart2 from './BarChart2';
+import Barchart3 from './BarChart3';
 
 const OverviewPage = () => {
   return (
@@ -94,14 +98,10 @@ const OverviewPage = () => {
             </div>
             <div className="chart-label">
               <div>
-                <div className="new-application label-tabs">
-                  New Application
-                </div>
-                <div className="approved-loans label-tabs2">Approved Loans</div>
-                <div className="declined-loans label-tabs3">Declined Loans</div>
-                <div className="defaulted-loans label-tabs4">
-                  Defaulted Loans
-                </div>
+                <div className="label-tabs">New Application</div>
+                <div className="label-tabs2">Approved Loans</div>
+                <div className="label-tabs3">Declined Loans</div>
+                <div className="label-tabs4">Defaulted Loans</div>
               </div>
               <div>
                 <div className="label-percentage">15%</div>
@@ -113,8 +113,14 @@ const OverviewPage = () => {
           </div>
         </div>
 
-        <div className="overview-3"></div>
-        <div className="overview-4"></div>
+        <div className="overview-3">
+          <Line_Chart/>
+          <Barchart1/>
+        </div>
+        <div className="overview-3">
+          <Barchart2/>
+          <Barchart3/>
+        </div>
       </div>
     </>
   );
