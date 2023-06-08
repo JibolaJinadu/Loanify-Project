@@ -4,6 +4,7 @@ import BusinessGuy from './Assets/business-guy.png';
 import Logo from './Assets/logo.svg';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Token = () => {
   const [tokenDigits, setTokenDigits] = useState(['', '', '', '']);
@@ -43,7 +44,7 @@ const Token = () => {
       setErrorMessage('Please enter all the digits of the token PIN.');
       return;
     }
-
+    toast.success('Login successfully');
     navigate('/dashboard');
 
     // try {

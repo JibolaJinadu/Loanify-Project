@@ -85,18 +85,56 @@
   border-radius: 8px;
 }
 
-.btn-export {
-  padding: 10px 20px;
-  background-color: #0744d3;
-  color: #fff;
-  cursor: pointer;
-  margin-right: 40px;
-  border: none;
-  outline: none;
-  border-radius: 8px;
-}
-
 .btn-filter {
   width: 200px;
   text-align: left;
+}
+
+#client-data tr td,
+#clients-row th {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.clients-input {
+  margin-left: 10px;
+}
+
+.status-approved {
+  color: green;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.status-decline {
+  color: red;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.status-pending {
+  color: yellow;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.client-dot {
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.search-filter,
+.filter-select {
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.filter-select {
+  border: 1px solid #bfbfbf;
 }

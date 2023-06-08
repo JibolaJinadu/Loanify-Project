@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Search } from '@mui/icons-material';
 import ClientDialog from '../client/ClientDialog';
 import './LoanHeader.css';
 
@@ -18,7 +19,7 @@ const LoanHeader = ({
     <div className="loan-header">
       <div className="loan-search">
         <input
-          type="text"
+          type="search"
           placeholder="Search"
           className="search"
           value={searchQuery}

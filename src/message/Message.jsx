@@ -8,8 +8,6 @@ import { Link } from 'react-router-dom';
 import './Message.css';
 import { data } from './Data';
 
-console.log(data);
-
 export default function Message() {
   return (
     <div>

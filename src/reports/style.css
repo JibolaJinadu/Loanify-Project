@@ -1,47 +1,48 @@
-body {
-  max-width: 100vw;
-}
-
-.item {
+.report-item {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
-.gap {
+.gap-report {
   gap: 30px;
 }
-.base {
+.base-report {
   border-radius: 8px;
   padding: 8px 15px;
   border: 1px solid black;
   margin-top: 0;
 }
-.white {
+.white-report {
   border: 2px solid white;
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
-.self {
+.self-report {
   border-radius: 7px;
   padding: 10px 15px;
   border: 1px solid #d30744;
 }
-.solo {
+.solo-report {
   color: #d30744;
 }
-.dot {
+.dot-report {
   background-color: #d30744;
-  padding: 7px;
-  border-radius: 60%;
+  margin-right: 5px;
+  padding: 1px 5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
-.shift {
+.shift-report {
   margin-block: 20px;
 }
-.dark {
+.report-dark {
   font-weight: 600;
 }
-.button {
+.button-report {
   background-color: #3969dc;
   color: white;
   text-align: center;
@@ -53,16 +54,16 @@ body {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
 }
-.mid {
+.mid-report {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.left {
+.left-report {
   display: flex;
   justify-content: right;
 }
-.sect {
+.sect-top {
   width: 50%;
   padding: 20px;
   border-radius: 8px;
@@ -71,14 +72,19 @@ body {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
 }
-.hr {
+.hr-report {
   border: 1px solid white;
   margin-inline: -20px;
 }
-.bg {
+.bg-report {
   background-color: rgb(240, 244, 252);
 }
 
+.report-piechart {
+  display: flex;
+  justify-content: right;
+}
+/* 
 @property --progress-value {
   syntax: '<integer>';
   initial-value: 0;
@@ -112,4 +118,4 @@ body {
   counter-reset: percentage var(--progress-value);
   content: counter(percentage) '%';
   animation: progress 2s 1 forwards;
-}
+} */

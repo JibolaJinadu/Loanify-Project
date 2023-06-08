@@ -4,6 +4,7 @@ import businessGuy from './img/business guy.png';
 import logo from './img/LOANIFY logo.svg';
 import { Link, useNavigate } from 'react-router-dom';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { toast } from 'react-toastify';
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -121,7 +122,7 @@ function Login() {
                 {errors.password}
               </span>
             )}
-            <Link to="/reset-password" className="pass">
+            <Link to="/forgot-password" className="pass">
               Forget password?
             </Link>
           </div>

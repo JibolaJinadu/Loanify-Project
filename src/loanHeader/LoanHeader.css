@@ -16,7 +16,7 @@
   padding: 10px;
 }
 .print {
-  width: 100px;
+  width: 80px;
   height: 40px;
   font-size: small;
   cursor: pointer;
@@ -26,7 +26,7 @@
   border-radius: 8px;
 }
 .export-data {
-  width: 100px;
+  width: 110px;
   height: 40px;
   font-size: small;
   cursor: pointer;
