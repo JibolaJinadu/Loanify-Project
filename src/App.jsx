@@ -22,6 +22,7 @@ import ResetPasswordEmail from './passwordReset/ResetPasswordEmail';
 import ResetPasswordLink from './passwordReset/ResetPasswordLink';
 import ResetSuccessful from './passwordReset/ResetSuccessful';
 import ResendToken from './passwordReset/ResendToken';
+import FAQ from './support/FAQ';
 
 function App() {
   return (
@@ -57,11 +58,13 @@ function App() {
           <Route path="/notification" element={<NotificationPage />}></Route>
           <Route path="/messages" element={<Message />}></Route>
           <Route path="/support/chat-box" element={<ChatBoxPage />}></Route>
+          <Route path="/support/faq" element={<FAQ/>}></Route>
           <Route
             path="/support/report-issue"
             element={<ReportIssuePage />}
           ></Route>
         </Routes>
+
       </Router>
     </>
   );
