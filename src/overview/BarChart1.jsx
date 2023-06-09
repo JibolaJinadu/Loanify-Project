@@ -1,28 +1,22 @@
-import React from "react";
-import {
-BarChart,
-Bar,
-XAxis,
-YAxis,
-CartesianGrid,
-} from "recharts";
+import React from 'react';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts';
 
 const data = [
-{
-name: "Jan",
-uv: 30,
-pv: 51,
-},
-{
-name: "Feb",
-uv: 70,
-pv: 80,
-},
-{
-name: "Mar",
-uv: 69,
-pv: 55,
-},
+  {
+    name: 'Jan',
+    uv: 30,
+    pv: 51,
+  },
+  {
+    name: 'Feb',
+    uv: 70,
+    pv: 80,
+  },
+  {
+    name: 'Mar',
+    uv: 69,
+    pv: 55,
+  },
 ];
 
 export default function Barchart1() {
@@ -39,13 +33,13 @@ export default function Barchart1() {
             right: 30,
             left: -20,
           }}
-          className='chart-main'
+          className="chart-main"
         >
           <CartesianGrid strokeDasharray="3 0" />
-          {<XAxis dataKey="name" style={{ fontSize: "10px" }}/>}
-          <YAxis domain={[0, 100]} style={{ fontSize: "10px" }}/>
-          <Bar dataKey="pv" fill="#3969dc" barSize={25} />
-          <Bar dataKey="uv" fill="#8fe56a" barSize={25} />
+          {<XAxis dataKey="name" style={{ fontSize: '10px' }} />}
+          <YAxis domain={[0, 100]} style={{ fontSize: '10px' }} />
+          <Bar dataKey="pv" fill="#00d43d" barSize={25} />
+          <Bar dataKey="uv" fill="#d61650" barSize={25} />
         </BarChart>
       </div>
     </div>

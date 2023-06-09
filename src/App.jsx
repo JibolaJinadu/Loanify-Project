@@ -22,6 +22,7 @@ import ResetPasswordEmail from './passwordReset/ResetPasswordEmail';
 import ResetPasswordLink from './passwordReset/ResetPasswordLink';
 import ResetSuccessful from './passwordReset/ResetSuccessful';
 import ResendToken from './passwordReset/ResendToken';
+import ClientOverview from './clientOverview/ClientOverview';
 import FAQ from './support/FAQ';
 
 function App() {
@@ -30,8 +31,7 @@ function App() {
       <ToastContainer />
       <Router>
         <Routes>
-          <Route path="/" element={<Message />}></Route>
-          {/* <Route path="/" element={<Home />}></Route> */}
+          <Route path="/" element={<Home />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/email-sent" element={<EmailSent />}></Route>
           <Route path="/sign-up" element={<SignUp />}></Route>
@@ -58,13 +58,15 @@ function App() {
           <Route path="/notification" element={<NotificationPage />}></Route>
           <Route path="/messages" element={<Message />}></Route>
           <Route path="/support/chat-box" element={<ChatBoxPage />}></Route>
-          <Route path="/support/faq" element={<FAQ/>}></Route>
           <Route
             path="/support/report-issue"
             element={<ReportIssuePage />}
           ></Route>
+          <Route
+            path="/clients/clients-overview"
+            element={<ClientOverview />}
+          ></Route>
         </Routes>
-
       </Router>
     </>
   );
