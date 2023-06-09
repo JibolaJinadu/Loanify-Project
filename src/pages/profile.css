@@ -171,6 +171,7 @@ p {
 }
 
 .profileTableWrapper {
+  width: 55rem;
   margin-top: 1rem;
 }
 .profileTableHeader {

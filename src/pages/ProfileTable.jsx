@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import tableData from './tableData';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 export default function ProfileTable() {
   const [data, setData] = useState(tableData);
@@ -30,18 +30,18 @@ export default function ProfileTable() {
                 <td className="text-left">
                   <input type="checkbox" name="" id="" />
                 </td>
-                <td>{rowData.applicationDate}</td>
-                <td>{rowData.loanStatus}</td>
                 <td>{rowData.caseNumber}</td>
                 <td>{rowData.firstName}</td>
                 <td>{rowData.lastName}</td>
+                <td>{rowData.applicationDate}</td>
                 <td>
                   {rowData.recentUpdate}
-                  <FontAwesomeIcon
+                  {/* <FontAwesomeIcon
                     icon={faAngleDown}
                     style={{ fontSize: '12px', marginLeft: '3rem' }}
-                  />
+                  /> */}
                 </td>
+                <td>{rowData.loanStatus}</td>
               </tr>
             );
           })}
