@@ -27,14 +27,17 @@ const LoanOverview = () => {
               <Link className="breadcrumbs" to="/dashboard">
                 Home
               </Link>
-              <p className="breadcrumbs">Loans</p>
+              <Link className="breadcrumbs" to="/loans">
+                Loans
+              </Link>
+              <p className="breadcrumbs">Loans Overview</p>
             </Breadcrumbs>
           </div>
           <LoanOverviewTab />
         </Box>
       </Box>
     </div>
-  )
-}
+  );
+};
 
-export default LoanOverview
+export default LoanOverview;
