@@ -18,9 +18,11 @@ import ReportIssuePage from './support/ReportIssuePage';
 import ProfilePage from './pages/ProfilePage';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import LoanOverview from './loanOverview/LoanOverview';
-
-
+import LoanOverview from './loanOverview/loanOverview';
+import ResetPasswordEmail from './passwordReset/ResetPasswordEmail';
+import ResetPasswordLink from './passwordReset/ResetPasswordLink';
+import ResetSuccessful from './passwordReset/ResetSuccessful';
+import ResendToken from './passwordReset/ResendToken';
 
 function App() {
   return (
@@ -32,7 +34,17 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/email-sent" element={<EmailSent />}></Route>
           <Route path="/sign-up" element={<SignUp />}></Route>
+          <Route
+            path="/forgot-password"
+            element={<ResetPasswordEmail />}
+          ></Route>
+          <Route
+            path="/submit-password"
+            element={<ResetPasswordLink />}
+          ></Route>
+          <Route path="/resend-token" element={<ResendToken />}></Route>
           <Route path="/reset-password" element={<ResetPassword />}></Route>
+          <Route path="/reset-successful" element={<ResetSuccessful />}></Route>
           <Route path="/settings" element={<Settings />}></Route>
           <Route path="/token" element={<Token />}></Route>
           <Route path="/loans" element={<Loan />}></Route>

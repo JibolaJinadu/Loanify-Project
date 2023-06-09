@@ -1,4 +1,5 @@
 import ReportBarChart from './ReportBarChart';
+import ReportPieChart from './ReportPieChart';
 import './style.css';
 
 export default function Top() {
@@ -24,7 +25,9 @@ export default function Top() {
           <p className="base-report">Total value of all loan applications</p>
           <h4>NGN325,450,000'</h4>
         </div>
-        <div className="left-report">{/* <Piechart /> */}</div>
+        <div className="report-piechart">
+          <ReportPieChart />
+        </div>
 
         <div className="shift-report">
           <span className="dot-report">&nbsp;</span>

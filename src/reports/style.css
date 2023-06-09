@@ -79,6 +79,11 @@
 .bg-report {
   background-color: rgb(240, 244, 252);
 }
+
+.report-piechart {
+  display: flex;
+  justify-content: right;
+}
 /* 
 @property --progress-value {
   syntax: '<integer>';

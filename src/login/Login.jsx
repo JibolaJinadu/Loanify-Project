@@ -42,7 +42,6 @@ function Login() {
     }
 
     if (isValid) {
-      toast.success('Login successfully');
       navigate('/verification');
     }
   }
@@ -123,7 +122,7 @@ function Login() {
                 {errors.password}
               </span>
             )}
-            <Link to="/reset-password" className="pass">
+            <Link to="/forgot-password" className="pass">
               Forget password?
             </Link>
           </div>
