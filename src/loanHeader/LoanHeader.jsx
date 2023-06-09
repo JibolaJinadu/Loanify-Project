@@ -1,44 +1,94 @@
-import { useState } from 'react';
-import AllLoans from '../allLoans/AllLoans';
+import { useState, useRef } from 'react'
 import { Details } from '../loan/Details';
-import { Button } from '@mui/material';
-// import Loan from '../loan/Loan';
+import SearchIcon from '@mui/icons-material/Search';
+import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import './LoanHeader.css';
+import ClientDialog from '../client/ClientDialog'
+import { utils, write } from 'xlsx';
+import { saveAs } from 'file-saver';
+
+const initialTableData = [
+  {
+    caseNumber: '',
+    firstName: '',
+    lastName: '',
+    applicationDate: '',
+    recentDate:'',
+    loanStatus:''
+  },
+];
+ 
+
 
 const LoanHeader = () => {
-  const keys = ['firstName', 'lastName'];
-  const [query, setQuery] = useState('');
+  const [tableData, setTableData] = useState(initialTableData);
+  const [records, setRecords] = useState({Details});
+
+  function handleFilter(event) {
+    const newData = records.filter(row => {
+      return row.firstName.toLowerCase().includes(event.target.value.toLowerCase())
+    })
+    setRecords(newData)
+  }
 
   const handlePrint = () => {
     window.print();
   };
 
-  const search = (data) => {
-    return data.filter((Details) =>
-      keys.some((key) => Details[key].toLowerCase().includes(query))
-    );
+  const table = useRef(null);
+  const exportToPDF = () => {
+    html2pdf()
+      .set({
+        margin: 10,
+        filename: 'tableData.pdf',
+        jsPDF: { format: 'a4', orientation: 'portrait' },
+      })
+      .from(table.current)
+      .save();
   };
+
+  const generateCSVData = () => {
+    const csvData = tableData.map((row) => Object.values(row));
+    return csvData;
+  };
+
+  const exportToExcel = () => {
+    console.log('exported!');
+    const worksheet = utils.json_to_sheet(tableData);
+    const workbook = utils.book_new();
+    utils.book_append_sheet(workbook, worksheet, 'Sheet1');
+    const excelBuffer = write(workbook, { bookType: 'xlsx', type: 'array' });
+    const data = new Blob([excelBuffer], {
+      type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+    });
+    saveAs(data, 'tableData.xlsx');
+  };
+
 
   return (
     <div className="loan-header">
       <div className="loan-search">
+      <SearchIcon sx={{color:'#bfbfbf'}} />
         <input
           type="text"
           placeholder="Search"
           className="search"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        {/* <FontAwesomeIcon icon="fa-thin fa-magnifying-glass" /> */}
-        {/* <Loan data={search(Details)}/> */}
+          onChange={handleFilter}
+          />
+       <FilterAltIcon sx={{color:'#bfbfbf'}}/>
         <input type="text" placeholder="Filter" className="filter" />
       </div>
-      {/* <FontAwesomeIcon icon="fa-thin fa-filter" /> */}
+     
       <div className="loan-print">
         <button className="print" onClick={handlePrint}>
           Print
         </button>
-        <button className="export-data">Export Data</button>
+        <ClientDialog
+                handleExcel={exportToExcel}
+                handlePdf={exportToPDF}
+                file={tableData.csv}
+                data={generateCSVData()}
+              />
       </div>
     </div>
   );

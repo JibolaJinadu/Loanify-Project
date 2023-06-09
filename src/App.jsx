@@ -18,6 +18,9 @@ import ReportIssuePage from './support/ReportIssuePage';
 import ProfilePage from './pages/ProfilePage';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import LoanOverview from './loanOverview/LoanOverview';
+
+
 
 function App() {
   return (
@@ -42,6 +45,7 @@ function App() {
           <Route path="/notification" element={<NotificationPage />}></Route>
           <Route path="/messages" element={<Message />}></Route>
           <Route path="/support/chat-box" element={<ChatBoxPage />}></Route>
+          <Route path="/loans/loans-overview" element={<LoanOverview/>}></Route>
           <Route
             path="/support/report-issue"
             element={<ReportIssuePage />}

@@ -1,6 +1,7 @@
 import React from 'react'
 import {Details} from '../loan/Details'
 import './NewApplications.css'
+import { Link } from 'react-router-dom';
 
 const NewApplications = () => {
   return (
@@ -25,7 +26,7 @@ const NewApplications = () => {
         <td>
           <input type="checkBox"></input>
         </td>
-        <td>{Details.caseNumber}</td>
+       <td>{Details.caseNumber}</td>
         <td>{Details.firstName}</td>
         <td>{Details.lastName}</td>
         <td>{Details.applicationDate}</td>
