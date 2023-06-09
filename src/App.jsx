@@ -23,6 +23,7 @@ import ResetPasswordLink from './passwordReset/ResetPasswordLink';
 import ResetSuccessful from './passwordReset/ResetSuccessful';
 import ResendToken from './passwordReset/ResendToken';
 import ClientOverview from './clientOverview/ClientOverview';
+import FAQ from './support/FAQ';
 
 function App() {
   return (

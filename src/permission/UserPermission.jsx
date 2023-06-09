@@ -27,12 +27,14 @@ const UserPermission = () => {
             <td>Adebayo</td>
             <td>atemidayo@xyz.com</td>
             <td>Loan Officer</td>
-            <td>Employed</td>
+            <td>Approver</td>
             <td>
               <label htmlFor="permit">Choose</label>
               <select name="permit" id="permit">
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
+                <option value="" ></option>
+                <option value="Approver">Approver</option>
+                <option value="Reviewer" >Reviewer</option>
+                <option value="Uploader" >Uploader</option>
               </select>
             </td>
           </tr>
@@ -44,12 +46,14 @@ const UserPermission = () => {
             <td>Adebayo</td>
             <td>atemidayo@xyz.com</td>
             <td>Manager</td>
-            <td>Employed</td>
+            <td>Reviewer</td>
             <td>
               <label htmlFor="permit">Choose</label>
               <select name="permit" id="permit">
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
+                <option value="" ></option>
+                <option value="Approver">Approver</option>
+                <option value="Reviewer" >Reviewer</option>
+                <option value="Uploader" >Uploader</option>
               </select>
             </td>
           </tr>
@@ -61,12 +65,14 @@ const UserPermission = () => {
             <td>Adebayo</td>
             <td>atemidayo@xyz.com</td>
             <td>Supervisor</td>
-            <td>Employed</td>
+            <td>Reviewer</td>
             <td>
               <label htmlFor="permit">Choose</label>
               <select name="permit" id="permit">
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
+                <option value="" ></option>
+                <option value="Approver">Approver</option>
+                <option value="Reviewer" >Reviewer</option>
+                <option value="Uploader" >Uploader</option>
               </select>
             </td>
           </tr>
@@ -78,12 +84,14 @@ const UserPermission = () => {
             <td>Adebayo</td>
             <td>atemidayo@xyz.com</td>
             <td>Field Officer</td>
-            <td>Employed</td>
+            <td>Uploader</td>
             <td>
               <label htmlFor="permit">Choose</label>
               <select name="permit" id="permit">
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
+                <option value="" ></option>
+                <option value="Approver">Approver</option>
+                <option value="Reviewer" >Reviewer</option>
+                <option value="Uploader" >Uploader</option> 
               </select>
             </td>
           </tr>
@@ -95,12 +103,14 @@ const UserPermission = () => {
             <td>Adebayo</td>
             <td>atemidayo@xyz.com</td>
             <td>Loan Officer</td>
-            <td>Employed</td>
+            <td>Approver</td>
             <td>
               <label htmlFor="permit">Choose</label>
               <select name="permit" id="permit">
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
+                <option value="" ></option>
+                <option value="Approver">Approver</option>
+                <option value="Reviewer" >Reviewer</option>
+                <option value="Uploader" >Uploader</option>
               </select>
             </td>
           </tr>
@@ -112,12 +122,14 @@ const UserPermission = () => {
             <td>Adebayo</td>
             <td>atemidayo@xyz.com</td>
             <td>Manager</td>
-            <td>Employed</td>
+            <td>Reviewer</td>
             <td>
               <label htmlFor="permit">Choose</label>
               <select name="permit" id="permit">
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
+                <option value="" ></option>
+                <option value="Approver">Approver</option>
+                <option value="Reviewer" >Reviewer</option>
+                <option value="Uploader" >Uploader</option>
               </select>
             </td>
           </tr>
@@ -129,12 +141,14 @@ const UserPermission = () => {
             <td>Adebayo</td>
             <td>atemidayo@xyz.com</td>
             <td>Supervisor</td>
-            <td>Employed</td>
+            <td>Reviewer</td>
             <td>
               <label htmlFor="permit">Choose</label>
               <select name="permit" id="permit">
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
+                <option value="" ></option>
+                <option value="Approver">Approver</option>
+                <option value="Reviewer" >Reviewer</option>
+                <option value="Uploader" >Uploader</option>
               </select>
             </td>
           </tr>
@@ -146,12 +160,14 @@ const UserPermission = () => {
             <td>Adebayo</td>
             <td>atemidayo@xyz.com</td>
             <td>Field Officer</td>
-            <td>Employed</td>
+            <td>Uploader</td>
             <td>
               <label htmlFor="permit">Choose</label>
               <select name="permit" id="permit">
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
+                <option value="" ></option>
+                <option value="Approver">Approver</option>
+                <option value="Reviewer" >Reviewer</option>
+                <option value="Uploader" >Uploader</option>
               </select>
             </td>
           </tr>
@@ -163,12 +179,14 @@ const UserPermission = () => {
             <td>Adebayo</td>
             <td>atemidayo@xyz.com</td>
             <td>Loan Officer</td>
-            <td>Employed</td>
+            <td>Approver</td>
             <td>
               <label htmlFor="permit">Choose</label>
               <select name="permit" id="permit">
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
+                <option value="" ></option>
+                <option value="Approver">Approver</option>
+                <option value="Reviewer" >Reviewer</option>
+                <option value="Uploader" >Uploader</option> 
               </select>
             </td>
           </tr>
