@@ -29,13 +29,12 @@ export default function General() {
 
   return (
     <div>
-      <div style={tab}>
+      {/* <div style={tab}>
         <NavbarItem title={'date & time'} />
-        {/* <Button move={'edit'} /> */}
         <a href="#" className="s-btn btn--blue btn--right">
           Edit
         </a>
-      </div>
+      </div> */}
 
       {/* <div style={tab}>
         <NavbarItem title={'dark mode'} />
@@ -46,10 +45,10 @@ export default function General() {
         <NavbarItem title={'updates'} />
       </div>
 
-      <div style={tabs}>
+      {/* <div style={tabs}>
         <NavbarItem title={'language'} />
         <Language placeholder="language" />
-      </div>
+      </div> */}
 
       <div style={tab}>
         <NavbarItem title={'legal and registory'} />

@@ -27,24 +27,9 @@ function Security() {
           <p>Set a unique password to protect your account.</p>
         </div>
         <div className="btn-holder">
-          <a href="#" className="s-btn btn--blue">
+          <Link to="/forgot-password" className="s-btn btn--blue">
             Change Password
-          </a>
-        </div>
-      </div>
-      <div className="card">
-        <div className="text-holder">
-          <h4>2-Step Verification</h4>
-          <p>Make your account extra secure.</p>
-        </div>
-        <div className="btn-holder">
-          <Toggle label="Toggle me" toggled={true} onClick={logState} />
-        </div>
-      </div>
-      <div className="card">
-        <div className="text-holder">
-          <h4>Deactivate my account</h4>
-          <p>Stay away for some time.</p>
+          </Link>
         </div>
       </div>
       <div className="card">
