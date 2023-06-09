@@ -22,6 +22,7 @@ import ResetPasswordEmail from './passwordReset/ResetPasswordEmail';
 import ResetPasswordLink from './passwordReset/ResetPasswordLink';
 import ResetSuccessful from './passwordReset/ResetSuccessful';
 import ResendToken from './passwordReset/ResendToken';
+import ClientOverview from './clientOverview/ClientOverview';
 
 function App() {
   return (
@@ -59,6 +60,10 @@ function App() {
           <Route
             path="/support/report-issue"
             element={<ReportIssuePage />}
+          ></Route>
+          <Route
+            path="/clients/clients-overview"
+            element={<ClientOverview />}
           ></Route>
         </Routes>
       </Router>
