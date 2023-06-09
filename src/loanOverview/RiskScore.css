@@ -1,0 +1,11 @@
+.risk-score {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.rs-highlighted {
+    background-color:#f0f4fc;
+    width: 500px;
+    padding: 4px;
+    border-radius: 0.5rem;
+}

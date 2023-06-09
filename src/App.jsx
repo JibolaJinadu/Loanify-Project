@@ -24,6 +24,7 @@ import ResetSuccessful from './passwordReset/ResetSuccessful';
 import ResendToken from './passwordReset/ResendToken';
 import ClientOverview from './clientOverview/ClientOverview';
 import FAQ from './support/FAQ';
+import LoanOverview from './loanOverview/LoanOverview';
 
 function App() {
   return (
@@ -49,6 +50,10 @@ function App() {
           <Route path="/settings" element={<Settings />}></Route>
           <Route path="/token" element={<Token />}></Route>
           <Route path="/loans" element={<Loan />}></Route>
+          <Route
+            path="/loans/loans-overview"
+            element={<LoanOverview />}
+          ></Route>
           <Route path="/verification" element={<Token />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/support" element={<SupportPage />}></Route>
@@ -66,6 +71,7 @@ function App() {
             path="/clients/clients-overview"
             element={<ClientOverview />}
           ></Route>
+          <Route path="/support/faq" element={<FAQ />}></Route>
         </Routes>
       </Router>
     </>

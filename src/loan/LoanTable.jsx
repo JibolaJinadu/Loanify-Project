@@ -1,5 +1,6 @@
 import React from 'react';
 import './loan.css';
+import { Link } from 'react-router-dom';
 
 const LoanTable = ({ tableData, table }) => {
   const getStatusColor = (status) => {
@@ -47,7 +48,9 @@ const LoanTable = ({ tableData, table }) => {
           {tableData.map((row, index) => (
             <tr key={index}>
               <td>
-                <input type="checkBox"></input>
+                <Link to="/loans/loans-overview">
+                  <input type="checkBox"></input>
+                </Link>
               </td>
               <td>{row.caseNumber}</td>
               <td>{row.firstName}</td>

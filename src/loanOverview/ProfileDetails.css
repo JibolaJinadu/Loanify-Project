@@ -1,0 +1,36 @@
+.flex {
+  display: flex;
+  gap: 15rem;
+  margin: 0 20px;
+}
+.highlighted {
+  background-color: #f0f4fc;
+  width: fit-content;
+  padding: 2px;
+}
+.btn-container {
+  display: flex;
+  gap: 1.5rem;
+}
+.small {
+  background-color: #f3b515;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 0.2rem;
+}
+.approve {
+  width: 110px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 0.2rem;
+}
+.decline {
+  width: 110px;
+  height: 40px;
+  color: white;
+  background-color: #d30744;
+  border: none;
+  border-radius: 0.2rem;
+}
