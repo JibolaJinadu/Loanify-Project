@@ -22,15 +22,13 @@ import ResetPasswordEmail from './passwordReset/ResetPasswordEmail';
 import ResetPasswordLink from './passwordReset/ResetPasswordLink';
 import ResetSuccessful from './passwordReset/ResetSuccessful';
 import ResendToken from './passwordReset/ResendToken';
-
+import ClientOverview from './clientOverview/ClientOverview';
+import FAQ from './support/FAQ';
+import LoanOverview from './loanOverview/LoanOverview';
 
 function App() {
   return (
     <>
-      
-      {/* <ResendToken />
-      <ResetPasswordLink />
-      <ResetSuccessful /> */}
       <ToastContainer />
       <Router>
         <Routes>
@@ -38,14 +36,24 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/email-sent" element={<EmailSent />}></Route>
           <Route path="/sign-up" element={<SignUp />}></Route>
-          <Route path="/forgot-password" element={<ResetPasswordEmail />}></Route>
-          <Route path="/submit-password" element={<ResetPasswordLink />}></Route>
+          <Route
+            path="/forgot-password"
+            element={<ResetPasswordEmail />}
+          ></Route>
+          <Route
+            path="/submit-password"
+            element={<ResetPasswordLink />}
+          ></Route>
           <Route path="/resend-token" element={<ResendToken />}></Route>
           <Route path="/reset-password" element={<ResetPassword />}></Route>
           <Route path="/reset-successful" element={<ResetSuccessful />}></Route>
           <Route path="/settings" element={<Settings />}></Route>
           <Route path="/token" element={<Token />}></Route>
           <Route path="/loans" element={<Loan />}></Route>
+          <Route
+            path="/loans/loans-overview"
+            element={<LoanOverview />}
+          ></Route>
           <Route path="/verification" element={<Token />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/support" element={<SupportPage />}></Route>
@@ -59,6 +67,11 @@ function App() {
             path="/support/report-issue"
             element={<ReportIssuePage />}
           ></Route>
+          <Route
+            path="/clients/clients-overview"
+            element={<ClientOverview />}
+          ></Route>
+          <Route path="/support/faq" element={<FAQ />}></Route>
         </Routes>
       </Router>
     </>

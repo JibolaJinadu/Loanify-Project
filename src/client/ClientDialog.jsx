@@ -12,14 +12,15 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
-import './Client.css';
-// import './sidebar.css';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { CSVLink } from 'react-csv';
+import { utils, write } from 'xlsx';
+import { saveAs } from 'file-saver';
+import html2pdf from 'html2pdf.js';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
@@ -66,7 +67,35 @@ BootstrapDialogTitle.propTypes = {
   onClose: PropTypes.func.isRequired,
 };
 
-export default function ClientDialog({ handleExcel, handlePdf, data, file }) {
+export default function ClientDialog({ table, tableData }) {
+  const exportToPDF = () => {
+    html2pdf()
+      .set({
+        margin: 10,
+        filename: 'tableData.pdf',
+        jsPDF: { format: 'a4', orientation: 'portrait' },
+      })
+      .from(table.current)
+      .save();
+  };
+
+  const generateCSVData = () => {
+    const csvData = tableData.map((row) => Object.values(row));
+    return csvData;
+  };
+
+  const exportToExcel = () => {
+    console.log('exported!');
+    const worksheet = utils.json_to_sheet(tableData);
+    const workbook = utils.book_new();
+    utils.book_append_sheet(workbook, worksheet, 'Sheet1');
+    const excelBuffer = write(workbook, { bookType: 'xlsx', type: 'array' });
+    const data = new Blob([excelBuffer], {
+      type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+    });
+    saveAs(data, 'tableData.xlsx');
+  };
+
   const [age, setAge] = React.useState('');
 
   const handleChange = (event) => {
@@ -84,7 +113,19 @@ export default function ClientDialog({ handleExcel, handlePdf, data, file }) {
 
   return (
     <div>
-      <button className="btn-export" onClick={handleClickOpen}>
+      <button
+        onClick={handleClickOpen}
+        style={{
+          padding: '12px 20px',
+          backgroundColor: '#0744d3',
+          color: '#fff',
+          cursor: 'pointer',
+          marginRight: '40px',
+          border: 'none',
+          outline: 'none',
+          borderRadius: '8px',
+        }}
+      >
         Export Data
       </button>
       <BootstrapDialog
@@ -115,29 +156,29 @@ export default function ClientDialog({ handleExcel, handlePdf, data, file }) {
                 </MenuItem>
                 <MenuItem
                   value={10}
-                  onClick={handlePdf}
+                  onClick={exportToPDF}
                   sx={{ fontSize: '12px', fontWeight: '600' }}
                 >
                   PDF
                 </MenuItem>
                 <MenuItem
                   value={20}
-                  onClick={handleExcel}
+                  onClick={exportToExcel}
                   sx={{ fontSize: '12px', fontWeight: '600' }}
                 >
                   Excel
                 </MenuItem>
                 <MenuItem value={30}>
                   <CSVLink
-                    data={data}
-                    filename={file}
+                    data={generateCSVData()}
+                    filename="tableData.csv"
                     style={{
                       color: 'rgba(0, 0, 0, 0.87)',
                       fontSize: '12px',
                       fontWeight: '600',
                     }}
                   >
-                    Export to CSV
+                    CSV
                   </CSVLink>
                 </MenuItem>
               </Select>

@@ -8,10 +8,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import './Client.css';
 import { Link } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
-import { utils, write } from 'xlsx';
-import { saveAs } from 'file-saver';
 import ClientDialog from './ClientDialog';
-import html2pdf from 'html2pdf.js';
 
 const initialTableData = [
   {
@@ -20,42 +17,92 @@ const initialTableData = [
     loanStatus: 'Approved',
     date: '20/03/2023',
   },
+  {
+    applicationNumber: 'GR45467RBA',
+    fullName: 'Justin Jude',
+    loanStatus: 'Decline',
+    date: 'Justin Jude',
+  },
+  {
+    applicationNumber: 'RRZU9D6BVG',
+    fullName: 'Sharon Udoh',
+    loanStatus: 'Pending Review',
+    date: '17/03/2023',
+  },
+  {
+    applicationNumber: 'GR45467RBA',
+    fullName: 'Olufemi Ayo',
+    loanStatus: 'Approved',
+    date: '18/03/2023',
+  },
+  {
+    applicationNumber: 'RRZU9D6BVG',
+    fullName: 'Temidayo Adebayo',
+    loanStatus: 'Approved',
+    date: '20/03/2023',
+  },
+  {
+    applicationNumber: 'GR45467RBA',
+    fullName: 'Justin Jude',
+    loanStatus: 'Decline',
+    date: 'Justin Jude',
+  },
+  {
+    applicationNumber: 'RRZU9D6BVG',
+    fullName: 'Sharon Udoh',
+    loanStatus: 'Pending Review',
+    date: '17/03/2023',
+  },
+  {
+    applicationNumber: 'GR45467RBA',
+    fullName: 'Olufemi Ayo',
+    loanStatus: 'Approved',
+    date: '18/03/2023',
+  },
 ];
 
 const Client = () => {
   const [tableData, setTableData] = useState(initialTableData);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filterStatus, setFilterStatus] = useState('');
+
+  const handleSearch = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleFilterStatus = (event) => {
+    setFilterStatus(event.target.value);
+  };
+
+  const filteredTableData = tableData.filter((row) => {
+    const fullName = row.fullName.toLowerCase();
+    const loanStatus = row.loanStatus.toLowerCase();
+    const applicationNumber = row.applicationNumber.toLowerCase();
+
+    return (
+      (fullName.includes(searchQuery.toLowerCase()) ||
+        applicationNumber.includes(searchQuery.toLowerCase())) &&
+      (filterStatus === '' || loanStatus === filterStatus.toLowerCase())
+    );
+  });
 
   const handlePrint = () => {
     window.print();
   };
 
   const table = useRef(null);
-  const exportToPDF = () => {
-    html2pdf()
-      .set({
-        margin: 10,
-        filename: 'tableData.pdf',
-        jsPDF: { format: 'a4', orientation: 'portrait' },
-      })
-      .from(table.current)
-      .save();
-  };
 
-  const generateCSVData = () => {
-    const csvData = tableData.map((row) => Object.values(row));
-    return csvData;
-  };
-
-  const exportToExcel = () => {
-    console.log('exported!');
-    const worksheet = utils.json_to_sheet(tableData);
-    const workbook = utils.book_new();
-    utils.book_append_sheet(workbook, worksheet, 'Sheet1');
-    const excelBuffer = write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], {
-      type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-    });
-    saveAs(data, 'tableData.xlsx');
+  const getStatusColor = (status) => {
+    switch (status) {
+      case 'Approved':
+        return 'status-approved';
+      case 'Decline':
+        return 'status-decline';
+      case 'Pending Review':
+        return 'status-pending';
+      default:
+        return '';
+    }
   };
 
   return (
@@ -88,13 +135,22 @@ const Client = () => {
                 <input
                   type="search"
                   className="search-input"
-                  placeholder="search"
-                  name=""
-                  id=""
+                  placeholder="Search"
+                  value={searchQuery}
+                  onChange={handleSearch}
                 />
               </div>
               <div className="search-filter">
-                <button className="btn-filter">filter</button>
+                <select
+                  className="filter-select"
+                  value={filterStatus}
+                  onChange={handleFilterStatus}
+                >
+                  <option value="">All</option>
+                  <option value="Approved">Approved</option>
+                  <option value="Decline">Decline</option>
+                  <option value="Pending Review">Pending Review</option>
+                </select>
               </div>
             </div>
 
@@ -102,12 +158,7 @@ const Client = () => {
               <button className="btn-print" onClick={handlePrint}>
                 Print
               </button>
-              <ClientDialog
-                handleExcel={exportToExcel}
-                handlePdf={exportToPDF}
-                file={tableData.csv}
-                data={generateCSVData()}
-              />
+              <ClientDialog table={table} tableData={tableData} />
             </div>
           </div>
           <table ref={table} id="clients">
@@ -127,7 +178,7 @@ const Client = () => {
               </tr>
             </thead>
             <tbody id="client-data">
-              {tableData.map((row, index) => (
+              {filteredTableData.map((row, index) => (
                 <tr key={index}>
                   <td>
                     <input
@@ -138,7 +189,12 @@ const Client = () => {
                   </td>
                   <td>{row.applicationNumber}</td>
                   <td>{row.fullName}</td>
-                  <td>&#x2022; {row.loanStatus}</td>
+                  <td>
+                    <span className={` ${getStatusColor(row.loanStatus)}`}>
+                      <span className="client-dot">&#x2022;</span>
+                      {row.loanStatus}
+                    </span>{' '}
+                  </td>
                   <td>{row.date}</td>
                 </tr>
               ))}

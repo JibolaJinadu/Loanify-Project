@@ -5,17 +5,17 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
-import AllLoans from '../allLoans/AllLoans';
-import NewApplications from '../applications/NewApplications';
-import Pending from '../pending/Pending';
-import Active from '../active/Active';
-import DueLoan from '../dueLoan/DueLoan';
-import Extended from '../extended/Extended';
-import Defaulted from '../defaulted/Defaulted';
-import Closed from '../closed/Closed';
 import LoanHeader from '../loanHeader/LoanHeader';
+import { Details } from './Details';
+import LoanTable from './LoanTable.jsx';
+import { useState, useRef, useEffect } from 'react';
 
 const LoanTab = () => {
+  const [tableData, setTableData] = useState(Details);
+  const table = useRef(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filterStatus, setFilterStatus] = useState('');
+
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('sm'));
 
@@ -25,13 +25,187 @@ const LoanTab = () => {
     setValue(newValue);
   };
 
+  const handleSearch = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleFilterStatus = (event) => {
+    setFilterStatus(event.target.value);
+  };
+
+  const [allLoans, setAllLoans] = useState([]);
+  useEffect(() => {
+    const filteredData = tableData.filter((row) => {
+      const firstName = row.firstName.toLowerCase();
+      const lastName = row.lastName.toLowerCase();
+      const loanStatus = row.loanStatus.toLowerCase();
+      const applicationNumber = row.caseNumber.toLowerCase();
+
+      return (
+        (firstName.includes(searchQuery.toLowerCase()) ||
+          lastName.includes(searchQuery.toLowerCase()) ||
+          applicationNumber.includes(searchQuery.toLowerCase())) &&
+        (filterStatus === '' || loanStatus === filterStatus.toLowerCase())
+      );
+    });
+
+    setAllLoans(filteredData);
+  }, [tableData, searchQuery, filterStatus]);
+
+  const [newApplications, setNewApplications] = useState([]);
+  useEffect(() => {
+    const filteredData = tableData.filter((row) => {
+      const firstName = row.firstName.toLowerCase();
+      const lastName = row.lastName.toLowerCase();
+      const loanStatus = row.loanStatus.toLowerCase();
+      const applicationNumber = row.caseNumber.toLowerCase();
+
+      return (
+        ((firstName.includes(searchQuery.toLowerCase()) ||
+          lastName.includes(searchQuery.toLowerCase()) ||
+          applicationNumber.includes(searchQuery.toLowerCase())) &&
+          loanStatus === 'received docs') ||
+        loanStatus === 'incomplete docs'
+      );
+    });
+
+    setNewApplications(filteredData);
+  }, [tableData, searchQuery]);
+
+  const [pendingLoans, setPendingLoans] = useState([]);
+
+  useEffect(() => {
+    const filteredData = tableData.filter((row) => {
+      const firstName = row.firstName.toLowerCase();
+      const lastName = row.lastName.toLowerCase();
+      const loanStatus = row.loanStatus.toLowerCase();
+      const applicationNumber = row.caseNumber.toLowerCase();
+
+      return (
+        (firstName.includes(searchQuery.toLowerCase()) ||
+          lastName.includes(searchQuery.toLowerCase()) ||
+          applicationNumber.includes(searchQuery.toLowerCase())) &&
+        loanStatus === 'pending'
+      );
+    });
+
+    setPendingLoans(filteredData);
+  }, [tableData, searchQuery]);
+
+  const [activeLoans, setActiveLoans] = useState([]);
+
+  useEffect(() => {
+    const filteredData = tableData.filter((row) => {
+      const firstName = row.firstName.toLowerCase();
+      const lastName = row.lastName.toLowerCase();
+      const loanStatus = row.loanStatus.toLowerCase();
+      const applicationNumber = row.caseNumber.toLowerCase();
+
+      return (
+        (firstName.includes(searchQuery.toLowerCase()) ||
+          lastName.includes(searchQuery.toLowerCase()) ||
+          applicationNumber.includes(searchQuery.toLowerCase())) &&
+        loanStatus === 'active'
+      );
+    });
+
+    setActiveLoans(filteredData);
+  }, [tableData, searchQuery]);
+
+  const [dueLoans, setDueLoans] = useState([]);
+
+  useEffect(() => {
+    const filteredData = tableData.filter((row) => {
+      const firstName = row.firstName.toLowerCase();
+      const lastName = row.lastName.toLowerCase();
+      const loanStatus = row.loanStatus.toLowerCase();
+      const applicationNumber = row.caseNumber.toLowerCase();
+
+      return (
+        (firstName.includes(searchQuery.toLowerCase()) ||
+          lastName.includes(searchQuery.toLowerCase()) ||
+          applicationNumber.includes(searchQuery.toLowerCase())) &&
+        loanStatus === 'due'
+      );
+    });
+
+    setDueLoans(filteredData);
+  }, [tableData, searchQuery]);
+
+  const [extendedLoans, setExtendedLoans] = useState([]);
+
+  useEffect(() => {
+    const filteredData = tableData.filter((row) => {
+      const firstName = row.firstName.toLowerCase();
+      const lastName = row.lastName.toLowerCase();
+      const loanStatus = row.loanStatus.toLowerCase();
+      const applicationNumber = row.caseNumber.toLowerCase();
+
+      return (
+        (firstName.includes(searchQuery.toLowerCase()) ||
+          lastName.includes(searchQuery.toLowerCase()) ||
+          applicationNumber.includes(searchQuery.toLowerCase())) &&
+        loanStatus === 'extended'
+      );
+    });
+
+    setExtendedLoans(filteredData);
+  }, [tableData, searchQuery]);
+
+  const [defaultedLoans, setDefaultedLoans] = useState([]);
+
+  useEffect(() => {
+    const filteredData = tableData.filter((row) => {
+      const firstName = row.firstName.toLowerCase();
+      const lastName = row.lastName.toLowerCase();
+      const loanStatus = row.loanStatus.toLowerCase();
+      const applicationNumber = row.caseNumber.toLowerCase();
+
+      return (
+        (firstName.includes(searchQuery.toLowerCase()) ||
+          lastName.includes(searchQuery.toLowerCase()) ||
+          applicationNumber.includes(searchQuery.toLowerCase())) &&
+        loanStatus === 'defaulted'
+      );
+    });
+
+    setDefaultedLoans(filteredData);
+  }, [tableData, searchQuery]);
+
+  const [closedLoans, setClosedLoans] = useState([]);
+
+  useEffect(() => {
+    const filteredData = tableData.filter((row) => {
+      const firstName = row.firstName.toLowerCase();
+      const lastName = row.lastName.toLowerCase();
+      const loanStatus = row.loanStatus.toLowerCase();
+      const applicationNumber = row.caseNumber.toLowerCase();
+
+      return (
+        (firstName.includes(searchQuery.toLowerCase()) ||
+          lastName.includes(searchQuery.toLowerCase()) ||
+          applicationNumber.includes(searchQuery.toLowerCase())) &&
+        loanStatus === 'closed'
+      );
+    });
+
+    setClosedLoans(filteredData);
+  }, [tableData, searchQuery]);
+
   return (
     <Box
       sx={{
         bgcolor: 'background.paper',
       }}
     >
-      <LoanHeader />
+      <LoanHeader
+        table={table}
+        tableData={tableData}
+        searchQuery={searchQuery}
+        handleSearch={handleSearch}
+        filterStatus={filterStatus}
+        handleFilterStatus={handleFilterStatus}
+      />
 
       <Tabs
         value={value}
@@ -136,44 +310,28 @@ const LoanTab = () => {
         />
       </Tabs>
       <TabPanel value={value} index={0}>
-        <Typography>
-          <AllLoans />
-        </Typography>
+        <LoanTable tableData={allLoans} table={table} />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Typography>
-          <NewApplications />
-        </Typography>
+        <LoanTable tableData={newApplications} table={table} />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Typography>
-          <Pending />
-        </Typography>
+        <LoanTable tableData={pendingLoans} table={table} />
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <Typography>
-          <Active />
-        </Typography>
+        <LoanTable tableData={activeLoans} table={table} />
       </TabPanel>
       <TabPanel value={value} index={4}>
-        <Typography>
-          <DueLoan />
-        </Typography>
+        <LoanTable tableData={dueLoans} table={table} />
       </TabPanel>
       <TabPanel value={value} index={5}>
-        <Typography>
-          <Extended />
-        </Typography>
+        <LoanTable tableData={extendedLoans} table={table} />
       </TabPanel>
       <TabPanel value={value} index={6}>
-        <Typography>
-          <Defaulted />
-        </Typography>
+        <LoanTable tableData={defaultedLoans} table={table} />
       </TabPanel>
       <TabPanel value={value} index={7}>
-        <Typography>
-          <Closed />
-        </Typography>
+        <LoanTable tableData={closedLoans} table={table} />
       </TabPanel>
     </Box>
   );

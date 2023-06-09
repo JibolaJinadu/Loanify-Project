@@ -72,3 +72,4 @@ export const data = [
     chat: 'No, you dont need a collateral.',
   },
 ];
+

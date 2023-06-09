@@ -42,7 +42,6 @@ function Login() {
     }
 
     if (isValid) {
-      toast.success('Login successfully');
       navigate('/verification');
     }
   }
