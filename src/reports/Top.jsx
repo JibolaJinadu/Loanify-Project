@@ -15,46 +15,69 @@ export default function Top() {
       <div className="sect-top bg-report">
         <div className="report-item">
           <p className="report-dark">Activities</p>
-          <p className="base-report">Year</p>
+          <p>
+            <select className='select-bg'>
+              <option value='year' hidden>Year</option>
+              <option value='year' >2023</option>
+              <option value='year' >2022</option>
+              <option value='year'>2021</option>
+            </select>
+          </p>
         </div>
         <div className="report-item">
-          <p className="base-report">Total number of loan application</p>
-          <h4>182</h4>
+          <p className="base-report set-bg">Total number of loan application</p>
+          <h4 className='move-left'>182</h4>
         </div>
         <div className="report-item">
-          <p className="base-report">Total value of all loan applications</p>
+          <p className="base-report set-bg">Total value of all loan applications</p>
           <h4>NGN325,450,000'</h4>
         </div>
-        <div className="report-piechart">
+        <div className="report-piechart move-down">
           <ReportPieChart />
         </div>
 
-        <div className="shift-report">
+        <div className="shift-report bg-report">
           <span className="dot-report">&nbsp;</span>
           <span className="report-dark">Default</span>
         </div>
         <div className="report-item">
-          <p className="self-report">Total number of default</p>
-          <h4 className="solo-report">8</h4>
+          <p className="self-report set-bg">Total number of default</p>
+          <h4 className="solo-report move-left">8</h4>
         </div>
         <div className="report-item">
-          <p className="base-report">Total number of defaulting payment</p>
+          <p className="base-report set-bg">Total number of defaulting payment</p>
           <h4>NGN5,102,740</h4>
         </div>
         <div className="report-item">
-          <p className="base-report">Total value of disbursed loans</p>
+          <p className="base-report set-bg">Total value of disbursed loans</p>
           <h4>NGN98,952,700</h4>
         </div>
         <div className="report-item">
-          <p className="base-report">Total value of loan repayment loan</p>
+          <p className="base-report set-bg">Total value of loan repayment loan</p>
           <h4>NGN61,245,750</h4>
         </div>
       </div>
 
-      <div className="sect-top bg">
-        <div className="report-item">
-          <p className="report-dark">Activities</p>
-          <p className="base-report">Year</p>
+      <div className="sect-top bg-report">
+        <div className="report-item shift-report">
+          <p className="report-dark">Complete Payment</p>
+          <p>
+          <select className='select-bg'>
+              <option value='year' hidden>Month</option>
+              <option value='year' >january</option>
+              <option value='year' >febuary</option>
+              <option value='year'>March</option>
+              <option value='year' >April</option>
+              <option value='year' >May</option>
+              <option value='year'>June</option>
+              <option value='year' >July</option>
+              <option value='year' >August</option>
+              <option value='year'>September</option>
+              <option value='year' >October</option>
+              <option value='year' >November</option>
+              <option value='year'>December</option>
+            </select>
+          </p>
         </div>
         <p className="hr-report"></p>
 
@@ -72,7 +95,10 @@ export default function Top() {
         <div className="mid-report shift-report">
           <button className="button-report">Approved vs Pending</button>
         </div>
-        <ReportBarChart />
+        <p style={{backgroundColor:'white',marginTop:'100px',}}>
+          <ReportBarChart style={{padding:'50px'}} />
+        </p>
+
       </div>
     </div>
   );
