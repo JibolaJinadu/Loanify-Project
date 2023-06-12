@@ -5,8 +5,8 @@ export default function Button(props) {
     <Link
       to={props.link}
       style={{
-        padding: '5px 10px',
-        borderRadius: '8px',
+        padding: '0 8px',
+        borderRadius: '50%',
         border: 'none',
         textTransform: 'capitalize',
         color: 'white',

@@ -91,7 +91,6 @@
   left: 5; */
 }
 
-
 .box1Percentage div,
 p {
   margin-top: 0.5rem;
@@ -171,7 +170,6 @@ p {
 }
 
 .profileTableWrapper {
-  width: 55rem;
   margin-top: 1rem;
 }
 .profileTableHeader {
@@ -183,18 +181,22 @@ p {
   border-collapse: collapse;
 }
 .profileTableWrapper table .tableHead {
-  border: 2px solid black;
+  border: 1px solid #bfbfbf;
   padding: 0.5rem;
 }
 .profileTableWrapper table th {
   text-align: left;
   padding: 0.5rem;
+  font-size: 16px;
+  font-weight: 700;
+  color: #010e2a;
 }
 .profileTableWrapper table td {
   text-align: left;
   padding: 0.5rem;
   font-weight: 300;
   font-size: 14px;
+  font-weight: 600;
 }
 
 .profile-name {

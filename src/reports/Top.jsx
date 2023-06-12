@@ -16,20 +16,24 @@ export default function Top() {
         <div className="report-item">
           <p className="report-dark">Activities</p>
           <p>
-            <select className='select-bg'>
-              <option value='year' hidden>Year</option>
-              <option value='year' >2023</option>
-              <option value='year' >2022</option>
-              <option value='year'>2021</option>
+            <select className="select-bg">
+              <option value="year" hidden>
+                Year
+              </option>
+              <option value="year">2023</option>
+              <option value="year">2022</option>
+              <option value="year">2021</option>
             </select>
           </p>
         </div>
         <div className="report-item">
           <p className="base-report set-bg">Total number of loan application</p>
-          <h4 className='move-left'>182</h4>
+          <h4 className="move-left">182</h4>
         </div>
         <div className="report-item">
-          <p className="base-report set-bg">Total value of all loan applications</p>
+          <p className="base-report set-bg">
+            Total value of all loan applications
+          </p>
           <h4>NGN325,450,000'</h4>
         </div>
         <div className="report-piechart move-down">
@@ -45,7 +49,9 @@ export default function Top() {
           <h4 className="solo-report move-left">8</h4>
         </div>
         <div className="report-item">
-          <p className="base-report set-bg">Total number of defaulting payment</p>
+          <p className="base-report set-bg">
+            Total number of defaulting payment
+          </p>
           <h4>NGN5,102,740</h4>
         </div>
         <div className="report-item">
@@ -53,7 +59,9 @@ export default function Top() {
           <h4>NGN98,952,700</h4>
         </div>
         <div className="report-item">
-          <p className="base-report set-bg">Total value of loan repayment loan</p>
+          <p className="base-report set-bg">
+            Total value of loan repayment loan
+          </p>
           <h4>NGN61,245,750</h4>
         </div>
       </div>
@@ -62,20 +70,22 @@ export default function Top() {
         <div className="report-item shift-report">
           <p className="report-dark">Complete Payment</p>
           <p>
-          <select className='select-bg'>
-              <option value='year' hidden>Month</option>
-              <option value='year' >january</option>
-              <option value='year' >febuary</option>
-              <option value='year'>March</option>
-              <option value='year' >April</option>
-              <option value='year' >May</option>
-              <option value='year'>June</option>
-              <option value='year' >July</option>
-              <option value='year' >August</option>
-              <option value='year'>September</option>
-              <option value='year' >October</option>
-              <option value='year' >November</option>
-              <option value='year'>December</option>
+            <select className="select-bg">
+              <option value="year" hidden>
+                Month
+              </option>
+              <option value="year">January</option>
+              <option value="year">Febuary</option>
+              <option value="year">March</option>
+              <option value="year">April</option>
+              <option value="year">May</option>
+              <option value="year">June</option>
+              <option value="year">July</option>
+              <option value="year">August</option>
+              <option value="year">September</option>
+              <option value="year">October</option>
+              <option value="year">November</option>
+              <option value="year">December</option>
             </select>
           </p>
         </div>
@@ -95,10 +105,9 @@ export default function Top() {
         <div className="mid-report shift-report">
           <button className="button-report">Approved vs Pending</button>
         </div>
-        <p style={{backgroundColor:'white',marginTop:'100px',}}>
-          <ReportBarChart style={{padding:'50px'}} />
+        <p style={{ backgroundColor: 'white', marginTop: '100px' }}>
+          <ReportBarChart style={{ padding: '50px' }} />
         </p>
-
       </div>
     </div>
   );

@@ -1,17 +1,17 @@
 import * as React from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
-import Security from '../security/Security';
-import UserPermission from '../permission/UserPermission';
-import General from '../general/General';
-import Notification from '../notification/Notification';
-import Combine from '../profile/combine';
+import GeneralInformation from './GeneralInformation';
+import RiskScore from './RiskScore';
+import Documents from './Documents';
+import ProfileDetails from './ProfileDetails';
+import ClientApplications from './ClientApplications';
 
-export default function SettingsTabs({ onTabChange }) {
+const ClientOverviewTab = ({ onTabChange }) => {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('sm'));
 
@@ -28,6 +28,7 @@ export default function SettingsTabs({ onTabChange }) {
         bgcolor: 'background.paper',
       }}
     >
+      <ProfileDetails />
       <Tabs
         value={value}
         onChange={handleChange}
@@ -48,7 +49,7 @@ export default function SettingsTabs({ onTabChange }) {
         }}
       >
         <Tab
-          label="General"
+          label="General Information"
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
@@ -66,7 +67,7 @@ export default function SettingsTabs({ onTabChange }) {
           }}
         />
         <Tab
-          label="Profile"
+          label="Loan Application"
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
@@ -83,7 +84,7 @@ export default function SettingsTabs({ onTabChange }) {
           }}
         />
         <Tab
-          label="User Permissions"
+          label="Risk Score"
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
@@ -100,24 +101,7 @@ export default function SettingsTabs({ onTabChange }) {
           }}
         />
         <Tab
-          label="Notifications"
-          sx={{
-            '&.Mui-selected': {
-              color: '#010E2A',
-              marginTop: '10px',
-              borderBottom: '0',
-              borderTop: '1px solid #010E2A',
-              borderRight: '1px solid #010E2A',
-              borderLeft: '1px solid #010E2A',
-            },
-            fontWeight: '700',
-            textTransform: 'none',
-            fontSize: '15px',
-            borderBottom: '1px solid #010E2A',
-          }}
-        />
-        <Tab
-          label="Security"
+          label="Documents"
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
@@ -137,32 +121,27 @@ export default function SettingsTabs({ onTabChange }) {
       </Tabs>
       <TabPanel value={value} index={0}>
         <Typography>
-          <General />
+          <GeneralInformation />
         </Typography>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <Typography>
-          <Combine />
+          <ClientApplications />
         </Typography>
       </TabPanel>
       <TabPanel value={value} index={2}>
         <Typography>
-          <UserPermission />
+          <RiskScore />
         </Typography>
       </TabPanel>
       <TabPanel value={value} index={3}>
         <Typography>
-          <Notification />
-        </Typography>
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        <Typography>
-          <Security />
+          <Documents />
         </Typography>
       </TabPanel>
     </Box>
   );
-}
+};
 
 function TabPanel(props) {
   const { children, value, index } = props;
@@ -179,3 +158,5 @@ function TabPanel(props) {
     </Typography>
   );
 }
+
+export default ClientOverviewTab;

@@ -54,9 +54,11 @@ const LoanOverviewTab = ({ onTabChange }) => {
             '&.Mui-selected': {
               color: '#010E2A',
               marginTop: '10px',
+              marginLeft: '10px',
               borderBottom: '0',
               borderTop: '1px solid #010E2A',
               borderRight: '1px solid #010E2A',
+              borderLeft: '1px solid #010E2A',
             },
             fontWeight: '700',
             textTransform: 'none',
@@ -104,9 +106,11 @@ const LoanOverviewTab = ({ onTabChange }) => {
             '&.Mui-selected': {
               color: '#010E2A',
               marginTop: '10px',
+              marginRight: '10px',
               borderBottom: '0',
               borderTop: '1px solid #010E2A',
               borderLeft: '1px solid #010E2A',
+              borderRight: '1px solid #010E2A',
             },
             fontWeight: '700',
             textTransform: 'none',

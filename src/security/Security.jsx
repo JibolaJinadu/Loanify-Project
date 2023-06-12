@@ -15,9 +15,9 @@ function Security() {
           <p>The email address associated with your account.</p>
         </div>
         <div className="btn-holder">
-          <Link href="#" className="s-btn btn--blue btn--right">
+          {/* <Link href="#" className="s-btn btn--blue btn--right">
             Edit
-          </Link>
+          </Link> */}
           <p>jamesbond@gmail.com</p>
         </div>
       </div>
@@ -27,7 +27,7 @@ function Security() {
           <p>Set a unique password to protect your account.</p>
         </div>
         <div className="btn-holder">
-          <Link to="/forgot-password" className="s-btn btn--blue">
+          <Link to="/settings/change-password" className="s-btn btn--blue">
             Change Password
           </Link>
         </div>

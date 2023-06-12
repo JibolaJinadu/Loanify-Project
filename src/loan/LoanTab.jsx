@@ -231,10 +231,12 @@ const LoanTab = ({ onTabChange }) => {
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
+              marginLeft: '10px',
               marginTop: '10px',
               borderBottom: '0',
               borderTop: '1px solid #010E2A',
               borderRight: '1px solid #010E2A',
+              borderLeft: '1px solid #010E2A',
             },
             fontWeight: '700',
             textTransform: 'none',
@@ -349,10 +351,12 @@ const LoanTab = ({ onTabChange }) => {
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
+              marginRight: '10px',
               marginTop: '10px',
               borderBottom: '0',
               borderTop: '1px solid #010E2A',
               borderLeft: '1px solid #010E2A',
+              borderRight: '1px solid #010E2A',
             },
             fontWeight: '700',
             textTransform: 'none',
