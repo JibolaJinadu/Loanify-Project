@@ -20,7 +20,7 @@ const LoanApplications = () => {
             </div>
             <div className='flex-container'>
                 <p>Do you have any outstanding loan to be repaid?</p>
-                <label><input type='text' placeholder='yes'></input></label>
+                <label><input type='text' placeholder='Yes'></input></label>
             </div>
             <div className='flex-container'>
                 <p>If yes, please state the amount</p>
