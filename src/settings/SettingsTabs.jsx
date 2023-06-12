@@ -11,7 +11,7 @@ import General from '../general/General';
 import Notification from '../notification/Notification';
 import Combine from '../profile/combine';
 
-export default function SettingsTabs() {
+export default function SettingsTabs({ onTabChange }) {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('sm'));
 
@@ -19,6 +19,7 @@ export default function SettingsTabs() {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    onTabChange(event, newValue);
   };
 
   return (
@@ -35,9 +36,15 @@ export default function SettingsTabs() {
         aria-label="scrollable prevent tabs example"
         sx={{
           '& .MuiTabs-indicator': {
-            backgroundColor: '#010E2A',
-            margin: '0 20px',
+            backgroundColor: 'transparent',
           },
+          '& .Mui-selected': {
+            borderBottom: 'none',
+          },
+          borderTop: '1px solid #010E2A',
+          borderRight: '1px solid #010E2A',
+          borderLeft: '1px solid #010E2A',
+          margin: '0 20px',
         }}
       >
         <Tab
@@ -45,10 +52,15 @@ export default function SettingsTabs() {
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
+              marginTop: '10px',
+              borderBottom: '0',
+              borderTop: '1px solid #010E2A',
+              borderRight: '1px solid #010E2A',
             },
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
+            borderBottom: '1px solid #010E2A',
           }}
         />
         <Tab
@@ -56,10 +68,16 @@ export default function SettingsTabs() {
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
+              marginTop: '10px',
+              borderBottom: '0',
+              borderTop: '1px solid #010E2A',
+              borderRight: '1px solid #010E2A',
+              borderLeft: '1px solid #010E2A',
             },
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
+            borderBottom: '1px solid #010E2A',
           }}
         />
         <Tab
@@ -67,10 +85,16 @@ export default function SettingsTabs() {
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
+              marginTop: '10px',
+              borderBottom: '0',
+              borderTop: '1px solid #010E2A',
+              borderRight: '1px solid #010E2A',
+              borderLeft: '1px solid #010E2A',
             },
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
+            borderBottom: '1px solid #010E2A',
           }}
         />
         <Tab
@@ -78,10 +102,16 @@ export default function SettingsTabs() {
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
+              marginTop: '10px',
+              borderBottom: '0',
+              borderTop: '1px solid #010E2A',
+              borderRight: '1px solid #010E2A',
+              borderLeft: '1px solid #010E2A',
             },
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
+            borderBottom: '1px solid #010E2A',
           }}
         />
         <Tab
@@ -89,10 +119,15 @@ export default function SettingsTabs() {
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
+              marginTop: '10px',
+              borderBottom: '0',
+              borderTop: '1px solid #010E2A',
+              borderLeft: '1px solid #010E2A',
             },
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
+            borderBottom: '1px solid #010E2A',
           }}
         />
       </Tabs>

@@ -2,6 +2,7 @@
   display: flex;
   gap: 15rem;
   margin: 0 20px;
+  padding-bottom: 20px;
 }
 .highlighted {
   background-color: #f0f4fc;

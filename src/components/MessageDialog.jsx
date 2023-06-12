@@ -123,7 +123,9 @@ export default function MessageDialog() {
             </div>
           </ListItem>
         </List>
-        <Link className="sms-btn">View all messages</Link>
+        <Link to="/messages" className="sms-btn">
+          View all messages
+        </Link>
       </BootstrapDialog>
     </div>
   );

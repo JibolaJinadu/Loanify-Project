@@ -11,24 +11,25 @@ import RiskScore from './RiskScore';
 import Documents from './Documents';
 import ProfileDetails from './ProfileDetails';
 
-const LoanOverviewTab = () => {
-    const theme = useTheme();
-    const isLargeScreen = useMediaQuery(theme.breakpoints.up('sm'));
-  
-    const [value, setValue] = React.useState(0);
-  
-    const handleChange = (event, newValue) => {
-      setValue(newValue);
-    };
-  
+const LoanOverviewTab = ({ onTabChange }) => {
+  const theme = useTheme();
+  const isLargeScreen = useMediaQuery(theme.breakpoints.up('sm'));
+
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+    onTabChange(event, newValue);
+  };
+
   return (
     <Box
-    sx={{
-      bgcolor: 'background.paper',
-    }}
-  >
-    <ProfileDetails/>
-    <Tabs
+      sx={{
+        bgcolor: 'background.paper',
+      }}
+    >
+      <ProfileDetails />
+      <Tabs
         value={value}
         onChange={handleChange}
         variant={isLargeScreen ? 'fullWidth' : 'scrollable'}
@@ -36,9 +37,15 @@ const LoanOverviewTab = () => {
         aria-label="scrollable prevent tabs example"
         sx={{
           '& .MuiTabs-indicator': {
-            backgroundColor: '#010E2A',
-            margin: '0 20px',
+            backgroundColor: 'transparent',
           },
+          '& .Mui-selected': {
+            borderBottom: 'none',
+          },
+          borderTop: '1px solid #010E2A',
+          borderRight: '1px solid #010E2A',
+          borderLeft: '1px solid #010E2A',
+          margin: '0 20px',
         }}
       >
         <Tab
@@ -46,10 +53,15 @@ const LoanOverviewTab = () => {
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
+              marginTop: '10px',
+              borderBottom: '0',
+              borderTop: '1px solid #010E2A',
+              borderRight: '1px solid #010E2A',
             },
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
+            borderBottom: '1px solid #010E2A',
           }}
         />
         <Tab
@@ -57,10 +69,16 @@ const LoanOverviewTab = () => {
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
+              marginTop: '10px',
+              borderBottom: '0',
+              borderTop: '1px solid #010E2A',
+              borderRight: '1px solid #010E2A',
+              borderLeft: '1px solid #010E2A',
             },
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
+            borderBottom: '1px solid #010E2A',
           }}
         />
         <Tab
@@ -68,10 +86,16 @@ const LoanOverviewTab = () => {
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
+              marginTop: '10px',
+              borderBottom: '0',
+              borderTop: '1px solid #010E2A',
+              borderRight: '1px solid #010E2A',
+              borderLeft: '1px solid #010E2A',
             },
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
+            borderBottom: '1px solid #010E2A',
           }}
         />
         <Tab
@@ -79,14 +103,19 @@ const LoanOverviewTab = () => {
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
+              marginTop: '10px',
+              borderBottom: '0',
+              borderTop: '1px solid #010E2A',
+              borderLeft: '1px solid #010E2A',
             },
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
+            borderBottom: '1px solid #010E2A',
           }}
         />
-     </Tabs>
-     <TabPanel value={value} index={0}>
+      </Tabs>
+      <TabPanel value={value} index={0}>
         <Typography>
           <GeneralInformation />
         </Typography>
@@ -106,24 +135,24 @@ const LoanOverviewTab = () => {
           <Documents />
         </Typography>
       </TabPanel>
-      </Box>
-  )
-}
+    </Box>
+  );
+};
 
 function TabPanel(props) {
-    const { children, value, index } = props;
-  
-    return (
-      <Typography
-        component="div"
-        role="tabpanel"
-        hidden={value !== index}
-        id={`tabpanel-${index}`}
-        aria-labelledby={`tab-${index}`}
-      >
-        {value === index && <Box p={3}>{children}</Box>}
-      </Typography>
-    );
-  }
+  const { children, value, index } = props;
 
-export default LoanOverviewTab
+  return (
+    <Typography
+      component="div"
+      role="tabpanel"
+      hidden={value !== index}
+      id={`tabpanel-${index}`}
+      aria-labelledby={`tab-${index}`}
+    >
+      {value === index && <Box p={3}>{children}</Box>}
+    </Typography>
+  );
+}
+
+export default LoanOverviewTab;

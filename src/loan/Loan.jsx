@@ -6,8 +6,24 @@ import Breadcrumbs from '@mui/material/Breadcrumbs';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Link } from 'react-router-dom';
 import LoanTab from './LoanTab';
+import { useState } from 'react';
 
 export default function Loan() {
+  const [activeTabLabel, setActiveTabLabel] = useState('All Loans');
+
+  const handleTabChange = (event, newValue) => {
+    const tabs = [
+      'All Loans',
+      'New Applications',
+      'Pending',
+      'Active',
+      'Due loan',
+      'Extended',
+      'Defaulted',
+      'Closed',
+    ];
+    setActiveTabLabel(tabs[newValue]);
+  };
   return (
     <div>
       <Box sx={{ display: 'flex' }}>
@@ -28,9 +44,10 @@ export default function Loan() {
                 Home
               </Link>
               <p className="breadcrumbs">Loans</p>
+              <p className="breadcrumbs">{activeTabLabel}</p>
             </Breadcrumbs>
           </div>
-          <LoanTab />
+          <LoanTab onTabChange={handleTabChange} />
         </Box>
       </Box>
     </div>

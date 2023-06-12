@@ -10,7 +10,7 @@ import { Details } from './Details';
 import LoanTable from './LoanTable.jsx';
 import { useState, useRef, useEffect } from 'react';
 
-const LoanTab = () => {
+const LoanTab = ({ onTabChange }) => {
   const [tableData, setTableData] = useState(Details);
   const table = useRef(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -23,6 +23,7 @@ const LoanTab = () => {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    onTabChange(event, newValue);
   };
 
   const handleSearch = (event) => {
@@ -215,9 +216,14 @@ const LoanTab = () => {
         aria-label="scrollable prevent tabs example"
         sx={{
           '& .MuiTabs-indicator': {
-            backgroundColor: '#010E2A',
-            margin: '0 20px',
+            backgroundColor: 'transparent',
           },
+          '& .Mui-selected': {
+            borderBottom: 'none',
+          },
+          borderTop: '1px solid #010E2A',
+          borderRight: '1px solid #010E2A',
+          borderLeft: '1px solid #010E2A',
         }}
       >
         <Tab
@@ -225,10 +231,15 @@ const LoanTab = () => {
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
+              marginTop: '10px',
+              borderBottom: '0',
+              borderTop: '1px solid #010E2A',
+              borderRight: '1px solid #010E2A',
             },
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
+            borderBottom: '1px solid #010E2A',
           }}
         />
         <Tab
@@ -236,10 +247,16 @@ const LoanTab = () => {
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
+              marginTop: '10px',
+              borderBottom: '0',
+              borderTop: '1px solid #010E2A',
+              borderRight: '1px solid #010E2A',
+              borderLeft: '1px solid #010E2A',
             },
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
+            borderBottom: '1px solid #010E2A',
           }}
         />
         <Tab
@@ -247,10 +264,16 @@ const LoanTab = () => {
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
+              marginTop: '10px',
+              borderBottom: '0',
+              borderTop: '1px solid #010E2A',
+              borderRight: '1px solid #010E2A',
+              borderLeft: '1px solid #010E2A',
             },
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
+            borderBottom: '1px solid #010E2A',
           }}
         />
         <Tab
@@ -258,10 +281,16 @@ const LoanTab = () => {
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
+              marginTop: '10px',
+              borderBottom: '0',
+              borderTop: '1px solid #010E2A',
+              borderRight: '1px solid #010E2A',
+              borderLeft: '1px solid #010E2A',
             },
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
+            borderBottom: '1px solid #010E2A',
           }}
         />
         <Tab
@@ -269,10 +298,16 @@ const LoanTab = () => {
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
+              marginTop: '10px',
+              borderBottom: '0',
+              borderTop: '1px solid #010E2A',
+              borderRight: '1px solid #010E2A',
+              borderLeft: '1px solid #010E2A',
             },
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
+            borderBottom: '1px solid #010E2A',
           }}
         />
         <Tab
@@ -280,10 +315,16 @@ const LoanTab = () => {
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
+              marginTop: '10px',
+              borderBottom: '0',
+              borderTop: '1px solid #010E2A',
+              borderRight: '1px solid #010E2A',
+              borderLeft: '1px solid #010E2A',
             },
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
+            borderBottom: '1px solid #010E2A',
           }}
         />
         <Tab
@@ -291,10 +332,16 @@ const LoanTab = () => {
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
+              marginTop: '10px',
+              borderBottom: '0',
+              borderTop: '1px solid #010E2A',
+              borderRight: '1px solid #010E2A',
+              borderLeft: '1px solid #010E2A',
             },
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
+            borderBottom: '1px solid #010E2A',
           }}
         />
         <Tab
@@ -302,10 +349,15 @@ const LoanTab = () => {
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
+              marginTop: '10px',
+              borderBottom: '0',
+              borderTop: '1px solid #010E2A',
+              borderLeft: '1px solid #010E2A',
             },
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
+            borderBottom: '1px solid #010E2A',
           }}
         />
       </Tabs>
