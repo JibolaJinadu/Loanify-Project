@@ -10,7 +10,7 @@ th {
   background-color: white;
   color: black;
   border: 2 px solid #ddd;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   text-align: center;
 }
@@ -18,8 +18,15 @@ th {
 td {
   text-align: center;
   padding-top: 20px;
+  font-size: 15px;
 }
 
 td label {
   margin-right: 10px;
+}
+
+.permit{
+  border: none;
+  color:gray;
+
 }
