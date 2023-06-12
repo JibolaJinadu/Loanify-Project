@@ -18,7 +18,7 @@
 .profileLoanWrapper {
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 .loanOfficerDetails {
   display: flex;
@@ -193,6 +193,8 @@ p {
 .profileTableWrapper table td {
   text-align: left;
   padding: 0.5rem;
+  font-weight: 300;
+  font-size: 14px;
 }
 
 .profile-name {
