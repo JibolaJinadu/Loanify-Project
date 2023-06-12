@@ -27,10 +27,10 @@ export default function ProfileLoanOfficer() {
             fontSize: '14px',
             fontWeight: '500',
             color: 'black',
-            border: '2px solid black',
+            border: '1px solid black',
             borderRadius: '8px',
             backgroundColor: 'white',
-            padding: '5px 12px',
+            padding: '5px 20px',
           }}
         >
           Edit
