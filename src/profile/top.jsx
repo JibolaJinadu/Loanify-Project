@@ -11,18 +11,7 @@ export default function Top() {
         <HighLighted />
       </div>
       <div>
-        <button
-          style={{
-            backgroundColor: 'white',
-            color: '#010E2A',
-            fontSize: '14px',
-            fontWeight: '700',
-            borderRadius: '8px',
-            padding: '7px',
-          }}
-        >
-          Edit Image
-        </button>
+        
       </div>
     </div>
   );

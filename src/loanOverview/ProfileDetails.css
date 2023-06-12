@@ -4,14 +4,27 @@
   margin: 0 20px;
   padding-bottom: 20px;
 }
+.profile-flex{
+  display: flex;
+  gap:20px;
+}
+.loan-type{
+  display: flex;
+  gap: 10px
+}
+.loan-contact {
+  display: flex;
+}
 .highlighted {
   background-color: #f0f4fc;
-  width: fit-content;
+  width: 318px;
   padding: 2px;
 }
+
 .btn-container {
   display: flex;
   gap: 1.5rem;
+  margin-top: 30px;
 }
 .small {
   background-color: #f3b515;
@@ -19,6 +32,7 @@
   height: 20px;
   border: none;
   border-radius: 0.2rem;
+  margin-top:11px ;
 }
 .approve {
   width: 110px;

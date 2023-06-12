@@ -9,12 +9,19 @@ const GeneralInformation = () => {
   const [dateOfBirth, setDateOfBirth] = useState('');
   const [maritalStatus, setMaritalStatus] = useState('');
   const [email, setEmail] = useState('');
+  const [workEmail, setWorkEmail] = useState('');
+  const [emailAddress, setEmailAddress] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [homeAddress, setHomeAddress] = useState('');
   const [date, setDate] = useState('');
   const [number, setNumber] = useState('');
+  const [work, setWork] = useState('');
   const [placeofwork, setPlaceOfWork] = useState('');
   const [address, setAddress] = useState('');
+  const [nin, setNin] = useState('');
+  const [endDate, setEndDate] = useState('');
+  const [birthDate, setBirthDate] = useState('');
+  const [physicalAddress, setPhysicalAddress] = useState('');
   const [jobTitle, setJobTitle] = useState('');
   const [fullName, setFullName] = useState('');
   const [employmentStatus, setEmploymentStatus] = useState('');
@@ -34,11 +41,20 @@ const GeneralInformation = () => {
   const handleDateOfBirthChange = (event) => {
     setDateOfBirth(event.target.value);
   };
+  const handleEmailAddressChange = (event) => {
+    setEmailAddress(event.target.value);
+  };
   const handleMaritalStatusChange = (event) => {
     setMaritalStatus(event.target.value);
   };
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
+  };
+  const handleBirthDateChange = (event) => {
+    setBirthDate(event.target.value);
+  };
+  const handleWorkEmailChange = (event) => {
+    setWorkEmail(event.target.value);
   };
   const handlePhoneNumberChange = (event) => {
     setPhoneNumber(event.target.value);
@@ -52,6 +68,9 @@ const GeneralInformation = () => {
   const handleNumberChange = (event) => {
     setNumber(event.target.value);
   };
+  const handleWorkChange = (event) => {
+    setWork(event.target.value);
+  };
   const handlePlaceOfWorkChange = (event) => {
     setPlaceOfWork(event.target.value);
   };
@@ -60,6 +79,15 @@ const GeneralInformation = () => {
   };
   const handleJobTitleChange = (event) => {
     setJobTitle(event.target.value);
+  };
+  const handleEndDateChange = (event) => {
+    setEndDate(event.target.value);
+  };
+  const handleNinChange = (event) => {
+    setNin(event.target.value);
+  };
+  const handlePhysicalAddressChange = (event) => {
+    setPhysicalAddress(event.target.value);
   };
   const handleFullNameChange = (event) => {
     setFullName(event.target.value);
@@ -77,14 +105,21 @@ const GeneralInformation = () => {
       lastName,
       gender,
       dateOfBirth,
+      emailAddress,
       maritalStatus,
       email,
+      workEmail,
       phoneNumber,
       homeAddress,
       date,
       number,
+      birthDate,
+      work,
+      nin,
+      endDate,
       placeofwork,
       address,
+      physicalAddress,
       jobTitle,
       fullName,
       employmentStatus
@@ -95,14 +130,20 @@ const GeneralInformation = () => {
     setLastName('');
     setGender('');
     setDateOfBirth('');
+    setEmailAddress('');
     setMaritalStatus('');
     setEmail('');
     setPhoneNumber('');
     setHomeAddress('');
     setDate('');
+    setWork('');
     setNumber('');
+    setNin('');
+    setEndDate('');
+    setBirthDate('');
     setPlaceOfWork('');
     setAddress('');
+    setPhysicalAddress(''),
     setJobTitle('');
     setFullName('');
     setEmploymentStatus('');
@@ -132,9 +173,9 @@ const GeneralInformation = () => {
                 Email Address
               <input
                 type="text"
-                value={email}
+                value={emailAddress}
                 placeholder="temidayo.bayo@gmail.com"
-                onChange={handleEmailChange}
+                onChange={handleEmailAddressChange}
                 required
               ></input>
             </label>
@@ -202,9 +243,9 @@ const GeneralInformation = () => {
                 NIN
               <input
                 type="text"
-                value={number}
+                value={nin}
                 placeholder="237569103853"
-                onChange={handleNumberChange}
+                onChange={handleNinChange}
               />
             </label>
             <label>
@@ -227,9 +268,9 @@ const GeneralInformation = () => {
             Place of Work
               <input
                 type="text"
-                value={placeofwork}
+                value={work}
                 placeholder="Nigerian Aviation"
-                onChange={handlePlaceOfWorkChange}
+                onChange={handleWorkChange}
               ></input>
             </label>
             <label>
@@ -246,9 +287,9 @@ const GeneralInformation = () => {
               <input
                 type="text"
                 name="address"
-                value={address}
+                value={physicalAddress}
                 placeholder="SANCO Complex, MMA2 Ikeja, Lagos"
-                onChange={handleAddressChange}
+                onChange={handlePhysicalAddressChange}
                 required
               ></input>
             </label>
@@ -278,9 +319,9 @@ const GeneralInformation = () => {
             Work Email
               <input
                 type="text"
-                value={email}
+                value={workEmail}
                 placeholder="atemiday@ngair.org.ng"
-                onChange={handleEmailChange}
+                onChange={handleWorkEmailChange}
                 required
               ></input>
             </label>  
@@ -288,9 +329,9 @@ const GeneralInformation = () => {
             End Date
               <input
                 type="text"
-                value={date}
+                value={endDate}
                 placeholder="N/A"
-                onChange={handleDateChange}
+                onChange={handleEndDateChange}
               />
             </label> 
         </div>
@@ -342,9 +383,9 @@ const GeneralInformation = () => {
                 Date of Birth
               <input
                 type="text"
-                value={dateOfBirth}
+                value={birthDate}
                 placeholder="12/04/2000"
-                onChange={handleDateOfBirthChange}
+                onChange={handleBirthDateChange}
               ></input>
             </label>
             <label>
@@ -374,9 +415,9 @@ const GeneralInformation = () => {
                 NIN
               <input
                 type="text"
-                value={number}
+                value={nin}
                 placeholder="237569103853"
-                onChange={handleNumberChange}
+                onChange={handleNinChange}
               />
             </label>
         </div>
