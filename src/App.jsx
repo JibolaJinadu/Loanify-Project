@@ -25,6 +25,7 @@ import ResendToken from './passwordReset/ResendToken';
 import ClientOverview from './clientOverview/ClientOverview';
 import FAQ from './support/FAQ';
 import LoanOverview from './loanOverview/LoanOverview';
+import ChangePwd from './changePassword/ChangePwd';
 
 function App() {
   return (
@@ -72,6 +73,10 @@ function App() {
             element={<ClientOverview />}
           ></Route>
           <Route path="/support/faq" element={<FAQ />}></Route>
+          <Route
+            path="/settings/change-password"
+            element={<ChangePwd />}
+          ></Route>
         </Routes>
       </Router>
     </>

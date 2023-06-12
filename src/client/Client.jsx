@@ -181,11 +181,13 @@ const Client = () => {
               {filteredTableData.map((row, index) => (
                 <tr key={index}>
                   <td>
-                    <input
-                      type="checkbox"
-                      disabled
-                      className="clients-input"
-                    ></input>
+                    <Link to="/clients/clients-overview">
+                      <input
+                        type="checkbox"
+                        disabled
+                        className="clients-input"
+                      ></input>
+                    </Link>
                   </td>
                   <td>{row.applicationNumber}</td>
                   <td>{row.fullName}</td>

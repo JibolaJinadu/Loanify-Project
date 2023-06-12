@@ -111,7 +111,9 @@ export default function NotificationDialog() {
             </div>
           </ListItem>
         </List>
-        <Link className="sms-btn notify-btn">View all Notifications</Link>
+        <Link to="/notification" className="sms-btn notify-btn">
+          View all Notifications
+        </Link>
       </BootstrapDialog>
     </div>
   );

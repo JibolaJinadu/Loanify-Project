@@ -4,21 +4,22 @@
   margin: 0 20px;
   padding-bottom: 20px;
 }
-.profile-flex{
+.profile-flex {
   display: flex;
-  gap:20px;
+  gap: 20px;
 }
-.loan-type{
+.loan-type {
   display: flex;
-  gap: 10px
+  gap: 10px;
 }
 .loan-contact {
   display: flex;
 }
-.highlighted {
+.highlighted-client {
   background-color: #f0f4fc;
-  width: 318px;
+  width: 400px;
   padding: 2px;
+  padding: 10px 20px;
 }
 
 .btn-container {
@@ -26,13 +27,13 @@
   gap: 1.5rem;
   margin-top: 30px;
 }
-.small {
-  background-color: #f3b515;
+.active-btn {
+  background-color: #00d43d;
   width: 20px;
   height: 20px;
   border: none;
   border-radius: 0.2rem;
-  margin-top:11px ;
+  margin-top: 11px;
 }
 .approve {
   width: 110px;

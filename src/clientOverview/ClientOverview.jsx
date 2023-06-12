@@ -1,12 +1,27 @@
+import * as React from 'react';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+import Sidebar from '../components/Sidebar';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Link } from 'react-router-dom';
-import Sidebar from '../components/Sidebar';
+import ClientOverviewTab from './ClientOverviewTab';
 
-export default function ClientOverview() {
+const ClientOverview = () => {
+  const [activeTabLabel, setActiveTabLabel] = React.useState(
+    'General Information'
+  );
+
+  const handleTabChange = (event, newValue) => {
+    const tabs = [
+      'General Information',
+      'Loan Application',
+      'Risk Score',
+      'Documents',
+    ];
+    setActiveTabLabel(tabs[newValue]);
+  };
+
   return (
     <div>
       <Box sx={{ display: 'flex' }}>
@@ -30,11 +45,14 @@ export default function ClientOverview() {
                 Clients
               </Link>
               <p className="breadcrumbs">Clients Overview</p>
+              <p className="breadcrumbs">{activeTabLabel}</p>
             </Breadcrumbs>
           </div>
-          {/* <ClientTab /> Add the tabs here */}
+          <ClientOverviewTab onTabChange={handleTabChange} />
         </Box>
       </Box>
     </div>
   );
-}
+};
+
+export default ClientOverview;

@@ -8,6 +8,20 @@ import { Link } from 'react-router-dom';
 import LoanOverviewTab from './LoanOverviewTab';
 
 const LoanOverview = () => {
+  const [activeTabLabel, setActiveTabLabel] = React.useState(
+    'General Information'
+  );
+
+  const handleTabChange = (event, newValue) => {
+    const tabs = [
+      'General Information',
+      'Loan Application',
+      'Risk Score',
+      'Documents',
+    ];
+    setActiveTabLabel(tabs[newValue]);
+  };
+
   return (
     <div>
       <Box sx={{ display: 'flex' }}>
@@ -31,9 +45,10 @@ const LoanOverview = () => {
                 Loans
               </Link>
               <p className="breadcrumbs">Loans Overview</p>
+              <p className="breadcrumbs">{activeTabLabel}</p>
             </Breadcrumbs>
           </div>
-          <LoanOverviewTab />
+          <LoanOverviewTab onTabChange={handleTabChange} />
         </Box>
       </Box>
     </div>

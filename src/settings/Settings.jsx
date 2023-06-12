@@ -7,12 +7,21 @@ import SettingsTabs from '../settings/SettingsTabs';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Link } from 'react-router-dom';
 import '../support/Support.css';
+import { useState } from 'react';
 
 export default function Settings() {
-  function handleClick(event) {
-    event.preventDefault();
-    console.info('You clicked a breadcrumb.');
-  }
+  const [activeTabLabel, setActiveTabLabel] = useState('General');
+
+  const handleTabChange = (event, newValue) => {
+    const tabs = [
+      'General',
+      'Profile',
+      'User Permission',
+      'Notifications',
+      'Security',
+    ];
+    setActiveTabLabel(tabs[newValue]);
+  };
   return (
     <div>
       <Box sx={{ display: 'flex' }}>
@@ -35,10 +44,10 @@ export default function Settings() {
               <Link className="breadcrumbs" to="/settings">
                 Settings
               </Link>
-              <p className="breadcrumbs">General</p>
+              <p className="breadcrumbs">{activeTabLabel}</p>
             </Breadcrumbs>
           </div>
-          <SettingsTabs />
+          <SettingsTabs onTabChange={handleTabChange} />
         </Box>
       </Box>
     </div>

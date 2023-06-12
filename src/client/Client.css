@@ -93,6 +93,15 @@
 #client-data tr td,
 #clients-row th {
   text-align: left;
+}
+
+th {
+  font-size: 16px;
+  font-weight: 700;
+  color: #010e2a;
+}
+
+td {
   font-size: 14px;
   font-weight: 600;
 }

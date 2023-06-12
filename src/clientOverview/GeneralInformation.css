@@ -1,0 +1,79 @@
+.personal-information-form {
+    margin: 0 auto;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    /* grid-template-columns: auto auto auto;
+    gap: 2rem; */
+  }
+  
+.form-settings {
+    display: flex;
+    gap: 20;
+  }
+  
+.personal-information-form label {
+    display: block;
+    padding-bottom: 30px;
+    font-size: 13px;
+    font-weight: small;
+    width: 60%;
+    color:#7a7979;
+  }
+.personal-information-form input {
+    width: 250px;
+    height: 40px;
+    border-radius: 0.5rem;
+    border: 1px solid grey;
+  }
+.personal-information-form input[name=address] {
+    width: 350px;
+}
+.employment-information-form {
+    margin: 0 auto;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+  }
+.employment-information-form label {
+    display: block;
+    padding-bottom: 30px;
+    font-size: 13px;
+    font-weight: small;
+    width: 60%;
+    color:#7a7979;
+  }
+  .employment-information-form input {
+    width: 200px;
+    height: 40px;
+    border-radius: 0.5rem;
+    border: 1px solid grey;
+  }
+.employment-information-form input[name=address] {
+    width: 350px;
+}
+.guarantor-information-form {
+    margin: 0 auto;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+.guarantor-information-form label {
+    display: block;
+    padding-bottom: 30px;
+    font-size: 13px;
+    font-weight: small;
+    width: 60%;
+    color:#7a7979;
+  }
+  .guarantor-information-form input {
+    width: 250px;
+    height: 40px;
+    border-radius: 0.5rem;
+    border: 1px solid grey;
+  }
+.guarantor-information-form input[name=address] {
+    width: 350px;
+}
+::placeholder{
+    color: black;
+    font-weight: lighter;
+    padding: 10px;
+}
