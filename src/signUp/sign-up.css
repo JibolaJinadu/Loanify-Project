@@ -173,12 +173,13 @@ body {
   left: 90%;
 }
 
-.message {
+.message-sent {
   text-align: center;
   max-width: 43vw;
   position: absolute;
   top: 30%;
   left: 15%;
+  background-color: #f0f4fc;
 }
 
 .Next a {

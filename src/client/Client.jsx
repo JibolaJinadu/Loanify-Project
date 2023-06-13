@@ -182,11 +182,7 @@ const Client = () => {
                 <tr key={index}>
                   <td>
                     <Link to="/clients/clients-overview">
-                      <input
-                        type="checkbox"
-                        disabled
-                        className="clients-input"
-                      ></input>
+                      <input type="checkbox" className="clients-input"></input>
                     </Link>
                   </td>
                   <td>{row.applicationNumber}</td>
