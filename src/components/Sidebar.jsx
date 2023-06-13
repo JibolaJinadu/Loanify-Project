@@ -55,7 +55,7 @@ export default function Sidebar() {
       path: '/messages',
     },
     {
-      list: 'Notication',
+      list: 'Notification',
       icon: notification,
       path: '/notification',
     },
@@ -130,23 +130,25 @@ export default function Sidebar() {
                       : {}
                   }
                 >
-                  <img
-                    src={text.icon}
-                    alt="Icon"
-                    style={{
-                      paddingLeft: '20px',
-                    }}
-                  />
-                  <ListItemText
-                    primary={text.list}
-                    style={{
-                      paddingLeft: '20px',
-                      paddingRight: '10px',
-                      marginTop: '5px',
-                      fontSize: '16px',
-                      fontWeight: '400',
-                    }}
-                  />
+                  <div className="side--menu">
+                    <div style={{ marginLeft: '20px' }}>
+                      <img
+                        src={text.icon}
+                        alt="Icon"
+                        style={{ width: '30px', height: '30px' }}
+                      />
+                    </div>
+                    <ListItemText
+                      primary={text.list}
+                      style={{
+                        marginLeft: '20px',
+                        paddingRight: '10px',
+                        marginTop: '5px',
+                        fontSize: '16px',
+                        fontWeight: '400',
+                      }}
+                    />
+                  </div>
                 </ListItemButton>
               </ListItem>
             );
@@ -165,18 +167,19 @@ export default function Sidebar() {
                       : {}
                   }
                 >
-                  <img
-                    src={support}
-                    alt=""
-                    style={{
-                      paddingLeft: '20px',
-                    }}
-                  />
+                  <div style={{ marginLeft: '20px' }}>
+                    <img
+                      src={support}
+                      alt="Icon"
+                      style={{ width: '30px', height: '30px' }}
+                    />
+                  </div>
                   <ListItemText
                     primary={text}
                     style={{
-                      paddingLeft: '20px',
+                      marginLeft: '20px',
                       paddingRight: '10px',
+                      marginTop: '5px',
                       fontSize: '16px',
                       fontWeight: '400',
                     }}

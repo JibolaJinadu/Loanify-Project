@@ -224,6 +224,7 @@ const LoanTab = ({ onTabChange }) => {
           borderTop: '1px solid #010E2A',
           borderRight: '1px solid #010E2A',
           borderLeft: '1px solid #010E2A',
+          margin: '0 20px',
         }}
       >
         <Tab

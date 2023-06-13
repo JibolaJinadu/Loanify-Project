@@ -10,7 +10,7 @@ const EmailSent = () => {
         <section className="left-div"></section>
         <section className="right-div">
           <img src={logo} alt="logo" className="rd-container-1" />
-          <div className="message">
+          <div className="message-sent">
             <h1 className="sent">Confirmation email sent !</h1>
             <p>
               Didn't receive the email ? <br /> Please check the email address

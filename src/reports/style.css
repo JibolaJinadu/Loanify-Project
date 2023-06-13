@@ -25,21 +25,19 @@
 }
 .solo-report {
   color: #d30744;
- 
 }
-.select-bg{
+.select-bg {
   padding: 7px 15px;
-  color: grey ;
+  color: grey;
   border-radius: 7px;
-
 }
-.set-bg{
+.set-bg {
   background-color: white;
 }
-.move-down{
+.move-down {
   margin-bottom: 20px;
 }
-.move-left{
+.move-left {
   padding-right: 100px;
 }
 .dot-report {
@@ -62,7 +60,7 @@
   background-color: #3969dc;
   color: white;
   text-align: center;
-  padding: 10px 30px;
+  padding: 10px 50px;
   border: none;
   border-radius: 8px;
   -webkit-border-radius: 8px;
