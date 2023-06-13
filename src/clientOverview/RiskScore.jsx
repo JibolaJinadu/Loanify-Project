@@ -1,5 +1,6 @@
 import React from 'react';
 import './RiskScore.css';
+import risk from './img/Risk.png';
 
 const RiskScore = () => {
   return (
@@ -7,6 +8,7 @@ const RiskScore = () => {
         <div className='risk-score'>
             <h5>Risk Score:</h5>
             <p>630</p>
+            <img src={risk}alt="image" style={{ height: '250px', width: '150px' }}></img>
        </div>
        <div className='risk-score'>
             <h5>Risk Level:</h5>

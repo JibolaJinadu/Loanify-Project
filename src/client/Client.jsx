@@ -146,7 +146,7 @@ const Client = () => {
                   value={filterStatus}
                   onChange={handleFilterStatus}
                 >
-                  <option value="">All</option>
+                  <option value="">Filter</option>
                   <option value="Approved">Approved</option>
                   <option value="Decline">Decline</option>
                   <option value="Pending Review">Pending Review</option>
@@ -167,7 +167,6 @@ const Client = () => {
                 <th>
                   <input
                     type="checkBox"
-                    disabled
                     className="clients-input"
                   ></input>
                 </th>
@@ -184,7 +183,6 @@ const Client = () => {
                     <Link to="/clients/clients-overview">
                       <input
                         type="checkbox"
-                        disabled
                         className="clients-input"
                       ></input>
                     </Link>

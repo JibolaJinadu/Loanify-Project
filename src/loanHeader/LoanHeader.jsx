@@ -30,7 +30,7 @@ const LoanHeader = ({
             value={filterStatus}
             onChange={handleFilterStatus}
           >
-            <option value="">All</option>
+            <option value="">Filter</option>
             <option value="Approved">Approved</option>
             <option value="Incomplete Docs">Incomplete Docs</option>
             <option value="Received Docs">Received Docs</option>

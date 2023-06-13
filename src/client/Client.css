@@ -22,15 +22,25 @@
 #client-data {
   border-collapse: collapse;
   background-color: white;
-  color: black;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
 }
 
-#clients-color {
+#clients-colorA {
   color: green;
 }
 
+#clients-colorD {
+  color: rgba(243, 35, 97, 0.945);
+}
+
+#clients-colorP {
+  color: yellow;
+}
+
+#clients-colorAP {
+  color: #7ce612;
+}
 .p-10 {
   padding: 10px 0;
 }
@@ -85,65 +95,117 @@
   border-radius: 8px;
 }
 
+.btn-export {
+  padding: 10px 20px;
+  background-color: #0744d3;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 40px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}
+
 .btn-filter {
   width: 200px;
   text-align: left;
 }
 
-#client-data tr td,
-#clients-row th {
-  text-align: left;
+/* General Information Styling*/
+.heading {
+  margin: 1rem;
 }
 
-th {
-  font-size: 16px;
-  font-weight: 700;
-  color: #010e2a;
+.information-style {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-td {
-  font-size: 14px;
-  font-weight: 600;
+.information-boxes {
+  width: 50%;
+  border:1px solid lightgrey;
+  border-radius: 5px;
+  margin:1rem;
+  padding: 0.3em;
+  font-size: 12px;
 }
 
-.clients-input {
-  margin-left: 10px;
+.information-box {
+  width:100%;
+  border:1px solid lightgrey;
+  border-radius: 5px;
+  margin:1rem;
+  padding: 0.3em;
+  font-size: 12px;
 }
 
-.status-approved {
-  color: green;
-  font-size: 14px;
-  font-weight: 600;
+
+.information-label {
+  font-size: 12px;
+  color: #bfbfbf;
+  margin: 1rem;
+} 
+
+/*Loan Details styling*/
+.loan-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
-.status-decline {
-  color: red;
-  font-size: 14px;
-  font-weight: 600;
+.loan-history {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 0.2rem;
+  border:1px solid lightgrey; 
+  padding-left: 50px;
 }
 
-.status-pending {
-  color: yellow;
-  font-size: 14px;
-  font-weight: 600;
+.percent-border {
+  width:100px;
+  height:15px;
+  margin-top:1.0rem;
+  background-color: rgb(236, 234, 234);
+  border-radius:20px;
+}
+.black-background {
+  background-color: black;
+  text-align: center;
+  width:90px;
+  height:15px;
+  border-radius:15px;
+  color:white;
+}
+.green-background {
+  background-color: rgb(16, 131, 16);
+  margin-top:1.0rem;
+  text-align: center;
+  height:15px;
+  border-radius:15px;
+  color:white;
+  width:100px
 }
 
-.client-dot {
-  font-size: 20px;
-  padding-right: 10px;
+.loan-information {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.search-filter,
-.filter-select {
-  outline: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
+.loan-responses p, 
+.collateral-information p {
+  width: 30%;
+  border:1px solid lightgrey;
+  border-radius: 5px;
+  height: 25px;
+  padding-left: 10px;
+  padding-top: 10px;
 }
 
-.filter-select {
-  border: 1px solid #bfbfbf;
+.collateral-information {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*Document*/
+.file {
+  display: flex;
 }
