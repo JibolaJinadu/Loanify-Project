@@ -1,7 +1,8 @@
 .risk-score {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     padding-top: 10px;
+    gap: 50;
 }
 .rs-highlighted {
     background-color:#f0f4fc;
@@ -9,3 +10,12 @@
     padding: 4px;
     border-radius: 0.5rem;
 }
+
+ .rs-sizeb {
+    font-size: 12px;
+    font-weight: 700;
+ }
+
+ .rs-size {
+    font-size: 12px;
+ }
