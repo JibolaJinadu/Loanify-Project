@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import axios from 'axios';
 import { nanoid } from 'nanoid';
 import logo from './Assets/LOANIFY logo.svg';
 import './sign-up.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { toast } from 'react-toastify';
+import Cookies from 'js-cookie';
+import { AuthContext } from '../AuthContext';
 
 const INITIAL_STATE = {
   firstName: '',
   lastName: '',
-  jobRole: '',
-  phoneNo: '',
+  role: '',
+  phoneNumber: '',
   email: '',
   password: '',
 };
@@ -46,7 +49,7 @@ const VALIDATION = {
       message: 'Last name should be less than or equal to 20 characters.',
     },
   ],
-  jobRole: [
+  role: [
     {
       isValid: (value) => !!value,
       message: '',
@@ -56,7 +59,7 @@ const VALIDATION = {
       message: 'Job role should be less than or equal to 50 characters.',
     },
   ],
-  phoneNo: [
+  phoneNumber: [
     {
       isValid: (value) => !!value,
       message: '',
@@ -79,6 +82,8 @@ const VALIDATION = {
 };
 
 const SignUp = () => {
+  const { signUpToken, setSignUpToken } = useContext(AuthContext);
+
   const [form, setForm] = useState(INITIAL_STATE);
   const [errorFields, setErrorFields] = useState({});
   const [isSuccess, setIsSuccess] = useState(false);
@@ -120,29 +125,31 @@ const SignUp = () => {
 
     if (!validateForm()) return;
 
-    navigate('/email-sent');
     try {
-      const { firstName, lastName, jobRole, phoneNo, email, password } = form;
+      const { firstName, lastName, role, phoneNumber, email, password } = form;
       const userData = {
-        id: nanoid(),
         firstName,
         lastName,
-        jobRole,
-        phoneNo,
+        role,
+        phoneNumber,
         email,
         password,
       };
 
-      await axios.post(
-        'https://my-json-server.typicode.com/tundeojediran/contacts-api-server/inquiries',
+      const response = await axios.post(
+        'https://loanifyteama-production.up.railway.app/api/v1/auth/sign-up/',
         userData
       );
-
-      setForm(INITIAL_STATE);
+      Cookies.set('signUpToken', response.data.token, { expires: 7 });
+      setSignUpToken(response.data.token);
       setIsSuccess(true);
       setSubmitError('');
+      toast.success('Sign up succesfully!');
+      setForm(INITIAL_STATE);
+      navigate('/email-sent');
     } catch (error) {
       console.log(error);
+      toast.error(error);
       setSubmitError(
         'There was an error submitting the form. Please try again later.'
       );
@@ -199,13 +206,13 @@ const SignUp = () => {
               <div className="field">
                 <input
                   className="signUp-input"
-                  id="jobRole"
+                  id="role"
                   type="text"
                   placeholder="Junior Loan Officer"
-                  value={form.jobRole}
+                  value={form.role}
                   onChange={handleChange}
                 />
-                {errorFields.jobRole?.map((error, index) => (
+                {errorFields.role?.map((error, index) => (
                   <span key={index} className="errorfield">
                     {error}
                   </span>
@@ -215,13 +222,13 @@ const SignUp = () => {
               <div className="field">
                 <input
                   className="signUp-input"
-                  id="phoneNo"
+                  id="phoneNumber"
                   type="number"
                   placeholder="Phone number"
-                  value={form.phoneNo}
+                  value={form.phoneNumber}
                   onChange={handleChange}
                 />
-                {errorFields.phoneNo?.map((error, index) => (
+                {errorFields.phoneNumber?.map((error, index) => (
                   <span key={index} className="errorfield">
                     {error}
                   </span>
@@ -258,8 +265,7 @@ const SignUp = () => {
                     className="password-toggle"
                     onClick={togglePasswordVisibility}
                   >
-                    {/* {showPassword ? 'Hide' : 'Show'} */}
-                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                    {showPassword ? <Visibility /> : <VisibilityOff />}
                   </span>
                 </div>
                 {errorFields.password?.map((error, index) => (

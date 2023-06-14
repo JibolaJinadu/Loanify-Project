@@ -79,7 +79,6 @@ export default function Sidebar() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      {/* <Navbar /> */}
       <AppBar
         position="fixed"
         sx={{
@@ -115,75 +114,105 @@ export default function Sidebar() {
         <Toolbar>
           <img src={logo} alt="Loanify Logo" className="sidebar-logo" />
         </Toolbar>
-        <List
-          sx={{ backgroundColor: '#04297F', color: 'white', height: '75%' }}
-        >
+        <List sx={{ backgroundColor: '#04297F', color: 'white' }}>
           {items.map((text, index) => {
             const isActive = location.pathname.startsWith(text.path);
             return (
               <ListItem key={index} disablePadding>
                 <ListItemButton
                   onClick={() => navigate(text.path)}
-                  sx={
-                    isActive
-                      ? { backgroundColor: 'rgba(255, 255, 255, 0.3)' }
-                      : {}
-                  }
+                  sx={{
+                    '&:hover': {
+                      backgroundColor: isActive
+                        ? 'rgba(255, 255, 255, 0.9)'
+                        : 'initial',
+                    },
+                    ...(isActive && {
+                      backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                      color: '#04297F',
+                    }),
+                    padding: '5px 0',
+                  }}
                 >
                   <div className="side--menu">
                     <div style={{ marginLeft: '20px' }}>
                       <img
                         src={text.icon}
                         alt="Icon"
-                        style={{ width: '30px', height: '30px' }}
+                        style={{
+                          width: '30px',
+                          height: '25px',
+                          filter: isActive ? 'hue-rotate(180deg)' : 'none',
+                        }}
                       />
                     </div>
-                    <ListItemText
-                      primary={text.list}
+                    <h1
                       style={{
-                        marginLeft: '20px',
+                        marginLeft: '10px',
                         paddingRight: '10px',
-                        marginTop: '5px',
-                        fontSize: '16px',
-                        fontWeight: '400',
+                        fontSize: '14px',
+                        fontWeight: isActive ? '600' : '500',
+                        textAlign: 'center',
+                        marginTop: '3px',
+                        fontFamily: 'Montserrat ,sans-serif',
                       }}
-                    />
+                    >
+                      {text.list}
+                    </h1>
                   </div>
                 </ListItemButton>
               </ListItem>
             );
           })}
         </List>
-        <List sx={{ backgroundColor: '#04297F', color: 'white' }}>
+        <List
+          sx={{
+            backgroundColor: '#04297F',
+            color: 'white',
+            height: '100vh',
+            paddingTop: '30px',
+          }}
+        >
           {['Support'].map((text, index) => {
             const isActive = location.pathname.startsWith('/support');
             return (
               <ListItem key={text} disablePadding>
                 <ListItemButton
                   onClick={() => navigate('/support')}
-                  sx={
-                    isActive
-                      ? { backgroundColor: 'rgba(255, 255, 255, 0.3)' }
-                      : {}
-                  }
+                  sx={{
+                    '&:hover': {
+                      backgroundColor: isActive
+                        ? 'rgba(255, 255, 255, 0.9)'
+                        : 'initial',
+                    },
+                    ...(isActive && {
+                      backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                      color: '#04297F',
+                    }),
+                    padding: '5px 0',
+                  }}
                 >
-                  <div style={{ marginLeft: '20px' }}>
-                    <img
-                      src={support}
-                      alt="Icon"
-                      style={{ width: '30px', height: '30px' }}
-                    />
+                  <div className="side--menu">
+                    <div style={{ marginLeft: '20px' }}>
+                      <img
+                        src={support}
+                        alt="Icon"
+                        style={{ width: '30px', height: '25px' }}
+                      />
+                    </div>
+                    <h1
+                      style={{
+                        marginLeft: '10px',
+                        paddingRight: '10px',
+                        fontSize: '14px',
+                        fontWeight: isActive ? '600' : '500',
+                        textAlign: 'center',
+                        marginTop: '3px',
+                      }}
+                    >
+                      {text}
+                    </h1>
                   </div>
-                  <ListItemText
-                    primary={text}
-                    style={{
-                      marginLeft: '20px',
-                      paddingRight: '10px',
-                      marginTop: '5px',
-                      fontSize: '16px',
-                      fontWeight: '400',
-                    }}
-                  />
                 </ListItemButton>
               </ListItem>
             );
