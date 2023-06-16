@@ -1,4 +1,4 @@
-import React,  { useState } from 'react';
+import React, { useState } from 'react';
 import './GeneralInformation.css';
 
 const GeneralInformation = () => {
@@ -123,7 +123,6 @@ const GeneralInformation = () => {
       jobTitle,
       fullName,
       employmentStatus
-
     );
     setFirstName('');
     setMiddleName('');
@@ -143,20 +142,19 @@ const GeneralInformation = () => {
     setBirthDate('');
     setPlaceOfWork('');
     setAddress('');
-    setPhysicalAddress(''),
-    setJobTitle('');
+    setPhysicalAddress(''), setJobTitle('');
     setFullName('');
     setEmploymentStatus('');
   };
 
   return (
-    <div>
+    <div className="general">
       <h5>Personal Information</h5>
-      <form className="personal-information-form"  onSubmit={{ handleSubmit }} >
+      <form className="personal-information-form" onSubmit={{ handleSubmit }}>
         <div className="form-settings">
           <div>
             <label>
-                First Name
+              First Name
               <input
                 type="text"
                 value={firstName}
@@ -165,12 +163,16 @@ const GeneralInformation = () => {
               ></input>
             </label>
             <label>
-                Sex
-              <input type="text" value={gender} placeholder="Female" onChange={handleGenderChange}>
-              </input>
+              Sex
+              <input
+                type="text"
+                value={gender}
+                placeholder="Female"
+                onChange={handleGenderChange}
+              ></input>
             </label>
             <label>
-                Email Address
+              Email Address
               <input
                 type="text"
                 value={emailAddress}
@@ -180,7 +182,7 @@ const GeneralInformation = () => {
               ></input>
             </label>
             <label>
-                Address
+              Address
               <input
                 type="text"
                 name="address"
@@ -192,7 +194,7 @@ const GeneralInformation = () => {
           </div>
           <div>
             <label>
-            Middle Name
+              Middle Name
               <input
                 type="text"
                 value={middleName}
@@ -201,7 +203,7 @@ const GeneralInformation = () => {
               ></input>
             </label>
             <label>
-                Date of Birth
+              Date of Birth
               <input
                 type="text"
                 value={dateOfBirth}
@@ -210,7 +212,7 @@ const GeneralInformation = () => {
               ></input>
             </label>
             <label>
-                Phone Number
+              Phone Number
               <input
                 type="text"
                 value={phoneNumber}
@@ -221,7 +223,7 @@ const GeneralInformation = () => {
           </div>
           <div>
             <label>
-                Last Name
+              Last Name
               <input
                 type="text"
                 value={lastName}
@@ -230,17 +232,16 @@ const GeneralInformation = () => {
               />
             </label>
             <label>
-                Marital Status
+              Marital Status
               <input
                 type="text"
                 value={maritalStatus}
                 placeholder="Married"
                 onChange={handleMaritalStatusChange}
-              >
-              </input>
+              ></input>
             </label>
             <label>
-                NIN
+              NIN
               <input
                 type="text"
                 value={nin}
@@ -249,7 +250,7 @@ const GeneralInformation = () => {
               />
             </label>
             <label>
-                Tenancy Start Date
+              Tenancy Start Date
               <input
                 type="text"
                 value={date}
@@ -262,10 +263,10 @@ const GeneralInformation = () => {
       </form>
       <h5>Employment Information</h5>
       <form className="employment-information-form" onSubmit={{ handleSubmit }}>
-       <div className="form-settings">
-        <div>
-        <label>
-            Place of Work
+        <div className="form-settings">
+          <div>
+            <label>
+              Place of Work
               <input
                 type="text"
                 value={work}
@@ -274,16 +275,16 @@ const GeneralInformation = () => {
               ></input>
             </label>
             <label>
-            Company Staff Number
+              Company Staff Number
               <input
                 type="text"
                 value={number}
                 placeholder="NGA7890"
                 onChange={handleNumberChange}
-              ></input> 
-             </label>
+              ></input>
+            </label>
             <label>
-            Company Physical Address
+              Company Physical Address
               <input
                 type="text"
                 name="address"
@@ -293,10 +294,10 @@ const GeneralInformation = () => {
                 required
               ></input>
             </label>
-        </div>
-        <div>
-        <label>
-            Job Title
+          </div>
+          <div>
+            <label>
+              Job Title
               <input
                 type="text"
                 value={jobTitle}
@@ -305,18 +306,18 @@ const GeneralInformation = () => {
               ></input>
             </label>
             <label>
-            Start Date
+              Start Date
               <input
                 type="text"
                 value={date}
                 placeholder="04/05/2013"
                 onChange={handleDateChange}
               />
-            </label> 
-        </div>
-        <div>
-        <label>
-            Work Email
+            </label>
+          </div>
+          <div>
+            <label>
+              Work Email
               <input
                 type="text"
                 value={workEmail}
@@ -324,25 +325,25 @@ const GeneralInformation = () => {
                 onChange={handleWorkEmailChange}
                 required
               ></input>
-            </label>  
+            </label>
             <label>
-            End Date
+              End Date
               <input
                 type="text"
                 value={endDate}
                 placeholder="N/A"
                 onChange={handleEndDateChange}
               />
-            </label> 
+            </label>
+          </div>
         </div>
-     </div>
       </form>
       <h5>Guarantor Information</h5>
       <form className="guarantor-information-form" onSubmit={{ handleSubmit }}>
-       <div className="form-settings">
-        <div>
-        <label>
-                Full Name
+        <div className="form-settings">
+          <div>
+            <label>
+              Full Name
               <input
                 type="text"
                 value={fullName}
@@ -351,7 +352,7 @@ const GeneralInformation = () => {
               />
             </label>
             <label>
-                Phone Number
+              Phone Number
               <input
                 type="text"
                 value={phoneNumber}
@@ -360,7 +361,7 @@ const GeneralInformation = () => {
               ></input>
             </label>
             <label>
-                Place of Work
+              Place of Work
               <input
                 type="text"
                 value={placeofwork}
@@ -368,10 +369,10 @@ const GeneralInformation = () => {
                 onChange={handlePlaceOfWorkChange}
               ></input>
             </label>
-        </div>
-        <div>
-        <label>
-                Employment Status
+          </div>
+          <div>
+            <label>
+              Employment Status
               <input
                 type="text"
                 value={employmentStatus}
@@ -380,7 +381,7 @@ const GeneralInformation = () => {
               ></input>
             </label>
             <label>
-                Date of Birth
+              Date of Birth
               <input
                 type="text"
                 value={birthDate}
@@ -389,7 +390,7 @@ const GeneralInformation = () => {
               ></input>
             </label>
             <label>
-                Work Address
+              Work Address
               <input
                 type="text"
                 name="address"
@@ -399,10 +400,10 @@ const GeneralInformation = () => {
                 required
               ></input>
             </label>
-        </div>
-        <div>
-        <label>
-                Email Address
+          </div>
+          <div>
+            <label>
+              Email Address
               <input
                 type="text"
                 value={email}
@@ -412,7 +413,7 @@ const GeneralInformation = () => {
               ></input>
             </label>
             <label>
-                NIN
+              NIN
               <input
                 type="text"
                 value={nin}
@@ -420,11 +421,11 @@ const GeneralInformation = () => {
                 onChange={handleNinChange}
               />
             </label>
+          </div>
         </div>
-       </div>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default GeneralInformation
+export default GeneralInformation;

@@ -112,3 +112,10 @@
 .logout {
   color: #d30744;
 }
+
+.side--menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 20px; */
+}
