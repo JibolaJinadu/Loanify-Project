@@ -13,7 +13,7 @@
 
 .personal-information-form label {
   display: block;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   font-size: 13px;
   font-weight: small;
   width: 60%;
@@ -35,7 +35,7 @@
 }
 .employment-information-form label {
   display: block;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   font-size: 13px;
   font-weight: small;
   width: 60%;
@@ -57,7 +57,7 @@
 }
 .guarantor-information-form label {
   display: block;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   font-size: 13px;
   font-weight: small;
   width: 60%;

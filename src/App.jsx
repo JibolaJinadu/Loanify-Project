@@ -26,10 +26,25 @@ import ClientOverview from './clientOverview/ClientOverview';
 import FAQ from './support/FAQ';
 import LoanOverview from './loanOverview/LoanOverview';
 import ChangePwd from './changePassword/ChangePwd';
+import { useEffect, useState } from 'react';
+import { AuthContext } from './AuthContext';
+import Cookies from 'js-cookie';
 
 function App() {
+  const [signUpToken, setSignUpToken] = useState('');
+  const [loginToken, setLoginToken] = useState('');
+
+  useEffect(() => {
+    const storedToken = Cookies.get('signUpToken');
+    if (storedToken) {
+      setSignUpToken(storedToken);
+    }
+  }, []);
+
   return (
-    <>
+    <AuthContext.Provider
+      value={{ signUpToken, setSignUpToken, loginToken, setLoginToken }}
+    >
       <ToastContainer />
       <Router>
         <Routes>
@@ -79,7 +94,7 @@ function App() {
           ></Route>
         </Routes>
       </Router>
-    </>
+    </AuthContext.Provider>
   );
 }
 

@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './token.css';
 import BusinessGuy from './Assets/business-guy.png';
 import Logo from './Assets/logo.svg';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { AuthContext } from '../AuthContext';
 
 const Token = () => {
+  const { signUpToken } = useContext(AuthContext);
   const [tokenDigits, setTokenDigits] = useState(['', '', '', '']);
   const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
+
+  console.log(`token ${signUpToken}`);
 
   const handleTokenChange = (index, event) => {
     const digit = event.target.value;
@@ -44,28 +48,33 @@ const Token = () => {
       setErrorMessage('Please enter all the digits of the token PIN.');
       return;
     }
-    toast.success('Login successfully');
-    navigate('/dashboard');
 
-    // try {
-    //   // Send a request to the server to verify the token PIN
-    //   const response = await axios.post(
-    //     'https://my-json-server.typicode.com/tundeojediran/contacts-api-server/inquiries',
-    //     { token }
-    //   );
+    try {
+      // Send a request to the server to verify the token PIN
+      const response = await axios.post(
+        'https://loanifyteama-production.up.railway.app/api/v1/auth/verify-email/',
+        { code: parseInt(token, 10) },
+        {
+          headers: {
+            Authorization: `Bearer ${signUpToken}`,
+          },
+        }
+      );
+      navigate('/dashboard');
+      toast.success('Login successfully');
 
-    //   // Process the server's response to check if the token PIN is correct
-    //   const isTokenCorrect = response.data.isTokenCorrect;
+      // Process the server's response to check if the token PIN is correct
+      // const isTokenCorrect = response.data.isTokenCorrect;
 
-    //   if (isTokenCorrect) {
-    //     // Navigate the user to the dashboard page
-    //     // navigate('/settings');
-    //   } else {
-    //     setErrorMessage('Sorry, the token PIN is not correct.');
-    //   }
-    // } catch (error) {
-    //   setErrorMessage('An error occurred. Please try again.');
-    // }
+      // if (isTokenCorrect) {
+      //   // Navigate the user to the dashboard page
+      // } else {
+      //   setErrorMessage('Sorry, the token PIN is not correct.');
+      // }
+    } catch (error) {
+      setErrorMessage('An error occurred. Please try again.');
+      console.log(error);
+    }
 
     setTokenDigits(['', '', '', '']);
   };
