@@ -5,6 +5,10 @@ import Line_Chart from './LineChart';
 import Barchart1 from './BarChart1';
 import Barchart2 from './BarChart2';
 import Barchart3 from './BarChart3';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+
+
 
 const OverviewPage = () => {
   return (
@@ -12,20 +16,22 @@ const OverviewPage = () => {
       <div className="overview-container">
         <div className="overview-1">
           <div className="overview-row1">
-            <div className="row-item1">
+          <div className="row-item1">
               <div className="item-left">
                 <p className="upper-text">All Loans</p>
                 <p className="lower-text">
-                  <span className="drop-sign">^ </span>15%
+                  <FontAwesomeIcon className="drop-up drop1" icon={faChevronUp} /> 
+                  <span className='lower-text-percent'>15%</span>
                 </p>
               </div>
-              <h2 className="item-right">250M</h2>
+              <h2 className="item-right right">250M</h2>
             </div>
             <div className="row-item2">
               <div className="item-left">
                 <p className="upper-text">New Applications</p>
                 <p className="lower-text">
-                  <span className="drop-sign">^ </span>40%
+                  <FontAwesomeIcon className="drop-up drop2" icon={faChevronUp} /> 
+                  <span className='lower-text-percent'>40%</span>
                 </p>
               </div>
               <h2 className="item-right right2">35</h2>
@@ -34,7 +40,8 @@ const OverviewPage = () => {
               <div className="item-left">
                 <p className="upper-text">Pending Loans</p>
                 <p className="lower-text">
-                  <sup className="drop-sign">v </sup>5%
+                  <FontAwesomeIcon className="drop-down drop3" icon={faChevronDown} /> 
+                  <span className='lower-text-percent'>5%</span>
                 </p>
               </div>
               <h2 className="item-right right3">30</h2>
@@ -43,7 +50,8 @@ const OverviewPage = () => {
               <div className="item-left">
                 <p className="upper-text">Active Loans</p>
                 <p className="lower-text">
-                  <span className="drop-sign">^ </span>12%
+                  <FontAwesomeIcon className="drop-up drop4" icon={faChevronUp} /> 
+                  <span className='lower-text-percent'>12%</span>
                 </p>
               </div>
               <h2 className="item-right right4">60</h2>
@@ -55,7 +63,8 @@ const OverviewPage = () => {
               <div className="item-left">
                 <p className="upper-text">Due Loans</p>
                 <p className="lower-text">
-                  <span className="drop-sign">^ </span>5%
+                  <FontAwesomeIcon className="drop-up drop5" icon={faChevronUp} /> 
+                  <span className='lower-text-percent'>5%</span>
                 </p>
               </div>
               <h2 className="item-right right5">75M</h2>
@@ -64,7 +73,8 @@ const OverviewPage = () => {
               <div className="item-left">
                 <p className="upper-text">Extended Loans</p>
                 <p className="lower-text">
-                  <span className="drop-sign">^ </span>8%
+                  <FontAwesomeIcon className="drop-up drop6" icon={faChevronUp} /> 
+                  <span className='lower-text-percent'>8%</span>
                 </p>
               </div>
               <h2 className="item-right right6">22M</h2>
@@ -73,7 +83,8 @@ const OverviewPage = () => {
               <div className="item-left">
                 <p className="upper-text">Defaulted Loans</p>
                 <p className="lower-text">
-                  <sup className="drop-sign">v </sup>10%
+                  <FontAwesomeIcon className="drop-down drop7" icon={faChevronDown} /> 
+                  <span className='lower-text-percent'>10%</span>
                 </p>
               </div>
               <h2 className="item-right right7">35M</h2>
@@ -82,7 +93,8 @@ const OverviewPage = () => {
               <div className="item-left">
                 <p className="upper-text">Closed Loans</p>
                 <p className="lower-text">
-                  <span className="drop-sign">^ </span>45%
+                  <FontAwesomeIcon className="drop-up drop8" icon={faChevronUp} /> 
+                  <span className='lower-text-percent'>45%</span>
                 </p>
               </div>
               <h2 className="item-right right8">98M</h2>
