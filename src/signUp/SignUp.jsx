@@ -93,12 +93,22 @@ const SignUp = () => {
 
   const handleChange = (event) => {
     const { id, value } = event.target;
-    setForm((prevState) => ({ ...prevState, [id]: value }));
-    setErrorFields((prevErrors) => ({
-      ...prevErrors,
-      [id]: validateField(id, value),
-    }));
+    if (id === "phoneNumber") {
+      const digitsOnly = value.replace(/\D/g, "");
+      setForm((prevState) => ({ ...prevState, [id]: digitsOnly }));
+      setErrorFields((prevErrors) => ({
+        ...prevErrors,
+        [id]: validateField(id, digitsOnly),
+      }));
+    } else {
+      setForm((prevState) => ({ ...prevState, [id]: value }));
+      setErrorFields((prevErrors) => ({
+        ...prevErrors,
+        [id]: validateField(id, value),
+      }));
+    }
   };
+
 
   const validateField = (id, value) => {
     if (!VALIDATION[id]) return [];
@@ -223,7 +233,7 @@ const SignUp = () => {
                 <input
                   className="signUp-input"
                   id="phoneNumber"
-                  type="number"
+                  type="tel"
                   placeholder="Phone number"
                   value={form.phoneNumber}
                   onChange={handleChange}
