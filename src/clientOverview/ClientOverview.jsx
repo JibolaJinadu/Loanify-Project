@@ -14,10 +14,12 @@ const ClientOverview = () => {
 
   const handleTabChange = (event, newValue) => {
     const tabs = [
+      '',
       'General Information',
       'Loan Application',
       'Risk Score',
       'Documents',
+      '',
     ];
     setActiveTabLabel(tabs[newValue]);
   };

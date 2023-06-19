@@ -62,15 +62,6 @@ const Token = () => {
       );
       navigate('/dashboard');
       toast.success('Login successfully');
-
-      // Process the server's response to check if the token PIN is correct
-      // const isTokenCorrect = response.data.isTokenCorrect;
-
-      // if (isTokenCorrect) {
-      //   // Navigate the user to the dashboard page
-      // } else {
-      //   setErrorMessage('Sorry, the token PIN is not correct.');
-      // }
     } catch (error) {
       setErrorMessage('An error occurred. Please try again.');
       console.log(error);

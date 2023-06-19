@@ -27,6 +27,15 @@ import MessageDialog from './MessageDialog';
 import NotificationDialog from './NotificationDialog';
 import UserDialog from './UserDialog';
 import notification from './assets/notifications.svg';
+import dashboardActive from './assets/dashboard-blue.svg';
+import profileActive from './assets/profile-blue.svg';
+import ClientActive from './assets/clients-blue.svg';
+import supportActive from './assets/support-blue.svg';
+import settingActive from './assets/settings-blue.svg';
+import reportActive from './assets/reports-blue.svg';
+import notificationActive from './assets/notifications-blue.svg';
+import loanActive from './assets/loan-blue.svg';
+import messageActive from './assets/message-blue.svg';
 
 const drawerWidth = 240;
 
@@ -38,41 +47,49 @@ export default function Sidebar() {
       list: 'Dashboard',
       icon: dashboard,
       path: '/dashboard',
+      iconActive: dashboardActive,
     },
     {
       list: 'Loans',
       icon: loans,
       path: '/loans',
+      iconActive: loanActive,
     },
     {
       list: 'Profile',
       icon: profile,
       path: '/profile',
+      iconActive: profileActive,
     },
     {
       list: 'Messages',
       icon: messages,
       path: '/messages',
+      iconActive: messageActive,
     },
     {
       list: 'Notification',
       icon: notification,
       path: '/notification',
+      iconActive: notificationActive,
     },
     {
       list: 'Reports',
       icon: reports,
       path: '/reports',
+      iconActive: reportActive,
     },
     {
       list: 'Clients',
       icon: clients,
       path: '/clients',
+      iconActive: ClientActive,
     },
     {
       list: 'Settings',
       icon: settings,
       path: '/settings',
+      iconActive: settingActive,
     },
   ];
 
@@ -128,21 +145,20 @@ export default function Sidebar() {
                         : 'initial',
                     },
                     ...(isActive && {
-                      backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                      backgroundColor: '#fff',
                       color: '#04297F',
                     }),
-                    padding: '5px 0',
+                    padding: '2px 20px',
                   }}
                 >
                   <div className="side--menu">
                     <div style={{ marginLeft: '20px' }}>
                       <img
-                        src={text.icon}
+                        src={isActive ? text.iconActive : text.icon}
                         alt="Icon"
                         style={{
-                          width: '30px',
-                          height: '25px',
-                          filter: isActive ? 'hue-rotate(180deg)' : 'none',
+                          width: '25px',
+                          height: '30px',
                         }}
                       />
                     </div>
@@ -153,7 +169,7 @@ export default function Sidebar() {
                         fontSize: '14px',
                         fontWeight: isActive ? '600' : '500',
                         textAlign: 'center',
-                        marginTop: '3px',
+                        marginTop: '5px',
                         fontFamily: 'Montserrat ,sans-serif',
                       }}
                     >
@@ -189,15 +205,15 @@ export default function Sidebar() {
                       backgroundColor: 'rgba(255, 255, 255, 0.9)',
                       color: '#04297F',
                     }),
-                    padding: '5px 0',
+                    padding: '2px 20px',
                   }}
                 >
                   <div className="side--menu">
                     <div style={{ marginLeft: '20px' }}>
                       <img
-                        src={support}
+                        src={isActive ? supportActive : support}
                         alt="Icon"
-                        style={{ width: '30px', height: '25px' }}
+                        style={{ width: '25px', height: '30px' }}
                       />
                     </div>
                     <h1
@@ -207,7 +223,7 @@ export default function Sidebar() {
                         fontSize: '14px',
                         fontWeight: isActive ? '600' : '500',
                         textAlign: 'center',
-                        marginTop: '3px',
+                        marginTop: '5px',
                       }}
                     >
                       {text}

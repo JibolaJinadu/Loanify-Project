@@ -88,41 +88,20 @@ export default function MessageDialog() {
           <h1 className="sms">Messages</h1>
         </BootstrapDialogTitle>
         <h4 className="newMessages">New Messages</h4>
-        <List>
-          <ListItem>
+        {msg.map((msg, i) => {
+          return (
             <div className="dialog-box">
-              <img src={jane} className="jane" alt="" />
+              <img src={msg.src} className="jane" alt="" />
               <div className="dialog-title">
-                <p>Jane</p>
-                <p>
-                  Hello, please have you had a chan... <span>1hr</span>
+                <p style={{ fontSize: '14px' }}>{msg.name}</p>
+                <p style={{ fontSize: '14px' }}>
+                  {msg.text} <span>{msg.time}</span>
                 </p>
               </div>
             </div>
-          </ListItem>
-          <ListItem>
-            <div className="dialog-box">
-              <img src={jane} className="jane" alt="" />
-              <div className="dialog-title">
-                <p>Jane</p>
-                <p>
-                  Hello, please have you had a chan... <span>1hr</span>
-                </p>
-              </div>
-            </div>
-          </ListItem>
-          <ListItem>
-            <div className="dialog-box">
-              <img src={jane} className="jane" alt="" />
-              <div className="dialog-title">
-                <p>Jane</p>
-                <p>
-                  Hello, please have you had a chan... <span>1hr</span>
-                </p>
-              </div>
-            </div>
-          </ListItem>
-        </List>
+          );
+        })}
+        <hr style={{ marginTop: '20px' }} />
         <Link to="/messages" className="sms-btn">
           View all messages
         </Link>
@@ -130,3 +109,24 @@ export default function MessageDialog() {
     </div>
   );
 }
+
+const msg = [
+  {
+    name: 'Jane',
+    src: jane,
+    time: '1hr',
+    text: 'Hello, please have you had a chan...',
+  },
+  {
+    name: 'Jane',
+    src: jane,
+    time: '1hr',
+    text: 'Hello, please have you had a chan...',
+  },
+  {
+    name: 'Jane',
+    src: jane,
+    time: '1hr',
+    text: 'Hello, please have you had a chan...',
+  },
+];
