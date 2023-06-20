@@ -93,8 +93,8 @@ const SignUp = () => {
 
   const handleChange = (event) => {
     const { id, value } = event.target;
-    if (id === "phoneNumber") {
-      const digitsOnly = value.replace(/\D/g, "");
+    if (id === 'phoneNumber') {
+      const digitsOnly = value.replace(/\D/g, '');
       setForm((prevState) => ({ ...prevState, [id]: digitsOnly }));
       setErrorFields((prevErrors) => ({
         ...prevErrors,
@@ -108,7 +108,6 @@ const SignUp = () => {
       }));
     }
   };
-
 
   const validateField = (id, value) => {
     if (!VALIDATION[id]) return [];
@@ -150,19 +149,35 @@ const SignUp = () => {
         'https://loanifyteama-production.up.railway.app/api/v1/auth/sign-up/',
         userData
       );
+
       Cookies.set('signUpToken', response.data.token, { expires: 7 });
       setSignUpToken(response.data.token);
       setIsSuccess(true);
       setSubmitError('');
-      toast.success('Sign up succesfully!');
+      toast.success('Sign up successfully!');
       setForm(INITIAL_STATE);
       navigate('/email-sent');
     } catch (error) {
-      console.log(error);
-      toast.error(error);
-      setSubmitError(
-        'There was an error submitting the form. Please try again later.'
-      );
+      if (
+        error.response &&
+        error.response.data &&
+        error.response.data.error &&
+        error.response.data.error.message
+      ) {
+        const errorMessage = error.response.data.error.message;
+        console.log(errorMessage);
+
+        if (
+          errorMessage.includes('duplicate key error') &&
+          errorMessage.includes('email')
+        ) {
+          toast.error('The email you entered is already registered.');
+        } else {
+          toast.error('There was an error signing up. Please try again later.');
+        }
+      } else {
+        toast.error('There was an error signing up. Please try again later.');
+      }
     }
   };
 

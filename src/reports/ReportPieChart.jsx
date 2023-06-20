@@ -2,11 +2,11 @@ import React, { useState, useCallback } from 'react';
 import { PieChart, Pie, Sector, ResponsiveContainer, Cell } from 'recharts';
 
 const data = [
-  { name: 'Active Disbursement', value: 900 },
-  { name: 'Repayment', value: 300 },
-  { name: 'Default', value: 300 },
+  { name: 'Default', title: 'Disbursement', value: 300 },
+  { name: 'Active', title: 'Disbursement', value: 900 },
+  { name: 'Repayment', title: 'Disbursement', value: 300 },
 ];
-const COLORS = ['#0744D3', '#44D307', '#D30744'];
+const COLORS = ['#D30744', '#0744D3', '#44D307'];
 
 const renderActiveShape = (props) => {
   const RADIAN = Math.PI / 180;
@@ -35,18 +35,25 @@ const renderActiveShape = (props) => {
 
   return (
     <g>
-      <text x={cx} y={cy} dy={8} textAnchor="middle" fill={fill}>
-        <tspan style={{ fontSize: '11px', fontWeight: '700' }}>
+      <text x={cx} y={cy} dy={-18} textAnchor="middle">
+        <tspan style={{ fontSize: '14px', fontWeight: '700', fill: '#999CA0' }}>
           {payload.name}
         </tspan>
         <tspan
           x={cx}
           y={cy}
-          dy={30}
-          textAnchor="middle"
-          style={{ fontSize: '16px', fontWeight: '400' }}
+          dy={4}
+          style={{ fontSize: '14px', fontWeight: '700', fill: '#999CA0' }}
         >
-          {`${(percent * 100).toFixed(2)}%`}
+          {payload.title}
+        </tspan>
+        <tspan
+          x={cx}
+          y={cy}
+          dy={35}
+          style={{ fontSize: '20px', fontWeight: '500' }}
+        >
+          {`${(percent * 100).toFixed(0)}%`}
         </tspan>
       </text>
       <Sector
@@ -58,14 +65,13 @@ const renderActiveShape = (props) => {
         endAngle={endAngle}
         fill={fill}
         cornerRadius={50}
-        paddingAngle={-5}
       />
     </g>
   );
 };
 
 const ReportPieChart = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(1);
 
   const onMouseEnter = useCallback(
     (_, index) => {
@@ -89,7 +95,7 @@ const ReportPieChart = () => {
             dataKey="value"
             onMouseEnter={onMouseEnter}
             cornerRadius={50}
-            paddingAngle={-5}
+            paddingAngle={-10}
           >
             {data.map((entry, index) => (
               <Cell
