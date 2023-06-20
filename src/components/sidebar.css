@@ -28,8 +28,14 @@
 
 .dialog-box {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 10px;
+  padding: 5px 20px;
+}
+
+.dialog-box p {
+  margin-top: 0;
 }
 
 .dialog-title p {
@@ -51,20 +57,29 @@
 }
 
 .sms-btn {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   color: #fff;
   background-color: #0744d3;
   display: block;
   margin-left: 20px;
   margin-bottom: 10px;
+  margin-top: 10px;
   width: 150px;
-  padding: 10px;
+  text-align: center;
+  padding: 8px 0;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
+}
+
+.allRead {
+  color: #0744d3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .span-box {

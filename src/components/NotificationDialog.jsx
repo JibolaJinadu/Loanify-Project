@@ -15,6 +15,8 @@ import { Link } from 'react-router-dom';
 import jane from './assets/jane.png';
 import notification from './assets/bell.svg';
 import './sidebar.css';
+import settings from './assets/settings-not.svg';
+import CheckIcon from '@mui/icons-material/Check';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
@@ -88,33 +90,56 @@ export default function NotificationDialog() {
           <h1 className="sms">Notifications</h1>
         </BootstrapDialogTitle>
         <h4 className="newMessages">New</h4>
-        <List>
-          <ListItem>
-            <div className="dialog-box">
-              <img src={jane} alt="" className="jane" />
-              <p>Jane Doe applied for a loan extension </p>
+        {not.map((not, i) => {
+          return (
+            <div className="dialog-box" key={i}>
+              <img src={not.src} className="jane" alt="" />
+              <p style={{ fontSize: '14px' }}>{not.text}</p>
               <div className="span-box">&nbsp;</div>
             </div>
-          </ListItem>
-          <ListItem>
-            <div className="dialog-box">
-              <img src={jane} alt="" className="jane" />
-              <p>Jane Doe applied for a loan extension </p>
-              <div className="span-box">&nbsp;</div>
-            </div>
-          </ListItem>
-          <ListItem>
-            <div className="dialog-box">
-              <img src={jane} alt="" className="jane" />
-              <p>Jane Doe applied for a loan extension </p>
-              <div className="span-box">&nbsp;</div>
-            </div>
-          </ListItem>
-        </List>
-        <Link to="/notification" className="sms-btn notify-btn">
-          View all Notifications
-        </Link>
+          );
+        })}
+        <hr style={{ marginTop: '20px' }} />
+        <div className="dialog-box">
+          <Link to="/settings">
+            <img src={settings} alt="" />
+          </Link>
+          <div className="allRead">
+            <CheckIcon />
+            <h5>Mark all as read.</h5>
+          </div>
+          <Link to="/notification" className="sms-btn notify-btn">
+            View all Notifications
+          </Link>
+        </div>
       </BootstrapDialog>
     </div>
   );
 }
+
+const not = [
+  {
+    src: jane,
+    text: 'Jane Doe applied for a loan extension',
+  },
+  {
+    src: jane,
+    text: 'Jane Doe applied for a loan extension',
+  },
+  {
+    src: jane,
+    text: 'Jane Doe applied for a loan extension',
+  },
+  {
+    src: jane,
+    text: 'Jane Doe applied for a loan extension',
+  },
+  {
+    src: jane,
+    text: 'Jane Doe applied for a loan extension',
+  },
+  {
+    src: jane,
+    text: 'Jane Doe applied for a loan extension',
+  },
+];
