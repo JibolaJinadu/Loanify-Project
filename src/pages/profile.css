@@ -41,7 +41,7 @@
   margin-top: 1rem;
 }
 .box {
-  width: 14rem;
+  width: 18rem;
   display: flex;
   justify-content: space-between;
   margin-right: 1.5rem;
@@ -94,19 +94,21 @@
 .profileTableWrapper table {
   margin-top: 1rem;
   width: 100%;
-  border-spacing: 0 10px;
   border-collapse: collapse;
   height: 100%;
 }
-.profileTableWrapper thead {
-  border: 1px solid #bfbfbf;
+.profileTableWrapper table thead tr {
+  border: 1px solid blue;
   height: 40px;
 }
-/* .profileTableWrapper table .tableHead {
-  /* border: 2px solid #bfbfbf;
-  padding: 0.5rem; */
-  /* border-collapse: collapse;
-  border-spacing:0 10px; */
+.profileTableWrapper .tableData{
+  background-color: #f0f4fc;
+  border-top: 5px solid white;
+  
+} 
+.profileTableWrapper .tableData:hover{
+  background-color: rgb(107, 107, 228);
+}
 
 .profileTableWrapper table th {
   text-align: left;
@@ -114,15 +116,26 @@
   font-size: 16px;
   font-weight: 700;
   color: #010e2a;
-  /* border-collapse: collapse; */
+}
+.profileTableWrapper table td {
+  text-align: left;
+  padding: 2rem;
+  font-weight: 300;
+  font-size: 12px;
 }
 .profileTableWrapper table td {
   text-align: left;
   padding: 0.5rem;
   font-weight: 300;
   font-size: 12px;
-  /* margin: 1rem; */
+  position: relative; /* Add relative positioning */
 }
+
+/* .profileTableWrapper table td::after {
+  content: ""; 
+  display: block;
+  height: 10px;
+} */
 .profile-name {
   font-size: 20px;
   font-weight: 700;
