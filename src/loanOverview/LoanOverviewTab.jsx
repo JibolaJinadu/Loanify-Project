@@ -15,7 +15,7 @@ const LoanOverviewTab = ({ onTabChange }) => {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('sm'));
 
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(1);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -48,18 +48,21 @@ const LoanOverviewTab = ({ onTabChange }) => {
           margin: '0 20px',
         }}
       >
+        <div
+          style={{ borderBottom: '1px solid #010E2A', padding: '5px' }}
+        ></div>
         <Tab
           label="General Information"
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
               marginTop: '10px',
-              marginLeft: '10px',
               borderBottom: '0',
               borderTop: '1px solid #010E2A',
               borderRight: '1px solid #010E2A',
               borderLeft: '1px solid #010E2A',
             },
+            color: '#010E2A',
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
@@ -77,6 +80,7 @@ const LoanOverviewTab = ({ onTabChange }) => {
               borderRight: '1px solid #010E2A',
               borderLeft: '1px solid #010E2A',
             },
+            color: '#010E2A',
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
@@ -94,6 +98,7 @@ const LoanOverviewTab = ({ onTabChange }) => {
               borderRight: '1px solid #010E2A',
               borderLeft: '1px solid #010E2A',
             },
+            color: '#010E2A',
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
@@ -106,35 +111,38 @@ const LoanOverviewTab = ({ onTabChange }) => {
             '&.Mui-selected': {
               color: '#010E2A',
               marginTop: '10px',
-              marginRight: '10px',
               borderBottom: '0',
               borderTop: '1px solid #010E2A',
               borderLeft: '1px solid #010E2A',
               borderRight: '1px solid #010E2A',
             },
+            color: '#010E2A',
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
             borderBottom: '1px solid #010E2A',
           }}
         />
+        <div
+          style={{ borderBottom: '1px solid #010E2A', padding: '5px' }}
+        ></div>
       </Tabs>
-      <TabPanel value={value} index={0}>
+      <TabPanel value={value} index={1}>
         <Typography>
           <GeneralInformation />
         </Typography>
       </TabPanel>
-      <TabPanel value={value} index={1}>
+      <TabPanel value={value} index={2}>
         <Typography>
           <LoanApplications />
         </Typography>
       </TabPanel>
-      <TabPanel value={value} index={2}>
+      <TabPanel value={value} index={3}>
         <Typography>
           <RiskScore />
         </Typography>
       </TabPanel>
-      <TabPanel value={value} index={3}>
+      <TabPanel value={value} index={4}>
         <Typography>
           <Documents />
         </Typography>
