@@ -128,7 +128,7 @@
   padding: 0.5rem;
   font-weight: 300;
   font-size: 12px;
-  position: relative; /* Add relative positioning */
+  /* margin: 1rem; 
 }
 
 /* .profileTableWrapper table td::after {
