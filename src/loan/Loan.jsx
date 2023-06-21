@@ -13,6 +13,7 @@ export default function Loan() {
 
   const handleTabChange = (event, newValue) => {
     const tabs = [
+      '',
       'All Loans',
       'New Applications',
       'Pending',
@@ -21,6 +22,7 @@ export default function Loan() {
       'Extended',
       'Defaulted',
       'Closed',
+      '',
     ];
     setActiveTabLabel(tabs[newValue]);
   };
