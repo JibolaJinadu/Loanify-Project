@@ -73,9 +73,10 @@ function App() {
             element={<LoanOverview />}
           ></Route>
           <Route
-            path="/profileCombine"
-            element={<Combine />}
+            path="/loans/loans-overview/loans-contract"
+            element={<LoanContract />}
           ></Route>
+          <Route path="/profileCombine" element={<Combine />}></Route>
           <Route path="/verification" element={<Token />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/support" element={<SupportPage />}></Route>

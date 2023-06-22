@@ -227,7 +227,7 @@ const LoanTab = ({ onTabChange }) => {
         }}
       >
         <div
-          style={{ borderBottom: '1px solid #010E2A', padding: '5px' }}
+          style={{ borderBottom: '1px solid #83a1e8', padding: '5px' }}
         ></div>
         <Tab
           label="All Loans"
@@ -374,7 +374,7 @@ const LoanTab = ({ onTabChange }) => {
           }}
         />
         <div
-          style={{ borderBottom: '1px solid #010E2A', padding: '5px' }}
+          style={{ borderBottom: '1px solid #83a1e8', padding: '5px' }}
         ></div>
       </Tabs>
       <TabPanel value={value} index={1}>

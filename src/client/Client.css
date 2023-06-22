@@ -16,15 +16,15 @@
   border: 1px solid black;
   color: black;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: bolder;
 }
 
 #client-data {
   border-collapse: collapse;
   background-color: white;
   color: black;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: lighter;
 }
 
 #clients-color {
@@ -81,7 +81,7 @@
   cursor: pointer;
   background-color: white;
   color: black;
-  border: 1px solid #bfbfbf;
+  border: 1px solid #83a1e8;
   border-radius: 8px;
 }
 
@@ -95,42 +95,93 @@
   text-align: left;
 }
 
+tr:hover {
+  background-color: #94afee;
+}
+
 th {
+  background-color: white;
+  color: black;
+  border: 2 px solid #ddd;
+  text-align: center;
   font-size: 16px;
-  font-weight: 700;
-  color: #010e2a;
+  font-weight: bolder;
 }
 
 td {
+  text-align: center;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
+  /* padding-top: 7px; */
 }
+
+/* tr:nth-child(even) {
+  background-color: lightgrey;
+} */
 
 .clients-input {
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .status-approved {
-  color: green;
+  width: 50%;
+  height: 40px;
+  text-align: center;
+  border: 1px solid #33dd64;
+  background-color: #33dd64;
+  border-radius: 20px;
+  border: 1px solid;
+  padding-left: 5px;
+  color: white;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 300;
+  padding-bottom: 3px;
 }
 
-.status-decline {
-  color: red;
+.status-due {
+  border: 1px solid #f3b516;
+  background-color: #f3b516;
+  width: 50%;
+  height: 40px;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid;
+  padding-left: 5px;
+  color: white;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 300;
+  padding-bottom: 3px;
 }
 
-.status-pending {
-  color: yellow;
+.status-declined {
+  /* width: 50%;
+  height: 40px; */
+  text-align: center;
+  border: 1px solid red;
+  background-color: red;
+  border-radius: 20px;
+  border: 1px solid;
+  padding: 7px 40px;
+  color: white;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 300;
+  padding-bottom: 3px;
 }
 
-.client-dot {
-  font-size: 20px;
-  padding-right: 10px;
+.status-closed {
+  width: 50%;
+  height: 40px;
+  text-align: center;
+  border: 1px solid #6a8fe5;
+  background-color: #6a8fe5;
+  border-radius: 20px;
+  border: 1px solid;
+  padding-left: 5px;
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+  padding-bottom: 3px;
 }
 
 .search-filter,

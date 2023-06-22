@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Documents.css'
 
-const Documents = () => {
+function Documents  () {
+    
   return (
     <div>
         <div className='documents'>
             <p>Loan Agreement</p>
+            <Link to= "/loancontracts">
             <button className='open-file'>Open File</button>
+            </Link>
         </div>
         <div className='documents'>
             <p>Driver's License</p>

@@ -7,7 +7,6 @@ body {
   border-spacing: 0px;
   border-collapse: collapse;
   height: 100%;
-  
 }
 thead {
   border: 1px solid #83a1e8;
@@ -24,17 +23,15 @@ th {
 }
 .blue-row {
   background-color: #f0f4fc;
-  border-bottom: 20px solid white;
-  
+  border-bottom: 10px solid white;
 }
 tr:hover {
   background-color: #94afee;
-} 
+}
 
 td {
-  line-height: 3rem;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .status-approved {
@@ -42,14 +39,14 @@ td {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top:10px ;
+  padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 12px;
   background-color: #33dd64;
   color: white;
   font-size: 13px;
   font-weight: lighter;
-  width: 110px;
+  width: 140px;
   height: 30px;
   border-radius: 3rem;
 }
@@ -59,10 +56,10 @@ td {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top:10px ;
+  padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 12px;
-  width: 110px;
+  width: 140px;
   height: 30px;
   border-radius: 3rem;
   background-color: #dc3969;
@@ -75,10 +72,10 @@ td {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top:10px ;
+  padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 12px;
-  width: 110px;
+  width: 140px;
   height: 30px;
   border-radius: 3rem;
   background-color: #88a5ea;
@@ -91,10 +88,10 @@ td {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top:10px ;
+  padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 12px;
-  width: 110px;
+  width: 140px;
   height: 30px;
   border-radius: 3rem;
   background-color: #33dd64;
@@ -108,10 +105,10 @@ td {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top:10px ;
+  padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 12px;
-  width: 110px;
+  width: 140px;
   height: 30px;
   border-radius: 3rem;
   background-color: #f5c445;
@@ -124,10 +121,10 @@ td {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top:10px ;
+  padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 12px;
-  width: 110px;
+  width: 140px;
   height: 30px;
   border-radius: 3rem;
   background-color: #365499;
@@ -140,10 +137,10 @@ td {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top:10px ;
+  padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 12px;
-  width: 110px;
+  width: 140px;
   height: 30px;
   border-radius: 3rem;
   background-color: #f5c445;
@@ -156,10 +153,10 @@ td {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top:10px ;
+  padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 12px;
-  width: 110px;
+  width: 140px;
   height: 30px;
   border-radius: 3rem;
   background-color: white;
@@ -172,14 +169,14 @@ td {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top:10px ;
+  padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 12px;
-  width: 110px;
+  width: 140px;
   height: 30px;
   border-radius: 3rem;
   background-color: #343e55;
   color: white;
   font-size: 13px;
-  font-weight: lighter; 
+  font-weight: lighter;
 }
