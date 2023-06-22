@@ -42,9 +42,9 @@ const LoanOverviewTab = ({ onTabChange }) => {
           '& .Mui-selected': {
             borderBottom: 'none',
           },
-          borderTop: '1px solid #010E2A',
-          borderRight: '1px solid #010E2A',
-          borderLeft: '1px solid #010E2A',
+          borderTop: '1px solid #c1d0f4',
+          borderRight: '1px solid #c1d0f4',
+          borderLeft: '1px solid #c1d0f4',
           margin: '0 20px',
         }}
       >
@@ -56,14 +56,14 @@ const LoanOverviewTab = ({ onTabChange }) => {
               marginTop: '10px',
               marginLeft: '10px',
               borderBottom: '0',
-              borderTop: '1px solid #010E2A',
-              borderRight: '1px solid #010E2A',
-              borderLeft: '1px solid #010E2A',
+              borderTop: '1px solid #c1d0f4',
+              borderRight: '1px solid #c1d0f4',
+              borderLeft: '1px solid #c1d0f4',
             },
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
-            borderBottom: '1px solid #010E2A',
+            borderBottom: '1px solid #c1d0f4',
           }}
         />
         <Tab
@@ -73,14 +73,14 @@ const LoanOverviewTab = ({ onTabChange }) => {
               color: '#010E2A',
               marginTop: '10px',
               borderBottom: '0',
-              borderTop: '1px solid #010E2A',
-              borderRight: '1px solid #010E2A',
-              borderLeft: '1px solid #010E2A',
+              borderTop: '1px solid #c1d0f4',
+              borderRight: '1px solid #c1d0f4',
+              borderLeft: '1px solid #c1d0f4',
             },
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
-            borderBottom: '1px solid #010E2A',
+            borderBottom: '1px solid #c1d0f4',
           }}
         />
         <Tab
@@ -90,14 +90,14 @@ const LoanOverviewTab = ({ onTabChange }) => {
               color: '#010E2A',
               marginTop: '10px',
               borderBottom: '0',
-              borderTop: '1px solid #010E2A',
-              borderRight: '1px solid #010E2A',
-              borderLeft: '1px solid #010E2A',
+              borderTop: '1px solid #c1d0f4',
+              borderRight: '1px solid #c1d0f4',
+              borderLeft: '1px solid #c1d0f4',
             },
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
-            borderBottom: '1px solid #010E2A',
+            borderBottom: '1px solid #c1d0f4',
           }}
         />
         <Tab
@@ -108,14 +108,14 @@ const LoanOverviewTab = ({ onTabChange }) => {
               marginTop: '10px',
               marginRight: '10px',
               borderBottom: '0',
-              borderTop: '1px solid #010E2A',
-              borderLeft: '1px solid #010E2A',
-              borderRight: '1px solid #010E2A',
+              borderTop: '1px solid #c1d0f4',
+              borderLeft: '1px solid #c1d0f4',
+              borderRight: '1px solid #c1d0f4',
             },
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
-            borderBottom: '1px solid #010E2A',
+            borderBottom: '1px solid #c1d0f4',
           }}
         />
       </Tabs>

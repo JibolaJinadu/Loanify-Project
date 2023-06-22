@@ -26,6 +26,7 @@ import ClientOverview from './clientOverview/ClientOverview';
 import FAQ from './support/FAQ';
 import LoanOverview from './loanOverview/LoanOverview';
 import ChangePwd from './changePassword/ChangePwd';
+import LoanContract from './loanOverview/LoanContract';
 
 function App() {
   return (
@@ -54,6 +55,10 @@ function App() {
           <Route
             path="/loans/loans-overview"
             element={<LoanOverview />}
+          ></Route>
+          <Route
+            path="/loans/loans-overview/loans-contract"
+            element={<LoanContract />}
           ></Route>
           <Route path="/verification" element={<Token />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>

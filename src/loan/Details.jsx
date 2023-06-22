@@ -221,6 +221,6 @@ export const Details = [
     lastName: 'Adebayo',
     applicationDate: '01/04/2023',
     recentUpdate: '04/04/2023',
-    loanStatus: 'Received',
+    loanStatus: 'Received Docs',
   },
 ];
