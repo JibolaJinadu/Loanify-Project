@@ -126,7 +126,7 @@ export default function ChangePwd() {
                   className="login-password"
                   onClick={togglePasswordVisibility}
                 >
-                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                  {showPassword ? <Visibility /> : <VisibilityOff />}
                 </span>
                 {errors.oldPassword && (
                   <span style={{ color: 'red', fontSize: '12px' }}>
@@ -165,7 +165,7 @@ export default function ChangePwd() {
                   className="login-password"
                   onClick={toggleNewPasswordVisibility}
                 >
-                  {showNewPassword ? <VisibilityOff /> : <Visibility />}
+                  {showNewPassword ? <Visibility /> : <VisibilityOff />}
                 </span>
                 {errors.newPassword && (
                   <span style={{ color: 'red', fontSize: '12px' }}>
@@ -207,7 +207,7 @@ export default function ChangePwd() {
                   className="login-password"
                   onClick={toggleConfirmPasswordVisibility}
                 >
-                  {showConfirmPassword ? <VisibilityOff /> : <Visibility />}
+                  {showConfirmPassword ? <Visibility /> : <VisibilityOff />}
                 </span>
                 {errors.confirmPassword && (
                   <span style={{ color: 'red', fontSize: '12px' }}>

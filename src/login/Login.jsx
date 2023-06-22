@@ -5,6 +5,7 @@ import logo from './img/LOANIFY logo.svg';
 import { Link, useNavigate } from 'react-router-dom';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { toast } from 'react-toastify';
+import axios from 'axios';
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -23,6 +24,25 @@ function Login() {
   };
 
   const navigate = useNavigate();
+  const submitForm = async () => {
+    try {
+      const response = await axios.post(
+        `https://loanifyteama-production.up.railway.app/api/v1/auth/login/`,
+        formData,
+        {
+          headers: {
+            'content-type': 'application/json; charset=UTF-8',
+          },
+        }
+      );
+      toast.success('login successfully');
+      navigate('/dashboard');
+      // navigate('/verification');
+    } catch (error) {
+      console.log(error);
+      toast.error('There was a problem signing in.');
+    }
+  };
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -42,9 +62,10 @@ function Login() {
     }
 
     if (isValid) {
-      navigate('/verification');
+      submitForm();
     }
   }
+
   return (
     <section className="login">
       <img src={businessGuy} alt="Business Guy" className="login-img" />
@@ -115,7 +136,7 @@ function Login() {
               }}
             />
             <span className="login-password" onClick={togglePasswordVisibility}>
-              {showPassword ? <VisibilityOff /> : <Visibility />}
+              {showPassword ? <Visibility /> : <VisibilityOff />}
             </span>
             {errors.password && (
               <span style={{ color: 'red', fontSize: '12px' }}>

@@ -92,7 +92,7 @@
   background-color: #fff;
   color: #000;
   transition: 0.3s;
-  border-radius: 8%;
+  border-radius: 10%;
   -webkit-border-radius: 8%;
   -moz-border-radius: 8%;
   -ms-border-radius: 8%;
@@ -133,4 +133,24 @@ strong {
   .text-holder h4 {
     font-size: 12px;
   }
+}
+
+.toggle-slider:before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
+  background-color: white;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.4s;
+}
+
+.toggle input:checked + .toggle-slider {
+  background-color: grey;
+}
+
+.toggle input:checked + .toggle-slider:before {
+  transform: translateX(24px);
 }

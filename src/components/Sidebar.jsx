@@ -27,6 +27,15 @@ import MessageDialog from './MessageDialog';
 import NotificationDialog from './NotificationDialog';
 import UserDialog from './UserDialog';
 import notification from './assets/notifications.svg';
+import dashboardActive from './assets/dashboard-blue.svg';
+import profileActive from './assets/profile-blue.svg';
+import ClientActive from './assets/clients-blue.svg';
+import supportActive from './assets/support-blue.svg';
+import settingActive from './assets/settings-blue.svg';
+import reportActive from './assets/reports-blue.svg';
+import notificationActive from './assets/notifications-blue.svg';
+import loanActive from './assets/loan-blue.svg';
+import messageActive from './assets/message-blue.svg';
 
 const drawerWidth = 240;
 
@@ -38,48 +47,55 @@ export default function Sidebar() {
       list: 'Dashboard',
       icon: dashboard,
       path: '/dashboard',
+      iconActive: dashboardActive,
     },
     {
       list: 'Loans',
       icon: loans,
       path: '/loans',
+      iconActive: loanActive,
     },
     {
       list: 'Profile',
       icon: profile,
       path: '/profile',
+      iconActive: profileActive,
     },
     {
       list: 'Messages',
       icon: messages,
       path: '/messages',
+      iconActive: messageActive,
     },
     {
       list: 'Notification',
       icon: notification,
       path: '/notification',
+      iconActive: notificationActive,
     },
     {
       list: 'Reports',
       icon: reports,
       path: '/reports',
+      iconActive: reportActive,
     },
     {
       list: 'Clients',
       icon: clients,
       path: '/clients',
+      iconActive: ClientActive,
     },
     {
       list: 'Settings',
       icon: settings,
       path: '/settings',
+      iconActive: settingActive,
     },
   ];
 
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      {/* <Navbar /> */}
       <AppBar
         position="fixed"
         sx={{
@@ -115,75 +131,104 @@ export default function Sidebar() {
         <Toolbar>
           <img src={logo} alt="Loanify Logo" className="sidebar-logo" />
         </Toolbar>
-        <List
-          sx={{ backgroundColor: '#04297F', color: 'white', height: '75%' }}
-        >
+        <List sx={{ backgroundColor: '#04297F', color: 'white' }}>
           {items.map((text, index) => {
             const isActive = location.pathname.startsWith(text.path);
             return (
               <ListItem key={index} disablePadding>
                 <ListItemButton
                   onClick={() => navigate(text.path)}
-                  sx={
-                    isActive
-                      ? { backgroundColor: 'rgba(255, 255, 255, 0.3)' }
-                      : {}
-                  }
+                  sx={{
+                    '&:hover': {
+                      backgroundColor: isActive
+                        ? 'rgba(255, 255, 255, 0.9)'
+                        : 'initial',
+                    },
+                    ...(isActive && {
+                      backgroundColor: '#fff',
+                      color: '#04297F',
+                    }),
+                    padding: '2px 20px',
+                  }}
                 >
                   <div className="side--menu">
                     <div style={{ marginLeft: '20px' }}>
                       <img
-                        src={text.icon}
+                        src={isActive ? text.iconActive : text.icon}
                         alt="Icon"
-                        style={{ width: '30px', height: '30px' }}
+                        style={{
+                          width: '25px',
+                          height: '30px',
+                        }}
                       />
                     </div>
-                    <ListItemText
-                      primary={text.list}
+                    <h1
                       style={{
-                        marginLeft: '20px',
+                        marginLeft: '10px',
                         paddingRight: '10px',
+                        fontSize: '14px',
+                        fontWeight: isActive ? '600' : '500',
+                        textAlign: 'center',
                         marginTop: '5px',
-                        fontSize: '16px',
-                        fontWeight: '400',
+                        fontFamily: 'Montserrat ,sans-serif',
                       }}
-                    />
+                    >
+                      {text.list}
+                    </h1>
                   </div>
                 </ListItemButton>
               </ListItem>
             );
           })}
         </List>
-        <List sx={{ backgroundColor: '#04297F', color: 'white' }}>
+        <List
+          sx={{
+            backgroundColor: '#04297F',
+            color: 'white',
+            height: '100vh',
+            paddingTop: '30px',
+          }}
+        >
           {['Support'].map((text, index) => {
             const isActive = location.pathname.startsWith('/support');
             return (
               <ListItem key={text} disablePadding>
                 <ListItemButton
                   onClick={() => navigate('/support')}
-                  sx={
-                    isActive
-                      ? { backgroundColor: 'rgba(255, 255, 255, 0.3)' }
-                      : {}
-                  }
+                  sx={{
+                    '&:hover': {
+                      backgroundColor: isActive
+                        ? 'rgba(255, 255, 255, 0.9)'
+                        : 'initial',
+                    },
+                    ...(isActive && {
+                      backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                      color: '#04297F',
+                    }),
+                    padding: '2px 20px',
+                  }}
                 >
-                  <div style={{ marginLeft: '20px' }}>
-                    <img
-                      src={support}
-                      alt="Icon"
-                      style={{ width: '30px', height: '30px' }}
-                    />
+                  <div className="side--menu">
+                    <div style={{ marginLeft: '20px' }}>
+                      <img
+                        src={isActive ? supportActive : support}
+                        alt="Icon"
+                        style={{ width: '25px', height: '30px' }}
+                      />
+                    </div>
+                    <h1
+                      style={{
+                        marginLeft: '10px',
+                        paddingRight: '10px',
+                        fontSize: '14px',
+                        fontWeight: isActive ? '600' : '500',
+                        textAlign: 'center',
+                        marginTop: '5px',
+                      }}
+                    >
+                      {text}
+                    </h1>
                   </div>
-                  <ListItemText
-                    primary={text}
-                    style={{
-                      marginLeft: '20px',
-                      paddingRight: '10px',
-                      marginTop: '5px',
-                      fontSize: '16px',
-                      fontWeight: '400',
-                    }}
-                  />
                 </ListItemButton>
               </ListItem>
             );

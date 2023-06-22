@@ -14,11 +14,13 @@ export default function Settings() {
 
   const handleTabChange = (event, newValue) => {
     const tabs = [
+      '',
       'General',
       'Profile',
       'User Permission',
       'Notifications',
       'Security',
+      '',
     ];
     setActiveTabLabel(tabs[newValue]);
   };
