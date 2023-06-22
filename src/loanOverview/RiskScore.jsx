@@ -13,24 +13,26 @@ const RiskScore = () => {
           <p>Odds(Good:Bad):</p>
           <p>Default Probability:</p>
         </div>
+        <div className='rs-space'></div>
         <div className="rs-size">
-          <p>630</p>
-          <p>Fair</p>
-          <p style={{ color: 'red' }}>Decline</p>
-          <p>20:40</p>
-          <p style={{ color: 'red' }}>56%</p>
+          <p>700/800</p>
+          <p>Low</p>
+          <p style={{ color: 'green' }}>Approve</p>
+          <p>80:20</p>
+          <p style={{ color: 'green' }}>15%</p>
         </div>
+        <div className='risk-space'></div>
         <div>
           <img src={risk} alt="image" style={{ width: '250px' }}></img>
         </div>
       </div>
       <hr />
       <div className="risk-score">
-        <h5>Decision Comments:</h5>
+        <p className='risk-comment'>Decision Comments:</p>
+        <div className='rs-space'></div>
         <div className="rs-highlighted">
-          <p>1. Open prior loan from another company</p>
-          <p>2. Insufficient Revenue</p>
-          <p>3. Insufficient Collateral</p>
+          <p className='riskComment'>1. System recommends making a standard client check</p>
+          
         </div>
       </div>
     </div>
