@@ -25,7 +25,6 @@
   color: black;
   font-size: 14px;
   font-weight: lighter;
-
 }
 
 #clients-color {
@@ -107,22 +106,18 @@ th {
   text-align: center;
   font-size: 16px;
   font-weight: bolder;
-  line-height: 3rem;
 }
 
 td {
-  line-height: 3rem;
   text-align: center;
-  padding-top: 20px;
   font-size: 14px;
-  font-weight: lighter;
-  padding-top: 7px;
+  font-weight: 500;
+  /* padding-top: 7px; */
 }
 
-
-tr:nth-child(even) {
+/* tr:nth-child(even) {
   background-color: lightgrey;
-}
+} */
 
 .clients-input {
   margin-left: 10px;
@@ -133,10 +128,10 @@ tr:nth-child(even) {
   width: 50%;
   height: 40px;
   text-align: center;
-  border: 1px solid #33DD64;
-  background-color: #33DD64;
+  border: 1px solid #33dd64;
+  background-color: #33dd64;
   border-radius: 20px;
-  border: 1px solid ;
+  border: 1px solid;
   padding-left: 5px;
   color: white;
   font-size: 14px;
@@ -145,13 +140,13 @@ tr:nth-child(even) {
 }
 
 .status-due {
-  border: 1px solid #F3B516;
-  background-color: #F3B516;
+  border: 1px solid #f3b516;
+  background-color: #f3b516;
   width: 50%;
   height: 40px;
   text-align: center;
   border-radius: 20px;
-  border: 1px solid ;
+  border: 1px solid;
   padding-left: 5px;
   color: white;
   font-size: 14px;
@@ -160,14 +155,14 @@ tr:nth-child(even) {
 }
 
 .status-declined {
-  width: 50%;
-  height: 40px;
+  /* width: 50%;
+  height: 40px; */
   text-align: center;
   border: 1px solid red;
   background-color: red;
   border-radius: 20px;
-  border: 1px solid ;
-  padding-left: 5px;
+  border: 1px solid;
+  padding: 7px 40px;
   color: white;
   font-size: 14px;
   font-weight: 300;
@@ -178,17 +173,16 @@ tr:nth-child(even) {
   width: 50%;
   height: 40px;
   text-align: center;
-  border: 1px solid #6A8FE5;
-  background-color: #6A8FE5;
+  border: 1px solid #6a8fe5;
+  background-color: #6a8fe5;
   border-radius: 20px;
-  border: 1px solid ;
+  border: 1px solid;
   padding-left: 5px;
   color: white;
   font-size: 14px;
   font-weight: 300;
   padding-bottom: 3px;
 }
-
 
 .search-filter,
 .filter-select {
