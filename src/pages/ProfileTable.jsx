@@ -49,42 +49,42 @@ export default function ProfileTable() {
             <th>Loan Status</th>
           </tr>
         </thead>
+        <h1 className="padtap"></h1>
         <tbody>
           {data.map((rowData, index) => {
             return (
-              <tr
-                key={index}
-                className='tableData'
-                style={{
-                  // paddingTop: '20px', // Add padding top
-                  // paddingBottom: '20px', // Add padding bottom
-                  // backgroundColor: checkedRows.includes(index)
-                  //   ? '#f0f4fc'
-                  //   : 'inherit',
-                }}
-              >
-                <td className="text-left">
-                  <input
-                    type="checkbox"
-                    checked={checkedRows.includes(index)}
-                    onChange={() => handleCheckboxChange(index)}
-                    name=""
-                    id=""
-                  />
-                </td>
-                <td>{rowData.caseNumber}</td>
-                <td>{rowData.firstName}</td>
-                <td>{rowData.lastName}</td>
-                <td>{rowData.applicationDate}</td>
-                <td>{rowData.recentUpdate}</td>
-                <td>
-                <Button
-                    style={{borderRadius:'1rem',textTransform:"Capitalize",width:'6rem',fontSize:'12px',color:'white', backgroundColor: getLoanStatusColor(rowData.loanStatus) }}
-                  >
-                    {rowData.loanStatus}
-                  </Button>
+              <>
+                <tr key={index} className="tableData">
+                  <td className="text-left">
+                    <input
+                      type="checkbox"
+                      checked={checkedRows.includes(index)}
+                      onChange={() => handleCheckboxChange(index)}
+                      name=""
+                      id=""
+                    />
                   </td>
-              </tr>
+                  <td>{rowData.caseNumber}</td>
+                  <td>{rowData.firstName}</td>
+                  <td>{rowData.lastName}</td>
+                  <td>{rowData.applicationDate}</td>
+                  <td>{rowData.recentUpdate}</td>
+                  <td>
+                    <Button
+                      style={{
+                        borderRadius: '1rem',
+                        textTransform: 'Capitalize',
+                        width: '6rem',
+                        fontSize: '12px',
+                        color: 'white',
+                        backgroundColor: getLoanStatusColor(rowData.loanStatus),
+                      }}
+                    >
+                      {rowData.loanStatus}
+                    </Button>
+                  </td>
+                </tr>
+              </>
             );
           })}
         </tbody>

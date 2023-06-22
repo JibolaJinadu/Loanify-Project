@@ -22,7 +22,7 @@ function ProfilePage() {
             aria-label="breadcrumb"
             separator={<ChevronRightIcon />}
             sx={{
-              // backgroundColor: '#F0F4FC',
+              backgroundColor: '#F0F4FC',
               padding: '10px 5px',
             }}
           >
