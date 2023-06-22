@@ -3,14 +3,18 @@
   justify-content: space-between;
   margin-bottom: 20px;
 }
+align{
+  display: flex;
+}
 .gap-report {
   gap: 30px;
 }
 .base-report {
-  border-radius: 8px;
-  padding: 8px 15px;
-  border: 1px solid black;
+  border-radius: 3px;
+  width: 60%;
+  text-align: center;
   margin-top: 0;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 .white-report {
   border: 2px solid white;
@@ -19,9 +23,10 @@
   margin-bottom: 20px;
 }
 .self-report {
-  border-radius: 7px;
-  padding: 10px 15px;
-  border: 1px solid #d30744;
+  border-radius: 3px;
+ width: 60%;
+  text-align: center;
+  box-shadow: rgba(121, 36, 43, 0.4) 0px 0px 0px 2px, rgba(94, 19, 19, 0.65) 0px 4px 6px -1px, rgba(177, 0, 0, 0.08) 0px 1px 0px inset;
 }
 .solo-report {
   color: #d30744;
@@ -59,14 +64,21 @@
 .button-report {
   background-color: #3969dc;
   color: white;
+  font-weight: 600;
   text-align: center;
-  padding: 10px 50px;
+  padding: 17px 70px;
   border: none;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
+}
+.set{
+  margin-top: 15px;
+}
+.set-top{
+  margin-top: 30px;
 }
 .mid-report {
   display: flex;
@@ -93,7 +105,15 @@
 .bg-report {
   background-color: rgb(240, 244, 252);
 }
-
+.size-font{
+  font-size: 14px;
+}
+.below{
+  margin-top: 100px;
+}
+.beneath{
+  margin-top: 50px;
+}
 .report-piechart {
   display: flex;
   justify-content: right;

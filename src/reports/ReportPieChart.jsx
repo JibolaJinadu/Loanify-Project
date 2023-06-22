@@ -82,7 +82,7 @@ const ReportPieChart = () => {
 
   return (
     <div className="">
-      <ResponsiveContainer width={160} height={200}>
+      <ResponsiveContainer width={250} height={200}>
         <PieChart>
           <Pie
             activeIndex={activeIndex}
