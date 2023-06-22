@@ -12,8 +12,8 @@ function Notification() {
         <div className="Text_holder">
           <h2>Email Notifications</h2>
           <p>
-            Get emails to find out what happens when you are not online.You can
-            turn them off
+            Get emails to find out what happens when you are not online.
+            You can turn them off
           </p>
         </div>
         <div className="email-section">
@@ -66,9 +66,9 @@ function Notification() {
       </div>
       <div className="Loan-container">
         <div className="Text_holder">
-          <h2>Loan Applications</h2>
+          <h2>Push Notifications</h2>
           <p>
-            Get push notifications in-app to find out what appens wen you're
+            Get push notifications in-app to find out what happens when you're
             online. You can turn them off.
           </p>
         </div>

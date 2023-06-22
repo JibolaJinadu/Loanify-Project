@@ -3,7 +3,7 @@ import './notification.css';
 
 function Notification() {
   const logState = (state) => {
-    console.log('Toggled:', state);
+    console.log ('Toggled:', state);
   };
 
   return (
