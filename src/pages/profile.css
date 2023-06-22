@@ -36,7 +36,7 @@
 .loanOfficerDetails .active {
   color: green;
 }
-.profilePercentageWrapper{
+.profilePercentageWrapper {
   display: flex;
   margin-top: 1rem;
 }
@@ -52,7 +52,7 @@
   color: gray;
   font-size: 12px;
 }
-.box span{
+.box span {
   font-size: 12px;
 }
 .circlePercent {
@@ -60,7 +60,7 @@
   font-size: 14px;
   margin-left: 5px;
   color: black;
-} 
+}
 .box .angleUp {
   color: rgb(70, 70, 235);
   font-size: 12px;
@@ -98,15 +98,14 @@
   height: 100%;
 }
 .profileTableWrapper table thead tr {
-  border: 1px solid blue;
+  border: 1px solid #83a1e8;
   height: 40px;
 }
-.profileTableWrapper .tableData{
+.profileTableWrapper .tableData {
   background-color: #f0f4fc;
-  border-top: 5px solid white;
-  
-} 
-.profileTableWrapper .tableData:hover{
+  border-bottom: 10px solid white;
+}
+.profileTableWrapper .tableData:hover {
   background-color: rgb(107, 107, 228);
 }
 
@@ -119,15 +118,9 @@
 }
 .profileTableWrapper table td {
   text-align: left;
-  padding: 2rem;
-  font-weight: 300;
-  font-size: 12px;
-}
-.profileTableWrapper table td {
-  text-align: left;
   padding: 0.5rem;
-  font-weight: 300;
-  font-size: 12px; 
+  font-weight: 500;
+  font-size: 14px;
 }
 .profile-name {
   font-size: 20px;
@@ -138,4 +131,12 @@
 .profile-sub {
   font-size: 16px;
   font-weight: 500;
+}
+
+profileThead {
+  margin-bottom: 20px !important;
+}
+
+.padtap {
+  padding: 5px;
 }

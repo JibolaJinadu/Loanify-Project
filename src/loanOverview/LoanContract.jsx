@@ -5,13 +5,12 @@ import Sidebar from '../components/Sidebar';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Link } from 'react-router-dom';
-import LoanDoc from './LoanDoc'
-
+import LoanDoc from './LoanDoc';
 
 const LoanContract = () => {
   return (
     <div>
-        <Box sx={{ display: 'flex' }}>
+      <Box sx={{ display: 'flex' }}>
         <Sidebar />
         <Box component="main" sx={{ flexGrow: 1, margin: '0 20px' }}>
           <Toolbar />
@@ -31,15 +30,18 @@ const LoanContract = () => {
               <Link className="breadcrumbs" to="/loans">
                 Loans
               </Link>
+              <Link className="breadcrumbs" to="/loans/loans-overview">
+                Loans Overview
+              </Link>
               <p className="breadcrumbs">Loan Contract</p>
               {/* <p className="breadcrumbs">{activeTabLabel}</p> */}
             </Breadcrumbs>
           </div>
-          <LoanDoc/>
+          <LoanDoc />
         </Box>
       </Box>
     </div>
-  )
-}
+  );
+};
 
-export default LoanContract
+export default LoanContract;

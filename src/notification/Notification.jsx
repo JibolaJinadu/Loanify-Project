@@ -12,8 +12,8 @@ function Notification() {
         <div className="Text_holder">
           <h2>Email Notifications</h2>
           <p>
-            Get emails to find out what happens when you are not online.
-            You can turn them off
+            Get emails to find out what happens when you are not online. You can
+            turn them off
           </p>
         </div>
         <div className="email-section">

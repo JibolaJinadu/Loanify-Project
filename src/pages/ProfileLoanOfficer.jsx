@@ -27,7 +27,6 @@ export default function ProfileLoanOfficer() {
             fontSize: '14px',
             fontWeight: '500',
             color: 'black',
-            border: '1px solid black',
             borderRadius: '8px',
             border: '1px solid blue',
             backgroundColor: 'white',

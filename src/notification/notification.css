@@ -153,7 +153,6 @@ strong {
   margin-bottom: 0px;
   gap: 60px;
   align-items: flex-start;
-  background-color: aqua;
 }
 
 .Text_holder h2 {
@@ -182,7 +181,7 @@ strong {
   gap: 10px;
 }
 
-.text-holder{
+.text-holder {
   line-height: 10px;
   padding-bottom: 10px;
 }

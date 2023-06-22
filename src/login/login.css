@@ -1,7 +1,4 @@
 /* Login CSS */
-body{
-  cursor: pointer;
-}
 
 a {
   text-decoration: none;
@@ -66,6 +63,7 @@ a {
 }
 
 .btn {
+  cursor: pointer;
   display: block;
   border: none;
   outline: none;

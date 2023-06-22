@@ -42,14 +42,14 @@ const LoanOverviewTab = ({ onTabChange }) => {
           '& .Mui-selected': {
             borderBottom: 'none',
           },
-          borderTop: '1px solid #c1d0f4',
-          borderRight: '1px solid #c1d0f4',
-          borderLeft: '1px solid #c1d0f4',
+          borderTop: '1px solid #83a1e8',
+          borderRight: '1px solid #83a1e8',
+          borderLeft: '1px solid #83a1e8',
           margin: '0 20px',
         }}
       >
         <div
-          style={{ borderBottom: '1px solid #010E2A', padding: '5px' }}
+          style={{ borderBottom: '1px solid #83a1e8', padding: '5px' }}
         ></div>
         <Tab
           label="General Information"
@@ -58,15 +58,15 @@ const LoanOverviewTab = ({ onTabChange }) => {
               color: '#010E2A',
               marginTop: '10px',
               borderBottom: '0',
-              borderTop: '1px solid #c1d0f4',
-              borderRight: '1px solid #c1d0f4',
-              borderLeft: '1px solid #c1d0f4',
+              borderTop: '1px solid #83a1e8',
+              borderRight: '1px solid #83a1e8',
+              borderLeft: '1px solid #83a1e8',
             },
             color: '#010E2A',
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
-            borderBottom: '1px solid #c1d0f4',
+            borderBottom: '1px solid #83a1e8',
           }}
         />
         <Tab
@@ -76,15 +76,15 @@ const LoanOverviewTab = ({ onTabChange }) => {
               color: '#010E2A',
               marginTop: '10px',
               borderBottom: '0',
-              borderTop: '1px solid #c1d0f4',
-              borderRight: '1px solid #c1d0f4',
-              borderLeft: '1px solid #c1d0f4',
+              borderTop: '1px solid #83a1e8',
+              borderRight: '1px solid #83a1e8',
+              borderLeft: '1px solid #83a1e8',
             },
             color: '#010E2A',
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
-            borderBottom: '1px solid #c1d0f4',
+            borderBottom: '1px solid #83a1e8',
           }}
         />
         <Tab
@@ -94,15 +94,15 @@ const LoanOverviewTab = ({ onTabChange }) => {
               color: '#010E2A',
               marginTop: '10px',
               borderBottom: '0',
-              borderTop: '1px solid #c1d0f4',
-              borderRight: '1px solid #c1d0f4',
-              borderLeft: '1px solid #c1d0f4',
+              borderTop: '1px solid #83a1e8',
+              borderRight: '1px solid #83a1e8',
+              borderLeft: '1px solid #83a1e8',
             },
             color: '#010E2A',
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
-            borderBottom: '1px solid #c1d0f4',
+            borderBottom: '1px solid #83a1e8',
           }}
         />
         <Tab
@@ -112,40 +112,32 @@ const LoanOverviewTab = ({ onTabChange }) => {
               color: '#010E2A',
               marginTop: '10px',
               borderBottom: '0',
-              borderTop: '1px solid #c1d0f4',
-              borderLeft: '1px solid #c1d0f4',
-              borderRight: '1px solid #c1d0f4',
+              borderTop: '1px solid #83a1e8',
+              borderLeft: '1px solid #83a1e8',
+              borderRight: '1px solid #83a1e8',
             },
             color: '#010E2A',
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
-            borderBottom: '1px solid #c1d0f4',
+            borderBottom: '1px solid #83a1e8',
           }}
         />
         <div
-          style={{ borderBottom: '1px solid #010E2A', padding: '5px' }}
+          style={{ borderBottom: '1px solid #83a1e8', padding: '5px' }}
         ></div>
       </Tabs>
       <TabPanel value={value} index={1}>
-        <Typography>
-          <GeneralInformation />
-        </Typography>
+        <GeneralInformation />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Typography>
-          <LoanApplications />
-        </Typography>
+        <LoanApplications />
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <Typography>
-          <RiskScore />
-        </Typography>
+        <RiskScore />
       </TabPanel>
       <TabPanel value={value} index={4}>
-        <Typography>
-          <Documents />
-        </Typography>
+        <Documents />
       </TabPanel>
     </Box>
   );
