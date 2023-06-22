@@ -1,10 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ProfileDetails.css';
 import temi from './img/Temidayo.png';
 import telephone from './img/telephone icon.svg';
 import message from './img/messages icon.svg';
+import { Button, Dialog, DialogContent, DialogTitle } from '@mui/material';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 const ProfileDetails = () => {
+    const [submissionMessage, setSubmissionMessage] = useState('');
+
+    const handleButtonClick = () => {
+        setSubmissionMessage('');
+      };
+
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
+        setSubmissionMessage('Application Declined\nThe loan application has been declined' );
+    };
+
+    const handleClose = () => {
+        setSubmissionMessage('');
+      };
+
   return (
     <div className='flex'>
         <div className='profile-flex'>
@@ -33,14 +51,28 @@ const ProfileDetails = () => {
             <p>Pending</p> 
             <button className='small'></button>
             </div>
-            <div className='btn-container'>
+            <div className='btn-container' >
                 <button className='approve'>
                     Approve
                 </button>
-                <button className='decline'>
-                    Decline
-                </button>
+            <form onSubmit={handleFormSubmit}>
+            <div>
+               <Button className='decline' onClick={handleButtonClick} type="submit" style={{color:'white', backgroundColor:'#d30744', borderRadius:'0.2rem', fontSize:'', textTransform: 'lowercase'}}>
+                <span style={{ textTransform: 'uppercase' }}>D</span>ecline
+               </Button>
             </div>
+            </form>
+            </div>
+            <Dialog open={submissionMessage !== ""} onClose={handleClose} style={{border:'1px solid #d30744'}}>
+              <DialogTitle style={{ color: "#d30744", fontSize: "50px", padding:"60px 210px 0px" }}>
+                <FontAwesomeIcon className="check-icon" icon={faXmark} />
+              </DialogTitle>
+              <DialogContent style={{color:'#d30744', fontSize: "15px", fontWeight:"bolder", padding:"0px 100px 50px" }}>
+              {submissionMessage.split('\n').map((message, index) => (
+            <p key={index} style={{ color: index === 1 ? 'grey' : '#d30744', textAlign:'center'}}>{message}</p>
+          ))}
+              </DialogContent>
+            </Dialog>
         </div>
 
     </div>

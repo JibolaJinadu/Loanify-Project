@@ -17,8 +17,12 @@ const LoanTable = ({ tableData, table }) => {
         return 'status-defaulted';
       case 'Due':
         return 'status-due';
-      case 'Extende':
+      case 'Extended':
         return 'status-extended';
+      case 'Incomplete Docs':
+        return 'status-incomplete-docs';
+      case 'Received Docs':
+        return 'status-received-docs';
       default:
         return '';
     }
@@ -46,7 +50,7 @@ const LoanTable = ({ tableData, table }) => {
         </thead>
         <tbody>
           {tableData.map((row, index) => (
-            <tr key={index}>
+            <tr key={index} className='blue-row'>
               <td>
                 <Link to="/loans/loans-overview">
                   <input type="checkBox"></input>

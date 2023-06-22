@@ -19,8 +19,8 @@ const UserPermission = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
+          <tr className='rowWrapper'>
+            <td >
               <input type="checkBox"></input>
             </td>
             <td>Temidayo</td>
@@ -37,7 +37,7 @@ const UserPermission = () => {
               </select>
             </td>
           </tr>
-          <tr>
+          <tr className='rowWrapper'>
             <td>
               <input type="checkBox"></input>
             </td>
@@ -55,7 +55,7 @@ const UserPermission = () => {
               </select>
             </td>
           </tr>
-          <tr>
+          <tr className='rowWrapper'>
             <td>
               <input type="checkBox"></input>
             </td>
@@ -73,7 +73,7 @@ const UserPermission = () => {
               </select>
             </td>
           </tr>
-          <tr>
+          <tr className='rowWrapper'>
             <td>
               <input type="checkBox"></input>
             </td>
@@ -91,7 +91,7 @@ const UserPermission = () => {
               </select>
             </td>
           </tr>
-          <tr>
+          <tr className='rowWrapper'>
             <td>
               <input type="checkBox"></input>
             </td>
@@ -109,7 +109,7 @@ const UserPermission = () => {
               </select>
             </td>
           </tr>
-          <tr>
+          <tr className='rowWrapper'>
             <td>
               <input type="checkBox"></input>
             </td>
@@ -127,7 +127,7 @@ const UserPermission = () => {
               </select>
             </td>
           </tr>
-          <tr>
+          <tr className='rowWrapper'>
             <td>
               <input type="checkBox"></input>
             </td>
@@ -145,7 +145,7 @@ const UserPermission = () => {
               </select>  
             </td>
           </tr>
-          <tr>
+          <tr className='rowWrapper'>
             <td>
               <input type="checkBox"></input>
             </td>
@@ -163,7 +163,7 @@ const UserPermission = () => {
               </select>
             </td>
           </tr>
-          <tr>
+          <tr className='rowWrapper'>
             <td>
               <input type="checkBox"></input>
             </td>
