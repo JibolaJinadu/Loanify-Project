@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './login/Login';
 import ResetPassword from './passwordReset/ResetPassword';
@@ -26,11 +25,12 @@ import ResendToken from './passwordReset/ResendToken';
 import ClientOverview from './clientOverview/ClientOverview';
 import FAQ from './support/FAQ';
 import LoanOverview from './loanOverview/LoanOverview';
+import Combine from './profile/combine';
 import ChangePwd from './changePassword/ChangePwd';
 import { useEffect, useState } from 'react';
 import { AuthContext } from './AuthContext';
 import Cookies from 'js-cookie';
-
+import LoanContract from './loanOverview/LoanContract';
 
 function App() {
   const [signUpToken, setSignUpToken] = useState('');
@@ -72,6 +72,10 @@ function App() {
             path="/loans/loans-overview"
             element={<LoanOverview />}
           ></Route>
+          <Route
+            path="/profileCombine"
+            element={<Combine />}
+          ></Route>
           <Route path="/verification" element={<Token />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/support" element={<SupportPage />}></Route>
@@ -96,8 +100,8 @@ function App() {
           ></Route>
         </Routes>
       </Router>
-    </>
-    
+    </AuthContext.Provider>
   );
-};
+}
+
 export default App;
