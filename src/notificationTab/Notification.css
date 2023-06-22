@@ -130,13 +130,14 @@ strong {
   }
 }
 
-.Loan-container {
+.loan-container2 {
   padding: 0px 20px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 0px;
   gap: 60px;
   align-items: flex-start;
+  background-color: #fff;
 }
 
 .Text_holder h2 {
@@ -162,7 +163,7 @@ strong {
   padding: 10px 20px;
   width: 500px;
   gap: 10px;
-};
+}
 
 .toggle-slider {
   position: relative;

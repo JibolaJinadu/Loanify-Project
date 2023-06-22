@@ -4,13 +4,13 @@
   margin: 0 20px;
   padding-bottom: 20px;
 }
-.profile-flex{
+.profile-flex {
   display: flex;
-  gap:20px;
+  gap: 20px;
 }
-.loan-type{
+.loan-type {
   display: flex;
-  gap: 10px
+  gap: 10px;
 }
 .loan-contact {
   display: flex;
@@ -32,13 +32,13 @@
   height: 20px;
   border: none;
   border-radius: 0.2rem;
-  margin-top:11px ;
+  margin-top: 11px;
 }
 .approve {
   width: 110px;
   height: 40px;
   background-color: white;
-  border: 1px solid #c1d0f4;
+  border: 1px solid #83a1e8;
   border-radius: 0.2rem;
 }
 .decline {

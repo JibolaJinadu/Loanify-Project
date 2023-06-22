@@ -98,7 +98,7 @@
   height: 100%;
 }
 .profileTableWrapper table thead tr {
-  border: 1px solid blue;
+  border: 1px solid #83a1e8;
   height: 40px;
 }
 .profileTableWrapper .tableData {
