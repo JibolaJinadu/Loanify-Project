@@ -30,6 +30,7 @@ import ChangePwd from './changePassword/ChangePwd';
 import { useEffect, useState } from 'react';
 import { AuthContext } from './AuthContext';
 import Cookies from 'js-cookie';
+import LoanContract from './loanOverview/LoanContract';
 
 function App() {
   const [signUpToken, setSignUpToken] = useState('');
