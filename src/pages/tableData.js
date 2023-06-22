@@ -5,7 +5,31 @@ const tableData =[
         lastName: "Adedayo",
         applicationDate: "1/05/2023",
         recentUpdate: "05/05/2023",
-        loanStatus: "Pending",
+        loanStatus: "Approved",
+    },
+    {
+        caseNumber: "RRZU9D6BVG",
+        firstName: "Temitayo",
+        lastName: "Adedayo",
+        applicationDate: "1/05/2023",
+        recentUpdate: "05/05/2023",
+        loanStatus: "Declined",
+    },
+    {
+        caseNumber: "RRZU9D6BVG",
+        firstName: "Temitayo",
+        lastName: "Adedayo",
+        applicationDate: "1/05/2023",
+        recentUpdate: "05/05/2023",
+        loanStatus: "Due",
+    },
+    {
+        caseNumber: "RRZU9D6BVG",
+        firstName: "Temitayo",
+        lastName: "Adedayo",
+        applicationDate: "1/05/2023",
+        recentUpdate: "05/05/2023",
+        loanStatus: "Closed",
     },
     {
         caseNumber: "RRZU9D6BVG",
@@ -21,7 +45,7 @@ const tableData =[
         lastName: "Adedayo",
         applicationDate: "1/05/2023",
         recentUpdate: "05/05/2023",
-        loanStatus: "Approved",
+        loanStatus: "Declined",
     },
     {
         caseNumber: "RRZU9D6BVG",
@@ -29,7 +53,7 @@ const tableData =[
         lastName: "Adedayo",
         applicationDate: "1/05/2023",
         recentUpdate: "05/05/2023",
-        loanStatus: "Pending",
+        loanStatus: "Closed",
     },
     {
         caseNumber: "RRZU9D6BVG",
@@ -37,23 +61,7 @@ const tableData =[
         lastName: "Adedayo",
         applicationDate: "1/05/2023",
         recentUpdate: "05/05/2023",
-        loanStatus: "Pending",
-    },
-    {
-        caseNumber: "RRZU9D6BVG",
-        firstName: "Temitayo",
-        lastName: "Adedayo",
-        applicationDate: "1/05/2023",
-        recentUpdate: "05/05/2023",
-        loanStatus: "Approved",
-    },
-    {
-        caseNumber: "RRZU9D6BVG",
-        firstName: "Temitayo",
-        lastName: "Adedayo",
-        applicationDate: "1/05/2023",
-        recentUpdate: "05/05/2023",
-        loanStatus: "Pending",
+        loanStatus: "Due",
     },
     {
         caseNumber: "RRZU9D6BVG",
@@ -69,7 +77,7 @@ const tableData =[
         lastName: "Adedayo",
         applicationDate: "1/05/2023",
         recentUpdate: "05/05/2023",
-        loanStatus: "Pending",
+        loanStatus: "Declined",
     },
     {
         caseNumber: "RRZU9D6BVG",
@@ -77,7 +85,7 @@ const tableData =[
         lastName: "Adedayo",
         applicationDate: "1/05/2023",
         recentUpdate: "05/05/2023",
-        loanStatus: "Pending",
+        loanStatus: "Closed",
     },
     {
         caseNumber: "RRZU9D6BVG",
@@ -85,15 +93,7 @@ const tableData =[
         lastName: "Adedayo",
         applicationDate: "1/05/2023",
         recentUpdate: "05/05/2023",
-        loanStatus: "Approved",
-    },
-    {
-        caseNumber: "RRZU9D6BVG",
-        firstName: "Temitayo",
-        lastName: "Adedayo",
-        applicationDate: "1/05/2023",
-        recentUpdate: "05/05/2023",
-        loanStatus: "Pending",
+        loanStatus: "Due",
     }
 ]
 export default tableData;
