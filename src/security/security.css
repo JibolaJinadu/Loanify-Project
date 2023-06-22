@@ -74,11 +74,11 @@
   bottom: 0;
   background: #3969dc;
   transition: 0.3s;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .toggle label span:before {
@@ -92,10 +92,10 @@
   color: #000;
   transition: 0.3s;
   border-radius: 10%;
-  -webkit-border-radius: 8%;
-  -moz-border-radius: 8%;
-  -ms-border-radius: 8%;
-  -o-border-radius: 8%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
 }
 
 .toggle label input:checked + span {

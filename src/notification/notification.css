@@ -8,24 +8,29 @@
   justify-content: space-between;
   margin-bottom: 10px;
   align-items: flex-start;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   gap: 60px;
-  /* background-color: blue; */
+  /* background-color:brown; */
 }
 
 .Text_holder {
   flex: 0 0 40%;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  line-height: 20px;
+  margin-top: 10px;
 }
 
-.text_holder h2 {
+.Text_holder h2 {
   font-size: 20px;
   font-weight: 700px;
   padding-top: 0px;
   margin-top: 0px;
 }
 
-.text_holder p {
+.Text_holder p {
   font-size: 20px;
+  margin-top: 0px;
 }
 
 .email-section {
@@ -96,11 +101,11 @@
   bottom: 2.6px;
   background-color: #fff;
   transition: 0.3s;
-  border-radius: 8%;
-  -webkit-border-radius: 8%;
-  -moz-border-radius: 8%;
-  -ms-border-radius: 8%;
-  -o-border-radius: 8%;
+  border-radius: 10%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
 }
 
 .toggle label input:checked + span {
@@ -148,6 +153,7 @@ strong {
   margin-bottom: 0px;
   gap: 60px;
   align-items: flex-start;
+  background-color: aqua;
 }
 
 .Text_holder h2 {
@@ -161,17 +167,22 @@ strong {
 }
 
 .loan-section {
-  /* background-color: red; */
-  margin: 30px 0;
-  padding-bottom: 5px;
+  /* background-color: blue; */
+  margin-bottom: 0px;
+  margin-left: 0px;
   flex: 0 0 60%;
 }
 .loan-options {
-  margin-right: 20px;
+  /* margin-right: 20px; */
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 10px 20px;
   width: 500px;
   gap: 10px;
+}
+
+.text-holder{
+  line-height: 10px;
+  padding-bottom: 10px;
 }

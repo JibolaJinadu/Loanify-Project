@@ -10,7 +10,6 @@
   align-items: flex-start;
   padding-bottom: 10px;
   gap: 60px;
-  /* background-color: blue; */
 }
 
 .Text_holder {
@@ -29,13 +28,11 @@
 }
 
 .email-section {
-  /* background-color: red; */
   margin-bottom: 0px;
   margin-left: 0px;
   flex: 0 0 60%;
 }
 .email-options {
-  /* margin-right: 60px; */
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -153,7 +150,6 @@ strong {
 }
 
 .loan-section {
-  /* background-color: red; */
   margin: 30px 0;
   padding-bottom: 5px;
   flex: 0 0 60%;
