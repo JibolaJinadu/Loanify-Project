@@ -44,7 +44,7 @@ function NotificationPage() {
                   </div>
                 </div>
                 <div className="">
-                <Button variant="contained">{''}</Button>
+                  <Button variant="contained">{''}</Button> 
                 </div>
               </div>
             ))}

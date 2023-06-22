@@ -19,7 +19,7 @@ const LoanTab = ({ onTabChange }) => {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('sm'));
 
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(1);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -207,7 +207,6 @@ const LoanTab = ({ onTabChange }) => {
         filterStatus={filterStatus}
         handleFilterStatus={handleFilterStatus}
       />
-
       <Tabs
         value={value}
         onChange={handleChange}
@@ -227,18 +226,21 @@ const LoanTab = ({ onTabChange }) => {
           margin: '0 20px',
         }}
       >
+        <div
+          style={{ borderBottom: '1px solid #010E2A', padding: '5px' }}
+        ></div>
         <Tab
           label="All Loans"
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
-              marginLeft: '10px',
               marginTop: '10px',
               borderBottom: '0',
               borderTop: '1px solid #83a1e8',
               borderRight: '1px solid #83a1e8',
               borderLeft: '1px solid #83a1e8',
             },
+            color: '#010E2A',
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
@@ -256,6 +258,7 @@ const LoanTab = ({ onTabChange }) => {
               borderRight: '1px solid #83a1e8',
               borderLeft: '1px solid #83a1e8',
             },
+            color: '#010E2A',
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
@@ -273,6 +276,7 @@ const LoanTab = ({ onTabChange }) => {
               borderRight: '1px solid #83a1e8',
               borderLeft: '1px solid #83a1e8',
             },
+            color: '#010E2A',
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
@@ -290,6 +294,7 @@ const LoanTab = ({ onTabChange }) => {
               borderRight: '1px solid #83a1e8',
               borderLeft: '1px solid #83a1e8',
             },
+            color: '#010E2A',
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
@@ -307,6 +312,7 @@ const LoanTab = ({ onTabChange }) => {
               borderRight: '1px solid #83a1e8',
               borderLeft: '1px solid #83a1e8',
             },
+            color: '#010E2A',
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
@@ -324,6 +330,7 @@ const LoanTab = ({ onTabChange }) => {
               borderRight: '1px solid #83a1e8',
               borderLeft: '1px solid #83a1e8',
             },
+            color: '#010E2A',
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
@@ -341,6 +348,7 @@ const LoanTab = ({ onTabChange }) => {
               borderRight: '1px solid #83a1e8',
               borderLeft: '1px solid #83a1e8',
             },
+            color: '#010E2A',
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
@@ -352,42 +360,45 @@ const LoanTab = ({ onTabChange }) => {
           sx={{
             '&.Mui-selected': {
               color: '#010E2A',
-              marginRight: '10px',
               marginTop: '10px',
               borderBottom: '0',
               borderTop: '1px solid #83a1e8',
               borderLeft: '1px solid #83a1e8',
               borderRight: '1px solid #83a1e8',
             },
+            color: '#010E2A',
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
             borderBottom: '1px solid #83a1e8',
           }}
         />
+        <div
+          style={{ borderBottom: '1px solid #010E2A', padding: '5px' }}
+        ></div>
       </Tabs>
-      <TabPanel value={value} index={0}>
+      <TabPanel value={value} index={1}>
         <LoanTable tableData={allLoans} table={table} />
       </TabPanel>
-      <TabPanel value={value} index={1}>
+      <TabPanel value={value} index={2}>
         <LoanTable tableData={newApplications} table={table} />
       </TabPanel>
-      <TabPanel value={value} index={2}>
+      <TabPanel value={value} index={3}>
         <LoanTable tableData={pendingLoans} table={table} />
       </TabPanel>
-      <TabPanel value={value} index={3}>
+      <TabPanel value={value} index={4}>
         <LoanTable tableData={activeLoans} table={table} />
       </TabPanel>
-      <TabPanel value={value} index={4}>
+      <TabPanel value={value} index={5}>
         <LoanTable tableData={dueLoans} table={table} />
       </TabPanel>
-      <TabPanel value={value} index={5}>
+      <TabPanel value={value} index={6}>
         <LoanTable tableData={extendedLoans} table={table} />
       </TabPanel>
-      <TabPanel value={value} index={6}>
+      <TabPanel value={value} index={7}>
         <LoanTable tableData={defaultedLoans} table={table} />
       </TabPanel>
-      <TabPanel value={value} index={7}>
+      <TabPanel value={value} index={8}>
         <LoanTable tableData={closedLoans} table={table} />
       </TabPanel>
     </Box>
