@@ -25,6 +25,7 @@ import ResendToken from './passwordReset/ResendToken';
 import ClientOverview from './clientOverview/ClientOverview';
 import FAQ from './support/FAQ';
 import LoanOverview from './loanOverview/LoanOverview';
+import Combine from './profile/combine';
 import ChangePwd from './changePassword/ChangePwd';
 import { useEffect, useState } from 'react';
 import { AuthContext } from './AuthContext';
@@ -72,8 +73,8 @@ function App() {
             element={<LoanOverview />}
           ></Route>
           <Route
-            path="/loans/loans-overview/loans-contract"
-            element={<LoanContract />}
+            path="/profileCombine"
+            element={<Combine />}
           ></Route>
           <Route path="/verification" element={<Token />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>

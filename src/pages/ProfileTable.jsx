@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import tableData from './tableData';
+import Button from '@mui/material/Button';
 
 export default function ProfileTable() {
   const [data, setData] = useState(tableData);
@@ -17,6 +18,18 @@ export default function ProfileTable() {
     }
 
     setCheckedRows(updatedCheckedRows);
+  };
+  const getLoanStatusColor = (loanStatus) => {
+    if (loanStatus === 'Approved') {
+      return 'green';
+    } else if (loanStatus === 'Declined') {
+      return 'red';
+    } else if (loanStatus === 'Closed') {
+      return 'blue';
+    } else if (loanStatus === 'Due') {
+      return 'orange';
+    }
+    return 'inherit'; // Default color
   };
 
   return (
@@ -41,10 +54,13 @@ export default function ProfileTable() {
             return (
               <tr
                 key={index}
+                className='tableData'
                 style={{
-                  backgroundColor: checkedRows.includes(index)
-                    ? '#f0f4fc'
-                    : 'inherit',
+                  // paddingTop: '20px', // Add padding top
+                  // paddingBottom: '20px', // Add padding bottom
+                  // backgroundColor: checkedRows.includes(index)
+                  //   ? '#f0f4fc'
+                  //   : 'inherit',
                 }}
               >
                 <td className="text-left">
@@ -61,7 +77,13 @@ export default function ProfileTable() {
                 <td>{rowData.lastName}</td>
                 <td>{rowData.applicationDate}</td>
                 <td>{rowData.recentUpdate}</td>
-                <td>{rowData.loanStatus}</td>
+                <td>
+                <Button
+                    style={{borderRadius:'1rem',textTransform:"Capitalize",width:'6rem',fontSize:'12px',color:'white', backgroundColor: getLoanStatusColor(rowData.loanStatus) }}
+                  >
+                    {rowData.loanStatus}
+                  </Button>
+                  </td>
               </tr>
             );
           })}
