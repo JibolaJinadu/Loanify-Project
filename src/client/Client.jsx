@@ -20,19 +20,19 @@ const initialTableData = [
   {
     applicationNumber: 'GR45467RBA',
     fullName: 'Justin Jude',
-    loanStatus: 'Decline',
-    date: 'Justin Jude',
+    loanStatus: 'Due',
+    date: '18/03/2023',
   },
   {
     applicationNumber: 'RRZU9D6BVG',
     fullName: 'Sharon Udoh',
-    loanStatus: 'Pending Review',
+    loanStatus: 'Declined',
     date: '17/03/2023',
   },
   {
     applicationNumber: 'GR45467RBA',
     fullName: 'Olufemi Ayo',
-    loanStatus: 'Approved',
+    loanStatus: 'Closed',
     date: '18/03/2023',
   },
   {
@@ -44,19 +44,67 @@ const initialTableData = [
   {
     applicationNumber: 'GR45467RBA',
     fullName: 'Justin Jude',
-    loanStatus: 'Decline',
-    date: 'Justin Jude',
+    loanStatus: 'Due',
+    date: '18/03/2023',
   },
   {
     applicationNumber: 'RRZU9D6BVG',
     fullName: 'Sharon Udoh',
-    loanStatus: 'Pending Review',
+    loanStatus: 'Declined',
     date: '17/03/2023',
   },
   {
     applicationNumber: 'GR45467RBA',
     fullName: 'Olufemi Ayo',
+    loanStatus: 'Closed',
+    date: '18/03/2023',
+  },
+  {
+    applicationNumber: 'RRZU9D6BVG',
+    fullName: 'Temidayo Adebayo',
     loanStatus: 'Approved',
+    date: '20/03/2023',
+  },
+  {
+    applicationNumber: 'GR45467RBA',
+    fullName: 'Justin Jude',
+    loanStatus: 'Due',
+    date: '18/03/2023',
+  },
+  {
+    applicationNumber: 'RRZU9D6BVG',
+    fullName: 'Sharon Udoh',
+    loanStatus: 'Declined',
+    date: '17/03/2023',
+  },
+  {
+    applicationNumber: 'GR45467RBA',
+    fullName: 'Olufemi Ayo',
+    loanStatus: 'Closed',
+    date: '18/03/2023',
+  },
+  {
+    applicationNumber: 'RRZU9D6BVG',
+    fullName: 'Temidayo Adebayo',
+    loanStatus: 'Approved',
+    date: '20/03/2023',
+  },
+  {
+    applicationNumber: 'GR45467RBA',
+    fullName: 'Justin Jude',
+    loanStatus: 'Due',
+    date: '18/03/2023',
+  },
+  {
+    applicationNumber: 'RRZU9D6BVG',
+    fullName: 'Sharon Udoh',
+    loanStatus: 'Declined',
+    date: '17/03/2023',
+  },
+  {
+    applicationNumber: 'GR45467RBA',
+    fullName: 'Olufemi Ayo',
+    loanStatus: 'Closed',
     date: '18/03/2023',
   },
 ];
@@ -96,16 +144,19 @@ const Client = () => {
     switch (status) {
       case 'Approved':
         return 'status-approved';
-      case 'Decline':
-        return 'status-decline';
-      case 'Pending Review':
-        return 'status-pending';
+      case 'Due':
+        return 'status-due';
+      case 'Declined':
+        return 'status-declined';
+        case 'Closed':
+        return 'status-closed';
       default:
         return '';
     }
   };
 
   return (
+    
     <Box sx={{ display: 'flex', margin: '0 20px' }}>
       <Sidebar />
       <Box component="main" sx={{ flexGrow: 1 }}>
@@ -148,8 +199,9 @@ const Client = () => {
                 >
                   <option value="">All</option>
                   <option value="Approved">Approved</option>
-                  <option value="Decline">Decline</option>
-                  <option value="Pending Review">Pending Review</option>
+                  <option value="Due">Due</option>
+                  <option value="Declined">Declined</option>
+                  <option value="Closed">Closed</option>
                 </select>
               </div>
             </div>
@@ -167,8 +219,8 @@ const Client = () => {
                 <th>
                   <input
                     type="checkBox"
-                    disabled
                     className="clients-input"
+                    disabled
                   ></input>
                 </th>
                 <th>Application Number</th>
@@ -182,17 +234,14 @@ const Client = () => {
                 <tr key={index}>
                   <td>
                     <Link to="/clients/clients-overview">
-                      <input type="checkbox" className="clients-input"></input>
+                      <input type="checkbox" disabled className="clients-input"></input>
                     </Link>
                   </td>
                   <td>{row.applicationNumber}</td>
                   <td>{row.fullName}</td>
-                  <td>
-                    <span className={` ${getStatusColor(row.loanStatus)}`}>
-                      <span className="client-dot">&#x2022;</span>
-                      {row.loanStatus}
-                    </span>{' '}
-                  </td>
+                  <td >
+                    <button className={` ${getStatusColor(row.loanStatus)}`}>{row.loanStatus}</button>{' '}
+                   </td>
                   <td>{row.date}</td>
                 </tr>
               ))}

@@ -1,14 +1,22 @@
 .risk-score {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  display: flex;
   padding-top: 10px;
-  gap: 50;
+}
+
+.risk-comment{
+  font-size: 14px;
+  font-weight: 700;
 }
 .rs-highlighted {
   background-color: #f0f4fc;
-  width: 500px;
+  width: 320px;
+  height: 80px;
   padding: 4px;
   border-radius: 0.5rem;
+}
+
+.riskComment {
+  font-size: 14px;
 }
 
 .rs-sizeb p {
@@ -16,6 +24,13 @@
   font-weight: 700;
 }
 
-.rs-size {
+.rs-size p {
   font-size: 14px;
+}
+.rs-space{
+  margin-right: 55px;
+}
+
+.risk-space {
+  margin-right: 80px;
 }

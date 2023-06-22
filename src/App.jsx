@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React from "react";
+/*import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './login/Login';
 import ResetPassword from './passwordReset/ResetPassword';
 import Token from './tokenAuth/Token';
@@ -25,11 +26,13 @@ import ResendToken from './passwordReset/ResendToken';
 import ClientOverview from './clientOverview/ClientOverview';
 import FAQ from './support/FAQ';
 import LoanOverview from './loanOverview/LoanOverview';
-import ChangePwd from './changePassword/ChangePwd';
+import ChangePwd from './changePassword/ChangePwd';*/
+
+import Tablek from "./client/tablek";
 
 function App() {
   return (
-    <>
+    /*<>
       <ToastContainer />
       <Router>
         <Routes>
@@ -79,6 +82,9 @@ function App() {
           ></Route>
         </Routes>
       </Router>
+    </>*/
+    <>
+    <Tablek/>
     </>
   );
 }

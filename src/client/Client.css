@@ -16,15 +16,16 @@
   border: 1px solid black;
   color: black;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: bolder;
 }
 
 #client-data {
   border-collapse: collapse;
   background-color: white;
   color: black;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: lighter;
+
 }
 
 #clients-color {
@@ -95,43 +96,99 @@
   text-align: left;
 }
 
+tr:hover {
+  background-color: #94afee;
+}
+
 th {
+  background-color: white;
+  color: black;
+  border: 2 px solid #ddd;
+  text-align: center;
   font-size: 16px;
-  font-weight: 700;
-  color: #010e2a;
+  font-weight: bolder;
+  line-height: 3rem;
 }
 
 td {
+  line-height: 3rem;
+  text-align: center;
+  padding-top: 20px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: lighter;
+  padding-top: 7px;
+}
+
+
+tr:nth-child(even) {
+  background-color: lightgrey;
 }
 
 .clients-input {
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .status-approved {
-  color: green;
+  width: 50%;
+  height: 40px;
+  text-align: center;
+  border: 1px solid #33DD64;
+  background-color: #33DD64;
+  border-radius: 20px;
+  border: 1px solid ;
+  padding-left: 5px;
+  color: white;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 300;
+  padding-bottom: 3px;
 }
 
-.status-decline {
-  color: red;
+.status-due {
+  border: 1px solid #F3B516;
+  background-color: #F3B516;
+  width: 50%;
+  height: 40px;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid ;
+  padding-left: 5px;
+  color: white;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 300;
+  padding-bottom: 3px;
 }
 
-.status-pending {
-  color: yellow;
+.status-declined {
+  width: 50%;
+  height: 40px;
+  text-align: center;
+  border: 1px solid red;
+  background-color: red;
+  border-radius: 20px;
+  border: 1px solid ;
+  padding-left: 5px;
+  color: white;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 300;
+  padding-bottom: 3px;
 }
 
-.client-dot {
-  font-size: 20px;
-  padding-right: 10px;
+.status-closed {
+  width: 50%;
+  height: 40px;
+  text-align: center;
+  border: 1px solid #6A8FE5;
+  background-color: #6A8FE5;
+  border-radius: 20px;
+  border: 1px solid ;
+  padding-left: 5px;
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+  padding-bottom: 3px;
 }
+
 
 .search-filter,
 .filter-select {
