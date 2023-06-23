@@ -31,6 +31,7 @@ import { useEffect, useState } from 'react';
 import { AuthContext } from './AuthContext';
 import Cookies from 'js-cookie';
 import LoanContract from './loanOverview/LoanContract';
+import ClientContract from './clientOverview/ClientContract';
 
 function App() {
   const [signUpToken, setSignUpToken] = useState('');
@@ -81,6 +82,10 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/support" element={<SupportPage />}></Route>
           <Route path="/clients" element={<Client />}></Route>
+          <Route
+            path="/clients/clients-overview/contract"
+            element={<ClientContract />}
+          ></Route>
           <Route path="/profile" element={<ProfilePage />}></Route>
           <Route path="/reports" element={<Reports />}></Route>
           <Route path="/notification" element={<NotificationPage />}></Route>

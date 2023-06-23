@@ -18,9 +18,10 @@ const UserPermission = () => {
             <th>Action</th>
           </tr>
         </thead>
+        <tr className="padtap">&nbsp;</tr>
         <tbody>
-          <tr className='rowWrapper'>
-            <td >
+          <tr className="rowWrapper">
+            <td>
               <input type="checkBox"></input>
             </td>
             <td>Temidayo</td>
@@ -30,14 +31,16 @@ const UserPermission = () => {
             <td>Approver</td>
             <td>
               <select className="permit" id="permit">
-                <option value='choose' hidden>choose</option>
+                <option value="choose" hidden>
+                  choose
+                </option>
                 <option value="Approver">Approver</option>
-                <option value="Reviewer" >Reviewer</option>
-                <option value="Uploader" >Uploader</option>
+                <option value="Reviewer">Reviewer</option>
+                <option value="Uploader">Uploader</option>
               </select>
             </td>
           </tr>
-          <tr className='rowWrapper'>
+          <tr className="rowWrapper">
             <td>
               <input type="checkBox"></input>
             </td>
@@ -48,14 +51,16 @@ const UserPermission = () => {
             <td>Reviewer</td>
             <td>
               <select className="permit" id="permit">
-                <option value='choose' hidden>choose</option>
+                <option value="choose" hidden>
+                  choose
+                </option>
                 <option value="Approver">Approver</option>
-                <option value="Reviewer" >Reviewer</option>
-                <option value="Uploader" >Uploader</option>
+                <option value="Reviewer">Reviewer</option>
+                <option value="Uploader">Uploader</option>
               </select>
             </td>
           </tr>
-          <tr className='rowWrapper'>
+          <tr className="rowWrapper">
             <td>
               <input type="checkBox"></input>
             </td>
@@ -66,14 +71,16 @@ const UserPermission = () => {
             <td>Reviewer</td>
             <td>
               <select className="permit" id="permit">
-                <option value="choose" hidden >choose</option>
+                <option value="choose" hidden>
+                  choose
+                </option>
                 <option value="Approver">Approver</option>
-                <option value="Reviewer" >Reviewer</option>
-                <option value="Uploader" >Uploader</option>
+                <option value="Reviewer">Reviewer</option>
+                <option value="Uploader">Uploader</option>
               </select>
             </td>
           </tr>
-          <tr className='rowWrapper'>
+          <tr className="rowWrapper">
             <td>
               <input type="checkBox"></input>
             </td>
@@ -84,14 +91,16 @@ const UserPermission = () => {
             <td>Uploader</td>
             <td>
               <select className="permit" id="permit">
-                <option value="choose" hidden >choose</option>
+                <option value="choose" hidden>
+                  choose
+                </option>
                 <option value="Approver">Approver</option>
-                <option value="Reviewer" >Reviewer</option>
-                <option value="Uploader" >Uploader</option>
+                <option value="Reviewer">Reviewer</option>
+                <option value="Uploader">Uploader</option>
               </select>
             </td>
           </tr>
-          <tr className='rowWrapper'>
+          <tr className="rowWrapper">
             <td>
               <input type="checkBox"></input>
             </td>
@@ -102,14 +111,16 @@ const UserPermission = () => {
             <td>Approver</td>
             <td>
               <select className="permit" id="permit">
-                <option value="choose" hidden>choose</option>
+                <option value="choose" hidden>
+                  choose
+                </option>
                 <option value="Approver">Approver</option>
-                <option value="Reviewer" >Reviewer</option>
-                <option value="Uploader" >Uploader</option>
+                <option value="Reviewer">Reviewer</option>
+                <option value="Uploader">Uploader</option>
               </select>
             </td>
           </tr>
-          <tr className='rowWrapper'>
+          <tr className="rowWrapper">
             <td>
               <input type="checkBox"></input>
             </td>
@@ -120,14 +131,16 @@ const UserPermission = () => {
             <td>Reviewer</td>
             <td>
               <select className="permit" id="permit">
-                <option value="choose" hidden>choose</option>
+                <option value="choose" hidden>
+                  choose
+                </option>
                 <option value="Approver">Approver</option>
-                <option value="Reviewer" >Reviewer</option>
-                <option value="Uploader" >Uploader</option>
+                <option value="Reviewer">Reviewer</option>
+                <option value="Uploader">Uploader</option>
               </select>
             </td>
           </tr>
-          <tr className='rowWrapper'>
+          <tr className="rowWrapper">
             <td>
               <input type="checkBox"></input>
             </td>
@@ -138,14 +151,16 @@ const UserPermission = () => {
             <td>Reviewer</td>
             <td>
               <select className="permit" id="permit">
-                <option value="choose" hidden>choose</option>
+                <option value="choose" hidden>
+                  choose
+                </option>
                 <option value="Approver">Approver</option>
-                <option value="Reviewer" >Reviewer</option>
-                <option value="Uploader" >Uploader</option>
-              </select>  
+                <option value="Reviewer">Reviewer</option>
+                <option value="Uploader">Uploader</option>
+              </select>
             </td>
           </tr>
-          <tr className='rowWrapper'>
+          <tr className="rowWrapper">
             <td>
               <input type="checkBox"></input>
             </td>
@@ -156,14 +171,16 @@ const UserPermission = () => {
             <td>Uploader</td>
             <td>
               <select className="permit" id="permit">
-                <option value="choose" hidden>choose</option>
+                <option value="choose" hidden>
+                  choose
+                </option>
                 <option value="Approver">Approver</option>
-                <option value="Reviewer" >Reviewer</option>
-                <option value="Uploader" >Uploader</option>
+                <option value="Reviewer">Reviewer</option>
+                <option value="Uploader">Uploader</option>
               </select>
             </td>
           </tr>
-          <tr className='rowWrapper'>
+          <tr className="rowWrapper">
             <td>
               <input type="checkBox"></input>
             </td>
@@ -174,10 +191,12 @@ const UserPermission = () => {
             <td>Approver</td>
             <td>
               <select className="permit" id="permit">
-                <option value="choose" hidden>choose</option>
+                <option value="choose" hidden>
+                  choose
+                </option>
                 <option value="Approver">Approver</option>
-                <option value="Reviewer" >Reviewer</option>
-                <option value="Uploader" >Uploader</option>
+                <option value="Reviewer">Reviewer</option>
+                <option value="Uploader">Uploader</option>
               </select>
             </td>
           </tr>

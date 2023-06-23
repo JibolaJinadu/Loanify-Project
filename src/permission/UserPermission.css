@@ -14,37 +14,28 @@ th {
   font-size: 40px;
   font-weight: 700px;
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 0px;
-  }
-
-td {
-  text-align: center;
-  padding: 20px;
-  font-size: 25px;
-  color: black;
-  font-weight: lighter;
-
+  padding: 10px 0;
 }
 
 td label {
   margin-right: 10px;
 }
 
-.permit{
+.permit {
   border: none;
-  color:gray;
-
+  color: gray;
 }
 
-
-tr:hover{
+tr:hover {
   background-color: #94afee;
 }
 
-
-.rowWrapper{
+.rowWrapper {
   background-color: rgb(233, 242, 245);
-  border: 15px solid white;
+  border-bottom: 10px solid white;
   /* margin-bottom: 20px; */
+}
+
+.rowWrapper:nth-child(:first-child(1)) {
+  border-top: 10px solid white;
 }

@@ -38,13 +38,14 @@
 }
 .profilePercentageWrapper {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 1rem;
 }
 .box {
-  width: 18rem;
+  width: 11.5rem;
   display: flex;
   justify-content: space-between;
-  margin-right: 1.5rem;
   background-color: #f0f4fc;
   padding: 1rem 0.5rem 0.5rem 1rem;
 }
@@ -106,19 +107,18 @@
   border-bottom: 10px solid white;
 }
 .profileTableWrapper .tableData:hover {
-  background-color: rgb(107, 107, 228);
+  background-color: #94afee;
 }
 
 .profileTableWrapper table th {
   text-align: left;
-  padding: 0.5rem;
   font-size: 16px;
   font-weight: 700;
   color: #010e2a;
 }
 .profileTableWrapper table td {
   text-align: left;
-  padding: 0.5rem;
+  padding: 10px 0;
   font-weight: 500;
   font-size: 14px;
 }
@@ -133,10 +133,10 @@
   font-weight: 500;
 }
 
-profileThead {
+/* .profileThead {
   margin-bottom: 20px !important;
-}
+} */
 
 .padtap {
-  padding: 5px;
+  font-size: 7px;
 }

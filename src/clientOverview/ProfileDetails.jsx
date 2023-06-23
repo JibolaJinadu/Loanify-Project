@@ -40,7 +40,7 @@ const ProfileDetails = () => {
           <p style={{ fontWeight: 'bold' }}>Loan Type:</p>
           <p>Personal Loan</p>
         </div>
-        <div className="loan-type">
+        <div className="loan-type pad-top">
           <p style={{ fontWeight: 'bold' }}>Loan Status:</p>
           <p>Active</p>
           <button className="active-btn"></button>
