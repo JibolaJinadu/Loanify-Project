@@ -9,7 +9,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 
-
 const OverviewPage = () => {
   return (
     <>
@@ -22,16 +21,18 @@ const OverviewPage = () => {
                 <p className="lower-text">
                   <FontAwesomeIcon className="drop-up drop1" icon={faChevronUp} /> 
                   <span className='lower-text-percent'>15%</span>
+                  <span className="increase">Increase</span>
                 </p>
               </div>
-              <h2 className="item-right right">250M</h2>
+              <h2 className="item-right right">1050</h2>
             </div>
             <div className="row-item2">
               <div className="item-left">
                 <p className="upper-text">New Applications</p>
                 <p className="lower-text">
                   <FontAwesomeIcon className="drop-up drop2" icon={faChevronUp} /> 
-                  <span className='lower-text-percent'>40%</span>
+                  <span className='lower-text-percent'> 40%</span>
+                  <span className="increase">Increase</span>
                 </p>
               </div>
               <h2 className="item-right right2">35</h2>
@@ -40,8 +41,9 @@ const OverviewPage = () => {
               <div className="item-left">
                 <p className="upper-text">Pending Loans</p>
                 <p className="lower-text">
-                  <FontAwesomeIcon className="drop-down drop3" icon={faChevronDown} /> 
+                  <FontAwesomeIcon className="drop-up drop3" icon={faChevronUp} /> 
                   <span className='lower-text-percent'>5%</span>
+                  <span className="increase">Increase</span>
                 </p>
               </div>
               <h2 className="item-right right3">30</h2>
@@ -52,6 +54,7 @@ const OverviewPage = () => {
                 <p className="lower-text">
                   <FontAwesomeIcon className="drop-up drop4" icon={faChevronUp} /> 
                   <span className='lower-text-percent'>12%</span>
+                  <span className="increase">Increase</span>
                 </p>
               </div>
               <h2 className="item-right right4">60</h2>
@@ -65,9 +68,10 @@ const OverviewPage = () => {
                 <p className="lower-text">
                   <FontAwesomeIcon className="drop-up drop5" icon={faChevronUp} /> 
                   <span className='lower-text-percent'>5%</span>
+                  <span className="increase">Increase</span>
                 </p>
               </div>
-              <h2 className="item-right right5">75M</h2>
+              <h2 className="item-right right5">30</h2>
             </div>
             <div className="row-item6">
               <div className="item-left">
@@ -75,9 +79,10 @@ const OverviewPage = () => {
                 <p className="lower-text">
                   <FontAwesomeIcon className="drop-up drop6" icon={faChevronUp} /> 
                   <span className='lower-text-percent'>8%</span>
+                  <span className="increase">Increase</span>
                 </p>
               </div>
-              <h2 className="item-right right6">22M</h2>
+              <h2 className="item-right right6">35</h2>
             </div>
             <div className="row-item7">
               <div className="item-left">
@@ -85,9 +90,10 @@ const OverviewPage = () => {
                 <p className="lower-text">
                   <FontAwesomeIcon className="drop-down drop7" icon={faChevronDown} /> 
                   <span className='lower-text-percent'>10%</span>
+                  <span className="increase">Decrease</span>
                 </p>
               </div>
-              <h2 className="item-right right7">35M</h2>
+              <h2 className="item-right right7">60</h2>
             </div>
             <div className="row-item8">
               <div className="item-left">
@@ -95,9 +101,10 @@ const OverviewPage = () => {
                 <p className="lower-text">
                   <FontAwesomeIcon className="drop-up drop8" icon={faChevronUp} /> 
                   <span className='lower-text-percent'>45%</span>
+                  <span className="increase">Increase</span>
                 </p>
               </div>
-              <h2 className="item-right right8">98M</h2>
+              <h2 className="item-right right8">98</h2>
             </div>
           </div>
         </div>
