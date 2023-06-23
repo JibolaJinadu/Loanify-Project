@@ -5,9 +5,9 @@ import Sidebar from '../components/Sidebar';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Link } from 'react-router-dom';
-import LoanDoc from './LoanDoc';
+import ClientContractForm from './ClientContractForm';
 
-const LoanContract = () => {
+export default function ClientContract() {
   return (
     <div>
       <Box sx={{ display: 'flex' }}>
@@ -27,20 +27,18 @@ const LoanContract = () => {
               <Link className="breadcrumbs" to="/dashboard">
                 Home
               </Link>
-              <Link className="breadcrumbs" to="/loans">
-                Loans
+              <Link className="breadcrumbs" to="/clients">
+                Clients
               </Link>
-              <Link className="breadcrumbs" to="/loans/loans-overview">
-                Loans Overview
+              <Link className="breadcrumbs" to="/clients/clients-overview">
+                Clients Overview
               </Link>
-              <p className="breadcrumbs">Loan Contract</p>
+              <p className="breadcrumbs">Clients Contract</p>
             </Breadcrumbs>
           </div>
-          <LoanDoc />
+          <ClientContractForm />
         </Box>
       </Box>
     </div>
   );
-};
-
-export default LoanContract;
+}

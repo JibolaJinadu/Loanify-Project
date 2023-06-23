@@ -16,6 +16,11 @@ input[type='checkbox'] {
   accent-color: #010e2a;
 }
 
+th input,
+td input {
+  margin-left: 7px;
+}
+
 th {
   font-size: 16px;
   font-weight: 700;
@@ -23,7 +28,6 @@ th {
 }
 .blue-row {
   background-color: #f0f4fc;
-  border-bottom: 10px solid white;
 }
 tr:hover {
   background-color: #94afee;
@@ -32,151 +36,98 @@ tr:hover {
 td {
   font-size: 14px;
   font-weight: 500;
+  padding: 12px 0;
+  border-bottom: 10px solid white;
 }
 
-.status-approved {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 12px;
+.loans-approved {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  width: 130px;
+  padding: 8px 0;
+  border-radius: 50px;
   background-color: #33dd64;
   color: white;
-  font-size: 13px;
-  font-weight: lighter;
-  width: 140px;
-  height: 30px;
-  border-radius: 3rem;
 }
-
-.status-defaulted {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 12px;
-  width: 140px;
-  height: 30px;
-  border-radius: 3rem;
+.loans-defaulted {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  width: 130px;
+  padding: 8px 0;
+  border-radius: 50px;
   background-color: #dc3969;
   color: white;
-  font-size: 13px;
-  font-weight: lighter;
 }
-.status-closed {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 12px;
-  width: 140px;
-  height: 30px;
-  border-radius: 3rem;
+.loans-closed {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  width: 130px;
+  padding: 8px 0;
+  border-radius: 50px;
   background-color: #88a5ea;
   color: white;
-  font-size: 13px;
-  font-weight: lighter;
 }
-.status-extended {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 12px;
-  width: 140px;
-  height: 30px;
-  border-radius: 3rem;
+.loans-extended {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  width: 130px;
+  padding: 8px 0;
+  border-radius: 50px;
   background-color: #33dd64;
   color: white;
-  font-size: 13px;
-  font-weight: lighter;
 }
 
-.status-pending {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 12px;
-  width: 140px;
-  height: 30px;
-  border-radius: 3rem;
+.loans-pending {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  width: 130px;
+  padding: 8px 0;
+  border-radius: 50px;
   background-color: #f5c445;
   color: white;
-  font-size: 13px;
-  font-weight: lighter;
 }
-.status-active {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 12px;
-  width: 140px;
-  height: 30px;
-  border-radius: 3rem;
+.loans-active {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  width: 130px;
+  padding: 8px 0;
+  border-radius: 50px;
   background-color: #365499;
   color: white;
-  font-size: 13px;
-  font-weight: lighter;
 }
-.status-due {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 12px;
-  width: 140px;
-  height: 30px;
-  border-radius: 3rem;
+.loans-due {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  width: 130px;
+  padding: 8px 0;
+  border-radius: 50px;
   background-color: #f5c445;
   color: white;
-  font-size: 13px;
-  font-weight: lighter;
 }
-.status-incomplete-docs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 12px;
-  width: 140px;
-  height: 30px;
-  border-radius: 3rem;
+.loans-incomplete-docs {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  width: 130px;
+  padding: 8px 0;
+  border-radius: 50px;
   background-color: white;
   color: black;
-  font-size: 13px;
-  font-weight: lighter;
 }
-.status-received-docs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 12px;
-  width: 140px;
-  height: 30px;
-  border-radius: 3rem;
+.loans-received-docs {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  width: 130px;
+  padding: 8px 0;
+  border-radius: 50px;
   background-color: #343e55;
   color: white;
-  font-size: 13px;
-  font-weight: lighter;
 }

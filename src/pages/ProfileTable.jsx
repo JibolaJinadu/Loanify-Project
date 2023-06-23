@@ -21,13 +21,13 @@ export default function ProfileTable() {
   };
   const getLoanStatusColor = (loanStatus) => {
     if (loanStatus === 'Approved') {
-      return 'green';
+      return '#33dd64';
     } else if (loanStatus === 'Declined') {
-      return 'red';
+      return '#D30744';
     } else if (loanStatus === 'Closed') {
-      return 'blue';
+      return '#88a5ea';
     } else if (loanStatus === 'Due') {
-      return 'orange';
+      return '#f3b516';
     }
     return 'inherit'; // Default color
   };
@@ -49,7 +49,7 @@ export default function ProfileTable() {
             <th>Loan Status</th>
           </tr>
         </thead>
-        <h1 className="padtap"></h1>
+        <tr className="padtap">&nbsp;</tr>
         <tbody>
           {data.map((rowData, index) => {
             return (
@@ -72,10 +72,11 @@ export default function ProfileTable() {
                   <td>
                     <Button
                       style={{
-                        borderRadius: '1rem',
+                        borderRadius: '50px',
                         textTransform: 'Capitalize',
-                        width: '6rem',
-                        fontSize: '12px',
+                        padding: '4px 0',
+                        width: '130px',
+                        fontSize: '14px',
                         color: 'white',
                         backgroundColor: getLoanStatusColor(rowData.loanStatus),
                       }}

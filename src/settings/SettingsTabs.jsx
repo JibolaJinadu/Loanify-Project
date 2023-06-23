@@ -174,7 +174,7 @@ function TabPanel(props) {
       id={`tabpanel-${index}`}
       aria-labelledby={`tab-${index}`}
     >
-      {value === index && <Box p={3}>{children}</Box>}
+      {value === index && <Box p={2.5}>{children}</Box>}
     </Typography>
   );
 }

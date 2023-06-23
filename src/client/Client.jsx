@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import './Client.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 import ClientDialog from './ClientDialog';
 
@@ -143,20 +143,25 @@ const Client = () => {
   const getStatusColor = (status) => {
     switch (status) {
       case 'Approved':
-        return 'status-approved';
+        return 'clients-approved';
       case 'Due':
-        return 'status-due';
+        return 'clients-due';
       case 'Declined':
-        return 'status-declined';
-        case 'Closed':
-        return 'status-closed';
+        return 'clients-declined';
+      case 'Closed':
+        return 'clients-closed';
       default:
         return '';
     }
   };
 
+  const navigate = useNavigate();
+
+  const handleRowClick = () => {
+    navigate('/clients/clients-overview');
+  };
+
   return (
-    
     <Box sx={{ display: 'flex', margin: '0 20px' }}>
       <Sidebar />
       <Box component="main" sx={{ flexGrow: 1 }}>
@@ -229,19 +234,26 @@ const Client = () => {
                 <th>Date</th>
               </tr>
             </thead>
+            <tr className="padtap">&nbsp;</tr>
             <tbody id="client-data">
               {filteredTableData.map((row, index) => (
-                <tr key={index}>
+                <tr className="client-row" key={index} onClick={handleRowClick}>
                   <td>
                     <Link to="/clients/clients-overview">
-                      <input type="checkbox" disabled className="clients-input"></input>
+                      <input
+                        type="checkbox"
+                        disabled
+                        className="clients-input"
+                      ></input>
                     </Link>
                   </td>
                   <td>{row.applicationNumber}</td>
                   <td>{row.fullName}</td>
-                  <td >
-                    <button className={` ${getStatusColor(row.loanStatus)}`}>{row.loanStatus}</button>{' '}
-                   </td>
+                  <td>
+                    <button className={` ${getStatusColor(row.loanStatus)}`}>
+                      {row.loanStatus}
+                    </button>{' '}
+                  </td>
                   <td>{row.date}</td>
                 </tr>
               ))}

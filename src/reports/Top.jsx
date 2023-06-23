@@ -110,11 +110,11 @@ export default function Top() {
 
         <div className="gap-report report-item shift-report">
           <div className="shift-report">
-            <h4>115</h4>
+            <h4 className="font-pad">115</h4>
             <p className="size-font">Total number of completed payments</p>
           </div>
           <div className="shift-report">
-            <h4>NGN41,952,700</h4>
+            <h4 className="font-pad">NGN41,952,700</h4>
             <p className="size-font">Total number of uncompleted payments</p>
           </div>
         </div>

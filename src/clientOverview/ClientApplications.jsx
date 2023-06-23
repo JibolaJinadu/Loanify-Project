@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './ClientApplications.css';
-// import { HiChevronDown } from 'react-icons/hi';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const ClientApplications = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,14 +32,13 @@ const ClientApplications = () => {
     <section className="clientContainer">
       <div>
         <div className="dropDown">
-          <button onClick={toggleDropdownOne} className="loan-btn">
+          <button className="loan-btn">
             <div className="arrow-icon">
               <h3>Loan Application History</h3>
-              {/* <HiChevronDown className="pointer" /> */}
+              <ExpandMoreIcon onClick={toggleDropdownOne} className="pointer" />
             </div>
           </button>
         </div>
-        <div className="spacing1"></div>
 
         {isVisible && (
           <div className="infoDetails">
@@ -50,7 +49,6 @@ const ClientApplications = () => {
               <h5>Next Payment DATE</h5>
               <h5>Payoff Progress</h5>
             </div>
-            <div className="spacing1"></div>
             <div className="details">
               <p>RRZU9D6BVG</p>
               <h5>500,000</h5>
@@ -60,7 +58,6 @@ const ClientApplications = () => {
                 <div className="blackColor">90%</div>
               </div>
             </div>
-            <div className="spacing1"></div>
             <div className="details">
               <p>RRZU9E6ATY</p>
               <h5>200,000</h5>
@@ -68,7 +65,6 @@ const ClientApplications = () => {
               <h5>N/A</h5>
               <div className="greenColor">100%</div>
             </div>
-            <div className="spacing1"></div>
             <div className="details">
               <p>RRZU9F8ZXP</p>
               <h5>120,000</h5>
@@ -81,10 +77,10 @@ const ClientApplications = () => {
       </div>
       <div className="spacing">
         <div className="dropDown">
-          <button onClick={toggleDropdownTwo} className="loan-btn">
+          <button className="loan-btn">
             <div className="arrow-icon">
               <h3>Loan Application Information</h3>
-              <HiChevronDown className="pointer" />
+              <ExpandMoreIcon className="pointer" onClick={toggleDropdownTwo} />
             </div>
           </button>
         </div>
@@ -125,10 +121,13 @@ const ClientApplications = () => {
       </div>
       <div>
         <div className="dropDown">
-          <button onClick={toggleDropdownThree} className="loan-btn">
+          <button className="loan-btn">
             <div className="arrow-icon">
               <h3>Collateral Information</h3>
-              <HiChevronDown className="pointer" />
+              <ExpandMoreIcon
+                onClick={toggleDropdownThree}
+                className="pointer"
+              />
             </div>
           </button>
         </div>
