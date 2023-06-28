@@ -25,7 +25,7 @@ const SupportPage = () => {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    setSubmissionMessage('Issue Sent' );
+    setSubmissionMessage('Issue Sent');
     setTextareaValue('');
   };
 
@@ -35,19 +35,19 @@ const SupportPage = () => {
 
   return (
     <>
-      <Box sx={{ display: "flex" }}>
+      <Box sx={{ display: 'flex' }}>
         <Sidebar />
-        <Box component="main" sx={{ flexGrow: 1, margin: "0 20px" }}>
+        <Box component="main" sx={{ flexGrow: 1 }}>
           <Toolbar />
           <div role="presentation">
             <Breadcrumbs
               separator={<ChevronRightIcon />}
               aria-label="breadcrumb"
               sx={{
-                backgroundColor: "#F0F4FC",
-                width: "94%",
-                margin: "0 20px 10px",
-                padding: "10px 5px",
+                backgroundColor: '#F0F4FC',
+                width: '94%',
+                margin: '0 20px 10px',
+                padding: '10px 5px',
               }}
             >
               <Link to="/dashboard" className="breadcrumbs">
@@ -59,7 +59,7 @@ const SupportPage = () => {
           <div className="overall">
             <div className="section-22">
               <Link to="/support/faq" className="faq-link">
-                  FAQ
+                FAQ
               </Link>
             </div>
 
@@ -73,21 +73,22 @@ const SupportPage = () => {
               <button className="toll-btn">080 0000 1234</button>
             </div>
 
-
             <div>
               <Button
                 onClick={handleButtonClick}
-                style={{backgroundColor:"rgb(240, 244, 252)", 
-                color: "black", 
-                width: "98%", 
-                height: "70px", 
-                padding: "5px 20px", 
-                display: "flex", 
-                justifyContent:"space-between",
-                marginTop:"1.5%",}}
+                style={{
+                  backgroundColor: 'rgb(240, 244, 252)',
+                  color: 'black',
+                  width: '98%',
+                  height: '70px',
+                  padding: '5px 20px',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  marginTop: '1.5%',
+                }}
               >
-                <p className='report-drp-p1'>Report an Issue</p>
-                <p className='report-drp-p2'>v</p>
+                <p className="report-drp-p1">Report an Issue</p>
+                <p className="report-drp-p2">v</p>
               </Button>
               {showTextarea && (
                 <form className="report-form-cover" onSubmit={handleFormSubmit}>
@@ -96,17 +97,39 @@ const SupportPage = () => {
                     onChange={handleTextareaChange}
                     className="report-textarea"
                   ></textarea>
-                  <Button className='report-final-sub' style={{backgroundColor:"#0744d3", color: "white", fontSize: "10px"}}  type="submit">Send</Button>
+                  <Button
+                    className="report-final-sub"
+                    style={{
+                      backgroundColor: '#0744d3',
+                      color: 'white',
+                      fontSize: '10px',
+                    }}
+                    type="submit"
+                  >
+                    Send
+                  </Button>
                 </form>
               )}
-            <Dialog open={submissionMessage !== ""} onClose={handleClose}>
-              <DialogTitle style={{ color: "green", fontSize: "50px", padding:"50px 120px 0px" }}>
-                <FontAwesomeIcon className="check-icon" icon={faCheck} />
-              </DialogTitle>
-              <DialogContent style={{ fontSize: "15px", fontWeight:"bolder", padding:"0px 100px 50px" }}>
-                {submissionMessage}
-              </DialogContent>
-            </Dialog>
+              <Dialog open={submissionMessage !== ''} onClose={handleClose}>
+                <DialogTitle
+                  style={{
+                    color: 'green',
+                    fontSize: '50px',
+                    padding: '50px 120px 0px',
+                  }}
+                >
+                  <FontAwesomeIcon className="check-icon" icon={faCheck} />
+                </DialogTitle>
+                <DialogContent
+                  style={{
+                    fontSize: '15px',
+                    fontWeight: 'bolder',
+                    padding: '0px 100px 50px',
+                  }}
+                >
+                  {submissionMessage}
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </Box>

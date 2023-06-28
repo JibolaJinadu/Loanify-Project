@@ -124,7 +124,6 @@ export default function ClientDialog({ table, tableData }) {
           backgroundColor: '#0744d3',
           color: '#fff',
           cursor: 'pointer',
-          marginRight: '40px',
           border: 'none',
           outline: 'none',
           borderRadius: '8px',

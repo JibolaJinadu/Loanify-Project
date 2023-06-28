@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './login.css';
 import businessGuy from './img/business guy.png';
 import logo from './img/LOANIFY logo.svg';
@@ -6,8 +6,12 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { toast } from 'react-toastify';
 import axios from 'axios';
+import Cookies from 'js-cookie';
+import { AuthContext } from '../AuthContext';
 
 function Login() {
+  const { loginToken, setLoginToken } = useContext(AuthContext);
+
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -35,12 +39,13 @@ function Login() {
           },
         }
       );
+      Cookies.set('loginToken', response.data.token, { expires: 7 });
+      setLoginToken(response.data.token);
       toast.success('login successfully');
       navigate('/dashboard');
-      // navigate('/verification');
     } catch (error) {
       console.log(error);
-      toast.error('There was a problem signing in.');
+      toast.error('Invalid Username or Password! Please try again.');
     }
   };
 
