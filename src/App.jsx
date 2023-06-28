@@ -39,8 +39,12 @@ function App() {
 
   useEffect(() => {
     const storedToken = Cookies.get('signUpToken');
+    const storedLoginToken = Cookies.get('loginToken');
     if (storedToken) {
       setSignUpToken(storedToken);
+    }
+    if (storedLoginToken) {
+      setLoginToken(storedLoginToken);
     }
   }, []);
 
