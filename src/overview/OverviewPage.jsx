@@ -24,7 +24,7 @@ const OverviewPage = () => {
                   <span className="increase">Increase</span>
                 </p>
               </div>
-              <h2 className="item-right right">1050</h2>
+              <h2 className="item-right right1">1050</h2>
             </div>
             <div className="row-item2">
               <div className="item-left">
@@ -67,7 +67,7 @@ const OverviewPage = () => {
                 <p className="upper-text">Due Loans</p>
                 <p className="lower-text">
                   <FontAwesomeIcon className="drop-up drop5" icon={faChevronUp} /> 
-                  <span className='lower-text-percent'>5%</span>
+                  <span className='lower-text-percent'>12%</span>
                   <span className="increase">Increase</span>
                 </p>
               </div>
@@ -100,7 +100,7 @@ const OverviewPage = () => {
                 <p className="upper-text">Closed Loans</p>
                 <p className="lower-text">
                   <FontAwesomeIcon className="drop-up drop8" icon={faChevronUp} /> 
-                  <span className='lower-text-percent'>45%</span>
+                  <span className='lower-text-percent'>12%</span>
                   <span className="increase">Increase</span>
                 </p>
               </div>
