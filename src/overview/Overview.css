@@ -13,7 +13,7 @@ body {
 }
 
 .row-item1 {
-  border-bottom: 3px solid rgb(7, 68, 211);
+  border-bottom: 3px solid rgb(4,41,127);
 }
 
 .row-item1,
@@ -33,7 +33,6 @@ body {
 .item-right {
   flex-basis: 30%;
   font-weight: lighter;
-  color: rgb(7, 68, 211);
   font-size: 27px;
 }
 
@@ -69,58 +68,58 @@ body {
   margin-left: 8px;
 }
 
-.drop1{
-  color: rgb(7, 68, 211);
+.drop1, .right1{
+  color: rgb(4,41,127);
 }
 
 .row-item2 {
-  border-bottom: 3px solid rgb(0, 212, 61);
+  border-bottom: 3px solid rgb(0,212,61);
 }
 .right2, .drop2 {
   color: rgb(0, 212, 61);
 }
 
 .row-item3{
-  border-bottom: 3px solid rgb(245, 189, 46);
+  border-bottom: 3px solid rgb(243,181,22);
 }
 .right3, .drop3{
-  color: rgb(245, 189, 46);
+  color: rgb(243,181,22);
   
 }
 
 .row-item4{
-  border-bottom: 3px solid rgb(211, 7, 68);
+  border-bottom: 3px solid rgb(120,154,232);
 
 }
 .right4, .drop4{
-  color: rgb(211, 7, 68);
+  color: rgb(120,154,232);
 }
 
 .row-item5 {
-  border-bottom: 3px solid rgb(1, 14, 42);
+  border-bottom: 3px solid rgb(243,181,22);
 }
 .right5, .drop5{
-  color: rgb(1, 14, 42);
+  color: rgb(243,181,22);
 }
 
 .row-item6 {
-  border-bottom: 3px solid rgb(63, 140, 30);
+  border-bottom: 3px solid rgb(41,127,4);
 }
 .right6, .drop6{
-  color: rgb(63, 140, 30);
+  color: rgb(41,127,4);
 }
 
 .row-item7 {
-  border-bottom: 3px solid rgb(178, 31, 75);
+  border-bottom: 3px solid rgb(211,7,68);
 }
 .right7, .drop7{
-  color: rgb(178, 31, 75);
+  color: rgb(211,7,68);
 }
 .row-item8 {
-  border-bottom: 3px solid rgb(106, 143, 229);
+  border-bottom: 3px solid rgb(1,14,42);
 }
 .right8, .drop8{
-  color: rgb(106, 143, 229);
+  color: rgb(1,14,42);
 }
 
 .overview-2 {

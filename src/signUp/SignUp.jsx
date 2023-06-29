@@ -8,6 +8,8 @@ import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { toast } from 'react-toastify';
 import Cookies from 'js-cookie';
 import { AuthContext } from '../AuthContext';
+import guyy from './Assets/business guy.png';
+import './sign-up-resp.css'
 
 const INITIAL_STATE = {
   firstName: '',
@@ -186,136 +188,278 @@ const SignUp = () => {
   };
 
   return (
-    <section>
-      {isSuccess}
-      {submitError && <div className="failed">{submitError}</div>}
-      <div className="container1">
-        <div className="left-div"></div>
-        <div className="right-div">
-          <img src={logo} alt="logo" className="rd-container-1" />
-          <h1 className="rd-container-2">Sign Up</h1>
-          <div className="rd-container-3">
-            <form className="signup-form" onSubmit={handleSubmit}>
-              <div className="field">
+    <>
+      <section>
+        {isSuccess}
+        {submitError && <div className="failed">{submitError}</div>}
+        <div className="container1">
+          <div className="left-div"></div>
+          <div className="right-div">
+            <img src={logo} alt="logo" className="rd-container-1" />
+            <h1 className="rd-container-2">Sign Up</h1>
+            <div className="rd-container-3">
+              <form className="signup-form" onSubmit={handleSubmit}>
+                <div className="field">
+                  <input
+                    className="signUp-input"
+                    id="firstName"
+                    type="text"
+                    placeholder="First name"
+                    value={form.firstName}
+                    onChange={handleChange}
+                    autoComplete={nanoid()}
+                  />
+                  {errorFields.firstName?.map((error, index) => (
+                    <span key={index} className="errorfield">
+                      {error}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="field">
+                  <input
+                    className="signUp-input"
+                    id="lastName"
+                    type="text"
+                    placeholder="Last name"
+                    value={form.lastName}
+                    onChange={handleChange}
+                    autoComplete={nanoid()}
+                  />
+                  {errorFields.lastName?.map((error, index) => (
+                    <span key={index} className="errorfield">
+                      {error}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="field">
+                  <input
+                    className="signUp-input"
+                    id="role"
+                    type="text"
+                    placeholder="Junior Loan Officer"
+                    value={form.role}
+                    onChange={handleChange}
+                    autoComplete={nanoid()}
+                  />
+                  {errorFields.role?.map((error, index) => (
+                    <span key={index} className="errorfield">
+                      {error}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="field">
+                  <input
+                    className="signUp-input"
+                    id="phoneNumber"
+                    type="tel"
+                    placeholder="Phone number"
+                    value={form.phoneNumber}
+                    onChange={handleChange}
+                    autoComplete={nanoid()}
+                  />
+                  {errorFields.phoneNumber?.map((error, index) => (
+                    <span key={index} className="errorfield">
+                      {error}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="field">
+                  <input
+                    className="signUp-input"
+                    id="email"
+                    type="text"
+                    placeholder="Email address"
+                    value={form.email}
+                    onChange={handleChange}
+                    autoComplete={nanoid()}
+                  />
+                  {errorFields.email?.map((error, index) => (
+                    <span key={index} className="errorfield">
+                      {error}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="field">
+                  <div className="password-input-container">
+                    <input
+                      id="password"
+                      type={showPassword ? 'text' : 'password'}
+                      placeholder="Password"
+                      value={form.password}
+                      onChange={handleChange}
+                      className="signUp-input password-input"
+                      autoComplete={nanoid()}
+                    />
+                    <span
+                      className="password-toggle"
+                      onClick={togglePasswordVisibility}
+                    >
+                      {showPassword ? <Visibility /> : <VisibilityOff />}
+                    </span>
+                  </div>
+                  {errorFields.password?.map((error, index) => (
+                    <span key={index} className="errorfield">
+                      {error}
+                    </span>
+                  ))}
+                </div>
+                <div className="signup-field">
+                  <button className="btn-submit" type="submit">
+                    Submit
+                  </button>
+                </div>
+              </form>
+              <p className="rd-container-4">
+                {' '}
+                Already have an Account?{' '}
+                <Link to="/login" className="signUp-btn">
+                  Log in
+                </Link>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="container-main">
+        <div className="upper-container">
+          <img src={guyy} alt="business-guy" className="guy-pix" />
+          <img src={logo} alt="logo" className="company-logo" />
+        </div>
+        <div className="form-section">
+          <h1 className="form-header">Sign Up</h1>
+            <form className="form-wrap" onSubmit={handleSubmit}>
+              <div className="field1">
                 <input
-                  className="signUp-input"
+                  className="signUp-input1"
                   id="firstName"
                   type="text"
                   placeholder="First name"
                   value={form.firstName}
                   onChange={handleChange}
+                  autoComplete={nanoid()}
                 />
                 {errorFields.firstName?.map((error, index) => (
-                  <span key={index} className="errorfield">
+                  <span key={index} className="errorfield1">
                     {error}
                   </span>
                 ))}
               </div>
 
-              <div className="field">
+              <div className="field1">
                 <input
-                  className="signUp-input"
+                  className="signUp-input1"
                   id="lastName"
                   type="text"
                   placeholder="Last name"
                   value={form.lastName}
                   onChange={handleChange}
+                  autoComplete={nanoid()}
                 />
                 {errorFields.lastName?.map((error, index) => (
-                  <span key={index} className="errorfield">
+                  <span key={index} className="errorfield1">
                     {error}
                   </span>
                 ))}
               </div>
 
-              <div className="field">
+              <div className="field1">
                 <input
-                  className="signUp-input"
+                  className="signUp-input1"
                   id="role"
                   type="text"
                   placeholder="Junior Loan Officer"
                   value={form.role}
                   onChange={handleChange}
+                  autoComplete={nanoid()}
                 />
                 {errorFields.role?.map((error, index) => (
-                  <span key={index} className="errorfield">
+                  <span key={index} className="errorfield1">
                     {error}
                   </span>
                 ))}
               </div>
 
-              <div className="field">
+              <div className="field1">
                 <input
-                  className="signUp-input"
+                  className="signUp-input1"
                   id="phoneNumber"
                   type="tel"
                   placeholder="Phone number"
                   value={form.phoneNumber}
                   onChange={handleChange}
+                  autoComplete={nanoid()}
                 />
                 {errorFields.phoneNumber?.map((error, index) => (
-                  <span key={index} className="errorfield">
+                  <span key={index} className="errorfield1">
                     {error}
                   </span>
                 ))}
               </div>
 
-              <div className="field">
+              <div className="field1">
                 <input
-                  className="signUp-input"
+                  className="signUp-input1"
                   id="email"
                   type="text"
                   placeholder="Email address"
                   value={form.email}
                   onChange={handleChange}
+                  autoComplete={nanoid()}
                 />
                 {errorFields.email?.map((error, index) => (
-                  <span key={index} className="errorfield">
+                  <span key={index} className="errorfield1">
                     {error}
                   </span>
                 ))}
               </div>
 
-              <div className="field">
-                <div className="password-input-container">
+              <div className="field1">
+                <div className="password-input-container1">
                   <input
                     id="password"
                     type={showPassword ? 'text' : 'password'}
                     placeholder="Password"
                     value={form.password}
                     onChange={handleChange}
-                    className="signUp-input password-input"
+                    className="signUp-input1 password-input1"
+                    autoComplete={nanoid()}
                   />
                   <span
-                    className="password-toggle"
+                    className="password-toggle1"
                     onClick={togglePasswordVisibility}
                   >
                     {showPassword ? <Visibility /> : <VisibilityOff />}
                   </span>
                 </div>
                 {errorFields.password?.map((error, index) => (
-                  <span key={index} className="errorfield">
+                  <span key={index} className="errorfield1">
                     {error}
                   </span>
                 ))}
               </div>
-              <div className="signup-field">
-                <button className="btn-submit" type="submit">
+              <div className="signup-field1">
+                <button className="btn-submit1" type="submit">
                   Submit
                 </button>
               </div>
             </form>
-            <p className="rd-container-4">
+            <p className="rd-container-41">
               {' '}
               Already have an Account?{' '}
-              <Link to="/login" className="signUp-btn">
+              <Link to="/login" className="signUp-btn1">
                 Log in
               </Link>
             </p>
-          </div>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
+      
+    </>
   );
 };
 
