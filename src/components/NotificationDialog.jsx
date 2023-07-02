@@ -108,7 +108,7 @@ export default function NotificationDialog() {
             <CheckIcon />
             <h5>Mark all as read.</h5>
           </div>
-          <Link to="/notification" className="sms-btn notify-btn">
+          <Link to="/notification" className="sms-btn  notify-btn">
             View all Notifications
           </Link>
         </div>

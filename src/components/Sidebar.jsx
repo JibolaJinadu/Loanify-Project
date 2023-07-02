@@ -97,6 +97,12 @@ function Sidebar(props) {
       path: '/settings',
       iconActive: settingActive,
     },
+    {
+      list: 'Support',
+      icon: support,
+      path: '/support',
+      iconActive: supportActive,
+    },
   ];
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -110,103 +116,58 @@ function Sidebar(props) {
       <Toolbar>
         <img src={logo} alt="Loanify Logo" className="sidebar-logo" />
       </Toolbar>
-      <List sx={{ backgroundColor: '#04297F', color: 'white' }}>
+      <List
+        sx={{ backgroundColor: '#04297F', color: 'white', height: '100vh' }}
+      >
         {items.map((text, index) => {
           const isActive = location.pathname.startsWith(text.path);
+          const listItemStyles = {
+            padding: '2px 20px',
+            marginTop: text.list === 'Support' ? '5rem' : '0px',
+            '&:hover': {
+              backgroundColor: isActive
+                ? 'rgba(255, 255, 255, 0.9)'
+                : 'initial',
+            },
+            ...(isActive && {
+              backgroundColor: '#fff',
+              color: '#04297F',
+            }),
+          };
+
           return (
             <ListItem key={index} disablePadding>
               <ListItemButton
                 onClick={() => navigate(text.path)}
-                sx={{
-                  '&:hover': {
-                    backgroundColor: isActive
-                      ? 'rgba(255, 255, 255, 0.9)'
-                      : 'initial',
-                  },
-                  ...(isActive && {
-                    backgroundColor: '#fff',
-                    color: '#04297F',
-                  }),
-                  padding: '2px 20px',
-                }}
+                sx={listItemStyles}
               >
                 <div className="side--menu">
-                  <div style={{ marginLeft: '20px' }}>
+                  <div style={{ marginLeft: '10px' }}>
                     <img
                       src={isActive ? text.iconActive : text.icon}
                       alt="Icon"
                       style={{
-                        width: '25px',
-                        height: '30px',
+                        width: text.list === 'Profile' ? '20px' : '22px',
+                        marginLeft: text.list === 'Profile' ? '3px' : '0',
+                        height: '25px',
                       }}
                     />
                   </div>
-                  <h1
-                    style={{
-                      marginLeft: '10px',
-                      paddingRight: '10px',
-                      fontSize: '14px',
-                      fontWeight: isActive ? '600' : '500',
-                      textAlign: 'center',
-                      marginTop: '5px',
-                      fontFamily: 'Montserrat ,sans-serif',
-                    }}
-                  >
-                    {text.list}
-                  </h1>
-                </div>
-              </ListItemButton>
-            </ListItem>
-          );
-        })}
-      </List>
-      <List
-        sx={{
-          backgroundColor: '#04297F',
-          color: 'white',
-          height: '100vh',
-          paddingTop: '30px',
-        }}
-      >
-        {['Support'].map((text, index) => {
-          const isActive = location.pathname.startsWith('/support');
-          return (
-            <ListItem key={text} disablePadding>
-              <ListItemButton
-                onClick={() => navigate('/support')}
-                sx={{
-                  '&:hover': {
-                    backgroundColor: isActive
-                      ? 'rgba(255, 255, 255, 0.9)'
-                      : 'initial',
-                  },
-                  ...(isActive && {
-                    backgroundColor: 'rgba(255, 255, 255, 0.9)',
-                    color: '#04297F',
-                  }),
-                  padding: '2px 20px',
-                }}
-              >
-                <div className="side--menu">
-                  <div style={{ marginLeft: '20px' }}>
-                    <img
-                      src={isActive ? supportActive : support}
-                      alt="Icon"
-                      style={{ width: '25px', height: '30px' }}
-                    />
+                  <div style={{ height: '25px' }}>
+                    <h1
+                      style={{
+                        paddingTop: '3px',
+                        marginLeft: '10px',
+                        paddingRight: '10px',
+                        fontSize: '14px',
+                        fontWeight: isActive ? '600' : '500',
+                        textAlign: 'center',
+                        fontFamily: 'Montserrat, sans-serif',
+                      }}
+                    >
+                      {text.list}
+                    </h1>
                   </div>
-                  <h1
-                    style={{
-                      marginLeft: '10px',
-                      paddingRight: '10px',
-                      fontSize: '14px',
-                      fontWeight: isActive ? '600' : '500',
-                      textAlign: 'center',
-                      marginTop: '5px',
-                    }}
-                  >
-                    {text}
-                  </h1>
                 </div>
               </ListItemButton>
             </ListItem>
@@ -270,6 +231,7 @@ function Sidebar(props) {
               overflow: 'hidden',
               border: 'none',
             },
+            border: 'none',
           }}
         >
           {drawer}
@@ -284,6 +246,7 @@ function Sidebar(props) {
               overflow: 'hidden',
               border: 'none',
             },
+            border: 'none',
           }}
           open
         >
