@@ -1,5 +1,6 @@
 import React from 'react';
 import './Overview.css';
+import './Overview-resp.css'
 import Chart from './PieChart';
 import Line_Chart from './LineChart';
 import Barchart1 from './BarChart1';
@@ -15,7 +16,8 @@ const OverviewPage = () => {
       <div className="overview-container">
         <div className="overview-1">
           <div className="overview-row1">
-          <div className="row-item1">
+
+            <div className="row-item1">
               <div className="item-left">
                 <p className="upper-text">All Loans</p>
                 <p className="lower-text">
@@ -26,6 +28,7 @@ const OverviewPage = () => {
               </div>
               <h2 className="item-right right1">1050</h2>
             </div>
+
             <div className="row-item2">
               <div className="item-left">
                 <p className="upper-text">New Applications</p>

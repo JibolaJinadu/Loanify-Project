@@ -1,5 +1,6 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts';
+import './Overview-resp.css'
 
 const data = [
   {
@@ -25,7 +26,7 @@ export default function Barchart1() {
       <div className="linechart-header">Approved vs Declined</div>
       <div className="linechart-div">
         <BarChart
-          width={400}
+          width={320}
           height={250}
           data={data}
           margin={{
