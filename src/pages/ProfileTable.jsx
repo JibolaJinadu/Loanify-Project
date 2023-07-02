@@ -33,7 +33,7 @@ export default function ProfileTable() {
   };
 
   return (
-    <section className="profileTableWrapper">
+    <section className="profileTableWrapper tableContainer">
       <h3 className="profileTableHeader">All clients</h3>
       <table>
         <thead>
@@ -54,8 +54,8 @@ export default function ProfileTable() {
           {data.map((rowData, index) => {
             return (
               <>
-                <tr key={index} className="tableData">
-                  <td className="text-left">
+                <tr key={index} className="tableData tableRow">
+                  <td className="tableCell">
                     <input
                       type="checkbox"
                       checked={checkedRows.includes(index)}
@@ -71,11 +71,12 @@ export default function ProfileTable() {
                   <td>{rowData.recentUpdate}</td>
                   <td>
                     <Button
+                      className='tableButton'
                       style={{
                         borderRadius: '50px',
                         textTransform: 'Capitalize',
                         padding: '4px 0',
-                        width: '130px',
+                        width: '8rem',
                         fontSize: '14px',
                         color: 'white',
                         backgroundColor: getLoanStatusColor(rowData.loanStatus),
