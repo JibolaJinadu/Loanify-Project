@@ -1,24 +1,34 @@
 import React from 'react';
 import './loan.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const LoanTable = ({ tableData, table }) => {
+  const navigate = useNavigate();
+
+  const handleRowClick = () => {
+    navigate('/loans/loans-overview');
+  };
+
   const getStatusColor = (status) => {
     switch (status) {
       case 'Approved':
-        return 'status-approved';
+        return 'loans-approved';
       case 'Closed':
-        return 'status-closed';
+        return 'loans-closed';
       case 'Pending':
-        return 'status-pending';
+        return 'loans-pending';
       case 'Active':
-        return 'status-active';
+        return 'loans-active';
       case 'Defaulted':
-        return 'status-defaulted';
+        return 'loans-defaulted';
       case 'Due':
-        return 'status-due';
-      case 'Extende':
-        return 'status-extended';
+        return 'loans-due';
+      case 'Extended':
+        return 'loans-extended';
+      case 'Incomplete Docs':
+        return 'loans-incomplete-docs';
+      case 'Received Docs':
+        return 'loans-received-docs';
       default:
         return '';
     }
@@ -44,21 +54,22 @@ const LoanTable = ({ tableData, table }) => {
             <th>Loan Status</th>
           </tr>
         </thead>
+        <tr className="padtap">&nbsp;</tr>
         <tbody>
           {tableData.map((row, index) => (
-            <tr key={index}>
+            <tr className="blue-row" key={index} onClick={handleRowClick}>
               <td>
-                <Link to="/loans/loans-overview">
-                  <input type="checkBox"></input>
-                </Link>
+                <input type="checkBox"></input>
               </td>
               <td>{row.caseNumber}</td>
               <td>{row.firstName}</td>
               <td>{row.lastName}</td>
               <td>{row.applicationDate}</td>
               <td>{row.recentUpdate}</td>
-              <td className={getStatusColor(row.loanStatus)}>
-                {row.loanStatus}
+              <td>
+                <button className={getStatusColor(row.loanStatus)}>
+                  {row.loanStatus}
+                </button>
               </td>
             </tr>
           ))}

@@ -25,10 +25,13 @@ import ResendToken from './passwordReset/ResendToken';
 import ClientOverview from './clientOverview/ClientOverview';
 import FAQ from './support/FAQ';
 import LoanOverview from './loanOverview/LoanOverview';
+import Combine from './profile/combine';
 import ChangePwd from './changePassword/ChangePwd';
 import { useEffect, useState } from 'react';
 import { AuthContext } from './AuthContext';
 import Cookies from 'js-cookie';
+import LoanContract from './loanOverview/LoanContract';
+import ClientContract from './clientOverview/ClientContract';
 
 function App() {
   const [signUpToken, setSignUpToken] = useState('');
@@ -36,8 +39,12 @@ function App() {
 
   useEffect(() => {
     const storedToken = Cookies.get('signUpToken');
+    const storedLoginToken = Cookies.get('loginToken');
     if (storedToken) {
       setSignUpToken(storedToken);
+    }
+    if (storedLoginToken) {
+      setLoginToken(storedLoginToken);
     }
   }, []);
 
@@ -70,10 +77,19 @@ function App() {
             path="/loans/loans-overview"
             element={<LoanOverview />}
           ></Route>
+          <Route
+            path="/loans/loans-overview/loans-contract"
+            element={<LoanContract />}
+          ></Route>
+          <Route path="/profileCombine" element={<Combine />}></Route>
           <Route path="/verification" element={<Token />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/support" element={<SupportPage />}></Route>
           <Route path="/clients" element={<Client />}></Route>
+          <Route
+            path="/clients/clients-overview/contract"
+            element={<ClientContract />}
+          ></Route>
           <Route path="/profile" element={<ProfilePage />}></Route>
           <Route path="/reports" element={<Reports />}></Route>
           <Route path="/notification" element={<NotificationPage />}></Route>

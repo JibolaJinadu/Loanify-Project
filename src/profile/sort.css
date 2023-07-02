@@ -29,7 +29,6 @@
 }
 
 .dev {
-  background-color: #f0f4fc;
   padding: 25px;
   width: 400px;
 }
@@ -195,3 +194,4 @@
 .checkbox:checked + .label .switch {
   right: 0px;
 }
+

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import tableData from './tableData';
+import Button from '@mui/material/Button';
 
 export default function ProfileTable() {
   const [data, setData] = useState(tableData);
@@ -17,6 +18,18 @@ export default function ProfileTable() {
     }
 
     setCheckedRows(updatedCheckedRows);
+  };
+  const getLoanStatusColor = (loanStatus) => {
+    if (loanStatus === 'Approved') {
+      return '#33dd64';
+    } else if (loanStatus === 'Declined') {
+      return '#D30744';
+    } else if (loanStatus === 'Closed') {
+      return '#88a5ea';
+    } else if (loanStatus === 'Due') {
+      return '#f3b516';
+    }
+    return 'inherit'; // Default color
   };
 
   return (
@@ -36,33 +49,43 @@ export default function ProfileTable() {
             <th>Loan Status</th>
           </tr>
         </thead>
+        <tr className="padtap">&nbsp;</tr>
         <tbody>
           {data.map((rowData, index) => {
             return (
-              <tr
-                key={index}
-                style={{
-                  backgroundColor: checkedRows.includes(index)
-                    ? '#f0f4fc'
-                    : 'inherit',
-                }}
-              >
-                <td className="text-left">
-                  <input
-                    type="checkbox"
-                    checked={checkedRows.includes(index)}
-                    onChange={() => handleCheckboxChange(index)}
-                    name=""
-                    id=""
-                  />
-                </td>
-                <td>{rowData.caseNumber}</td>
-                <td>{rowData.firstName}</td>
-                <td>{rowData.lastName}</td>
-                <td>{rowData.applicationDate}</td>
-                <td>{rowData.recentUpdate}</td>
-                <td>{rowData.loanStatus}</td>
-              </tr>
+              <>
+                <tr key={index} className="tableData">
+                  <td className="text-left">
+                    <input
+                      type="checkbox"
+                      checked={checkedRows.includes(index)}
+                      onChange={() => handleCheckboxChange(index)}
+                      name=""
+                      id=""
+                    />
+                  </td>
+                  <td>{rowData.caseNumber}</td>
+                  <td>{rowData.firstName}</td>
+                  <td>{rowData.lastName}</td>
+                  <td>{rowData.applicationDate}</td>
+                  <td>{rowData.recentUpdate}</td>
+                  <td>
+                    <Button
+                      style={{
+                        borderRadius: '50px',
+                        textTransform: 'Capitalize',
+                        padding: '4px 0',
+                        width: '130px',
+                        fontSize: '14px',
+                        color: 'white',
+                        backgroundColor: getLoanStatusColor(rowData.loanStatus),
+                      }}
+                    >
+                      {rowData.loanStatus}
+                    </Button>
+                  </td>
+                </tr>
+              </>
             );
           })}
         </tbody>

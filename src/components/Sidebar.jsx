@@ -1,15 +1,21 @@
-import { useNavigate, useLocation } from 'react-router-dom';
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Drawer from '@mui/material/Drawer';
-import CssBaseline from '@mui/material/CssBaseline';
+import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import CssBaseline from '@mui/material/CssBaseline';
+import Drawer from '@mui/material/Drawer';
+import IconButton from '@mui/material/IconButton';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
 import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import ListItem from '@mui/material/ListItem';
+import MailIcon from '@mui/icons-material/Mail';
+import MenuIcon from '@mui/icons-material/Menu';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import { useLocation, useNavigate } from 'react-router-dom';
 import logo from '../login/img/LOANIFY logo.svg';
 import { Link } from 'react-router-dom';
 import Settings from '../settings/SettingsTabs';
@@ -37,9 +43,9 @@ import notificationActive from './assets/notifications-blue.svg';
 import loanActive from './assets/loan-blue.svg';
 import messageActive from './assets/message-blue.svg';
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
-export default function Sidebar() {
+function Sidebar(props) {
   const navigate = useNavigate();
   const location = useLocation();
   const items = [
@@ -92,6 +98,126 @@ export default function Sidebar() {
       iconActive: settingActive,
     },
   ];
+  const { window } = props;
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  const drawer = (
+    <div>
+      <Toolbar>
+        <img src={logo} alt="Loanify Logo" className="sidebar-logo" />
+      </Toolbar>
+      <List sx={{ backgroundColor: '#04297F', color: 'white' }}>
+        {items.map((text, index) => {
+          const isActive = location.pathname.startsWith(text.path);
+          return (
+            <ListItem key={index} disablePadding>
+              <ListItemButton
+                onClick={() => navigate(text.path)}
+                sx={{
+                  '&:hover': {
+                    backgroundColor: isActive
+                      ? 'rgba(255, 255, 255, 0.9)'
+                      : 'initial',
+                  },
+                  ...(isActive && {
+                    backgroundColor: '#fff',
+                    color: '#04297F',
+                  }),
+                  padding: '2px 20px',
+                }}
+              >
+                <div className="side--menu">
+                  <div style={{ marginLeft: '20px' }}>
+                    <img
+                      src={isActive ? text.iconActive : text.icon}
+                      alt="Icon"
+                      style={{
+                        width: '25px',
+                        height: '30px',
+                      }}
+                    />
+                  </div>
+                  <h1
+                    style={{
+                      marginLeft: '10px',
+                      paddingRight: '10px',
+                      fontSize: '14px',
+                      fontWeight: isActive ? '600' : '500',
+                      textAlign: 'center',
+                      marginTop: '5px',
+                      fontFamily: 'Montserrat ,sans-serif',
+                    }}
+                  >
+                    {text.list}
+                  </h1>
+                </div>
+              </ListItemButton>
+            </ListItem>
+          );
+        })}
+      </List>
+      <List
+        sx={{
+          backgroundColor: '#04297F',
+          color: 'white',
+          height: '100vh',
+          paddingTop: '30px',
+        }}
+      >
+        {['Support'].map((text, index) => {
+          const isActive = location.pathname.startsWith('/support');
+          return (
+            <ListItem key={text} disablePadding>
+              <ListItemButton
+                onClick={() => navigate('/support')}
+                sx={{
+                  '&:hover': {
+                    backgroundColor: isActive
+                      ? 'rgba(255, 255, 255, 0.9)'
+                      : 'initial',
+                  },
+                  ...(isActive && {
+                    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                    color: '#04297F',
+                  }),
+                  padding: '2px 20px',
+                }}
+              >
+                <div className="side--menu">
+                  <div style={{ marginLeft: '20px' }}>
+                    <img
+                      src={isActive ? supportActive : support}
+                      alt="Icon"
+                      style={{ width: '25px', height: '30px' }}
+                    />
+                  </div>
+                  <h1
+                    style={{
+                      marginLeft: '10px',
+                      paddingRight: '10px',
+                      fontSize: '14px',
+                      fontWeight: isActive ? '600' : '500',
+                      textAlign: 'center',
+                      marginTop: '5px',
+                    }}
+                  >
+                    {text}
+                  </h1>
+                </div>
+              </ListItemButton>
+            </ListItem>
+          );
+        })}
+      </List>
+    </div>
+  );
+
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -99,14 +225,23 @@ export default function Sidebar() {
       <AppBar
         position="fixed"
         sx={{
-          width: `calc(100% - ${drawerWidth}px)`,
-          ml: `${drawerWidth}px`,
+          width: { md: `calc(100% - ${drawerWidth}px)` },
+          ml: { md: `${drawerWidth}px` },
           bgcolor: 'white',
           boxShadow: 'none',
           color: 'black',
         }}
       >
         <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { md: 'none' } }}
+          >
+            <MenuIcon />
+          </IconButton>
           <div className="navbar">
             <MessageDialog />
             <NotificationDialog />
@@ -114,127 +249,53 @@ export default function Sidebar() {
           </div>
         </Toolbar>
       </AppBar>
-      <Drawer
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
-            width: drawerWidth,
-            boxSizing: 'border-box',
-            overflow: 'hidden',
-            border: 'none',
-          },
-        }}
-        variant="permanent"
-        anchor="left"
+      <Box
+        component="nav"
+        sx={{ width: { md: drawerWidth }, flexShrink: { md: 0 } }}
+        aria-label="mailbox folders"
       >
-        <Toolbar>
-          <img src={logo} alt="Loanify Logo" className="sidebar-logo" />
-        </Toolbar>
-        <List sx={{ backgroundColor: '#04297F', color: 'white' }}>
-          {items.map((text, index) => {
-            const isActive = location.pathname.startsWith(text.path);
-            return (
-              <ListItem key={index} disablePadding>
-                <ListItemButton
-                  onClick={() => navigate(text.path)}
-                  sx={{
-                    '&:hover': {
-                      backgroundColor: isActive
-                        ? 'rgba(255, 255, 255, 0.9)'
-                        : 'initial',
-                    },
-                    ...(isActive && {
-                      backgroundColor: '#fff',
-                      color: '#04297F',
-                    }),
-                    padding: '2px 20px',
-                  }}
-                >
-                  <div className="side--menu">
-                    <div style={{ marginLeft: '20px' }}>
-                      <img
-                        src={isActive ? text.iconActive : text.icon}
-                        alt="Icon"
-                        style={{
-                          width: '25px',
-                          height: '30px',
-                        }}
-                      />
-                    </div>
-                    <h1
-                      style={{
-                        marginLeft: '10px',
-                        paddingRight: '10px',
-                        fontSize: '14px',
-                        fontWeight: isActive ? '600' : '500',
-                        textAlign: 'center',
-                        marginTop: '5px',
-                        fontFamily: 'Montserrat ,sans-serif',
-                      }}
-                    >
-                      {text.list}
-                    </h1>
-                  </div>
-                </ListItemButton>
-              </ListItem>
-            );
-          })}
-        </List>
-        <List
+        <Drawer
+          container={container}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true,
+          }}
           sx={{
-            backgroundColor: '#04297F',
-            color: 'white',
-            height: '100vh',
-            paddingTop: '30px',
+            display: { xs: 'block', md: 'none' },
+            '& .MuiDrawer-paper': {
+              boxSizing: 'border-box',
+              width: drawerWidth,
+              overflow: 'hidden',
+              border: 'none',
+            },
           }}
         >
-          {['Support'].map((text, index) => {
-            const isActive = location.pathname.startsWith('/support');
-            return (
-              <ListItem key={text} disablePadding>
-                <ListItemButton
-                  onClick={() => navigate('/support')}
-                  sx={{
-                    '&:hover': {
-                      backgroundColor: isActive
-                        ? 'rgba(255, 255, 255, 0.9)'
-                        : 'initial',
-                    },
-                    ...(isActive && {
-                      backgroundColor: 'rgba(255, 255, 255, 0.9)',
-                      color: '#04297F',
-                    }),
-                    padding: '2px 20px',
-                  }}
-                >
-                  <div className="side--menu">
-                    <div style={{ marginLeft: '20px' }}>
-                      <img
-                        src={isActive ? supportActive : support}
-                        alt="Icon"
-                        style={{ width: '25px', height: '30px' }}
-                      />
-                    </div>
-                    <h1
-                      style={{
-                        marginLeft: '10px',
-                        paddingRight: '10px',
-                        fontSize: '14px',
-                        fontWeight: isActive ? '600' : '500',
-                        textAlign: 'center',
-                        marginTop: '5px',
-                      }}
-                    >
-                      {text}
-                    </h1>
-                  </div>
-                </ListItemButton>
-              </ListItem>
-            );
-          })}
-        </List>
-      </Drawer>
+          {drawer}
+        </Drawer>
+        <Drawer
+          variant="permanent"
+          sx={{
+            display: { xs: 'none', md: 'block' },
+            '& .MuiDrawer-paper': {
+              boxSizing: 'border-box',
+              width: drawerWidth,
+              overflow: 'hidden',
+              border: 'none',
+            },
+          }}
+          open
+        >
+          {drawer}
+        </Drawer>
+      </Box>
     </Box>
   );
 }
+
+Sidebar.propTypes = {
+  window: PropTypes.func,
+};
+
+export default Sidebar;

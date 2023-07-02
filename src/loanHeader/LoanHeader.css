@@ -1,7 +1,7 @@
 .search {
   width: 320px;
   height: 40px;
-  border: 1px solid #bfbfbf;
+  border: 1px solid #83a1e8;
   padding: 10px;
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -9,9 +9,9 @@
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
 }
-.filter {
+.filter-select {
   height: 40px;
-  border: 1px solid #bfbfbf;
+  border: 1px solid #83a1e8;
   border-radius: 8px;
   padding: 10px;
 }
@@ -22,7 +22,7 @@
   cursor: pointer;
   background-color: white;
   color: black;
-  border: 1px solid #bfbfbf;
+  border: 1px solid #83a1e8;
   border-radius: 8px;
 }
 .export-data {

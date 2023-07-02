@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import './Client.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 import ClientDialog from './ClientDialog';
 
@@ -20,19 +20,19 @@ const initialTableData = [
   {
     applicationNumber: 'GR45467RBA',
     fullName: 'Justin Jude',
-    loanStatus: 'Decline',
-    date: 'Justin Jude',
+    loanStatus: 'Due',
+    date: '18/03/2023',
   },
   {
     applicationNumber: 'RRZU9D6BVG',
     fullName: 'Sharon Udoh',
-    loanStatus: 'Pending Review',
+    loanStatus: 'Declined',
     date: '17/03/2023',
   },
   {
     applicationNumber: 'GR45467RBA',
     fullName: 'Olufemi Ayo',
-    loanStatus: 'Approved',
+    loanStatus: 'Closed',
     date: '18/03/2023',
   },
   {
@@ -44,19 +44,67 @@ const initialTableData = [
   {
     applicationNumber: 'GR45467RBA',
     fullName: 'Justin Jude',
-    loanStatus: 'Decline',
-    date: 'Justin Jude',
+    loanStatus: 'Due',
+    date: '18/03/2023',
   },
   {
     applicationNumber: 'RRZU9D6BVG',
     fullName: 'Sharon Udoh',
-    loanStatus: 'Pending Review',
+    loanStatus: 'Declined',
     date: '17/03/2023',
   },
   {
     applicationNumber: 'GR45467RBA',
     fullName: 'Olufemi Ayo',
+    loanStatus: 'Closed',
+    date: '18/03/2023',
+  },
+  {
+    applicationNumber: 'RRZU9D6BVG',
+    fullName: 'Temidayo Adebayo',
     loanStatus: 'Approved',
+    date: '20/03/2023',
+  },
+  {
+    applicationNumber: 'GR45467RBA',
+    fullName: 'Justin Jude',
+    loanStatus: 'Due',
+    date: '18/03/2023',
+  },
+  {
+    applicationNumber: 'RRZU9D6BVG',
+    fullName: 'Sharon Udoh',
+    loanStatus: 'Declined',
+    date: '17/03/2023',
+  },
+  {
+    applicationNumber: 'GR45467RBA',
+    fullName: 'Olufemi Ayo',
+    loanStatus: 'Closed',
+    date: '18/03/2023',
+  },
+  {
+    applicationNumber: 'RRZU9D6BVG',
+    fullName: 'Temidayo Adebayo',
+    loanStatus: 'Approved',
+    date: '20/03/2023',
+  },
+  {
+    applicationNumber: 'GR45467RBA',
+    fullName: 'Justin Jude',
+    loanStatus: 'Due',
+    date: '18/03/2023',
+  },
+  {
+    applicationNumber: 'RRZU9D6BVG',
+    fullName: 'Sharon Udoh',
+    loanStatus: 'Declined',
+    date: '17/03/2023',
+  },
+  {
+    applicationNumber: 'GR45467RBA',
+    fullName: 'Olufemi Ayo',
+    loanStatus: 'Closed',
     date: '18/03/2023',
   },
 ];
@@ -95,14 +143,22 @@ const Client = () => {
   const getStatusColor = (status) => {
     switch (status) {
       case 'Approved':
-        return 'status-approved';
-      case 'Decline':
-        return 'status-decline';
-      case 'Pending Review':
-        return 'status-pending';
+        return 'clients-approved';
+      case 'Due':
+        return 'clients-due';
+      case 'Declined':
+        return 'clients-declined';
+      case 'Closed':
+        return 'clients-closed';
       default:
         return '';
     }
+  };
+
+  const navigate = useNavigate();
+
+  const handleRowClick = () => {
+    navigate('/clients/clients-overview');
   };
 
   return (
@@ -148,8 +204,9 @@ const Client = () => {
                 >
                   <option value="">All</option>
                   <option value="Approved">Approved</option>
-                  <option value="Decline">Decline</option>
-                  <option value="Pending Review">Pending Review</option>
+                  <option value="Due">Due</option>
+                  <option value="Declined">Declined</option>
+                  <option value="Closed">Closed</option>
                 </select>
               </div>
             </div>
@@ -167,8 +224,8 @@ const Client = () => {
                 <th>
                   <input
                     type="checkBox"
-                    disabled
                     className="clients-input"
+                    disabled
                   ></input>
                 </th>
                 <th>Application Number</th>
@@ -177,21 +234,25 @@ const Client = () => {
                 <th>Date</th>
               </tr>
             </thead>
+            <tr className="padtap">&nbsp;</tr>
             <tbody id="client-data">
               {filteredTableData.map((row, index) => (
-                <tr key={index}>
+                <tr className="client-row" key={index} onClick={handleRowClick}>
                   <td>
                     <Link to="/clients/clients-overview">
-                      <input type="checkbox" className="clients-input"></input>
+                      <input
+                        type="checkbox"
+                        disabled
+                        className="clients-input"
+                      ></input>
                     </Link>
                   </td>
                   <td>{row.applicationNumber}</td>
                   <td>{row.fullName}</td>
                   <td>
-                    <span className={` ${getStatusColor(row.loanStatus)}`}>
-                      <span className="client-dot">&#x2022;</span>
+                    <button className={` ${getStatusColor(row.loanStatus)}`}>
                       {row.loanStatus}
-                    </span>{' '}
+                    </button>{' '}
                   </td>
                   <td>{row.date}</td>
                 </tr>
