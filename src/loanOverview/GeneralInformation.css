@@ -1,17 +1,28 @@
-.personal-information-form {
+.personal-info-form, .employment-info-form, .guarantor-info-form {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.personal-info-form {
   margin: 0 auto;
   padding: 10px;
   font-family: Arial, sans-serif;
-  /* grid-template-columns: auto auto auto;
-    gap: 2rem; */
+  
 }
 
 .form-settings {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 110px;
+  margin-bottom: 20px;
+  line-height: 30px;
+}
+.grid-column {
   display: flex;
-  gap: 20;
+  flex-direction: column;
 }
 
-.personal-information-form label {
+.personal-info-form label {
   display: block;
   padding-bottom: 10px;
   font-size: 13px;
@@ -19,21 +30,19 @@
   width: 60%;
   color: #7a7979;
 }
-.personal-information-form input {
+.personal-info-form input {
   width: 250px;
   height: 40px;
+  padding: 10px;
   border-radius: 0.5rem;
-  border: 1px solid grey;
+  border: 1px solid #83a1e8;
 }
-.personal-information-form input[name='address'] {
-  width: 350px;
-}
-.employment-information-form {
+.employment-info-form {
   margin: 0 auto;
   padding: 10px;
   font-family: Arial, sans-serif;
 }
-.employment-information-form label {
+.employment-info-form label {
   display: block;
   padding-bottom: 10px;
   font-size: 13px;
@@ -41,21 +50,22 @@
   width: 60%;
   color: #7a7979;
 }
-.employment-information-form input {
-  width: 200px;
+.employment-info-form input {
+  width: 250px;
   height: 40px;
+  padding: 10px;
   border-radius: 0.5rem;
-  border: 1px solid grey;
+  border: 1px solid #83a1e8;
 }
-.employment-information-form input[name='address'] {
+/* .employment-information-form input[name='address'] {
   width: 350px;
-}
-.guarantor-information-form {
+} */
+.guarantor-info-form {
   margin: 0 auto;
   padding: 10px;
   font-family: Arial, sans-serif;
 }
-.guarantor-information-form label {
+.guarantor-info-form label {
   display: block;
   padding-bottom: 10px;
   font-size: 13px;
@@ -63,15 +73,16 @@
   width: 60%;
   color: #7a7979;
 }
-.guarantor-information-form input {
+.guarantor-info-form input {
   width: 250px;
   height: 40px;
+  padding:10px;
   border-radius: 0.5rem;
-  border: 1px solid grey;
+  border: 1px solid #83a1e8;
 }
-.guarantor-information-form input[name='address'] {
+/* .guarantor-information-form input[name='address'] {
   width: 350px;
-}
+} */
 ::placeholder {
   color: black;
   font-weight: lighter;

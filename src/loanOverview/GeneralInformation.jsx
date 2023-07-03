@@ -150,9 +150,9 @@ const GeneralInformation = () => {
   return (
     <div className="general">
       <h5>Personal Information</h5>
-      <form className="personal-information-form" onSubmit={{ handleSubmit }}>
+      <form className="personal-info-form" onSubmit={{ handleSubmit }}>
         <div className="form-settings">
-          <div>
+          <div className="grid-column">
             <label>
               First Name
               <input
@@ -192,13 +192,13 @@ const GeneralInformation = () => {
               />
             </label>
           </div>
-          <div>
+          <div className="grid-column">
             <label>
               Middle Name
               <input
                 type="text"
                 value={middleName}
-                placeholder="Middle Name(optional)"
+                placeholder="Janet"
                 onChange={handleMiddleNameChange}
               ></input>
             </label>
@@ -221,7 +221,7 @@ const GeneralInformation = () => {
               ></input>
             </label>
           </div>
-          <div>
+          <div className="grid-column">
             <label>
               Last Name
               <input
@@ -262,7 +262,7 @@ const GeneralInformation = () => {
         </div>
       </form>
       <h5>Employment Information</h5>
-      <form className="employment-information-form" onSubmit={{ handleSubmit }}>
+      <form className="employment-info-form" onSubmit={{ handleSubmit }}>
         <div className="form-settings">
           <div>
             <label>
@@ -339,7 +339,7 @@ const GeneralInformation = () => {
         </div>
       </form>
       <h5>Guarantor Information</h5>
-      <form className="guarantor-information-form" onSubmit={{ handleSubmit }}>
+      <form className="guarantor-info-form" onSubmit={{ handleSubmit }}>
         <div className="form-settings">
           <div>
             <label>

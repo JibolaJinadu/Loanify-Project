@@ -81,7 +81,7 @@ const ProfileDetails = () => {
                   textTransform: 'lowercase',
                 }}
               >
-                <span style={{ textTransform: 'uppercase' }}>Decline</span>
+                <span style={{ textTransform: 'uppercase' }}>D</span>ecline
               </Button>
             </div>
           </form>
