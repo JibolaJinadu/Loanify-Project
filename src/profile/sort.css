@@ -194,4 +194,30 @@
 .checkbox:checked + .label .switch {
   right: 0px;
 }
-
+@media(max-width:400px){
+  .profile-input{
+    display: flex;
+    flex-direction: column;
+  }
+  .contain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .new-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main{
+    width: 100%;
+  }
+  img{
+    height: 50px;
+    width: 50px;
+  }
+  .dev{
+    padding: 5px;
+    width: 200px;
+  }
+}

@@ -28,8 +28,8 @@ export default function ReportBarChart() {
   return (
     <div>
       <BarChart
-        width={450}
-        height={400}
+        width={500}
+        height={500}
         data={data}
         margin={{
           top: 5,

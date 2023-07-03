@@ -122,8 +122,8 @@ export default function Top() {
         <div className="mid-report shift-report">
           <button className="button-report set">Approved vs Pending</button>
         </div>
-        <p style={{ backgroundColor: 'white', marginTop: '60px' }}>
-          <ReportBarChart style={{ padding: '50px' }} />
+        <p style={{ backgroundColor: 'white', marginTop: '50px',paddingLeft:'70px' }}>
+          <ReportBarChart />
         </p>
 
       </div>

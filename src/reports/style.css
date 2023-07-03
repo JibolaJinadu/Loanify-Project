@@ -121,6 +121,9 @@ align {
 .beneath {
   margin-top: 50px;
 }
+.font-pad{
+  padding-left: 10px;
+}
 .report-piechart {
   display: flex;
   justify-content: right;
@@ -160,3 +163,14 @@ align {
   content: counter(percentage) '%';
   animation: progress 2s 1 forwards;
 } */
+
+@media(max-width:400px){
+  .boss{
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .sect-top{
+    width: 100%;
+  }
+}
