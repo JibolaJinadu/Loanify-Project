@@ -9,21 +9,31 @@ const LoanTable = ({ tableData, table }) => {
     navigate('/loans/loans-overview');
   };
 
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const year = date.getFullYear();
+
+    const formattedDate = `${day}/${month}/${year}`;
+    return formattedDate;
+  };
+
   const getStatusColor = (status) => {
     switch (status) {
-      case 'Approved':
+      case 'cpproved':
         return 'loans-approved';
-      case 'Closed':
+      case 'closed':
         return 'loans-closed';
-      case 'Pending':
+      case 'pending':
         return 'loans-pending';
-      case 'Active':
+      case 'approved':
         return 'loans-active';
-      case 'Defaulted':
+      case 'defaulted':
         return 'loans-defaulted';
-      case 'Due':
+      case 'due':
         return 'loans-due';
-      case 'Extended':
+      case 'extended':
         return 'loans-extended';
       case 'Incomplete Docs':
         return 'loans-incomplete-docs';
@@ -32,6 +42,17 @@ const LoanTable = ({ tableData, table }) => {
       default:
         return '';
     }
+  };
+
+  const formatStatus = (status) => {
+    const formattedStatus =
+      status.charAt(0).toUpperCase() + status.slice(1).toLowerCase();
+    return formattedStatus;
+  };
+  const formatCast = (castNumber) => {
+    const formattedCast =
+      castNumber.charAt(0).toUpperCase() + castNumber.slice(1).toLowerCase();
+    return formattedCast;
   };
 
   if (tableData.length === 0) {
@@ -57,18 +78,18 @@ const LoanTable = ({ tableData, table }) => {
         <tr className="padtap">&nbsp;</tr>
         <tbody>
           {tableData.map((row, index) => (
-            <tr className="blue-row" key={index} onClick={handleRowClick}>
+            <tr className="blue-row" key={row.id} onClick={handleRowClick}>
               <td>
                 <input type="checkBox"></input>
               </td>
-              <td>{row.caseNumber}</td>
-              <td>{row.firstName}</td>
-              <td>{row.lastName}</td>
-              <td>{row.applicationDate}</td>
-              <td>{row.recentUpdate}</td>
+              <td>{formatCast(row.castNumber)}</td>
+              <td>{row.lender.firstName}</td>
+              <td>{row.lender.lastName}</td>
+              <td>{formatDate(row.createdAt)}</td>
+              <td>{formatDate(row.updatedAt)}</td>
               <td>
-                <button className={getStatusColor(row.loanStatus)}>
-                  {row.loanStatus}
+                <button className={getStatusColor(row.status.toLowerCase())}>
+                  {formatStatus(row.status)}
                 </button>
               </td>
             </tr>

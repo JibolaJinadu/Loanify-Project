@@ -1,3 +1,11 @@
+// import * as React from 'react';
+// import Tabs from '@mui/material/Tabs';
+// import Tab from '@mui/material/Tab';
+// import Box from '@mui/material/Box';
+// import Typography from '@mui/material/Typography';
+// import useMediaQuery from '@mui/material/useMediaQuery';
+// import { useTheme } from '@mui/material/styles';
+// import Security from '../security/Security';
 import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -11,11 +19,32 @@ import General from '../general/General';
 import Notification from '../notification/Notification';
 import Combine from '../profile/combine';
 
-export default function SettingsTabs({ onTabChange }) {
+export default function SettingsTabs({ onTabChange, activeTab }) {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('sm'));
 
-  const [value, setValue] = React.useState(1);
+  const getValueForTab = (tabName) => {
+    switch (tabName) {
+      case 'General':
+        return 1;
+      case 'Profile':
+        return 2;
+      case 'User Permission':
+        return 3;
+      case 'Notifications':
+        return 4;
+      case 'Security':
+        return 5;
+      default:
+        return 1;
+    }
+  };
+
+  const [value, setValue] = React.useState(getValueForTab(activeTab));
+
+  React.useEffect(() => {
+    setValue(getValueForTab(activeTab));
+  }, [activeTab]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

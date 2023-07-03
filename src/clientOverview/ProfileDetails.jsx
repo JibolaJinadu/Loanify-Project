@@ -11,16 +11,16 @@ const ProfileDetails = () => {
         <img
           src={temi}
           alt="image"
-          style={{ height: '150px', width: '150px', borderRadius: '50%' }}
+          className='profileImage'
         ></img>
         <div className="highlighted-client">
           <h3>Temidayo Adebayo</h3>
-          <p style={{ color: '#297F04', fontSize: '12px', fontWeight: '700' }}>
+          <p className='caseId'>
             Case ID:RRZU9D6BVG
           </p>
           <div className="loan-contact">
             <img src={telephone} alt="tel-icon" className="profile-icon" />
-            <p style={{ fontSize: '14px' }}> 09055555558 </p>
+            <p className='tel-no'> 09055555558 </p>
             <img
               src={message}
               alt="tel-icon"
@@ -40,7 +40,7 @@ const ProfileDetails = () => {
           <p style={{ fontWeight: 'bold' }}>Loan Type:</p>
           <p>Personal Loan</p>
         </div>
-        <div className="loan-type pad-top">
+        <div className="loan-type">
           <p style={{ fontWeight: 'bold' }}>Loan Status:</p>
           <p>Active</p>
           <button className="active-btn"></button>

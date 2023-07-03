@@ -13,45 +13,31 @@ function Documents() {
       </div>
       <div className="documents">
         <p>Driver's License</p>
-        <Link to="/clients/clients-overview/contract">
-          <button className="open-file">Open File</button>
-        </Link>
+        <button className="open-file">Open File</button>
       </div>
       <div className="documents">
         <p>Birth Certificate</p>
-        <Link to="/clients/clients-overview/contract">
-          <button className="open-file">Open File</button>
-        </Link>
+        <button className="open-file">Open File</button>
       </div>
       <div className="documents">
         <p>Passport</p>
-        <Link to="/clients/clients-overview/contract">
-          <button className="open-file">Open File</button>
-        </Link>
+        <button className="open-file">Open File</button>
       </div>
       <div className="documents">
         <p>Bank Statement</p>
-        <Link to="/clients/clients-overview/contract">
-          <button className="open-file">Open File</button>
-        </Link>
+        <button className="open-file">Open File</button>
       </div>
       <div className="documents">
         <p>Tenancy Agreement</p>
-        <Link to="/clients/clients-overview/contract">
-          <button className="open-file">Open File</button>
-        </Link>
+        <button className="open-file">Open File</button>
       </div>
       <div className="documents">
         <p>Utility Bill</p>
-        <Link to="/clients/clients-overview/contract">
-          <button className="open-file">Open File</button>
-        </Link>
+        <button className="open-file">Open File</button>
       </div>
       <div className="documents">
         <p>Collateral Documents</p>
-        <Link to="/clients/clients-overview/contract">
-          <button className="open-file">Open File</button>
-        </Link>
+        <button className="open-file">Open File</button>
       </div>
     </div>
   );

@@ -3,16 +3,14 @@ import HighLighted from './highLighted';
 import Small from './small';
 import './sort.css';
 
-export default function Top() {
+export default function Top({ role, fullName }) {
   return (
     <div className="shift-wrapper">
       <div className="shift">
         <Small />
-        <HighLighted />
+        <HighLighted role={role} fullName={fullName} />
       </div>
-      <div>
-        
-      </div>
+      <div></div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect, useContext } from 'react';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Sidebar from '../components/Sidebar';
@@ -9,108 +9,13 @@ import './Client.css';
 import { Link, useNavigate } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 import ClientDialog from './ClientDialog';
-
-const initialTableData = [
-  {
-    applicationNumber: 'RRZU9D6BVG',
-    fullName: 'Temidayo Adebayo',
-    loanStatus: 'Approved',
-    date: '20/03/2023',
-  },
-  {
-    applicationNumber: 'GR45467RBA',
-    fullName: 'Justin Jude',
-    loanStatus: 'Due',
-    date: '18/03/2023',
-  },
-  {
-    applicationNumber: 'RRZU9D6BVG',
-    fullName: 'Sharon Udoh',
-    loanStatus: 'Declined',
-    date: '17/03/2023',
-  },
-  {
-    applicationNumber: 'GR45467RBA',
-    fullName: 'Olufemi Ayo',
-    loanStatus: 'Closed',
-    date: '18/03/2023',
-  },
-  {
-    applicationNumber: 'RRZU9D6BVG',
-    fullName: 'Temidayo Adebayo',
-    loanStatus: 'Approved',
-    date: '20/03/2023',
-  },
-  {
-    applicationNumber: 'GR45467RBA',
-    fullName: 'Justin Jude',
-    loanStatus: 'Due',
-    date: '18/03/2023',
-  },
-  {
-    applicationNumber: 'RRZU9D6BVG',
-    fullName: 'Sharon Udoh',
-    loanStatus: 'Declined',
-    date: '17/03/2023',
-  },
-  {
-    applicationNumber: 'GR45467RBA',
-    fullName: 'Olufemi Ayo',
-    loanStatus: 'Closed',
-    date: '18/03/2023',
-  },
-  {
-    applicationNumber: 'RRZU9D6BVG',
-    fullName: 'Temidayo Adebayo',
-    loanStatus: 'Approved',
-    date: '20/03/2023',
-  },
-  {
-    applicationNumber: 'GR45467RBA',
-    fullName: 'Justin Jude',
-    loanStatus: 'Due',
-    date: '18/03/2023',
-  },
-  {
-    applicationNumber: 'RRZU9D6BVG',
-    fullName: 'Sharon Udoh',
-    loanStatus: 'Declined',
-    date: '17/03/2023',
-  },
-  {
-    applicationNumber: 'GR45467RBA',
-    fullName: 'Olufemi Ayo',
-    loanStatus: 'Closed',
-    date: '18/03/2023',
-  },
-  {
-    applicationNumber: 'RRZU9D6BVG',
-    fullName: 'Temidayo Adebayo',
-    loanStatus: 'Approved',
-    date: '20/03/2023',
-  },
-  {
-    applicationNumber: 'GR45467RBA',
-    fullName: 'Justin Jude',
-    loanStatus: 'Due',
-    date: '18/03/2023',
-  },
-  {
-    applicationNumber: 'RRZU9D6BVG',
-    fullName: 'Sharon Udoh',
-    loanStatus: 'Declined',
-    date: '17/03/2023',
-  },
-  {
-    applicationNumber: 'GR45467RBA',
-    fullName: 'Olufemi Ayo',
-    loanStatus: 'Closed',
-    date: '18/03/2023',
-  },
-];
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import { AuthContext } from '../AuthContext';
 
 const Client = () => {
-  const [tableData, setTableData] = useState(initialTableData);
+  const { loginToken, setLoginToken } = useContext(AuthContext);
+  const [tableData, setTableData] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [filterStatus, setFilterStatus] = useState('');
 
@@ -122,17 +27,24 @@ const Client = () => {
     setFilterStatus(event.target.value);
   };
 
-  const filteredTableData = tableData.filter((row) => {
-    const fullName = row.fullName.toLowerCase();
-    const loanStatus = row.loanStatus.toLowerCase();
-    const applicationNumber = row.applicationNumber.toLowerCase();
+  const filteredTableData = (data) => {
+    return data.filter((row) => {
+      const fullName = row.lender?.fullName?.toLowerCase();
+      const loanStatus = row.status?.toLowerCase();
+      const applicationNumber = row.castNumber?.toLowerCase();
 
-    return (
-      (fullName.includes(searchQuery.toLowerCase()) ||
-        applicationNumber.includes(searchQuery.toLowerCase())) &&
-      (filterStatus === '' || loanStatus === filterStatus.toLowerCase())
-    );
-  });
+      return (
+        (fullName &&
+          searchQuery &&
+          fullName.startsWith(searchQuery.toLowerCase())) ||
+        (applicationNumber &&
+          searchQuery &&
+          applicationNumber.startsWith(searchQuery.toLowerCase()))
+      );
+    });
+  };
+
+  const filteredData = filteredTableData(tableData);
 
   const handlePrint = () => {
     window.print();
@@ -142,13 +54,17 @@ const Client = () => {
 
   const getStatusColor = (status) => {
     switch (status) {
-      case 'Approved':
+      case 'approved':
         return 'clients-approved';
-      case 'Due':
+      case 'due':
         return 'clients-due';
-      case 'Declined':
+      case 'declined':
         return 'clients-declined';
-      case 'Closed':
+      case 'defaulted':
+        return 'clients-defaulted';
+      case 'extended':
+        return 'clients-extended';
+      case 'closed':
         return 'clients-closed';
       default:
         return '';
@@ -159,6 +75,47 @@ const Client = () => {
 
   const handleRowClick = () => {
     navigate('/clients/clients-overview');
+  };
+
+  const GetClients = async () => {
+    if (loginToken) {
+      try {
+        const response = await axios.get(
+          `https://loanifyteama-production.up.railway.app/api/v1/loans?perPage=50`,
+          {
+            headers: {
+              Authorization: `Bearer ${loginToken}`,
+            },
+          }
+        );
+        console.log(response.data.data); // Check the type of response.data
+        setTableData(response.data.data);
+        // toast.success('Profile Update!');
+      } catch (error) {
+        console.log(error);
+        // toast.error("Couldn't update profile data!");
+      }
+    }
+  };
+
+  useEffect(() => {
+    GetClients();
+  }, []);
+
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const year = date.getFullYear();
+
+    const formattedDate = `${day}/${month}/${year}`;
+    return formattedDate;
+  };
+
+  const formatStatus = (status) => {
+    const formattedStatus =
+      status.charAt(0).toUpperCase() + status.slice(1).toLowerCase();
+    return formattedStatus;
   };
 
   return (
@@ -236,27 +193,40 @@ const Client = () => {
             </thead>
             <tr className="padtap">&nbsp;</tr>
             <tbody id="client-data">
-              {filteredTableData.map((row, index) => (
-                <tr className="client-row" key={index} onClick={handleRowClick}>
-                  <td>
-                    <Link to="/clients/clients-overview">
-                      <input
-                        type="checkbox"
-                        disabled
-                        className="clients-input"
-                      ></input>
-                    </Link>
-                  </td>
-                  <td>{row.applicationNumber}</td>
-                  <td>{row.fullName}</td>
-                  <td>
-                    <button className={` ${getStatusColor(row.loanStatus)}`}>
-                      {row.loanStatus}
-                    </button>{' '}
-                  </td>
-                  <td>{row.date}</td>
-                </tr>
-              ))}
+              {tableData.map((row, index) => {
+                const fullName =
+                  `${row.lender?.firstName} ${row.lender?.lastName}` ?? '';
+                console.log('fullName');
+                return (
+                  <tr
+                    className="client-row"
+                    key={index}
+                    onClick={handleRowClick}
+                  >
+                    <td>
+                      <Link to="/clients/clients-overview">
+                        <input
+                          type="checkbox"
+                          disabled
+                          className="clients-input"
+                        ></input>
+                      </Link>
+                    </td>
+                    <td>{row.castNumber}</td>
+                    <td>{fullName}</td>
+                    <td>
+                      <button
+                        className={` ${getStatusColor(
+                          row.status.toLowerCase()
+                        )}`}
+                      >
+                        {formatStatus(row.status)}
+                      </button>{' '}
+                    </td>
+                    <td>{formatDate(row.lender.createdAt)}</td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>

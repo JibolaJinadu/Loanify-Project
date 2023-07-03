@@ -49,7 +49,7 @@ export default function ProfileTable() {
             <th>Loan Status</th>
           </tr>
         </thead>
-        <tr className="padtap">&nbsp;</tr>
+        <tr style={{ fontSize: '10px' }}>&nbsp;</tr>
         <tbody>
           {data.map((rowData, index) => {
             return (
@@ -71,7 +71,7 @@ export default function ProfileTable() {
                   <td>{rowData.recentUpdate}</td>
                   <td>
                     <Button
-                      className='tableButton'
+                      className="tableButton"
                       style={{
                         borderRadius: '50px',
                         textTransform: 'Capitalize',

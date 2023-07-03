@@ -8,7 +8,7 @@ body {
 }
 
 .row-item1 {
-  border-bottom: 3px solid rgb(4,41,127);
+  border-bottom: 3px solid rgb(4, 41, 127);
 }
 
 .upper-text {
@@ -23,70 +23,78 @@ body {
   margin-top: 5px;
 }
 
-.increase{
+.increase {
   font-size: 10px;
   margin-left: 5px;
 }
 
-.drop-up, .drop-down {
+.drop-up,
+.drop-down {
   font-size: 8px;
 }
 
-.lower-text-percent{
+.lower-text-percent {
   margin-left: 8px;
 }
 
-.drop1, .right1{
-  color: rgb(4,41,127);
+.drop1,
+.right1 {
+  color: rgb(4, 41, 127);
 }
 
 .row-item2 {
-  border-bottom: 3px solid rgb(0,212,61);
+  border-bottom: 3px solid rgb(0, 212, 61);
 }
-.right2, .drop2 {
+.right2,
+.drop2 {
   color: rgb(0, 212, 61);
 }
 
-.row-item3{
-  border-bottom: 3px solid rgb(243,181,22);
+.row-item3 {
+  border-bottom: 3px solid rgb(243, 181, 22);
 }
-.right3, .drop3{
-  color: rgb(243,181,22);
+.right3,
+.drop3 {
+  color: rgb(243, 181, 22);
 }
 
-.row-item4{
-  border-bottom: 3px solid rgb(120,154,232);
-
+.row-item4 {
+  border-bottom: 3px solid rgb(120, 154, 232);
 }
-.right4, .drop4{
-  color: rgb(120,154,232);
+.right4,
+.drop4 {
+  color: rgb(120, 154, 232);
 }
 
 .row-item5 {
-  border-bottom: 3px solid rgb(243,181,22);
+  border-bottom: 3px solid rgb(243, 181, 22);
 }
-.right5, .drop5{
-  color: rgb(243,181,22);
+.right5,
+.drop5 {
+  color: rgb(243, 181, 22);
 }
 
 .row-item6 {
-  border-bottom: 3px solid rgb(41,127,4);
+  border-bottom: 3px solid rgb(41, 127, 4);
 }
-.right6, .drop6{
-  color: rgb(41,127,4);
+.right6,
+.drop6 {
+  color: rgb(41, 127, 4);
 }
 
 .row-item7 {
-  border-bottom: 3px solid rgb(211,7,68);
+  border-bottom: 3px solid rgb(211, 7, 68);
 }
-.right7, .drop7{
-  color: rgb(211,7,68);
+.right7,
+.drop7 {
+  color: rgb(211, 7, 68);
 }
 .row-item8 {
-  border-bottom: 3px solid rgb(1,14,42);
+  border-bottom: 3px solid rgb(1, 14, 42);
 }
-.right8, .drop8{
-  color: rgb(1,14,42);
+.right8,
+.drop8 {
+  color: rgb(1, 14, 42);
 }
 
 .pie-label-container {
@@ -103,7 +111,7 @@ body {
 }
 
 .label-tabs {
-  background-color: #3969dc;
+  background-color: rgb(243, 181, 22);
 }
 
 .label-tabs2 {
@@ -111,7 +119,7 @@ body {
 }
 
 .label-tabs3 {
-  background-color: #d30744;
+  background-color: #3969dc;
 }
 
 .label-tabs4 {
@@ -168,4 +176,3 @@ body {
   margin: auto;
   margin-top: 10px;
 }
-

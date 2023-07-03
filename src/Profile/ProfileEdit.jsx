@@ -1,78 +1,185 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import Button from '@mui/material/Button';
+import { AuthContext } from '../AuthContext';
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import { useEffect } from 'react';
+import Switch from './switch';
+import Buttons from './buttons';
+import Top from './top';
+import Big from './big';
+import './sort.css';
+
 export default function ProfileEdit() {
+  const [getData, setGetData] = useState('');
+  const { loginToken, setLoginToken } = useContext(AuthContext);
+  const [profileData, setProfileData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    gender: '',
+    phoneNumber: '',
+    address: '',
+    dob: '',
+    martialStatus: '',
+    role: '',
+  });
+
+  const GetProfile = async () => {
+    try {
+      const response = await axios.get(
+        `https://loanifyteama-production.up.railway.app/api/v1/users/me`,
+        {
+          headers: {
+            Authorization: `Bearer ${loginToken}`,
+          },
+        }
+      );
+      setProfileData({
+        firstName: response.data.data.firstName,
+        lastName: response.data.data.lastName,
+        email: response.data.data.email,
+        gender: response.data.data.gender,
+        phoneNumber: response.data.data.phoneNumber,
+        address: response.data.data.address,
+        dob: response.data.data.dob,
+        martialStatus: response.data.data.martialStatus,
+        role: response.data.data.role,
+      });
+      // toast.success('Profile gotten');
+    } catch (error) {
+      console.log(error);
+      toast.error("Couldn't fetch profile data!");
+    }
+  };
+
+  useEffect(() => {
+    GetProfile();
+  }, []);
+
+  const fullName = `${profileData.firstName} ${profileData.lastName}`;
+
+  const [update, setUpdate] = useState({
+    firstName: profileData.firstName,
+    lastName: profileData.lastName,
+    phoneNumber: profileData.phoneNumber,
+    basicInformation: {
+      address: profileData.address,
+    },
+  });
+
+  const UpdateProfile = async () => {
+    try {
+      const response = await axios.put(
+        `https://loanifyteama-production.up.railway.app/api/v1/users`,
+        update,
+        {
+          headers: {
+            Authorization: `Bearer ${loginToken}`,
+          },
+        }
+      );
+      toast.success('Profile Update!');
+    } catch (error) {
+      console.log(error);
+      toast.error("Couldn't update profile data!");
+    }
+  };
+
   return (
-    <section className="profileEditWrapper">
-      <div className="flex-grow">
-        <form action="" className="mt-8 ">
-          <h3 className="text-3xl">Personal Information</h3>
-          <div className="formInputDiv">
-            <div className="formInputLabel flex-col  mb-4">
-              <label className="py-2">First Name</label>
+    <section className="">
+      <Top role={profileData.role} fullName={fullName} />
+      <div className="">
+        <form action="" className="">
+          <h3 className="">Personal Information</h3>
+          <div className="profile-form">
+            <div className="profile-group">
+              <label className="">First Name</label>
               <input
                 type="text"
-                placeholder="Olufemi"
-                className=" formInput border-gray-100 w-[25rem] rounded-md p-2"
+                // placeholder="Olufemi"
+                className=""
+                value={profileData.firstName}
+                onChange={(e) =>
+                  setProfileData({ ...profileData, firstName: e.target.value })
+                }
               />
             </div>
-            <div className="formInputLabel flex-col mb-4 md:mt-5">
+            <div className="profile-group">
               <label>Last Name</label>
               <input
                 type="text"
-                placeholder="Ayo"
-                className=" formInput border-gray-100 w-[25rem] rounded-md p-2"
+                // placeholder="Ayo"
+                className=""
+                value={profileData.lastName}
+                onChange={(e) =>
+                  setProfileData({ ...profileData, lastName: e.target.value })
+                }
               />
             </div>
           </div>
-          <div className="formInputDiv flex-col md:flex-row md:justify-between">
-            <div className="formInputLabel">
+          <div className="profile-form">
+            <div className="profile-group">
               <label>Email</label>
               <input
                 type="email"
-                placeholder="Olufemiayo@gmail.com"
-                className=" formInput border-gray-100 w-[25rem] rounded-md p-2"
+                // placeholder="Olufemiayo@gmail.com"
+                className=""
+                value={profileData.email}
+                onChange={(e) =>
+                  setProfileData({ ...profileData, email: e.target.value })
+                }
               />
             </div>
-            <div className="formInputLabel flex-col mb-4">
+            <div className="profile-group">
               <label>Number</label>
               <input
                 type="telephone"
-                placeholder="08022222222"
-                className=" formInput border-gray-100 w-[25rem] rounded-md p-2"
+                // placeholder="08022222222"
+                className=""
+                value={profileData.phoneNumber}
+                onChange={(e) =>
+                  setProfileData({
+                    ...profileData,
+                    phoneNumber: e.target.value,
+                  })
+                }
               />
             </div>
           </div>
-          <div className="formInputDiv flex-col md:flex-row md:justify-between">
-            <div className="formInputLabel flex-col mb-4">
+          <div className="profile-form">
+            <div className="profile-group">
               <label>Address</label>
               <input
                 type="address"
-                placeholder="No 10, Superman lane, infinity street, oz"
-                className=" formInput border-gray-100 w-[25rem] rounded-md p-2"
+                // placeholder="No 10, Superman lane, infinity street, oz"
+                className=""
+                value={profileData.address}
+                onChange={(e) =>
+                  setProfileData({ ...profileData, address: e.target.value })
+                }
               />
             </div>
-            <div className="formInputLabel flex-col mb-4">
+            <div className="profile-group">
               <label>Role</label>
               <input
                 type="text"
-                placeholder="Senior Loan Officer"
-                className="formInput"
+                // placeholder="Senior Loan Officer"
+                className=""
+                value={profileData.role}
+                onChange={(e) =>
+                  setProfileData({ ...profileData, role: e.target.value })
+                }
               />
             </div>
           </div>
-          <Button
-            variant="contained"
-            style={{
-              fontSize: '10px',
-              width: '2rem',
-              color: 'white',
-              textTransform: 'Capitalize',
-              backgroundColor: 'blue',
-            }}
-          >
-            Save
-          </Button>
         </form>
+      </div>
+      <Switch label="notif" />
+      <div className="new-btn">
+        <button className="new" onClick={UpdateProfile}>
+          save
+        </button>
       </div>
     </section>
   );

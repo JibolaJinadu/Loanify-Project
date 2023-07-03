@@ -1,18 +1,18 @@
 import Big from './big';
 import './sort.css';
 
-export default function HighLighted() {
+export default function HighLighted({ role, fullName }) {
   return (
     <div className="dev">
       <div>
-        <Big bold={'Oluwafemi ayo'} />
+        <Big bold={fullName} />
       </div>
       <div className="move">
         <div>
           <Big tiny={'role:'} />
         </div>
         <div>
-          <Big tiny={'Senior Loan Officer'} />
+          <Big tiny={role} />
         </div>
       </div>
       <div className="move">

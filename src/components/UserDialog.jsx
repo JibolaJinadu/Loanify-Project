@@ -103,7 +103,7 @@ export default function UserDialog() {
                 </Link>
               </li>
               <li>
-                <Link className="user-link" to="/settings">
+                <Link className="user-link" to="/settings/Profile">
                   Profile Settings
                 </Link>
               </li>

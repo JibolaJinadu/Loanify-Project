@@ -101,7 +101,7 @@ export default function NotificationDialog() {
         })}
         <hr style={{ marginTop: '20px' }} />
         <div className="dialog-box">
-          <Link to="/settings">
+          <Link to="/settings/Notifications">
             <img src={settings} alt="" />
           </Link>
           <div className="allRead">

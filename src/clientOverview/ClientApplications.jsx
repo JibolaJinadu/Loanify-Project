@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './ClientApplications.css';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { HiChevronDown } from 'react-icons/hi2';
+import LoanApp from './LoanApp';
+import CollateralInformation from './CollateralInformation';
 
 const ClientApplications = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,42 +38,66 @@ const ClientApplications = () => {
           <button className="loan-btn">
             <div className="arrow-icon">
               <h3>Loan Application History</h3>
-              <ExpandMoreIcon onClick={toggleDropdownOne} className="pointer" />
+              <KeyboardArrowDownIcon
+                onClick={toggleDropdownOne}
+                className="pointer"
+              />
             </div>
           </button>
         </div>
+        <div className="spacing"></div>
 
         {isVisible && (
           <div className="infoDetails">
-            <div className="details">
+            <div className="details-title">
               <h5>Case Number</h5>
               <h5>Loan Amount</h5>
               <h5>Balance</h5>
-              <h5>Next Payment DATE</h5>
+              <h5>Next Payment Date</h5>
               <h5>Payoff Progress</h5>
             </div>
+            <div className="spacing"></div>
             <div className="details">
-              <p>RRZU9D6BVG</p>
-              <h5>500,000</h5>
-              <h5>750,000</h5>
-              <h5>08/12/2023</h5>
-              <div className="greyBackground">
-                <div className="blackColor">90%</div>
-              </div>
+              <p id="case-number">RRZU9D6BVG</p>
+              <p>500,000</p>
+              <p>750,000</p>
+              <p>08/12/2023</p>
+              <p>
+                <div className="progress-one">
+                  <div className="progress-bar">
+                    <span className="textName">90%</span>
+                  </div>
+                </div>
+              </p>
             </div>
+            <div className="spacing"></div>
             <div className="details">
-              <p>RRZU9E6ATY</p>
-              <h5>200,000</h5>
-              <h5>N/A</h5>
-              <h5>N/A</h5>
-              <div className="greenColor">100%</div>
+              <p id="case-number">RRZU9E6ATY</p>
+              <p>200,000</p>
+              <p>N/A</p>
+              <p>N/A</p>
+              <p>
+                <div className="progress">
+                  <div className="progressBar">
+                    <span className="textName">100%</span>
+                  </div>
+                </div>
+              </p>
             </div>
+            <div className="spacing"></div>
             <div className="details">
-              <p>RRZU9F8ZXP</p>
-              <h5>120,000</h5>
-              <h5>N/A</h5>
-              <h5>N/A</h5>
-              <div className="greenColor">100%</div>
+              <p id="case-number">RRZU9F8ZXP</p>
+              <p>120,000</p>
+              <p>N/A</p>
+              <p>N/A</p>
+
+              <p>
+                <div className="progress">
+                  <div className="progressBar">
+                    <span className="textName">100%</span>
+                  </div>
+                </div>
+              </p>
             </div>
           </div>
         )}
@@ -80,42 +107,17 @@ const ClientApplications = () => {
           <button className="loan-btn">
             <div className="arrow-icon">
               <h3>Loan Application Information</h3>
-              <ExpandMoreIcon className="pointer" onClick={toggleDropdownTwo} />
+              <KeyboardArrowDownIcon
+                onClick={toggleDropdownTwo}
+                className="pointer"
+              />
             </div>
           </button>
         </div>
 
         {isOpen && (
           <div>
-            <h5>Loan Information</h5>
-            <div className="loanDetails">
-              <p>Loan Amount</p>
-              <p className="addBorder">NGN550,000</p>
-            </div>
-            <div className="loanDetails">
-              <p>Purpose of the Loan</p>
-              <p className="addBorder">Business</p>
-            </div>
-            <div className="loanDetails">
-              <p>Repayment Method</p>
-              <p className="addBorder">Monthly</p>
-            </div>
-            <div className="loanDetails">
-              <p>Do you have any outstanding loan to be repaid?</p>
-              <p className="addBorder">Yes</p>
-            </div>
-            <div className="loanDetails">
-              <p>If yes, please state the amount</p>
-              <p className="addBorder">NGN550,000</p>
-            </div>
-            <div className="loanDetails">
-              <p>How much is the amount left to be paid?</p>
-              <p className="addBorder">NGN75,000</p>
-            </div>
-            <div className="loanDetails">
-              <p>Is the loan with our institution?</p>
-              <p className="addBorder">No</p>
-            </div>
+            <LoanApp />
           </div>
         )}
       </div>
@@ -124,7 +126,7 @@ const ClientApplications = () => {
           <button className="loan-btn">
             <div className="arrow-icon">
               <h3>Collateral Information</h3>
-              <ExpandMoreIcon
+              <KeyboardArrowDownIcon
                 onClick={toggleDropdownThree}
                 className="pointer"
               />
@@ -133,14 +135,7 @@ const ClientApplications = () => {
         </div>
         {isDisplayed && (
           <div>
-            <div className="collateralInformation">
-              <p>Toyota Corolla</p>
-              <p>E210</p>
-            </div>
-            <div className="collateralInformation">
-              <p>2019</p>
-              <p>Silver</p>
-            </div>
+            <CollateralInformation />
           </div>
         )}
       </div>
