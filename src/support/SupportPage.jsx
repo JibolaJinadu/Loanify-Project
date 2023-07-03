@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { Button, Dialog, DialogContent, DialogTitle } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 const SupportPage = () => {
   const [showTextarea, setShowTextarea] = useState(false);
@@ -56,8 +57,9 @@ const SupportPage = () => {
               <p className="breadcrumbs">Support</p>
             </Breadcrumbs>
           </div>
+
           <div className="overall">
-            <div className="section-22">
+            <div className="section-2a">
               <Link to="/support/faq" className="faq-link">
                 FAQ
               </Link>
@@ -73,22 +75,20 @@ const SupportPage = () => {
               <button className="toll-btn">080 0000 1234</button>
             </div>
 
-            <div>
-              <Button
+            <div className='section-4'>
+            <Button
                 onClick={handleButtonClick}
+                className="report-final-sub1"
                 style={{
-                  backgroundColor: 'rgb(240, 244, 252)',
                   color: 'black',
-                  width: '98%',
-                  height: '70px',
-                  padding: '5px 20px',
                   display: 'flex',
+                  alignItems: 'center',
                   justifyContent: 'space-between',
                   marginTop: '1.5%',
                 }}
               >
                 <p className="report-drp-p1">Report an Issue</p>
-                <p className="report-drp-p2">v</p>
+                <FontAwesomeIcon className="report-drp-p2" icon={faChevronDown} />
               </Button>
               {showTextarea && (
                 <form className="report-form-cover" onSubmit={handleFormSubmit}>
@@ -112,6 +112,7 @@ const SupportPage = () => {
               )}
               <Dialog open={submissionMessage !== ''} onClose={handleClose}>
                 <DialogTitle
+                  className='dialog-title'
                   style={{
                     color: 'green',
                     fontSize: '50px',
@@ -121,6 +122,7 @@ const SupportPage = () => {
                   <FontAwesomeIcon className="check-icon" icon={faCheck} />
                 </DialogTitle>
                 <DialogContent
+                  className='dialog-content'
                   style={{
                     fontSize: '15px',
                     fontWeight: 'bolder',
