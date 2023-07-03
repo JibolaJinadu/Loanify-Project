@@ -12,7 +12,7 @@ export default function ProfileLoanOfficer() {
     <div className="profileLoanWrapper">
       <div className="loanOfficerDetails">
         <img src={loanOfficer} alt="" className=" mr-2 " />
-        <div className="">
+        <div className="loan-text">
           <h4 className="profile-name">Olufemi Ayo</h4>
           <p className="profile-sub">Role: Senior loan officer</p>
           <p className="profile-sub">

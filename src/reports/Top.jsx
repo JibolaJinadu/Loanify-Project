@@ -23,15 +23,28 @@ export default function Top() {
               <option value="year">2023</option>
               <option value="year">2022</option>
               <option value="year">2021</option>
+              <option value="year">2020</option>
+              <option value="year">2019</option>
+              <option value="year">2018</option>
+              <option value="year">2017</option>
+              <option value="year">2016</option>
+              <option value="year">2015</option>
+              <option value="year">2014</option>
+              <option value="year">2013</option>
+              <option value="year">2012</option>
+              <option value="year">2011</option>
+              <option value="year">2010</option>
             </select>
           </p>
         </div>
-        <div className="report-item">
-          <p className="base-report set-bg">Total number of loan application</p>
+        <div className="report-item beneath">
+          <p className="base-report set-bg size-font">
+            Total number of loan application
+          </p>
           <h4 className="move-left">182</h4>
         </div>
         <div className="report-item">
-          <p className="base-report set-bg">
+          <p className="base-report set-bg size-font">
             Total value of all loan applications
           </p>
           <h4>NGN325,450,000'</h4>
@@ -45,21 +58,25 @@ export default function Top() {
           <span className="report-dark">Default</span>
         </div>
         <div className="report-item">
-          <p className="self-report set-bg">Total number of default</p>
+          <p className="self-report set-bg size-font">
+            Total number of default
+          </p>
           <h4 className="solo-report move-left">8</h4>
         </div>
         <div className="report-item">
-          <p className="base-report set-bg">
+          <p className="base-report set-bg size-font">
             Total number of defaulting payment
           </p>
           <h4>NGN5,102,740</h4>
         </div>
         <div className="report-item">
-          <p className="base-report set-bg">Total value of disbursed loans</p>
+          <p className="base-report set-bg size-font">
+            Total value of disbursed loans
+          </p>
           <h4>NGN98,952,700</h4>
         </div>
         <div className="report-item">
-          <p className="base-report set-bg">
+          <p className="base-report set-bg size-font">
             Total value of loan repayment loan
           </p>
           <h4>NGN61,245,750</h4>
@@ -92,20 +109,20 @@ export default function Top() {
         <p className="hr-report"></p>
 
         <div className="gap-report report-item shift-report">
-          <div>
-            <h4>115</h4>
-            <p>Total number of completed payments</p>
+          <div className="shift-report">
+            <h4 className="font-pad">115</h4>
+            <p className="size-font">Total number of completed payments</p>
           </div>
-          <div>
-            <h4>NGN41,952,700</h4>
-            <p>Total number of uncompleted payments</p>
+          <div className="shift-report">
+            <h4 className="font-pad">NGN41,952,700</h4>
+            <p className="size-font">Total number of uncompleted payments</p>
           </div>
         </div>
         <p className="hr-report"></p>
         <div className="mid-report shift-report">
           <button className="button-report set">Approved vs Pending</button>
         </div>
-        <p style={{ backgroundColor: 'white', marginTop: '100px' }}>
+        <p style={{ backgroundColor: 'white', marginTop: '60px' }}>
           <ReportBarChart style={{ padding: '50px' }} />
         </p>
 

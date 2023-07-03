@@ -1,15 +1,10 @@
 body {
   font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
 }
-
+/* @media screen and (min-width: 769px){ */
 .overview-container {
   width: 99%;
-}
-
-.overview-row1 {
-  display: flex;
-  gap: 7%;
-  margin: 20px;
 }
 
 .row-item1 {
@@ -219,3 +214,4 @@ body {
   margin: auto;
   margin-top: 10px;
 }
+

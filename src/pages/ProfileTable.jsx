@@ -33,7 +33,7 @@ export default function ProfileTable() {
   };
 
   return (
-    <section className="profileTableWrapper">
+    <section className="profileTableWrapper tableContainer">
       <h3 className="profileTableHeader">All clients</h3>
       <table>
         <thead>
@@ -71,6 +71,7 @@ export default function ProfileTable() {
                   <td>{rowData.recentUpdate}</td>
                   <td>
                     <Button
+                      className='tableButton'
                       style={{
                         borderRadius: '50px',
                         textTransform: 'Capitalize',
