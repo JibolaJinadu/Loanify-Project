@@ -4,10 +4,9 @@ import { AuthContext } from '../AuthContext';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useEffect } from 'react';
-import Top from './Top';
-import Big from './Big';
-import './sort.css';
 import SwitchProfile from './SwitchProfile';
+import ProfileHeader from './ProfileHeader';
+import './sort.css';
 
 export default function ProfileEdit() {
   const { loginToken, setLoginToken } = useContext(AuthContext);
@@ -87,7 +86,7 @@ export default function ProfileEdit() {
 
   return (
     <section className="">
-      <Top role={profileData.role} fullName={fullName} />
+      <ProfileHeader role={profileData.role} fullName={fullName} />
       <div className="">
         <form action="" className="">
           <h3 className="">Personal Information</h3>
