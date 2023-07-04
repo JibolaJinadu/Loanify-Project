@@ -72,8 +72,8 @@ function ClientContractForm() {
 
   return (
     <section>
-      <div className="client-contract">
-        <div>
+      <div className="client-container">
+        <div className='client-contract'>
           <h3>Loan Contracts</h3>
           <div className="print-button">
             <button className="print-btn" onClick={handlePrint}>

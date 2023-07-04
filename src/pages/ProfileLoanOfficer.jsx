@@ -3,7 +3,7 @@ import { useState } from 'react';
 import loanOfficer from './img/loanOfficer.png';
 import { Link } from 'react-router-dom';
 
-export default function ProfileLoanOfficer() {
+export default function ProfileLoanOfficer({ role, fullName }) {
   // const [clicked, setClicked] = useState(false);
   // const handleClick = () => {
   //   setClicked(true);
@@ -13,8 +13,8 @@ export default function ProfileLoanOfficer() {
       <div className="loanOfficerDetails">
         <img src={loanOfficer} alt="" className=" mr-2 " />
         <div className="loan-text">
-          <h4 className="profile-name">Olufemi Ayo</h4>
-          <p className="profile-sub">Role: Senior loan officer</p>
+          <h4 className="profile-name">{fullName}</h4>
+          <p className="profile-sub">Role: {role}</p>
           <p className="profile-sub">
             Status: <span className="active">Active</span>
           </p>
@@ -22,8 +22,8 @@ export default function ProfileLoanOfficer() {
       </div>
       <div className="">
         <Link
-          to="/profileCombine"
-          className='edit--button'
+          to="/settings/Profile"
+          className="edit--button"
           style={{
             fontSize: '14px',
             fontWeight: '500',

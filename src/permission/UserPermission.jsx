@@ -3,7 +3,7 @@ import './UserPermission.css';
 
 const UserPermission = () => {
   return (
-    <div class="user-info">
+    <div className="user-info">
       <table id="users">
         <thead>
           <tr>

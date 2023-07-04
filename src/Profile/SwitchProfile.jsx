@@ -1,5 +1,7 @@
-import './sort.css';
-export default function Switch({ label }) {
+import React from 'react';
+import './ProfileStyles.css';
+
+function SwitchProfile({ label }) {
   return (
     <div className="container contain">
       {' '}
@@ -13,3 +15,5 @@ export default function Switch({ label }) {
     </div>
   );
 }
+
+export default SwitchProfile;

@@ -46,9 +46,9 @@
     margin: 20px;
     padding-top: 20px;
   }
-  .recharts-surface {
+  /* .recharts-surface {
     width: 320px;
-  }
+  } */
 }
 
 @media screen and (min-width: 540px) and (max-width: 768px) {

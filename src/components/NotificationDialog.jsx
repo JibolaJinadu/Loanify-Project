@@ -101,14 +101,14 @@ export default function NotificationDialog() {
         })}
         <hr style={{ marginTop: '20px' }} />
         <div className="dialog-box">
-          <Link to="/settings">
+          <Link to="/settings/Notifications">
             <img src={settings} alt="" />
           </Link>
           <div className="allRead">
             <CheckIcon />
             <h5>Mark all as read.</h5>
           </div>
-          <Link to="/notification" className="sms-btn notify-btn">
+          <Link to="/notification" className="sms-btn  notify-btn">
             View all Notifications
           </Link>
         </div>

@@ -1,4 +1,6 @@
-export default function Big(props) {
+import React from 'react';
+
+const ProfileBig = (props) => {
   return (
     <>
       <div
@@ -22,4 +24,6 @@ export default function Big(props) {
       </div>
     </>
   );
-}
+};
+
+export default ProfileBig;

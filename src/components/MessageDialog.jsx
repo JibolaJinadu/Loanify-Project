@@ -90,7 +90,7 @@ export default function MessageDialog() {
         <h4 className="newMessages">New Messages</h4>
         {msg.map((msg, i) => {
           return (
-            <div className="dialog-box">
+            <div className="dialog-box" key={i}>
               <img src={msg.src} className="jane" alt="" />
               <div className="dialog-title">
                 <p style={{ fontSize: '14px' }}>{msg.name}</p>

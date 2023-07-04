@@ -16,17 +16,17 @@
   padding-bottom: 30px;
   font-size: 13px;
   font-weight: small;
-  width: 60%;
+  width: 100%;
   color: #7a7979;
 }
 .personal-information-form input {
-  width: 250px;
+  width: 200px;
   height: 40px;
   border-radius: 0.5rem;
   border: 1px solid grey;
 }
 .personal-information-form input[name='address'] {
-  width: 350px;
+  width: 500px;
 }
 .employment-information-form {
   margin: 0 auto;
@@ -38,12 +38,12 @@
   padding-bottom: 30px;
   font-size: 13px;
   font-weight: small;
-  width: 60%;
+  width: 100%;
   color: #7a7979;
 }
 .employment-information-form input {
   width: 200px;
-  height: 40px;
+  height: 30px;
   border-radius: 0.5rem;
   border: 1px solid grey;
 }
@@ -60,7 +60,7 @@
   padding-bottom: 30px;
   font-size: 13px;
   font-weight: small;
-  width: 60%;
+  width: 100%;
   color: #7a7979;
 }
 .guarantor-information-form input {

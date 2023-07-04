@@ -9,13 +9,34 @@ import Security from '../security/Security';
 import UserPermission from '../permission/UserPermission';
 import General from '../general/General';
 import Notification from '../notification/Notification';
-import Combine from '../profile/combine';
+import ProfileEdit from '../Profile/ProfileEdit';
 
-export default function SettingsTabs({ onTabChange }) {
+export default function SettingsTabs({ onTabChange, activeTab }) {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('sm'));
 
-  const [value, setValue] = React.useState(1);
+  const getValueForTab = (tabName) => {
+    switch (tabName) {
+      case 'General':
+        return 1;
+      case 'Profile':
+        return 2;
+      case 'User Permission':
+        return 3;
+      case 'Notifications':
+        return 4;
+      case 'Security':
+        return 5;
+      default:
+        return 1;
+    }
+  };
+
+  const [value, setValue] = React.useState(getValueForTab(activeTab));
+
+  React.useEffect(() => {
+    setValue(getValueForTab(activeTab));
+  }, [activeTab]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -148,7 +169,7 @@ export default function SettingsTabs({ onTabChange }) {
         <General />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Combine />
+        <ProfileEdit />
       </TabPanel>
       <TabPanel value={value} index={3}>
         <UserPermission />

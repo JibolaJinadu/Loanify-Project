@@ -1,14 +1,7 @@
-import React from "react";
-import { PieChart, Pie, Cell } from "recharts";
+import React from 'react';
+import { PieChart, Pie, Cell } from 'recharts';
 
-const data = [
-  { name: "Group A", value: 200 },
-  { name: "Group B", value: 150 },
-  { name: "Group C", value: 500 },
-  { name: "Group D", value: 150 }
-];
-
-const COLORS = ["#d30744", "#3969dc", "#00d43d", "#dc3969"];
+const COLORS = ['#3969dc', 'rgb(243,181,22)', '#00d43d', '#dc3969'];
 
 const RADIAN = Math.PI / 180;
 
@@ -19,7 +12,7 @@ const renderCustomizedLabel = ({
   innerRadius,
   outerRadius,
   percent,
-  index
+  index,
 }) => {
   const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
   const x = cx + radius * Math.cos(-midAngle * RADIAN);
@@ -30,14 +23,26 @@ const renderCustomizedLabel = ({
       x={x}
       y={y}
       fill="white"
-      textAnchor={x > cx ? "start" : "end"}
+      textAnchor={x > cx ? 'start' : 'end'}
       dominantBaseline="central"
     >
       {`${(percent * 100).toFixed(0)}%`}
     </text>
   );
 };
-export default function Chart() {
+export default function Chart({
+  approve,
+  close,
+  pending,
+  defaulted,
+  percentages,
+}) {
+  const data = [
+    { name: 'Group A', value: close },
+    { name: 'Group B', value: pending },
+    { name: 'Group C', value: approve },
+    { name: 'Group D', value: defaulted },
+  ];
   return (
     <PieChart width={330} height={340}>
       <Pie
@@ -55,6 +60,18 @@ export default function Chart() {
           <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
         ))}
       </Pie>
+      <div className="label-percentage">{`${(percentages[0] * 100).toFixed(
+        0
+      )}%`}</div>
+      <div className="label-percentage">{`${(percentages[1] * 100).toFixed(
+        0
+      )}%`}</div>
+      <div className="label-percentage">{`${(percentages[2] * 100).toFixed(
+        0
+      )}%`}</div>
+      <div className="label-percentage">{`${(percentages[3] * 100).toFixed(
+        0
+      )}%`}</div>
     </PieChart>
   );
 }

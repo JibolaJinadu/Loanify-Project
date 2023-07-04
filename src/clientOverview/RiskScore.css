@@ -1,36 +1,41 @@
-.risk-score {
-  display: flex;
-  padding-top: 10px;
+.risk-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
 }
 
-.risk-comment{
-  font-size: 14px;
-  font-weight: 700;
-}
-.rs-highlighted {
-  background-color: #f0f4fc;
-  width: 320px;
-  height: 80px;
-  padding: 4px;
-  border-radius: 0.5rem;
-}
-
-.riskComment {
-  font-size: 14px;
-}
-
-.rs-sizeb p {
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.rs-size p {
-  font-size: 14px;
-}
-.rs-space{
-  margin-right: 55px;
+.risk-scoreClient,
+.risk-grade {
+  padding-top: 40px;
 }
 
 .risk-space {
-  margin-right: 80px;
+  padding-left: 20px;
+}
+
+.risk-scoreClient p {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.risk-grade p {
+  font-size: 14px;
+}
+
+.comment-container {
+  display: flex;
+}
+
+.risk-comment {
+  font-size: 14px;
+  font-weight: 700;
+}
+.risk-highlighted {
+  background-color: #f0f4fc;
+  width: 500px;
+  height: 80px;
+  border-radius: 0.5rem;
+}
+
+.risk-feedback {
+  font-size: 14px;
 }

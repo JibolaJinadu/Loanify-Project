@@ -24,14 +24,15 @@ import ResetSuccessful from './passwordReset/ResetSuccessful';
 import ResendToken from './passwordReset/ResendToken';
 import ClientOverview from './clientOverview/ClientOverview';
 import FAQ from './support/FAQ';
-import LoanOverview from './loanOverview/LoanOverview';
-import Combine from './profile/combine';
 import ChangePwd from './changePassword/ChangePwd';
 import { useEffect, useState } from 'react';
 import { AuthContext } from './AuthContext';
 import Cookies from 'js-cookie';
 import LoanContract from './loanOverview/LoanContract';
-import ClientContract from './clientOverview/ClientContract';
+import ClientContractForm from './clientOverview/ClientContractForm';
+import ProfileEdit from './Profile/ProfileEdit';
+import LoanOverview from './loanOverview/LoanOverview';
+// import ClientContract from './clientOverview/ClientContract';
 
 function App() {
   const [signUpToken, setSignUpToken] = useState('');
@@ -71,6 +72,28 @@ function App() {
           <Route path="/reset-password" element={<ResetPassword />}></Route>
           <Route path="/reset-successful" element={<ResetSuccessful />}></Route>
           <Route path="/settings" element={<Settings />}></Route>
+          <Route
+            path="/settings/Profile"
+            element={<Settings activeTab="profile" />}
+          />
+          <Route
+            path="/settings/General"
+            element={<Settings activeTab="general" />}
+          />
+          <Route
+            path="/settings/User Permission"
+            element={<Settings activeTab="user permission" />}
+          />
+          <Route
+            path="/settings/Notifications"
+            element={<Settings activeTab="notifications" />}
+          />
+          <Route
+            path="/settings/Security"
+            element={<Settings activeTab="security" />}
+          />
+          {/* <Route path="/settings/profile" element={<ProfilePage />} /> */}
+
           <Route path="/token" element={<Token />}></Route>
           <Route path="/loans" element={<Loan />}></Route>
           <Route
@@ -81,14 +104,14 @@ function App() {
             path="/loans/loans-overview/loans-contract"
             element={<LoanContract />}
           ></Route>
-          <Route path="/profileCombine" element={<Combine />}></Route>
+          <Route path="/profileCombine" element={<ProfileEdit />}></Route>
           <Route path="/verification" element={<Token />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/support" element={<SupportPage />}></Route>
           <Route path="/clients" element={<Client />}></Route>
           <Route
             path="/clients/clients-overview/contract"
-            element={<ClientContract />}
+            element={<ClientContractForm />}
           ></Route>
           <Route path="/profile" element={<ProfilePage />}></Route>
           <Route path="/reports" element={<Reports />}></Route>
