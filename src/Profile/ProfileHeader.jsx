@@ -1,6 +1,7 @@
 import React from 'react';
 import ProfileImage from './ProfileImage';
 import ProfileHighLight from './ProfileHighLight';
+import './ProfileStyles.css';
 
 function ProfileHeader({ role, fullName }) {
   return (

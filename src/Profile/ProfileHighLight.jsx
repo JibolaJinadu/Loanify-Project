@@ -1,6 +1,6 @@
 import React from 'react';
 import ProfileBig from './ProfileBig';
-import './sort.css';
+import './ProfileStyles.css';
 
 const ProfileHighLight = ({ role, fullName }) => {
   return (

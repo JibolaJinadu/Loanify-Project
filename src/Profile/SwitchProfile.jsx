@@ -1,5 +1,5 @@
 import React from 'react';
-import './sort.css';
+import './ProfileStyles.css';
 
 function SwitchProfile({ label }) {
   return (

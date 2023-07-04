@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import { useEffect } from 'react';
 import SwitchProfile from './SwitchProfile';
 import ProfileHeader from './ProfileHeader';
-import './sort.css';
+import './ProfileStyles.css';
 
 export default function ProfileEdit() {
   const { loginToken, setLoginToken } = useContext(AuthContext);
