@@ -24,14 +24,14 @@ import ResetSuccessful from './passwordReset/ResetSuccessful';
 import ResendToken from './passwordReset/ResendToken';
 import ClientOverview from './clientOverview/ClientOverview';
 import FAQ from './support/FAQ';
-import LoanOverview from './loanOverview/LoanOverview';
-import Combine from './profile/combine';
 import ChangePwd from './changePassword/ChangePwd';
 import { useEffect, useState } from 'react';
 import { AuthContext } from './AuthContext';
 import Cookies from 'js-cookie';
 import LoanContract from './loanOverview/LoanContract';
 import ClientContractForm from './clientOverview/ClientContractForm';
+import ProfileEdit from './Profile/ProfileEdit';
+import LoanOverview from './loanOverview/LoanOverview';
 // import ClientContract from './clientOverview/ClientContract';
 
 function App() {
@@ -104,7 +104,7 @@ function App() {
             path="/loans/loans-overview/loans-contract"
             element={<LoanContract />}
           ></Route>
-          <Route path="/profileCombine" element={<Combine />}></Route>
+          <Route path="/profileCombine" element={<ProfileEdit />}></Route>
           <Route path="/verification" element={<Token />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/support" element={<SupportPage />}></Route>

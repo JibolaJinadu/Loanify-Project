@@ -1,11 +1,3 @@
-// import * as React from 'react';
-// import Tabs from '@mui/material/Tabs';
-// import Tab from '@mui/material/Tab';
-// import Box from '@mui/material/Box';
-// import Typography from '@mui/material/Typography';
-// import useMediaQuery from '@mui/material/useMediaQuery';
-// import { useTheme } from '@mui/material/styles';
-// import Security from '../security/Security';
 import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -17,7 +9,7 @@ import Security from '../security/Security';
 import UserPermission from '../permission/UserPermission';
 import General from '../general/General';
 import Notification from '../notification/Notification';
-import Combine from '../profile/combine';
+import ProfileEdit from '../Profile/ProfileEdit';
 
 export default function SettingsTabs({ onTabChange, activeTab }) {
   const theme = useTheme();
@@ -177,7 +169,7 @@ export default function SettingsTabs({ onTabChange, activeTab }) {
         <General />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Combine />
+        <ProfileEdit />
       </TabPanel>
       <TabPanel value={value} index={3}>
         <UserPermission />
