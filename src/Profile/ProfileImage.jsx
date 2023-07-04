@@ -1,5 +1,5 @@
 import React from 'react';
-import face from './img/face.png';
+import face from './img/Avatar.png';
 
 function ProfileImage() {
   return (
