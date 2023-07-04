@@ -1,5 +1,7 @@
+import React from 'react';
 import './sort.css';
-export default function Switch({ label }) {
+
+function Switch({ label }) {
   return (
     <div className="container contain">
       {' '}
@@ -13,3 +15,5 @@ export default function Switch({ label }) {
     </div>
   );
 }
+
+export default Switch;
