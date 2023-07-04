@@ -89,15 +89,6 @@ export default function UserDialog() {
           <ListItem>
             <ul className="user-lists">
               <li>
-                <Link className="user-link">Online</Link>
-              </li>
-              <li>
-                <Link className="user-link">On Break</Link>
-              </li>
-              <li>
-                <Link className="user-link">Offline</Link>
-              </li>
-              <li>
                 <Link className="user-link" to="/profile">
                   View Profile
                 </Link>

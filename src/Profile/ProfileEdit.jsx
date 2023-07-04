@@ -11,8 +11,8 @@ import Big from './big';
 import './sort.css';
 
 export default function ProfileEdit() {
-  const [getData, setGetData] = useState('');
   const { loginToken, setLoginToken } = useContext(AuthContext);
+  const [getData, setGetData] = useState('');
   const [profileData, setProfileData] = useState({
     firstName: '',
     lastName: '',
