@@ -4,11 +4,11 @@ import { AuthContext } from '../AuthContext';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useEffect } from 'react';
-import Switch from './switch';
 import Buttons from './buttons';
 import Top from './top';
 import Big from './big';
 import './sort.css';
+import SwitchProfile from './SwitchProfile';
 
 export default function ProfileEdit() {
   const { loginToken, setLoginToken } = useContext(AuthContext);
@@ -175,7 +175,7 @@ export default function ProfileEdit() {
           </div>
         </form>
       </div>
-      <Switch label="notif" />
+      <SwitchProfile label="notif" />
       <div className="new-btn">
         <button className="new" onClick={UpdateProfile}>
           save

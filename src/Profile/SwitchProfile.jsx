@@ -1,7 +1,7 @@
 import React from 'react';
 import './sort.css';
 
-function Switch({ label }) {
+function SwitchProfile({ label }) {
   return (
     <div className="container contain">
       {' '}
@@ -16,4 +16,4 @@ function Switch({ label }) {
   );
 }
 
-export default Switch;
+export default SwitchProfile;
