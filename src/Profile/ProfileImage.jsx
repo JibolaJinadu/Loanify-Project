@@ -1,5 +1,5 @@
 import React from 'react';
-import face from './img/face.svg';
+import face from './img/face.png';
 
 function ProfileImage() {
   return (
