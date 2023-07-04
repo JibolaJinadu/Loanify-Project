@@ -4,7 +4,6 @@ import { AuthContext } from '../AuthContext';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useEffect } from 'react';
-import Buttons from './buttons';
 import Top from './Top';
 import Big from './Big';
 import './sort.css';

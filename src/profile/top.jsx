@@ -1,4 +1,3 @@
-import Buttons from './buttons';
 import HighLighted from './HighLighted';
 import Small from './Small';
 import './sort.css';
