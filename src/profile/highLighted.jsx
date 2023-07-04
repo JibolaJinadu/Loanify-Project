@@ -1,4 +1,4 @@
-import Big from './big';
+import Big from './Big';
 import './sort.css';
 
 export default function HighLighted({ role, fullName }) {

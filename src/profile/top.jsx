@@ -1,6 +1,6 @@
 import Buttons from './buttons';
-import HighLighted from './highLighted';
-import Small from './small';
+import HighLighted from './HighLighted';
+import Small from './Small';
 import './sort.css';
 
 export default function Top({ role, fullName }) {

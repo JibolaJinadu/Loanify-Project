@@ -5,8 +5,8 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useEffect } from 'react';
 import Buttons from './buttons';
-import Top from './top';
-import Big from './big';
+import Top from './Top';
+import Big from './Big';
 import './sort.css';
 import SwitchProfile from './SwitchProfile';
 
