@@ -1,6 +1,8 @@
 body {
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
 }
 /* @media screen and (min-width: 769px){ */
 .overview-container {
@@ -8,7 +10,7 @@ body {
 }
 
 .row-item1 {
-  border-bottom: 3px solid rgb(4, 41, 127);
+  border-bottom: 4px solid rgb(4, 41, 127);
 }
 
 .upper-text {
@@ -19,8 +21,9 @@ body {
 }
 
 .lower-text {
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 5px;
+  font-weight: 600;
 }
 
 .increase {
@@ -43,7 +46,7 @@ body {
 }
 
 .row-item2 {
-  border-bottom: 3px solid rgb(0, 212, 61);
+  border-bottom: 4px solid rgb(0, 212, 61);
 }
 .right2,
 .drop2 {
@@ -51,7 +54,7 @@ body {
 }
 
 .row-item3 {
-  border-bottom: 3px solid rgb(243, 181, 22);
+  border-bottom: 4px solid rgb(243, 181, 22);
 }
 .right3,
 .drop3 {
@@ -59,7 +62,7 @@ body {
 }
 
 .row-item4 {
-  border-bottom: 3px solid rgb(120, 154, 232);
+  border-bottom: 4px solid rgb(120, 154, 232);
 }
 .right4,
 .drop4 {
@@ -67,7 +70,7 @@ body {
 }
 
 .row-item5 {
-  border-bottom: 3px solid rgb(243, 181, 22);
+  border-bottom: 4px solid rgb(243, 181, 22);
 }
 .right5,
 .drop5 {
@@ -75,7 +78,7 @@ body {
 }
 
 .row-item6 {
-  border-bottom: 3px solid rgb(41, 127, 4);
+  border-bottom: 4px solid rgb(41, 127, 4);
 }
 .right6,
 .drop6 {
@@ -83,14 +86,14 @@ body {
 }
 
 .row-item7 {
-  border-bottom: 3px solid rgb(211, 7, 68);
+  border-bottom: 4px solid rgb(211, 7, 68);
 }
 .right7,
 .drop7 {
   color: rgb(211, 7, 68);
 }
 .row-item8 {
-  border-bottom: 3px solid rgb(1, 14, 42);
+  border-bottom: 4px solid rgb(1, 14, 42);
 }
 .right8,
 .drop8 {
@@ -101,47 +104,49 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15%;
+  gap: 13%;
   margin: 0;
+  padding: 10px;
 }
 
 .chart-label {
   display: flex;
-  margin: 30px 5px 0 0;
+  margin: 30px 3px 0 0;
+}
+
+.label-both-container{
+  max-width: 20vw;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vw;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 2vh;
+}
+
+.label-bkg{
+  width: 17vw;
+  text-align: center;
+  padding: 0.9vh 0;
+  border-radius: 3px;
+  color: white;
 }
 
 .label-tabs {
   background-color: rgb(243, 181, 22);
 }
-
 .label-tabs2 {
   background-color: #00d43d;
 }
-
 .label-tabs3 {
   background-color: #3969dc;
 }
-
 .label-tabs4 {
   background-color: #dc3969;
 }
 
-.label-tabs,
-.label-tabs2,
-.label-tabs3,
-.label-tabs4 {
-  margin-bottom: 20px;
-  padding: 10px 70px;
-  color: white;
-  border-radius: 3px;
-  font-size: 12px;
-}
 
-.label-percentage {
-  margin: 0 0 18px 30px;
-  padding: 10px 20px;
-  font-size: 12px;
-}
 
 .pb-50 {
   padding-bottom: 30px;
