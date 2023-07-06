@@ -20,41 +20,42 @@ const INITIAL_STATE = {
   password: '',
 };
 
+
 const VALIDATION = {
   email: [
     {
       isValid: (value) => !!value,
-      message: '',
+      message: 'Enter valid email address.',
     },
     {
       isValid: (value) => /\S+@\S+\.\S+/.test(value),
-      message: 'Please enter a valid email address.',
+      message: '',
     },
   ],
   firstName: [
     {
-      isValid: (value) => !!value,
-      message: '',
+      isValid: (value) => !!value.trim(),
+      message: 'First name is required.',
     },
     {
-      isValid: (value) => value.length <= 20,
+      isValid: (value) => value.trim().length <= 20,
       message: 'First name should be less than or equal to 20 characters.',
     },
   ],
   lastName: [
     {
-      isValid: (value) => !!value,
-      message: '',
+      isValid: (value) => !!value.trim(),
+      message: 'Last name is required.',
     },
     {
-      isValid: (value) => value.length <= 20,
+      isValid: (value) => value.trim().length <= 20,
       message: 'Last name should be less than or equal to 20 characters.',
     },
   ],
   role: [
     {
-      isValid: (value) => !!value,
-      message: '',
+      isValid: (value) => !!value.trim(),
+      message: 'Job role is required.',
     },
     {
       isValid: (value) => value.length <= 50,
@@ -68,7 +69,7 @@ const VALIDATION = {
     },
     {
       isValid: (value) => /^\d{11}$/.test(value),
-      message: 'Phone number must be 11 digits.',
+      message: 'Enter 11 digits Phone number.',
     },
   ],
   password: [
@@ -78,7 +79,7 @@ const VALIDATION = {
     },
     {
       isValid: (value) => value.length >= 8,
-      message: 'Password must be at least 8 characters long.',
+      message: 'Enter at-least 8 characters long Password.',
     },
   ],
 };
@@ -199,22 +200,21 @@ const SignUp = () => {
             <h1 className="rd-container-2">Sign Up</h1>
             <div className="rd-container-3">
               <form className="signup-form" onSubmit={handleSubmit}>
-                <div className="field">
-                  <input
-                    className="signUp-input"
-                    id="firstName"
-                    type="text"
-                    placeholder="First name"
-                    value={form.firstName}
-                    onChange={handleChange}
-                    autoComplete={nanoid()}
-                  />
-                  {errorFields.firstName?.map((error, index) => (
-                    <span key={index} className="errorfield">
-                      {error}
-                    </span>
-                  ))}
-                </div>
+              <div className="field">
+                <input
+                  className="signUp-input"
+                  id="firstName"
+                  type="text"
+                  placeholder="First name"
+                  value={form.firstName}
+                  onChange={handleChange}
+                  onBlur={() => validateField('firstName', form.firstName)}
+                  autoComplete={nanoid()}
+                />
+                {errorFields.firstName?.length > 0 && (
+                  <span className="errorfield">{errorFields.firstName[0]}</span>
+                )}
+              </div>
 
                 <div className="field">
                   <input
