@@ -1,7 +1,6 @@
 .personal-info-form, .employment-info-form, .guarantor-info-form {
   display: flex;
   flex-wrap: wrap;
-
 }
 .personal-info-form {
   margin: 0 auto;
@@ -13,7 +12,7 @@
 .form-settings {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 110px;
+  gap: 115px;
   margin-bottom: 20px;
   line-height: 30px;
 }
@@ -37,6 +36,16 @@
   border-radius: 0.5rem;
   border: 1px solid #83a1e8;
 }
+/* .address-setting {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.personal-info-form input[name='address'] {
+  width: 350px;
+  height: 40px;
+
+} */
 .employment-info-form {
   margin: 0 auto;
   padding: 10px;
@@ -47,7 +56,7 @@
   padding-bottom: 10px;
   font-size: 13px;
   font-weight: small;
-  width: 60%;
+  width: 70%;
   color: #7a7979;
 }
 .employment-info-form input {
@@ -92,3 +101,26 @@
 .general h5 {
   font-size: 18px;
 }
+
+@media (max-width:600px) {
+.form-settings {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 10px;
+    }
+.grid-column {
+  display: flex;
+  flex-direction: column;
+  
+}
+.personal-info-form label, .employment-info-form label, .guarantor-info-form label {
+  display: block;
+  width: 300px;
+}
+.personal-info-form input, .employment-info-form input, .guarantor-info-form input {
+  width: 300px;
+
+}
+}
+

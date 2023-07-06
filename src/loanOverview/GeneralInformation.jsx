@@ -181,6 +181,7 @@ const GeneralInformation = () => {
                 required
               ></input>
             </label>
+            <div className='address-setting'>
             <label>
               Address
               <input
@@ -191,6 +192,7 @@ const GeneralInformation = () => {
                 onChange={handleHomeAddressChange}
               />
             </label>
+            </div>
           </div>
           <div className="grid-column">
             <label>
@@ -249,6 +251,7 @@ const GeneralInformation = () => {
                 onChange={handleNinChange}
               />
             </label>
+            <div className='address-setting'>
             <label>
               Tenancy Start Date
               <input
@@ -258,6 +261,7 @@ const GeneralInformation = () => {
                 onChange={handleDateChange}
               />
             </label>
+            </div>
           </div>
         </div>
       </form>

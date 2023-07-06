@@ -5,10 +5,20 @@ import telephone from './img/telephone icon.svg';
 import message from './img/messages icon.svg';
 import { Button, Dialog, DialogContent, DialogTitle } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faXmark, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 const ProfileDetails = () => {
   const [submissionMessage, setSubmissionMessage] = useState('');
+  const [showNotification, setShowNotification] = useState(false);
+  const [approveNotification, setApproveNotification] = useState('');
+  const [showApproveNotification, setShowApproveNotification] = useState(false);
+
+  const handleApproveButtonClick = () => {
+    setSubmissionMessage('');
+    setApproveNotification('Application Approved\nThe loan application has been successfully approved.');
+    setShowNotification(true);
+    setShowApproveNotification(true);
+  };
 
   const handleButtonClick = () => {
     setSubmissionMessage('');
@@ -23,6 +33,8 @@ const ProfileDetails = () => {
 
   const handleClose = () => {
     setSubmissionMessage('');
+    setShowNotification(false);
+    setShowApproveNotification(false);
   };
 
   return (
@@ -66,8 +78,9 @@ const ProfileDetails = () => {
           <button className="small"></button>
         </div>
         <div className="btn-container">
-          <button className="approve">Approve</button>
+        <button className="approve" onClick={handleApproveButtonClick}>Approve</button>
           <form onSubmit={handleFormSubmit}>
+          
             <div>
               <Button
                 className="decline"
@@ -86,6 +99,42 @@ const ProfileDetails = () => {
             </div>
           </form>
         </div>
+        <Dialog
+  open={showApproveNotification}
+  onClose={() => setShowApproveNotification(false)}
+  style={{ border: '1px solid #8dba80' }}
+>
+  <DialogTitle
+    style={{
+      color: '#00d43d',
+      fontSize: '50px',
+      padding: '50px 270px 0px',
+    }}
+  >
+    <FontAwesomeIcon className="check-icon" icon={faCheck} />
+  </DialogTitle>
+  <DialogContent
+    style={{
+      color: '#00d43d',
+      fontSize: '15px',
+      fontWeight: 'bolder',
+      padding: '0px 100px 50px',
+    }}
+  >
+    {approveNotification.split('\n').map((message, index) => (
+              <p
+                key={index}
+                style={{
+                  color: index === 1 ? 'grey' : '#00d43d',
+                  textAlign: 'center',
+                }}
+              >
+                {message}
+              </p>
+            ))}
+  </DialogContent>
+</Dialog>
+
         <Dialog
           open={submissionMessage !== ''}
           onClose={handleClose}
