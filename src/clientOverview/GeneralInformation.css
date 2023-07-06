@@ -1,83 +1,108 @@
+.general h5 {
+  font-size: 18px;
+  padding-left: 10px;
+}
+
 .personal-information-form {
   margin: 0 auto;
   padding: 10px;
   font-family: Arial, sans-serif;
-  /* grid-template-columns: auto auto auto;
-    gap: 2rem; */
 }
 
 .form-settings {
   display: flex;
-  gap: 20;
+  justify-content: space-between;
+}
+
+.label-settings {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
 }
 
 .personal-information-form label {
-  display: block;
-  padding-bottom: 30px;
   font-size: 13px;
   font-weight: small;
-  width: 100%;
-  color: #7a7979;
+  color: #7A7979;
 }
-.personal-information-form input {
-  width: 200px;
+
+.label-settings input {
   height: 40px;
-  border-radius: 0.5rem;
-  border: 1px solid grey;
-}
-.personal-information-form input[name='address'] {
-  width: 500px;
-}
-.employment-information-form {
-  margin: 0 auto;
-  padding: 10px;
-  font-family: Arial, sans-serif;
-}
-.employment-information-form label {
-  display: block;
-  padding-bottom: 30px;
-  font-size: 13px;
-  font-weight: small;
-  width: 100%;
-  color: #7a7979;
-}
-.employment-information-form input {
-  width: 200px;
-  height: 30px;
-  border-radius: 0.5rem;
-  border: 1px solid grey;
-}
-.employment-information-form input[name='address'] {
-  width: 350px;
-}
-.guarantor-information-form {
-  margin: 0 auto;
-  padding: 10px;
-  font-family: Arial, sans-serif;
-}
-.guarantor-information-form label {
-  display: block;
-  padding-bottom: 30px;
-  font-size: 13px;
-  font-weight: small;
-  width: 100%;
-  color: #7a7979;
-}
-.guarantor-information-form input {
   width: 250px;
+  border-radius: 0.4rem;
+  border: 1px solid lightgrey;
+}
+
+.label-settings label {
+  padding-bottom: 5px;
+}
+
+.address-settings {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.address-settings input {
+  width: 775px;
   height: 40px;
-  border-radius: 0.5rem;
-  border: 1px solid grey;
+  border-radius: 0.4rem;
+  border: 1px solid lightgrey;
 }
-.guarantor-information-form input[name='address'] {
-  width: 350px;
+
+.address-settings label {
+  padding-bottom: 5px;
 }
-::placeholder {
+
+.information-input {
   color: black;
   font-weight: lighter;
   padding: 10px;
 }
 
-.general h5 {
-  font-size: 18px;
+::placeholder {
+  color: black;
+  font-weight: lighter;
+  padding: 5px;
+}
+
+
+
+@media (max-width: 600px) {
+  .general h5 {
+    font-size: 10px;
+    padding-left: 5px;
+  }
+
+  .personal-information-form {
+    margin: 0 auto;
+    padding: 5px;
+    font-family: Arial, sans-serif;
+  }
+
+  .personal-information-form label {
+    font-size: 9px;
+    font-weight: small;
+    color: #7A7979;
+  }
+
+  .label-settings input {
+    height: 20px;
+    width: 78px;
+    border-radius: 0.2rem;
+    border: 1px solid lightgrey;
+  }
+  .address-settings input {
+    width: 225px;
+    height: 20px;
+    border-radius: 0.2rem;
+    border: 1px solid lightgrey;
+  }
+
+  ::placeholder {
+    color: black;
+    font-weight: lighter;
+    font-size: 9px;
+    padding: 5px;
+  }
 }
