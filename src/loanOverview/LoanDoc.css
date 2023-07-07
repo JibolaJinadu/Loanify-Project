@@ -61,10 +61,29 @@
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 10px;
-    width: 698px;
+    width: 735px;
     margin-top: 20px;
 }
 
 .data-input {
     margin-bottom: 20px;
+}
+/*Extra small devices (phones, 600px and down)*/
+@media only screen and (max-width: 600px){
+  .contract-container {border: 30px double teal;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up)*/
+@media only screen and (min-width: 600px){
+  .contract-container {border: 30px double lemonchiffon}
+}
+
+/*Medium devices (landscape tablets, 768px and up)*/
+@media only screen and (min-width: 768px){
+  .contract-container {border: 30px double lightcoral}
+}
+
+/*Extra large devices(large laptops and desktops, 1200px and up)*/
+@media only screen and (min-width: 1200px){
+  .contract-container {border: 30px double #F0F4FC;}
 }
