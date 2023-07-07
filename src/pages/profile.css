@@ -32,9 +32,6 @@ body {
   padding: 10px;
   margin-left: 1rem;
 }
-.loanOfficerDetails .active {
-  color: green;
-}
 .profilePercentageWrapper {
   display: flex;
   margin-top: 1rem;

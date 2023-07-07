@@ -173,7 +173,7 @@ export default function ProfileEdit() {
           </div>
         </form>
       </div>
-      <SwitchProfile label="notif" />
+      <SwitchProfile />
       <div className="new-btn">
         <button className="new" onClick={UpdateProfile}>
           save
