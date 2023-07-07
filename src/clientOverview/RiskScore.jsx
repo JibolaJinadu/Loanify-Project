@@ -1,6 +1,6 @@
 import React from 'react';
 import './RiskScore.css';
-import risk from './img/Risk Chart.jpeg';
+import risk from './img/Risk Chart.jpg';
 
 const RiskScore = () => {
   return (
