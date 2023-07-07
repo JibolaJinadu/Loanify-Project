@@ -35,6 +35,52 @@ const LoanApplications = () => {
                 <label><input type='text' placeholder='No'></input></label>
             </div>
         </form>
+        <h5 className='cfi'>Current Financial Information</h5>
+        <form className='form-setting'>
+            <div>
+                <label>Gross Monthly Revenue
+                    <input type='text' placeholder='NGN450,000'></input>
+                </label>
+
+                <label>Average Monthly Profit
+                    <input type='text' placeholder='NGN450,000'></input>
+                </label>
+            </div>
+            <div>
+                <label>Gross Monthly Expenses
+                    <input type='text' placeholder='NGN300,000'></input>
+                </label>
+                <label>Average Monthly Profit
+                    <input type='text' placeholder='NGN320,000'></input>
+                </label>
+            </div>
+            <div>
+                <label>Gross Annual Revenue
+                    <input type='text' placeholder='NGN5,400,000'></input>
+                </label>
+                <label>Net Monthly Profit
+                    <input type='text' placeholder='NGN420,000'></input>
+                </label>
+            </div>
+        </form>
+        <h5 className='cfi'>Bank Information</h5>
+        <form className='form-setting'>
+            <div>
+               <label>Account Name
+                    <input type='text' placeholder='Temidayo Adebayo'></input>
+                </label>
+            </div>
+            <div>
+            <label>Account Number
+                    <input type='text' placeholder='004567210'></input>
+            </label>
+            </div>
+            <div>
+            <label>Bank Name
+                    <input type='text' placeholder='Fidelity Bank'></input>
+            </label>
+            </div>
+        </form>
     </div>
   )
 }

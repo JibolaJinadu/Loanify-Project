@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import './LoanDoc.css'
+import ClientDialog from '../client/ClientDialog';
 
 const LoanDoc = () => {
   const [agreement, setAgreement ] = useState('')
@@ -79,7 +80,8 @@ const LoanDoc = () => {
     <h3>Loan Contract</h3>
     <div className='flex-wrap'>
         <button className="print" onClick={handlePrint}>Print</button>
-        <button className='edit-doc'>Edit Document</button>
+        <button className='edit-doc'>Export Doc.
+        </button>
     </div>
     <button className='return'>Return To Documents</button>
     </div>
