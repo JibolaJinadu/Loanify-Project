@@ -94,6 +94,7 @@ const OverviewPage = () => {
               </div>
               <h2 className="item-right right2">0</h2>
             </div>
+
             <div className="row-item3">
               <div className="item-left">
                 <p className="upper-text">Pending Loans</p>
@@ -196,19 +197,24 @@ const OverviewPage = () => {
                 percentages={percentages}
               />
             </div>
-            <div className="chart-label">
-              <div>
-                <div className="label-tabs">Pending Loans</div>
-                <div className="label-tabs2">Approved Loans</div>
-                <div className="label-tabs3">Closed Loans</div>
-                <div className="label-tabs4">Defaulted Loans</div>
+            
+            <div>
+              <div className='label-both-container'>
+                <div className="label-tabs label-bkg">Pending Loans</div>
+                <div>{loansPending}%</div>
               </div>
-              {/* <div>
-                <div className="label-percentage">15%</div>
-                <div className="label-percentage">50%</div>
-                <div className="label-percentage">20%</div>
-                <div className="label-percentage">15%</div>
-              </div> */}
+              <div className='label-both-container'>
+                <div className="label-tabs2 label-bkg">Approved Loans</div>
+                <div>{loansApproved}%</div>
+              </div>
+              <div className='label-both-container'>
+                <div className="label-tabs3 label-bkg">Defaulted Loans</div>
+                <div>{loansDefaulted}%</div>
+              </div>
+              <div className='label-both-container'>
+                <div className="label-tabs4 label-bkg">Closed Loans</div>
+                <div>{loansClosed}%</div>
+              </div>
             </div>
           </div>
         </div>
