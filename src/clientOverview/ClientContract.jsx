@@ -7,6 +7,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Link } from 'react-router-dom';
 import ClientContractForm from './ClientContractForm';
 
+
 export default function ClientContract() {
   return (
     <div>
