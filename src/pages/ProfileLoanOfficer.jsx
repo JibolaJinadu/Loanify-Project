@@ -11,7 +11,7 @@ export default function ProfileLoanOfficer({ role, fullName }) {
   return (
     <div className="profileLoanWrapper">
       <div className="loanOfficerDetails">
-        <img src={loanOfficer} alt="" className=" mr-2 " />
+        <img src={loanOfficer} alt="" className="" />
         <div className="loan-text">
           <h4 className="profile-name">{fullName}</h4>
           <p className="profile-sub">Role: {role}</p>

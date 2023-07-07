@@ -7,10 +7,9 @@ function ProfileHeader({ role, fullName }) {
   return (
     <div className="shift-wrapper">
       <div className="shift">
-        <ProfileImage />
+        <ProfileImage firstName={fullName.split(' ')[0][0]} lastName={fullName.split(' ')[1][0]} />
         <ProfileHighLight role={role} fullName={fullName} />
       </div>
-      <div></div>
     </div>
   );
 }
