@@ -1,79 +1,120 @@
+.general {
+  width: 100%;
+  padding-bottom: 2.5px;
+  padding-top: 2.5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+}
+
+.general h5 {
+  font-size: 18px;
+}
+
 .personal-information-form {
-    margin: 0 auto;
-    padding: 10px;
-    font-family: Arial, sans-serif;
-    /* grid-template-columns: auto auto auto;
-    gap: 2rem; */
-  }
-  
-.form-settings {
-    display: flex;
-    gap: 20;
-  }
-  
+  font-family: Arial, sans-serif;
+}
+
+.personal-form-settings {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label-settings {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
 .personal-information-form label {
-    display: block;
-    padding-bottom: 30px;
-    font-size: 13px;
-    font-weight: small;
-    width: 60%;
-    color:#7a7979;
-  }
-.personal-information-form input {
-    width: 250px;
-    height: 40px;
-    border-radius: 0.5rem;
-    border: 1px solid grey;
-  }
-.personal-information-form input[name=address] {
-    width: 350px;
+  font-size: 13px;
+  font-weight: small;
+  color: #7A7979;
 }
-.employment-information-form {
+
+.label-settings input {
+  padding-left: 5px;
+  width: 200px;
+  height: 40px;
+  border-radius: 0.3rem;
+  border: 1px solid #83a1e8;
+}
+
+.label-settings label {
+  padding-bottom: 5px;
+}
+
+.address-settings {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.address-settings input {
+  width: 625px;
+  height: 40px;
+  border-radius: 0.4rem;
+  border: 1px solid #83a1e8;
+  
+}
+
+.address-settings label {
+  padding-bottom: 5px;
+}
+
+.information-input {
+  color: black;
+  font-weight: lighter;
+  padding: 10px;
+}
+
+::placeholder {
+  color: black;
+  font-weight: lighter;
+  padding: 5px;
+}
+
+.client-padding {
+  padding-bottom: 45px;
+}
+
+
+@media (max-width: 600px) {
+  .general h5 {
+    font-size: 10px;
+    padding-left: 5px;
+  }
+
+  .personal-information-form {
     margin: 0 auto;
-    padding: 10px;
+    padding: 5px;
     font-family: Arial, sans-serif;
   }
-.employment-information-form label {
-    display: block;
-    padding-bottom: 30px;
-    font-size: 13px;
+
+  .personal-information-form label {
+    font-size: 9px;
     font-weight: small;
-    width: 60%;
-    color:#7a7979;
+    color: #7A7979;
   }
-  .employment-information-form input {
-    width: 200px;
-    height: 40px;
-    border-radius: 0.5rem;
-    border: 1px solid grey;
+
+  .label-settings input {
+    height: 20px;
+    width: 78px;
+    border-radius: 0.2rem;
+    border: 1px solid #83a1e8;
   }
-.employment-information-form input[name=address] {
-    width: 350px;
-}
-.guarantor-information-form {
-    margin: 0 auto;
-    padding: 10px;
-    font-family: Arial, sans-serif;
-}
-.guarantor-information-form label {
-    display: block;
-    padding-bottom: 30px;
-    font-size: 13px;
-    font-weight: small;
-    width: 60%;
-    color:#7a7979;
+
+  .address-settings input {
+    width: 225px;
+    height: 20px;
+    border-radius: 0.2rem;
+    border: 1px solid #83a1e8;
   }
-  .guarantor-information-form input {
-    width: 250px;
-    height: 40px;
-    border-radius: 0.5rem;
-    border: 1px solid grey;
-  }
-.guarantor-information-form input[name=address] {
-    width: 350px;
-}
-::placeholder{
+
+  ::placeholder {
     color: black;
     font-weight: lighter;
-    padding: 10px;
+    font-size: 9px;
+    padding: 5px;
+  }
 }
