@@ -26,7 +26,7 @@ import ClientOverview from './clientOverview/ClientOverview';
 import FAQ from './support/FAQ';
 import ChangePwd from './changePassword/ChangePwd';
 import { useEffect, useState } from 'react';
-import { AuthContext } from './AuthContext';
+import { AuthProvider } from './AuthContext';
 import Cookies from 'js-cookie';
 import LoanContract from './loanOverview/LoanContract';
 import ClientContractForm from './clientOverview/ClientContractForm';
@@ -35,24 +35,10 @@ import LoanOverview from './loanOverview/LoanOverview';
 // import ClientContract from './clientOverview/ClientContract';
 
 function App() {
-  const [signUpToken, setSignUpToken] = useState('');
-  const [loginToken, setLoginToken] = useState('');
-
-  useEffect(() => {
-    const storedToken = Cookies.get('signUpToken');
-    const storedLoginToken = Cookies.get('loginToken');
-    if (storedToken) {
-      setSignUpToken(storedToken);
-    }
-    if (storedLoginToken) {
-      setLoginToken(storedLoginToken);
-    }
-  }, []);
+  //
 
   return (
-    <AuthContext.Provider
-      value={{ signUpToken, setSignUpToken, loginToken, setLoginToken }}
-    >
+    <AuthProvider>
       <ToastContainer />
       <Router>
         <Routes>
@@ -133,7 +119,7 @@ function App() {
           ></Route>
         </Routes>
       </Router>
-    </AuthContext.Provider>
+    </AuthProvider>
   );
 }
 

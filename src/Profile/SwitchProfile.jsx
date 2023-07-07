@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './ProfileStyles.css';
+import { AuthContext } from '../AuthContext';
 
-function SwitchProfile({ label }) {
+function SwitchProfile() {
+  const { isActive, toggleButton } = useContext(AuthContext);
+
+  console.log(isActive);
   return (
-    <div className="container contain">
-      {' '}
-      <div className="toggle-switch">
-        <input type="checkbox" className="checkbox" name={label} id={label} />
-        <label className="label" htmlFor={label}>
-          <span className="inner" />
-          <span className="switch" />
-        </label>
+    <>
+      <div
+        onClick={toggleButton}
+        className={` ${isActive ? 'toggleBox' : 'toggleRed'}`}
+      >
+        <p>Active</p>
+        <p>Inactive</p>
       </div>
-    </div>
+    </>
   );
 }
 

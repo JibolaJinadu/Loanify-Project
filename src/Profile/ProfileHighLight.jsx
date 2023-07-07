@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ProfileBig from './ProfileBig';
 import './ProfileStyles.css';
+import { AuthContext } from '../AuthContext';
 
 const ProfileHighLight = ({ role, fullName }) => {
+  const { isActive } = useContext(AuthContext);
+
   return (
     <div className="dev">
       <div>
@@ -20,8 +23,8 @@ const ProfileHighLight = ({ role, fullName }) => {
         <div>
           <ProfileBig tiny={'Status:'} />
         </div>
-        <div style={{ color: 'green' }}>
-          <ProfileBig tiny={'Active'} />
+        <div style={{ color: isActive ? '#297F04' : '#D30744' }}>
+          <ProfileBig tiny={isActive ? 'Active' : 'Inactive'} />
         </div>
       </div>
     </div>
