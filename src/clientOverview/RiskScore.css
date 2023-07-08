@@ -1,41 +1,82 @@
-.risk-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-}
-
-.risk-scoreClient,
-.risk-grade {
-  padding-top: 40px;
-}
-
-.risk-space {
-  padding-left: 20px;
-}
-
-.risk-scoreClient p {
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.risk-grade p {
-  font-size: 14px;
-}
-
-.comment-container {
+/*.risk-score {
   display: flex;
 }
 
-.risk-comment {
+.risk-comment{
   font-size: 14px;
   font-weight: 700;
 }
-.risk-highlighted {
+
+.rs-highlighted {
   background-color: #f0f4fc;
-  width: 500px;
+  width: 390px;
   height: 80px;
-  border-radius: 0.5rem;
+  padding: 5px;
+  border-radius: 2.5rem;
 }
 
-.risk-feedback {
+.riskComment {
   font-size: 14px;
+}
+
+
+.rs-sizeb p {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+.rs-size p {
+  font-size: 14px;
+}
+
+.risk-level p {
+  line-height: 2.5rem;
+}
+.rs-space{
+ padding-left: 80px;
+}
+
+.risk-space {
+  padding-left: 160px;
+}
+*/
+
+.risk-text {
+  display: flex;
+}
+
+.risk-grade {
+  padding-left: 100px;
+}
+.risk-grades {
+  padding-left: 92px;
+}
+
+.risk-image {
+  padding-left: 225px;
+}
+
+.risk-good h4 {
+  padding-bottom: 15px;
+}
+
+.risk-grade p {
+  padding-bottom: 15px;
+}
+
+.decision-text {
+  padding-top: 20px;
+}
+
+.decision-recommendation {
+  background-color: #f0f4fc;
+  width: 490px;
+  height: 80px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.decision-recommendation p {
+  padding: 5px;
 }

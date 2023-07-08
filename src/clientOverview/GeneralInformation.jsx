@@ -151,8 +151,10 @@ const GeneralInformation = () => {
   return (
     <div className="general">
       <h5>Personal Information</h5>
+      <div className='client-padding'></div>
+
       <form className="personal-information-form" onSubmit={{ handleSubmit }}>
-        <div className="form-settings">
+        <div className="personal-form-settings">
           <div>
             <div className='label-settings'>
               <label>First Name</label>
@@ -258,7 +260,7 @@ const GeneralInformation = () => {
 
 
       <form className='personal-information-form' onSubmit={{ handleSubmit }}>
-        <div className='form-settings'>
+        <div className='personal-form-settings'>
         <div className='address-settings'>
             <label>Address</label>
               <input
@@ -282,11 +284,13 @@ const GeneralInformation = () => {
             </div>
         </div>
       </form>
-
+      <div className='client-padding'></div>
 
       <h5>Employment Information</h5>
+      <div className='client-padding'></div>
+
       <form  className="personal-information-form" onSubmit={{ handleSubmit }}>
-        <div className="form-settings">
+        <div className="personal-form-settings">
           <div>
             <div className='label-settings'>
               <label>Place of Work</label>
@@ -377,11 +381,15 @@ const GeneralInformation = () => {
               ></input>
             </div>
       </form>
+      <div className='client-padding'></div>
 
 
+      <div>
       <h5>Guarantor Information</h5>
+      <div className='client-padding'></div>
+
       <form  className="personal-information-form" onSubmit={{ handleSubmit }}>
-        <div className="form-settings">
+        <div className="personal-form-settings">
           <div>
             <div className='label-settings'>
             <label>Full Name </label>
@@ -401,17 +409,6 @@ const GeneralInformation = () => {
                 value={phoneNumber}
                 placeholder="09055555558"
                 onChange={handlePhoneNumberChange}
-
-              ></input>
-            </div>
-
-            <div className='label-settings'>
-            <label>Place of Work </label>
-              <input
-                type="text"
-                value={placeofwork}
-                placeholder="Greene Logistics"
-                onChange={handlePlaceOfWorkChange}
 
               ></input>
             </div>
@@ -440,19 +437,6 @@ const GeneralInformation = () => {
 
               ></input>
             </div>
-
-            <div className='label-settings'>
-            <label>Work Address</label>
-              <input
-                type="text"
-                name="address"
-                value={address}
-                placeholder="12, Herbert Marculay Way, Ikoyi, Lagos"
-                onChange={handleAddressChange}
-                required
-
-              ></input>
-            </div>
           </div>
 
           <div>
@@ -475,12 +459,41 @@ const GeneralInformation = () => {
                 value={nin}
                 placeholder="237569103853"
                 onChange={handleNinChange}
-
               />
             </div>
           </div>
         </div>
       </form>
+      </div>
+
+    
+        <form>
+          <div className='personal-form-settings'>
+          <div  className='label-settings'>
+            <label>Place of Work</label>
+              <input
+                type="text"
+                value={placeofwork}
+                placeholder="Greene Logistics"
+                onChange={handlePlaceOfWorkChange}
+                required
+              ></input>
+        </div>
+
+        <div className='address-settings'>
+            <label>Work Address</label>
+              <input
+                type="text"
+                value={address}
+                placeholder="12, Herbert Marculay Way, Ikoyi, Lagos"
+                onChange={handleAddressChange}
+
+              ></input>
+            </div>
+          </div>
+        
+        </form>
+     
     </div>
   );
 };

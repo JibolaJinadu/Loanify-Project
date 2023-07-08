@@ -1,4 +1,4 @@
-.client-container {
+.clients-container {
   display: flex;
 }
 .client-contract {
@@ -81,7 +81,7 @@
 }
 
 .contract-container {
-  border: 30px double #F0F4FC;
+  border: 15px solid #f0f4fc;
   background-color: #F0F4FC;
   line-height: 1.6rem;
 }

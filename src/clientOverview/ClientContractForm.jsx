@@ -72,7 +72,7 @@ function ClientContractForm() {
 
   return (
     <section>
-      <div className="client-container">
+      <div className="clients-container">
         <div className='client-contract'>
           <h3>Loan Contracts</h3>
           <div className="print-button">
