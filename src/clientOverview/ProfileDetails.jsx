@@ -6,8 +6,8 @@ import message from './img/messages icon.svg';
 
 const ProfileDetails = () => {
   return (
-    <div className="flex-cont">
-      <div className="profile-cont">
+    <div className="flex">
+      <div className="profile-flex">
         <img
           src={temi}
           alt="image"
@@ -18,7 +18,7 @@ const ProfileDetails = () => {
           <p className='caseId'>
             Case ID:RRZU9D6BVG
           </p>
-          <div className="prof-contact">
+          <div className="loan-contact">
             <img src={telephone} alt="tel-icon" className="profile-icon" />
             <p className='tel-no'> 09055555558 </p>
             <img
@@ -29,21 +29,21 @@ const ProfileDetails = () => {
             />
             <p>temidayo.bayo@gmail.com</p>
           </div>
-          <div className="prof-type">
+          <div className="loan-type">
             <p style={{ fontWeight: 'bold' }}>Loan Officer:</p>
             <p>John Doe</p>
           </div>
         </div>
       </div>
-      <div className='profType'>
-        <div className="prof-type">
+      <div>
+        <div className="loan-type">
           <p style={{ fontWeight: 'bold' }}>Loan Type:</p>
           <p>Personal Loan</p>
         </div>
-        <div className='prof-type'>
+        <div className="loan-type">
           <p style={{ fontWeight: 'bold' }}>Loan Status:</p>
           <p>Active</p>
-          <button className="active-button"></button>
+          <button className="active-btn"></button>
         </div>
       </div>
     </div>
