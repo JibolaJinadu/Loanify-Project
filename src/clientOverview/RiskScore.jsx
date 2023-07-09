@@ -36,7 +36,7 @@ const RiskScore = () => {
        
         <div className='risk-grades'>
           <div className='decision-recommendation'>
-          <p>1. System recommends making a standard client check</p>
+          <p className='riskComment'>1. System recommends making a standard client check</p>
           </div>
          
         </div>

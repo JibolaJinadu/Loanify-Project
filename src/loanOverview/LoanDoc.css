@@ -60,11 +60,14 @@
     padding-right: 40px;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-size: 10px;
+    font-size: 14px;
     width: 735px;
     margin-top: 20px;
 }
 
+.white-background h4 {
+  padding-top: 20px;
+}
 .data-input {
     margin-bottom: 20px;
 }
