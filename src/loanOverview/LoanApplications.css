@@ -13,11 +13,8 @@
 .cfi {
     padding-top: 30px;
 }
-.form-setting {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 200px;
-}
+
+
 .form-setting label {
     display: block;
     width: 200px;

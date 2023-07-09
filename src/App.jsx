@@ -26,19 +26,33 @@ import ClientOverview from './clientOverview/ClientOverview';
 import FAQ from './support/FAQ';
 import ChangePwd from './changePassword/ChangePwd';
 import { useEffect, useState } from 'react';
-import { AuthProvider } from './AuthContext';
+import { AuthContext } from './AuthContext';
 import Cookies from 'js-cookie';
 import LoanContract from './loanOverview/LoanContract';
-import ClientContractForm from './clientOverview/ClientContractForm';
 import ProfileEdit from './Profile/ProfileEdit';
 import LoanOverview from './loanOverview/LoanOverview';
-// import ClientContract from './clientOverview/ClientContract';
+import ClientContract from './clientOverview/ClientContract';
+
 
 function App() {
-  //
+  const [signUpToken, setSignUpToken] = useState('');
+  const [loginToken, setLoginToken] = useState('');
+
+  useEffect(() => {
+    const storedToken = Cookies.get('signUpToken');
+    const storedLoginToken = Cookies.get('loginToken');
+    if (storedToken) {
+      setSignUpToken(storedToken);
+    }
+    if (storedLoginToken) {
+      setLoginToken(storedLoginToken);
+    }
+  }, []);
 
   return (
-    <AuthProvider>
+    <AuthContext.Provider
+      value={{ signUpToken, setSignUpToken, loginToken, setLoginToken }}
+    >
       <ToastContainer />
       <Router>
         <Routes>
@@ -97,8 +111,9 @@ function App() {
           <Route path="/clients" element={<Client />}></Route>
           <Route
             path="/clients/clients-overview/contract"
-            element={<ClientContractForm />}
+            element={<ClientContract />}
           ></Route>
+          
           <Route path="/profile" element={<ProfilePage />}></Route>
           <Route path="/reports" element={<Reports />}></Route>
           <Route path="/notification" element={<NotificationPage />}></Route>
@@ -119,7 +134,7 @@ function App() {
           ></Route>
         </Routes>
       </Router>
-    </AuthProvider>
+    </AuthContext.Provider>
   );
 }
 
