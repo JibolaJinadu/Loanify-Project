@@ -6,7 +6,7 @@ body{
 }
 
 .overall {
-  width: 76.5vw;
+  width: 94%;
   margin: 0 15px 0 20px;
 }
 
@@ -38,7 +38,7 @@ body{
 
 .toll-bttn {
 padding: 7px;
-border: solid 0.3px grey;
+border: solid 0.3px rgb(202, 200, 200);
 border-radius: 5px;
 background-color: white;
 font-weight: bolder;
@@ -72,11 +72,6 @@ font-size: 12px;
   margin-top: 0;
 }
 
-.check-icon{
-  color: green;
-  font-size: 8vh;
-}
-
 .faq-header {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: -2px;
@@ -105,7 +100,7 @@ font-size: 12px;
 }
 
 .support-session{
-  width: 90vw;
+  /* width: 90vw; */
   min-height: 12vh;
   background-color: rgb(240, 244, 252);
   margin: 15px 0 10px;
@@ -114,18 +109,31 @@ font-size: 12px;
 
 @media (max-width: 600px) {
  .support-session {
-    width: 90vw;
+    width: 97%;
  }
+  .check-icon{
+  color: green;
+  font-size: 4vh;
+}
+
 }
 
 @media (min-width: 601px) and (max-width: 960px) {
    .support-session {
-    width: 85vw;
+    width: 100%;
  }
+   .check-icon{
+  color: green;
+  font-size: 5vh;
+}
 }
 
 @media (min-width: 961px) {
    .support-session {
-    width: 80vw;
+    width: 100%;
  }
+ .check-icon{
+  color: green;
+  font-size: 8vh;
+}
 }
