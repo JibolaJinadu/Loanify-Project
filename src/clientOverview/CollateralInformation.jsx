@@ -58,9 +58,9 @@ const CollateralInformation = () => {
   return (
     <div className='clientsPadding'>
       <form onSubmit={{ handleSubmits }}>
-        <div className='client-container'>
+        <div className='the-client-container'>
             <div>
-              <div className='label-settings'>
+              <div className='labels-settings'>
               <label>Collateral Type</label>
               <input
                 type="text"
@@ -70,7 +70,7 @@ const CollateralInformation = () => {
               ></input>
               </div>
             
-               <div className='label-settings'>
+               <div className='labels-settings'>
               <label>Year Of Purchase</label>
               <input
                 type="text"
@@ -82,7 +82,7 @@ const CollateralInformation = () => {
             </div>
 
             <div>
-              <div className='label-settings'>
+              <div className='labels-settings'>
               <label>Collateral Name</label>
               <input
                 type="text"
@@ -92,7 +92,7 @@ const CollateralInformation = () => {
               ></input>
               </div>
 
-              <div className='label-settings'>
+              <div className='labels-settings'>
               <label> Current Market Value</label>
               <input
                 type="text"
@@ -103,14 +103,14 @@ const CollateralInformation = () => {
             
               </div>
             
-              <div className='ownership-proof'>
-             <button type="submit" className='proof-button'>Proof of Ownership</button>
+              <div className='ownership-proof '>
+             <button type="submit" className='the-proof-button'>Proof of Ownership</button>
              </div>
              </div>
 
 
             <div>
-              <div  className='label-settings'>
+              <div  className='labels-settings'>
               <label>Model No </label>
               <input
                 type="text"
@@ -120,7 +120,7 @@ const CollateralInformation = () => {
               ></input>
               </div>
 
-              <div className='label-settings'>
+              <div className='labels-settings'>
               <label>Model Color </label>
               <input
                 type="text"

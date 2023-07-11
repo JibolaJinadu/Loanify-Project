@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import './ClientContractForm.css'
 
-const LoanDoc = () => {
+const ClientContractForm = () => {
   const [agreement, setAgreement ] = useState('')
   const [officials, setOfficials] = useState('')
   const [law, setLaw] = useState('')
@@ -128,6 +128,8 @@ const LoanDoc = () => {
           <p>
             - The Parties hereby agree to the terms and conditions set forth in this Agreement and such is demonstrated throughout by their signatures below:
           </p>
+
+          <div className='data-input'></div>
           <div>
             <label>BORROWER Name:</label>
             <input type="text"
@@ -187,4 +189,4 @@ const LoanDoc = () => {
   )
 }
 
-export default LoanDoc
+export default ClientContractForm

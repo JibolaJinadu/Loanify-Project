@@ -35,7 +35,7 @@
 
 .decision-recommendation {
   background-color: #f0f4fc;
-  width: 470px;
+  width: 475px;
   height: 120px;
   padding: 5px;
   border-radius: 5px;
@@ -47,4 +47,63 @@
 
 .riskComment {
   font-size: 14px;
+}
+
+.risk-charts {
+  width: 200px;
+}
+
+
+@media screen and (max-width: 768px) {
+  
+  .risk-grade {
+    padding-left: 90px;
+  }
+  .risk-grades {
+    padding-left: 82px;
+  }
+  
+  .risk-image {
+    padding-left: 25px;
+  }
+  
+  .risk-good h4 {
+    padding-bottom: 18px;
+    font-size: 11px;
+    font-weight: 900;
+  }
+
+  
+.risk-charts {
+  width: 110px;
+}
+
+  
+  .risk-grade p {
+    padding-bottom: 18px;
+    font-size: 10px;
+  }
+
+  .decision-comments h4 {
+    font-size: 11px;
+    font-weight: 900;
+  }
+  
+  .decision-recommendation {
+    background-color: #f0f4fc;
+    width: 197px;
+    height: 120px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .decision-recommendation p {
+    padding: 5px;
+  }
+  
+  .riskComment {
+    font-size: 10px;
+  }
+  
+  
 }

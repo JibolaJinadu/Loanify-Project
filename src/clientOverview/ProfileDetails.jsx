@@ -16,12 +16,12 @@ const ProfileDetails = () => {
           <div>
             <div>
             <h3>Temidayo Adebayo</h3>
-            <p tyle={{ color: '#8dba80', fontSize: '12px' }}> Case ID:RRZU9D6BVG</p>
+            <p className='the-case-identity'> Case ID:RRZU9D6BVG</p>
             <div className='profiles-image-content'>
-                <img src={telephone} alt="tel-icon" className='profile-icons' />
-                <p style={{ fontSize: '14px' }}>09055555558</p>
+                <img src={telephone} alt="tel-icon" className='profiles-icons' />
+                <p className='the-profiles-answer profiles-telephone'>09055555558</p>
                 <img src={message} alt="msg-icon"  style={{ color: 'red' }} className='profile-icons'/>
-                <p>temidayo.bayo@gmail.com</p>
+                <p className='the-profiles-answer'>temidayo.bayo@gmail.com</p>
             </div>
             <div>
               
@@ -29,19 +29,19 @@ const ProfileDetails = () => {
             
             </div>
             <div className='profiles-details '>
-              <p  style={{ fontWeight: 'bold' }}>Loan Officer:</p>
-              <p>John Doe</p>
+              <p className='the-profiles-title'>Loan Officer:</p>
+              <p className='the-profiles-answer'>John Doe</p>
             </div>
           </div>
         </div>
         <div>
           <div className='profiles-details profiles-spaced'>
-            <p style= {{ fontWeight: 'bold' }}>Loan Type:</p>
-            <p>Personal Loan</p>
+            <p className='the-profiles-title'>Loan Type:</p>
+            <p className='the-profiles-answer'>Personal Loan</p>
           </div>
           <div className='profiles-details profiles-space'>
-            <p style={{ fontWeight: 'bold' }}>Loan Status:</p>
-            <p>Active</p>
+            <p className='the-profiles-title'>Loan Status:</p>
+            <p className='the-profiles-answer'>Active</p>
             <button className='active-button'></button>
           </div>
         </div>
