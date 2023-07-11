@@ -36,7 +36,7 @@ const LoanApplications = () => {
             </div>
         </form>
         <h5 className='cfi'>Current Financial Information</h5>
-        <form className='form-setting'>
+        <form className='flex-container form-setting'>
             <div>
                 <label>Gross Monthly Revenue
                     <input type='text' placeholder='NGN450,000'></input>
@@ -64,7 +64,7 @@ const LoanApplications = () => {
             </div>
         </form>
         <h5 className='cfi'>Bank Information</h5>
-        <form className='form-setting'>
+        <form className='flex-container form-setting'>
             <div>
                <label>Account Name
                     <input type='text' placeholder='Temidayo Adebayo'></input>
