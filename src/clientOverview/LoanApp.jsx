@@ -121,49 +121,53 @@ const LoanApp = () => {
     <div>
       <form onSubmit={{ handleSubmit }}>
         <div className='spaced-down'></div>
-        
-      <h5 className='clientapp-history'>Loan Information</h5>
-            <div className='client-container spaced-down-up'>
+        <div className='the-clients-h5'>
+        <h5 className='the-clientapp-history'>Loan Information</h5>
+        </div>
+     
+            <div className='the-client-container spaced-down-up'>
                 <p>Loan Amount</p>
                 <label><input type='text' placeholder='NGN550,000' value={loanAmount} onChange={handdleLoanAmountChange}></input></label>
             </div>
-            <div className='client-container spaced-down'>
+            <div className='the-client-container spaced-down'>
                 <p>Purpose of the Loan</p>
                 <label><input type='text' placeholder='Business' value={loanPurpose} onChange={handleLoanPurposeChange}></input></label>
             </div>
-            <div className='client-container spaced-down'>
+            <div className='the-client-container spaced-down'>
                 <p>Repayment Method</p>
                 <label><input type='text' placeholder='Monthly' value={repaymentMethod} onChange={handleRepaymentMethodChange}></input></label>
             </div>
-            <div className='client-container spaced-down'>
+            <div className='the-client-container spaced-down'>
                 <p>Do you have any outstanding loan to be repaid?</p>
                 <label><input type='text' placeholder='Yes' value={outstandingLoan} onChange={handleOutstandingLoanChange}></input></label>
             </div>
-            <div className='client-container spaced-down'>
+            <div className='the-client-container spaced-down'>
                 <p>If yes, please state the amount</p>
                 <label><input type='text' placeholder='NGN550,000' value={amount} onChange={handleAmountChange}></input></label>
             </div>
-            <div className='client-container spaced-down'>
+            <div className='the-client-container spaced-down'>
                 <p>How much is the amount left to be paid?</p>
                 <label><input type='text' placeholder='NGN75,000' value={amountLeft} onChange={handleAmountChange}></input></label>
             </div>
-            <div className='client-container spaced-down'>
+            <div className='the-client-container spaced-down'>
                 <p>Is the loan with our institution?</p>
                 <label><input type='text' placeholder='No' value={institloan} onChange={handleInstitloanChange}></input></label>
             </div>
-            <div className='client-container spaced-down'>
+            <div className='the-client-container spaced-down'>
                 <p>If No, please state the name of the lender?</p>
                 <label><input type='text' placeholder='No' value={lenderName} onChange={handleLenderNameChange}></input></label>
             </div>
       </form>
       <div className='spaced-down'></div>
 
-      <h5 className='clientapp-history'>Current Financial Information</h5>
+      <div className='the-clients-h5'>
+      <h5 className='the-clientapp-history'>Current Financial Information</h5>
+      </div>
       <div className='spaced-down'></div>
       <form onSubmit={{ handleSubmit }}>
-        <div className='client-container'>
+        <div className='the-client-container'>
           <div>
-            <div className='label-settings'>
+            <div className='labels-settings'>
             <label> Gross Monthly Revenue</label>
              <input
                 type="text"
@@ -173,7 +177,7 @@ const LoanApp = () => {
               ></input>
             </div>
 
-            <div className='label-settings'>
+            <div className='labels-settings'>
             <label>Average Monthly Profit</label>
               <input
                 type="text"
@@ -186,7 +190,7 @@ const LoanApp = () => {
 
           
           <div>
-          <div className='label-settings'>
+          <div className='labels-settings'>
           <label>Gross Monthly Expenses </label> 
               <input
                 type="text"
@@ -197,7 +201,7 @@ const LoanApp = () => {
           </div>
 
 
-           <div className='label-settings'>
+           <div className='labels-settings'>
            <label>Average Monthly Profit</label>
               <input
                 type="text"
@@ -210,7 +214,7 @@ const LoanApp = () => {
 
 
           <div>
-            <div className='label-settings'>
+            <div className='labels-settings'>
             <label>Gross Annual Revenue</label>
               <input
                 type="text"
@@ -220,7 +224,7 @@ const LoanApp = () => {
                ></input>
             </div>
 
-            <div className='label-settings'>
+            <div className='labels-settings'>
             <label>Net Monthly Profit</label>
               <input
                 type="text"
@@ -233,14 +237,15 @@ const LoanApp = () => {
         </div>
       </form>
       <div className='spaced-down'></div>
-     
 
-
-      <h5 className='clientapp-history'>Bank Information</h5>
+      <div className='the-clients-h5'>
+      <h5 className='the-clientapp-history'>Bank Information</h5>
+      </div>
+      
       <div className='spaced-down'></div>
       <form  onSubmit={{ handleSubmit }}>
-        <div className='client-container'>
-          <div className='label-settings'>
+        <div className='the-client-container'>
+          <div className='labels-settings'>
           <label>Account Name</label>
            <input
                 type="text"
@@ -252,7 +257,7 @@ const LoanApp = () => {
 
 
           <div>
-            <div className='label-settings'>
+            <div className='labels-settings'>
             <label>Account Number</label>
               <input
                 type="text"
@@ -267,7 +272,7 @@ const LoanApp = () => {
             
             
             <div>
-              <div className='label-settings'>
+              <div className='labels-settings'>
               <label>Bank Name</label>
               <input
                 type="text"

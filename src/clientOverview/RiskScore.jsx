@@ -23,7 +23,7 @@ const RiskScore = () => {
         </div>
         
         <div className='risk-image'>
-          <img src={risk} alt="image" style={{ width: '200px' }}></img>
+          <img src={risk} alt="image" className='risk-charts'></img>
         </div>
       </div>
 

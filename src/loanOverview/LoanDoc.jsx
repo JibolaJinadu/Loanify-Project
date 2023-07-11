@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import './LoanDoc.css'
-import ClientDialog from '../client/ClientDialog';
 
 const LoanDoc = () => {
   const [agreement, setAgreement ] = useState('')
@@ -129,6 +128,8 @@ const LoanDoc = () => {
           <p>
             - The Parties hereby agree to the terms and conditions set forth in this Agreement and such is demonstrated throughout by their signatures below:
           </p>
+
+          <div className='data-input'></div>
           <div>
             <label>BORROWER Name:</label>
             <input type="text"

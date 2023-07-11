@@ -1,5 +1,6 @@
-.clientapp-history {
+.the-clientapp-history {
   font-weight: 900;
+  font-size: 14px;
 }
 
 .spaced-down-up {
@@ -16,12 +17,14 @@
   padding-top: 20px;
 }
 
-.client-container {
+.the-client-container {
     display: flex;
     justify-content: space-between;
 }
 
-.client-container input {
+
+
+.the-client-container input {
   padding-left: 5px;
   width: 200px;
   height: 40px;
@@ -29,8 +32,13 @@
   border: 1px solid #83a1e8;
 }
 
+.the-client-container label {
+  font-size: 13px;
+  font-weight: small;
+  color: #7A7979;
+}
 
-.proof-button {
+.the-proof-button {
   padding-left: 5px;
   width: 200px;
   height: 40px;
@@ -39,6 +47,10 @@
   background-color: blue;
   color: white;
   cursor: pointer;
+}
+
+.ownership-proof {
+  padding-top: 20px;
 }
 
 .client-padding {
@@ -49,26 +61,17 @@
   padding-top: 15px;
 }
 
-.label-settings {
+.labels-settings {
   display: flex;
   flex-direction: column;
+  padding-top: 20px;
 }
 
-.label-settings label {
-  font-size: 13px;
-  font-weight: small;
-  color: #7A7979;
-}
-
-.form-settings {
-    display: flex;
-    justify-content: space-between;
-    row-gap: 100px;
-}
 
 
 ::placeholder {
   color: black;
+  font-size: 12px;
   font-weight: lighter;
   padding: 10px;
 }
@@ -76,82 +79,46 @@
 
 
 
-/*Extra small devices (phones, 600px and down)*/
-@media only screen and (max-width: 600px){
-  .contract-container {border: 1px solid gainsboro}
 
-  .flex-container p {
-    font-size: 11px; 
-  }
-  .flex-container {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 2px;
+
+
+@media only screen and (max-width: 768px){
+.the-client-container {
+  flex-direction: column;
+  align-items: center;
 }
-.flex-container input {
-  padding-left: 2.5px;
-  width: 90px;
-  height: 20px;
+
+.the-client-container p {
+  font-size: 12px;
+}
+
+.the-client-container input {
+  padding-left: 5px;
+  width: 250px;
+  height: 40px;
   border-radius: 0.3rem;
-  border: 1px solid lightgrey;
+  border: 1px solid #83a1e8;
 }
 
-.form-settings {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 2px;
+.labels-settings {
+  padding-top: 20px;
 }
 
-.loan-app-form label {
-    display: block;
-    padding-bottom: 30px;
-    font-size: 12px;
-    font-weight: small;
-    width: 100%;
-    color: #7a7979;
-}
 
-.loan-app-form input {
-  padding-left: 2.5px;
-  width: 90px;
-  height: 20px;
+.the-proof-button {
+  padding-left: 5px;
+  width: 250px;
+  height: 40px;
   border-radius: 0.3rem;
-  border: 1px solid lightgrey;
-}
-
-::placeholder {
-  color: black;
-  font-size: 10px;
-  font-weight: lighter;
-  padding: 10px;
-}
-
-.proof {
-  text-decoration: none;
-  font-size: 10px;
-  border-radius: 0.3rem;
-  border: 1px solid blue;
-  padding: 8px 9px;
+  border: 1px solid #83a1e8;
   background-color: blue;
   color: white;
-  text-align: center;
   cursor: pointer;
-  
+}
+
+.the-clients-h5 {
+  padding-left: 150px;
 }
 
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up)*/
-@media only screen and (min-width: 600px){
-  .contract-container {border: 1px solid grey}
-}
-
-/*Medium devices (landscape tablets, 768px and up)*/
-@media only screen and (min-width: 768px){
-  .contract-container {border: 1px solid goldenrod}
-}
-
-/*Extra large devices(large laptops and desktops, 1200px and up)*/
-@media only screen and (min-width: 1200px){
-  .contract-container { border: 1px solid lightgrey;}
-}

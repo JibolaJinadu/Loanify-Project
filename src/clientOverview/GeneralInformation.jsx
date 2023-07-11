@@ -149,14 +149,17 @@ const GeneralInformation = () => {
   };
 
   return (
-    <div className="general">
+    <div className="general-information">
+      <div className='the-gen-information'>
       <h5>Personal Information</h5>
-      <div className='client-padding'></div>
+      </div>
+      
+      <div className='client-paddings'></div>
 
-      <form className="personal-information-form" onSubmit={{ handleSubmit }}>
-        <div className="personal-form-settings">
+      <form className="personal-information-forms" onSubmit={{ handleSubmit }}>
+        <div className="personal-forms-settings">
           <div>
-            <div className='label-settings'>
+            <div className='the-label-settings'>
               <label>First Name</label>
               <input
                 type="text"
@@ -166,7 +169,7 @@ const GeneralInformation = () => {
               ></input>
             </div>
 
-            <div className='label-settings'>
+            <div className='the-label-settings'>
               <label>Sex</label>
               <input
                 type="text"
@@ -176,7 +179,7 @@ const GeneralInformation = () => {
               ></input>
             </div>
 
-            <div className='label-settings'>
+            <div className='the-label-settings'>
             <label>Email Address</label>
               <input
                 type="text"
@@ -189,7 +192,7 @@ const GeneralInformation = () => {
           </div>
 
           <div>
-            <div className='label-settings'>
+            <div className='the-label-settings'>
             <label>Middle Name</label>
               <input
                 type="text"
@@ -199,7 +202,7 @@ const GeneralInformation = () => {
               ></input>
             </div>
 
-            <div className='label-settings'>
+            <div className='the-label-settings'>
             <label>Date of Birth</label>
               <input
                 type="text"
@@ -209,7 +212,7 @@ const GeneralInformation = () => {
               ></input>
             </div>
 
-            <div className='label-settings'>
+            <div className='the-label-settings'>
             <label>Phone Number</label>
               <input
                 type="text"
@@ -222,7 +225,7 @@ const GeneralInformation = () => {
 
 
           <div>
-            <div className='label-settings'>
+            <div className='the-label-settings'>
             <label>Last Name</label>
               <input
                 type="text"
@@ -233,7 +236,7 @@ const GeneralInformation = () => {
               />
             </div>
 
-            <div className='label-settings'>
+            <div className='the-label-settings'>
             <label>Marital Status</label>
               <input
                 type="text"
@@ -244,7 +247,7 @@ const GeneralInformation = () => {
               ></input>
             </div>
 
-            <div className='label-settings'>
+            <div className='the-label-settings'>
             <label>NIN</label>
               <input
                 type="text"
@@ -259,9 +262,9 @@ const GeneralInformation = () => {
       </form>
 
 
-      <form className='personal-information-form' onSubmit={{ handleSubmit }}>
-        <div className='personal-form-settings'>
-        <div className='address-settings'>
+      <form className='personal-information-forms' onSubmit={{ handleSubmit }}>
+        <div className='personal-forms-settings'>
+          <div className='the-address-settings'>
             <label>Address</label>
               <input
                 type="text"
@@ -271,8 +274,8 @@ const GeneralInformation = () => {
                 onChange={handleHomeAddressChange}
 
               />
-        </div>
-        <div className='label-settings'>
+          </div>
+          <div className='the-label-settings'>
             <label>Tenancy Start Date</label>
               <input
                 type="text"
@@ -284,15 +287,18 @@ const GeneralInformation = () => {
             </div>
         </div>
       </form>
-      <div className='client-padding'></div>
+      <div className='client-paddings'></div>
 
+      <div className='the-gen-information'>
       <h5>Employment Information</h5>
-      <div className='client-padding'></div>
+      </div>
+      
+      <div className='client-paddings'></div>
 
-      <form  className="personal-information-form" onSubmit={{ handleSubmit }}>
-        <div className="personal-form-settings">
+      <form  className="personal-information-forms" onSubmit={{ handleSubmit }}>
+        <div className="personal-forms-settings">
           <div>
-            <div className='label-settings'>
+            <div className='the-label-settings'>
               <label>Place of Work</label>
               <input
                 type="text"
@@ -303,7 +309,7 @@ const GeneralInformation = () => {
               ></input>
             </div>
 
-            <div className='label-settings'>
+            <div className='the-label-settings'>
               <label>Company Staff Number</label>
               <input
                 type="text"
@@ -316,7 +322,7 @@ const GeneralInformation = () => {
           </div>
 
           <div>
-            <div className='label-settings'>
+            <div className='the-label-settings'>
               <label>Job Title</label>
               <input
                 type="text"
@@ -327,7 +333,7 @@ const GeneralInformation = () => {
               ></input>
             </div>
 
-            <div className='label-settings'>
+            <div className='the-label-settings'>
             <label>Start Date</label>
             <input
                 type="text"
@@ -341,7 +347,7 @@ const GeneralInformation = () => {
 
 
           <div>
-            <div className='label-settings'>
+            <div className='the-label-settings'>
             <label> Work Email</label>
               <input
                 type="text"
@@ -353,7 +359,7 @@ const GeneralInformation = () => {
               ></input>
             </div>
 
-            <div className='label-settings'>
+            <div className='the-label-settings'>
             <label> End Date </label>
               <input
                 type="text"
@@ -367,8 +373,9 @@ const GeneralInformation = () => {
       </form>
 
 
-      <form className='personal-information-form' onSubmit={{ handleSubmit }}>
-      <div className='address-settings'>
+      <form className='personal-information-forms' onSubmit={{ handleSubmit }}>
+        <div className="personal-forms-settings">
+          <div className='the-address-settings'>
               <label> Company Physical Address</label>
               <input
                 type="text"
@@ -380,18 +387,23 @@ const GeneralInformation = () => {
 
               ></input>
             </div>
+        </div>
+     
       </form>
-      <div className='client-padding'></div>
+      <div className='client-paddings'></div>
 
 
       <div>
-      <h5>Guarantor Information</h5>
-      <div className='client-padding'></div>
+        <div className='the-gen-information'>
+        <h5>Guarantor Information</h5>
+        </div>
+      
+      <div className='client-paddings'></div>
 
-      <form  className="personal-information-form" onSubmit={{ handleSubmit }}>
-        <div className="personal-form-settings">
+      <form  className="personal-information-forms" onSubmit={{ handleSubmit }}>
+        <div className="personal-forms-settings">
           <div>
-            <div className='label-settings'>
+            <div className='the-label-settings'>
             <label>Full Name </label>
               <input
                 type="text"
@@ -402,7 +414,7 @@ const GeneralInformation = () => {
               />
             </div>
 
-            <div className='label-settings'>
+            <div className='the-label-settings'>
             <label>Phone Number</label>
               <input
                 type="text"
@@ -416,7 +428,7 @@ const GeneralInformation = () => {
 
 
           <div>
-            <div className='label-settings'>
+            <div className='the-label-settings'>
             <label>Employment Status </label>
               <input
                 type="text"
@@ -427,7 +439,7 @@ const GeneralInformation = () => {
               ></input>
             </div>
 
-            <div className='label-settings'>
+            <div className='the-label-settings'>
             <label>Date of Birth</label>
               <input
                 type="text"
@@ -440,7 +452,7 @@ const GeneralInformation = () => {
           </div>
 
           <div>
-            <div className='label-settings'>
+            <div className='the-label-settings'>
             <label>Email Address</label>
               <input
                 type="text"
@@ -452,7 +464,7 @@ const GeneralInformation = () => {
               ></input>
             </div>
 
-            <div className='label-settings'>
+            <div className='the-label-settings'>
             <label>NIN</label>
               <input
                 type="text"
@@ -468,8 +480,9 @@ const GeneralInformation = () => {
 
     
         <form>
-          <div className='personal-form-settings'>
-          <div  className='label-settings'>
+          <div className='personal-information-forms'>
+            <div className='personal-forms-settings'>
+            <div  className='the-label-settings'>
             <label>Place of Work</label>
               <input
                 type="text"
@@ -480,7 +493,7 @@ const GeneralInformation = () => {
               ></input>
         </div>
 
-        <div className='address-settings'>
+        <div className='the-address-settings'>
             <label>Work Address</label>
               <input
                 type="text"
@@ -489,6 +502,7 @@ const GeneralInformation = () => {
                 onChange={handleAddressChange}
 
               ></input>
+            </div>
             </div>
           </div>
         

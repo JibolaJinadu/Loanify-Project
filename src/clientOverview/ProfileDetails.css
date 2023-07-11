@@ -4,11 +4,24 @@
   justify-content: space-between;
 }
 
+the-profiles-title {
+  font-weight: bold;
+}
+
+.the-case-identity {
+  color: #8dba80;
+  font-size: 12px;
+  font-weight: 700;
+}
 
 .profileImage {
   height: 150px;
   width: 150px;
   border-radius: 50%;
+}
+
+.profiles-telephone {
+  font-size: 14px;
 }
 
 .profiles-content {
@@ -41,5 +54,74 @@
   width: 20px;
   height: 20px;
   border: none;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .profiles-details-container {
+    margin: 0 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  
+  .profileImage {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+  
+  .profiles-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .profiles-image-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profiles-details {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .profiles-space {
+    padding-top: 5px;
+  }
+  
+  .profiles-spaced {
+    padding-top: 20px;
+  }
+  
+  
+  .active-button {
+    background-color: #00d43d;
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 0.2rem;
+  }
+  
+  .profiles-icons {
+    font-size: 5px;
+  }
+
+  .the-profiles-title {
+    font-weight: bold;
+    font-size: 10px;
+  }
+
+ .the-profiles-answer {
+  font-size: 10px;
+ } 
+
+ .the-case-identity {
+  color: #8dba80;
+  font-size: 10px;
+  font-weight: 700;
+}
+
 }

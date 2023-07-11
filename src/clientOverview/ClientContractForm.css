@@ -33,6 +33,7 @@
     outline: none;
     border-radius: 8px;
   }
+  
   .return {
     width: 150px;
     height: 40px;
@@ -46,6 +47,7 @@
     outline: none;
     border-radius: 8px;
   }
+
   .form-text {
     border-top: none;
     border-left: none;
@@ -68,25 +70,29 @@
 .white-background h4 {
   padding-top: 20px;
 }
+
 .data-input {
     margin-bottom: 20px;
 }
-/*Extra small devices (phones, 600px and down)*/
-@media only screen and (max-width: 600px){
-  .contract-container {border: 30px double teal;}
+
+
+@media only screen and (max-width: 768px){ 
+  .loan-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+.white-background{
+  background-color: white;
+  border: 15px solid #f0f4fc;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 12px;
+  width: 300px;
+  margin-top: 20px;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up)*/
-@media only screen and (min-width: 600px){
-  .contract-container {border: 30px double lemonchiffon}
-}
-
-/*Medium devices (landscape tablets, 768px and up)*/
-@media only screen and (min-width: 768px){
-  .contract-container {border: 30px double lightcoral}
-}
-
-/*Extra large devices(large laptops and desktops, 1200px and up)*/
-@media only screen and (min-width: 1200px){
-  .contract-container {border: 30px double #F0F4FC;}
 }
