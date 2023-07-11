@@ -95,7 +95,7 @@ const SupportPage = () => {
                 <div style={{ marginTop: "3px", position: "relative" }}>
                   <textarea
                     className="report-textarea"
-                    style={{ width: "100%", minHeight: "30vh", padding: "1vw", outline: "none" }}
+                    style={{ width: "100%", minHeight: "30vh", padding: "1vw", outline: "none", borderColor: "lightgrey", borderRadius: "5px" }}
                     placeholder="Enter your message here"
                     value={textareaValue}
                     onChange={handleChange}
@@ -108,9 +108,10 @@ const SupportPage = () => {
                       bottom: "15px",
                       right: "2px",
                       padding: "1vh 2vw",
-                      backgroundColor: "#0744d3",
+                      backgroundColor: "#0744e7",
                       color: "white",
                       borderRadius: "5px",
+                      border: "none"
                     }}
                   >
                     Send
@@ -129,16 +130,16 @@ const SupportPage = () => {
                   <div
                     className="submission-mssg"
                     style={{
-                      width: "20vw",
-                      height: "15vw",
-                      background: "lightgray",
+                      width: "30%",
+                      height: "60%",
+                      background: "rgb(240, 244, 252)",
                       borderRadius: "8px",
-                      padding: "40px 16px 0",
+                      padding: "1vh auto",
                       textAlign: "center",
                     }}
                   >
-                    <FontAwesomeIcon className="check-icon" icon={faCheck} />
-                    <p>Submission successful!</p>
+                    <FontAwesomeIcon className="check-icon" icon={faCheck}/>
+                    <p style={{paddingTop: "1%", textAlign:"center"}}> Message sent!</p>
                   </div>
                 </div>
               )}
@@ -149,6 +150,5 @@ const SupportPage = () => {
     </>
   );
 };
-
 
 export default SupportPage;
